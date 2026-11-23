@@ -19,19 +19,16 @@ bool validEmail(const std::string& e) {
 std::string secret() { return Config::instance().get("JWT_SECRET"); }
 
 json studentSession(Tx& t, const std::string& userId, const std::string& locale) {
-    auto student = svc::loadStudent(t, userId, locale);
-    const std::string role = student.value("role", "student");
-    json profile;
-    if (role == "student") {
-        profile = student;
-    } else {
-        profile = svc::loadUser(t, userId, locale);
-        profile["nickname"] = profile.value("display_name", "");
-        profile["avatar"] = "admin_panel_settings";
-        profile["total_xp"] = 0;
-        profile["level"] = 1;
-        profile["coins"] = 0;
-    }
+    auto user = svc::loadUser(t, userId, locale);
+    const std::string role = user.value("role", "student");
+    if (role == "student") return svc::loadStudent(t, userId, locale);
+
+    json profile = user;
+    profile["nickname"] = profile.value("display_name", "");
+    profile["avatar"] = "admin_panel_settings";
+    profile["total_xp"] = 0;
+    profile["level"] = 1;
+    profile["coins"] = 0;
     return profile;
 }
 
