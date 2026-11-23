@@ -15,6 +15,7 @@ option(LUMINA_BUILD_TESTS "Build unit tests" ON)
 # Drogon's installed CMake package forces a MySQL lookup even though we only use
 # PostgreSQL. Link the MSYS2 libraries directly to keep the build hermetic.
 find_path(DROGON_INCLUDE_DIR drogon/drogon.h)
+find_path(JSONCPP_INCLUDE_DIR json/json.h PATH_SUFFIXES jsoncpp REQUIRED)
 find_library(DROGON_LIBRARY NAMES drogon REQUIRED)
 find_library(TRANTOR_LIBRARY NAMES trantor REQUIRED)
 find_library(JSONCPP_LIBRARY NAMES jsoncpp REQUIRED)
@@ -26,7 +27,7 @@ find_library(CARES_LIBRARY NAMES cares)
 
 add_library(Drogon::Drogon INTERFACE IMPORTED)
 set_target_properties(Drogon::Drogon PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "${DROGON_INCLUDE_DIR}"
+  INTERFACE_INCLUDE_DIRECTORIES "${DROGON_INCLUDE_DIR};${JSONCPP_INCLUDE_DIR}"
   INTERFACE_LINK_LIBRARIES "${DROGON_LIBRARY};${TRANTOR_LIBRARY};${JSONCPP_LIBRARY};${UUID_LIBRARY};${BROTLI_ENC_LIBRARY};${BROTLI_DEC_LIBRARY};${BROTLI_COMMON_LIBRARY};${CARES_LIBRARY}")
 
 find_package(OpenSSL REQUIRED)

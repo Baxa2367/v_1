@@ -182,7 +182,7 @@ json Db::query(const std::string& sql, const Params& params) {
     return tx([&](Tx& t) { return t.query(sql, params); });
 }
 
-json Db::rowToJson(const pqxx::row_ref& row) {
+json Db::rowToJson(const pqxx::row& row) {
     json obj = json::object();
     for (int i = 0; i < row.size(); ++i) {
         const auto& f = row[i];
