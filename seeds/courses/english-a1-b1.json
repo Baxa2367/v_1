@@ -1,0 +1,1915 @@
+{
+  "slug": "english-a1-b1",
+  "title": { "kk": "Ағылшын тілі A1–B1", "ru": "Английский язык A1–B1", "en": "English A1–B1" },
+  "description": {
+    "kk": "Ағылшын тілін A1-ден B1 деңгейіне дейін меңгеруге арналған толық курс: Present Simple-ден бастап күрделі грамматика мен оқу мәтіндеріне дейін. 8 деңгей, 80 тапсырма, екі босс деңгейі.",
+    "ru": "Полный курс английского языка от A1 до B1: от Present Simple до сложной грамматики и текстов для чтения. 8 уровней, 80 заданий, два босс-уровня.",
+    "en": "A complete English course from A1 to B1: from Present Simple to advanced grammar and reading texts. 8 levels, 80 tasks, two boss levels."
+  },
+  "category": "language",
+  "difficulty": 5,
+  "tags": ["english", "grammar", "vocabulary", "reading", "a1-b1"],
+  "cover": "language",
+  "levels": [
+    {
+      "order_no": 1,
+      "title": { "kk": "Present Simple және күнделікті өмір", "ru": "Present Simple и повседневная жизнь", "en": "Present Simple and daily life" },
+      "description": {
+        "kk": "Күнделікті әдеттер туралы айтуды үйреніңіз: болымды, болымсыз және сұрақ сөйлемдер, жиілік демеуліктері.",
+        "ru": "Учимся рассказывать о ежедневных привычках: утвердительные, отрицательные и вопросительные предложения, наречия частотности.",
+        "en": "Learn to talk about daily habits: affirmative, negative and question forms, adverbs of frequency."
+      },
+      "icon": "today",
+      "is_boss": false,
+      "unlock_rules": { "min_xp": 0, "min_prev_accuracy": 0, "required_tasks": 0 },
+      "topics": [
+        { "code": "en.present_simple.forms", "name": { "kk": "Present Simple: болымды түрі", "ru": "Present Simple: утвердительная форма", "en": "Present Simple: affirmative" } },
+        { "code": "en.present_simple.daily_routine", "name": { "kk": "Күн тәртібі және жиілік демеуліктері", "ru": "Распорядок дня и наречия частотности", "en": "Daily routine and adverbs of frequency" } }
+      ],
+      "tasks": [
+        {
+          "type": "single_choice",
+          "topic": "en.present_simple.forms",
+          "difficulty": 1,
+          "base_xp": 20,
+          "time_limit_sec": 60,
+          "prompt": { "kk": "Дұрыс нұсқаны таңдаңыз: She ___ to school by bus every morning.", "ru": "Выберите правильный вариант: She ___ to school by bus every morning.", "en": "Choose the correct option: She ___ to school by bus every morning." },
+          "explanation": { "kk": "«She» — 3-ші жақ жекеше бастауыш, сондықтан Present Simple-де етістікке -es жалғанады: goes. -o әрпінен кейін де -es жазылады.", "ru": "«She» — подлежащее 3-го лица единственного числа, поэтому в Present Simple к глаголу добавляется -es: goes. После -o также пишется -es." },
+          "hints": [
+            { "kk": "Бастауыш «She» — 3-ші жақ жекеше.", "ru": "Подлежащее «She» — 3-е лицо единственного числа." },
+            { "kk": "3-ші жақта етістікке -s немесе -es жалғанады.", "ru": "В 3-м лице к глаголу добавляется -s или -es." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "go", "ru": "go" } },
+            { "id": "b", "text": { "kk": "goes", "ru": "goes" } },
+            { "id": "c", "text": { "kk": "going", "ru": "going" } },
+            { "id": "d", "text": { "kk": "went", "ru": "went" } }
+          ] },
+          "answer_key": { "correct": ["b"] }
+        },
+        {
+          "type": "true_false",
+          "topic": "en.present_simple.forms",
+          "difficulty": 1,
+          "base_xp": 25,
+          "time_limit_sec": 70,
+          "prompt": { "kk": "Тұжырым дұрыс па, әлде бұрыс па? Ережеге назар аударыңыз.", "ru": "Верно или неверно утверждение? Обратите внимание на правило.", "en": "Is the statement true or false? Pay attention to the rule." },
+          "explanation": { "kk": "Дұрыс: he, she, it бастауыштарынан кейін етістікке -s немесе -es жалғанады: he works, she watches, it rains.", "ru": "Верно: после he, she, it в Present Simple к глаголу добавляется -s или -es: he works, she watches, it rains." },
+          "hints": [
+            { "kk": "«He works», «she watches» мысалдарын еске түсіріңіз.", "ru": "Вспомните примеры «he works», «she watches»." },
+            { "kk": "Ереже тек 3-ші жақ жекешеге қатысты.", "ru": "Правило касается только 3-го лица единственного числа." }
+          ],
+          "payload": { "statement": { "kk": "In Present Simple we add -s or -es to the verb after he, she and it.", "ru": "In Present Simple we add -s or -es to the verb after he, she and it." } },
+          "answer_key": { "correct": true }
+        },
+        {
+          "type": "cloze",
+          "topic": "en.present_simple.daily_routine",
+          "difficulty": 2,
+          "base_xp": 40,
+          "time_limit_sec": 150,
+          "prompt": { "kk": "Мәтінді оқып, әр бос орынға дұрыс етістік түрін қойыңыз.", "ru": "Прочитайте текст и выберите правильную форму глагола для каждого пропуска.", "en": "Read the text and choose the correct verb form for each gap." },
+          "explanation": { "kk": "«I» бастауышымен етістік жіктелмейді (get, have), ал «my sister» — 3-ші жақ жекеше, сондықтан goes деп жазылады.", "ru": "С «I» глагол не получает окончания (get, have), а «my sister» — 3-е лицо единственного числа, поэтому пишется goes." },
+          "hints": [
+            { "kk": "Алдымен әр сөйлемнің бастауышын анықтаңыз: I, I, my sister.", "ru": "Сначала определите подлежащее в каждом предложении: I, I, my sister." },
+            { "kk": "Бастауыш 3-ші жақ жекеше болса, етістікке -s/-es қосылады.", "ru": "Если подлежащее в 3-м лице единственного числа, глагол получает -s/-es." }
+          ],
+          "payload": {
+            "text": {
+              "kk": "My name is Arman. I {{1}} up at seven o'clock every day. Then I {{2}} breakfast with my family. My sister {{3}} to school at eight, but I start at nine.",
+              "ru": "My name is Arman. I {{1}} up at seven o'clock every day. Then I {{2}} breakfast with my family. My sister {{3}} to school at eight, but I start at nine."
+            },
+            "blanks": [
+              { "id": "1", "options": [
+                { "id": "b1a", "text": { "kk": "get", "ru": "get" } },
+                { "id": "b1b", "text": { "kk": "gets", "ru": "gets" } },
+                { "id": "b1c", "text": { "kk": "getting", "ru": "getting" } }
+              ] },
+              { "id": "2", "options": [
+                { "id": "b2a", "text": { "kk": "have", "ru": "have" } },
+                { "id": "b2b", "text": { "kk": "has", "ru": "has" } },
+                { "id": "b2c", "text": { "kk": "having", "ru": "having" } }
+              ] },
+              { "id": "3", "options": [
+                { "id": "b3a", "text": { "kk": "go", "ru": "go" } },
+                { "id": "b3b", "text": { "kk": "goes", "ru": "goes" } },
+                { "id": "b3c", "text": { "kk": "going", "ru": "going" } }
+              ] }
+            ]
+          },
+          "answer_key": { "blanks": { "1": "b1a", "2": "b2a", "3": "b3b" } }
+        },
+        {
+          "type": "ordering",
+          "topic": "en.present_simple.daily_routine",
+          "difficulty": 2,
+          "base_xp": 40,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "Сөздерді дұрыс ретпен қойып, сөйлем құрастырыңыз.", "ru": "Расставьте слова в правильном порядке, чтобы получилось предложение.", "en": "Put the words in the correct order to make a sentence." },
+          "explanation": { "kk": "Жиілік демеулігі always негізгі етістіктің алдында тұрады, ал уақыт мәндесі in the morning сөйлем соңында: She always drinks coffee in the morning.", "ru": "Наречие частотности always стоит перед смысловым глаголом, а обстоятельство времени in the morning — в конце: She always drinks coffee in the morning." },
+          "hints": [
+            { "kk": "Жиілік демеулігі негізгі етістіктің алдында тұрады.", "ru": "Наречие частотности стоит перед смысловым глаголом." },
+            { "kk": "Уақыт мәндесі сөйлемнің соңына қойылады.", "ru": "Обстоятельство времени ставится в конце предложения." }
+          ],
+          "payload": { "items": [
+            { "id": "i1", "text": { "kk": "She", "ru": "She" } },
+            { "id": "i2", "text": { "kk": "always", "ru": "always" } },
+            { "id": "i3", "text": { "kk": "drinks", "ru": "drinks" } },
+            { "id": "i4", "text": { "kk": "coffee", "ru": "coffee" } },
+            { "id": "i5", "text": { "kk": "in the morning", "ru": "in the morning" } }
+          ] },
+          "answer_key": { "order": ["i1", "i2", "i3", "i4", "i5"] }
+        },
+        {
+          "type": "matching",
+          "topic": "en.present_simple.daily_routine",
+          "difficulty": 2,
+          "base_xp": 45,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "Күн тәртібіне қатысты сөздерді қазақша аудармасымен сәйкестендіріңіз.", "ru": "Сопоставьте слова о распорядке дня с русским переводом.", "en": "Match the daily routine verbs with their translations." },
+          "explanation": { "kk": "wake up — ояну, have breakfast — таңғы ас ішу, go to work — жұмысқа бару, go to bed — ұйықтауға жату.", "ru": "wake up — просыпаться, have breakfast — завтракать, go to work — идти на работу, go to bed — ложиться спать." },
+          "hints": [
+            { "kk": "«Wake up» таңертең оянуды білдіреді.", "ru": "«Wake up» означает просыпаться утром." },
+            { "kk": "«Go to bed» — ұйықтауға жату.", "ru": "«Go to bed» — ложиться спать." }
+          ],
+          "payload": {
+            "left": [
+              { "id": "l1", "text": { "kk": "wake up", "ru": "wake up" } },
+              { "id": "l2", "text": { "kk": "have breakfast", "ru": "have breakfast" } },
+              { "id": "l3", "text": { "kk": "go to work", "ru": "go to work" } },
+              { "id": "l4", "text": { "kk": "go to bed", "ru": "go to bed" } }
+            ],
+            "right": [
+              { "id": "r1", "text": { "kk": "жұмысқа бару", "ru": "идти на работу" } },
+              { "id": "r2", "text": { "kk": "ояну", "ru": "просыпаться" } },
+              { "id": "r3", "text": { "kk": "таңғы ас ішу", "ru": "завтракать" } },
+              { "id": "r4", "text": { "kk": "ұйықтауға жату", "ru": "ложиться спать" } }
+            ]
+          },
+          "answer_key": { "pairs": { "l1": "r2", "l2": "r3", "l3": "r1", "l4": "r4" } }
+        },
+        {
+          "type": "multiple_choice",
+          "topic": "en.present_simple.forms",
+          "difficulty": 2,
+          "base_xp": 45,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "Барлық дұрыс сөйлемдерді таңдаңыз (Present Simple).", "ru": "Выберите все грамматически правильные предложения (Present Simple).", "en": "Choose all grammatically correct sentences (Present Simple)." },
+          "explanation": { "kk": "he/she/it үшін көмекші етістік does/doesn't қолданылады, сондықтан a және c дұрыс. f да дұрыс, өйткені they-мен етістік жіктелмейді. b, d, e — қате нұсқалар.", "ru": "С he/she/it используется does/doesn't, поэтому a и c верны. f тоже верно: с they глагол не получает окончания. b, d, e — ошибочные варианты." },
+          "hints": [
+            { "kk": "he/she/it үшін көмекші етістік — does немесе doesn't.", "ru": "Для he/she/it вспомогательный глагол — does или doesn't." },
+            { "kk": "does-тан кейін етістік түбір түрінде тұрады.", "ru": "После does глагол стоит в начальной форме." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "He doesn't like tea.", "ru": "He doesn't like tea." } },
+            { "id": "b", "text": { "kk": "He don't like tea.", "ru": "He don't like tea." } },
+            { "id": "c", "text": { "kk": "Does she work here?", "ru": "Does she work here?" } },
+            { "id": "d", "text": { "kk": "Do she work here?", "ru": "Do she work here?" } },
+            { "id": "e", "text": { "kk": "They goes home.", "ru": "They goes home." } },
+            { "id": "f", "text": { "kk": "They go home.", "ru": "They go home." } }
+          ] },
+          "answer_key": { "correct": ["a", "c", "f"] }
+        },
+        {
+          "type": "short_answer",
+          "topic": "en.present_simple.forms",
+          "difficulty": 2,
+          "base_xp": 35,
+          "time_limit_sec": 80,
+          "prompt": { "kk": "Сұрақты толықтырыңыз, бір сөз жазыңыз: ___ you play tennis?", "ru": "Дополните вопрос, напишите одно слово: ___ you play tennis?", "en": "Complete the question with one word: ___ you play tennis?" },
+          "explanation": { "kk": "«You» бастауышымен сұрақ Do көмекші етістігі арқылы жасалады: Do you play tennis?", "ru": "С подлежащим «you» вопрос строится с помощью вспомогательного глагола Do: Do you play tennis?" },
+          "hints": [
+            { "kk": "«You» бастауышы 1-ші және 2-ші жаққа жатады, көмекші етістік — Do.", "ru": "«You» требует вспомогательного глагола Do." },
+            { "kk": "Сөйлем үлкен әріппен басталады.", "ru": "Предложение начинается с заглавной буквы." }
+          ],
+          "payload": { "placeholder": { "kk": "Бір сөз жазыңыз", "ru": "Напишите одно слово" } },
+          "answer_key": { "accepted": ["Do", "do"], "case_sensitive": false }
+        },
+        {
+          "type": "timed_quiz",
+          "topic": "en.present_simple.daily_routine",
+          "difficulty": 1,
+          "base_xp": 20,
+          "time_limit_sec": 25,
+          "prompt": { "kk": "Жылдам жауап беріңіз: My brother ___ TV in the evening.", "ru": "Отвечайте быстро: My brother ___ TV in the evening.", "en": "Answer quickly: My brother ___ TV in the evening." },
+          "explanation": { "kk": "«My brother» — 3-ші жақ жекеше, ал -ch әріптер тіркесінен кейін -es жалғанады: watches.", "ru": "«My brother» — 3-е лицо единственного числа, после -ch добавляется -es: watches." },
+          "hints": [
+            { "kk": "Бастауыш — «my brother», яғни he.", "ru": "Подлежащее «my brother» заменяется на he." },
+            { "kk": "-ch, -sh, -ss, -o тіркестерінен кейін -es жазылады.", "ru": "После -ch, -sh, -ss, -o пишется -es." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "watch", "ru": "watch" } },
+            { "id": "b", "text": { "kk": "watches", "ru": "watches" } },
+            { "id": "c", "text": { "kk": "watching", "ru": "watching" } },
+            { "id": "d", "text": { "kk": "is watch", "ru": "is watch" } }
+          ] },
+          "answer_key": { "correct": ["b"] }
+        },
+        {
+          "type": "single_choice",
+          "topic": "en.present_simple.forms",
+          "difficulty": 2,
+          "base_xp": 40,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "Қай сөйлем дұрыс құрастырылған? (be етістігі және жиілік демеулігі)", "ru": "Какое предложение построено правильно? (глагол be и наречие частотности)", "en": "Which sentence is correct? (verb be and an adverb of frequency)" },
+          "explanation": { "kk": "«Be» етістігі (is/am/are) бар сөйлемде жиілік демеулігі оның артында тұрады: She is always happy.", "ru": "В предложениях с глаголом be (is/am/are) наречие частотности стоит после него: She is always happy." },
+          "hints": [
+            { "kk": "Сөйлемде «is» бар — демеулік оның алдында емес, артында тұрады.", "ru": "В предложении есть «is» — наречие ставится после него." },
+            { "kk": "Жиілік демеулігі мен сын есімнің орнын салыстырыңыз.", "ru": "Сравните порядок наречия и прилагательного." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "She is always happy.", "ru": "She is always happy." } },
+            { "id": "b", "text": { "kk": "She always is happy.", "ru": "She always is happy." } },
+            { "id": "c", "text": { "kk": "Always she is happy.", "ru": "Always she is happy." } },
+            { "id": "d", "text": { "kk": "She is happy always.", "ru": "She is happy always." } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "single_choice",
+          "topic": "en.present_simple.daily_routine",
+          "difficulty": 2,
+          "base_xp": 35,
+          "time_limit_sec": 80,
+          "prompt": { "kk": "Дұрыс нұсқаны таңдаңыз: I ___ drink coffee at night.", "ru": "Выберите правильный вариант: I ___ drink coffee at night.", "en": "Choose the correct option: I ___ drink coffee at night." },
+          "explanation": { "kk": "«Never» — ешқашан дегенді білдіреді және етістіктің алдында тұрады. «Not» бұл орында жалғыз қолданылмайды, «no» зат есімнің алдында тұрады.", "ru": "«Never» означает «никогда» и стоит перед глаголом. «Not» здесь не употребляется отдельно, «no» ставится перед существительным." },
+          "hints": [
+            { "kk": "Бұл сөйлемде болымсыз мағына бір демеулік арқылы беріледі.", "ru": "Отрицательное значение здесь передаётся одним наречием." },
+            { "kk": "«Ever» сұрақтарда қолданылады, болымсыз сөйлемге келмейді.", "ru": "«Ever» используется в вопросах, для отрицания не подходит." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "never", "ru": "never" } },
+            { "id": "b", "text": { "kk": "ever", "ru": "ever" } },
+            { "id": "c", "text": { "kk": "no", "ru": "no" } },
+            { "id": "d", "text": { "kk": "not", "ru": "not" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        }
+      ]
+    },
+    {
+      "order_no": 2,
+      "title": { "kk": "Past Simple және әңгімелер", "ru": "Past Simple и истории", "en": "Past Simple and stories" },
+      "description": {
+        "kk": "Өткен оқиғаларды баяндауды үйреніңіз: дұрыс және дұрыс емес етістіктер, уақыт белгілері.",
+        "ru": "Учимся рассказывать о прошлых событиях: правильные и неправильные глаголы, указатели времени.",
+        "en": "Learn to tell stories about the past: regular and irregular verbs, time markers."
+      },
+      "icon": "history",
+      "is_boss": false,
+      "unlock_rules": { "min_xp": 120, "min_prev_accuracy": 0.6, "required_tasks": 10 },
+      "topics": [
+        { "code": "en.past_simple.verbs", "name": { "kk": "Past Simple: дұрыс және дұрыс емес етістіктер", "ru": "Past Simple: правильные и неправильные глаголы", "en": "Past Simple: regular and irregular verbs" } },
+        { "code": "en.past_simple.timemarkers", "name": { "kk": "Өткен шақтың уақыт белгілері", "ru": "Указатели времени Past Simple", "en": "Past Simple time markers" } }
+      ],
+      "tasks": [
+        {
+          "type": "single_choice",
+          "topic": "en.past_simple.verbs",
+          "difficulty": 2,
+          "base_xp": 30,
+          "time_limit_sec": 70,
+          "prompt": { "kk": "Дұрыс нұсқаны таңдаңыз: We ___ to the cinema last Sunday.", "ru": "Выберите правильный вариант: We ___ to the cinema last Sunday.", "en": "Choose the correct option: We ___ to the cinema last Sunday." },
+          "explanation": { "kk": "«Last Sunday» өткен шақты білдіреді, ал «go» — дұрыс емес етістік, оның Past Simple түрі went.", "ru": "«Last Sunday» указывает на прошлое, а «go» — неправильный глагол, его форма Past Simple — went." },
+          "hints": [
+            { "kk": "«Last Sunday» — өткен шақ белгісі.", "ru": "«Last Sunday» — маркер прошедшего времени." },
+            { "kk": "«Go» етістігінің екінші түрі — went.", "ru": "Вторая форма глагола «go» — went." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "went", "ru": "went" } },
+            { "id": "b", "text": { "kk": "go", "ru": "go" } },
+            { "id": "c", "text": { "kk": "gone", "ru": "gone" } },
+            { "id": "d", "text": { "kk": "goed", "ru": "goed" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "single_choice",
+          "topic": "en.past_simple.verbs",
+          "difficulty": 3,
+          "base_xp": 40,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "Болымсыз сөйлемнің дұрыс түрін таңдаңыз: She ___ me yesterday.", "ru": "Выберите правильную отрицательную форму: She ___ me yesterday.", "en": "Choose the correct negative form: She ___ me yesterday." },
+          "explanation": { "kk": "Past Simple-де болымсыз сөйлем didn't + етістіктің түбір түрі арқылы жасалады: She didn't call me yesterday.", "ru": "В Past Simple отрицание строится как didn't + начальная форма глагола: She didn't call me yesterday." },
+          "hints": [
+            { "kk": "Көмекші етістік — did, оның болымсыз түрі — didn't.", "ru": "Вспомогательный глагол — did, его отрицание — didn't." },
+            { "kk": "didn't-тан кейін етістік -ed жалғауынсыз тұрады.", "ru": "После didn't глагол стоит без окончания -ed." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "didn't call", "ru": "didn't call" } },
+            { "id": "b", "text": { "kk": "doesn't call", "ru": "doesn't call" } },
+            { "id": "c", "text": { "kk": "not called", "ru": "not called" } },
+            { "id": "d", "text": { "kk": "didn't called", "ru": "didn't called" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "true_false",
+          "topic": "en.past_simple.verbs",
+          "difficulty": 2,
+          "base_xp": 30,
+          "time_limit_sec": 70,
+          "prompt": { "kk": "Тұжырым дұрыс па, әлде бұрыс па? Past Simple ережесіне назар аударыңыз.", "ru": "Верно или неверно утверждение? Обратите внимание на правило Past Simple.", "en": "Is the statement true or false? Pay attention to the Past Simple rule." },
+          "explanation": { "kk": "«Go» — дұрыс емес етістік, оның өткен шақ түрі went, «goed» деген форма жоқ.", "ru": "«Go» — неправильный глагол, его форма прошедшего времени — went, формы «goed» не существует." },
+          "hints": [
+            { "kk": "Дұрыс емес етістіктер -ed жалғауымен жасалмайды.", "ru": "Неправильные глаголы не образуют форму с -ed." },
+            { "kk": "«Go → went → gone» қатарын еске түсіріңіз.", "ru": "Вспомните ряд «go → went → gone»." }
+          ],
+          "payload": { "statement": { "kk": "The past form of the verb 'go' is 'goed'.", "ru": "The past form of the verb 'go' is 'goed'." } },
+          "answer_key": { "correct": false }
+        },
+        {
+          "type": "multiple_choice",
+          "topic": "en.past_simple.verbs",
+          "difficulty": 3,
+          "base_xp": 45,
+          "time_limit_sec": 110,
+          "prompt": { "kk": "Past Simple-де дұрыс емес етістіктерді таңдаңыз.", "ru": "Выберите неправильные глаголы в Past Simple.", "en": "Choose the irregular verbs in Past Simple." },
+          "explanation": { "kk": "buy → bought, take → took, see → saw — дұрыс емес етістіктер. play, watch, visit — дұрыс етістіктер: played, watched, visited.", "ru": "buy → bought, take → took, see → saw — неправильные глаголы. play, watch, visit — правильные: played, watched, visited." },
+          "hints": [
+            { "kk": "Дұрыс етістіктер -ed жалғауымен жасалады.", "ru": "Правильные глаголы образуют форму с помощью -ed." },
+            { "kk": "bought, took, saw формалары -ed жалғауынсыз жасалған.", "ru": "Формы bought, took, saw образованы без -ed." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "buy", "ru": "buy" } },
+            { "id": "b", "text": { "kk": "play", "ru": "play" } },
+            { "id": "c", "text": { "kk": "take", "ru": "take" } },
+            { "id": "d", "text": { "kk": "watch", "ru": "watch" } },
+            { "id": "e", "text": { "kk": "see", "ru": "see" } },
+            { "id": "f", "text": { "kk": "visit", "ru": "visit" } }
+          ] },
+          "answer_key": { "correct": ["a", "c", "e"] }
+        },
+        {
+          "type": "matching",
+          "topic": "en.past_simple.verbs",
+          "difficulty": 3,
+          "base_xp": 45,
+          "time_limit_sec": 110,
+          "prompt": { "kk": "Етістіктерді олардың Past Simple түрімен сәйкестендіріңіз.", "ru": "Сопоставьте глаголы с их формой Past Simple.", "en": "Match the verbs with their Past Simple forms." },
+          "explanation": { "kk": "go → went, write → wrote, eat → ate, buy → bought. Барлығы дұрыс емес етістіктер.", "ru": "go → went, write → wrote, eat → ate, buy → bought. Все это неправильные глаголы." },
+          "hints": [
+            { "kk": "«Write» етістігінің өткен шағы — wrote.", "ru": "Прошедшая форма «write» — wrote." },
+            { "kk": "«Eat» етістігінің өткен шағы — ate, «buy» — bought.", "ru": "Прошедшая форма «eat» — ate, «buy» — bought." }
+          ],
+          "payload": {
+            "left": [
+              { "id": "l1", "text": { "kk": "go", "ru": "go" } },
+              { "id": "l2", "text": { "kk": "write", "ru": "write" } },
+              { "id": "l3", "text": { "kk": "eat", "ru": "eat" } },
+              { "id": "l4", "text": { "kk": "buy", "ru": "buy" } }
+            ],
+            "right": [
+              { "id": "r1", "text": { "kk": "wrote", "ru": "wrote" } },
+              { "id": "r2", "text": { "kk": "went", "ru": "went" } },
+              { "id": "r3", "text": { "kk": "bought", "ru": "bought" } },
+              { "id": "r4", "text": { "kk": "ate", "ru": "ate" } }
+            ]
+          },
+          "answer_key": { "pairs": { "l1": "r2", "l2": "r1", "l3": "r4", "l4": "r3" } }
+        },
+        {
+          "type": "ordering",
+          "topic": "en.past_simple.timemarkers",
+          "difficulty": 3,
+          "base_xp": 40,
+          "time_limit_sec": 100,
+          "prompt": { "kk": "Сөздерді дұрыс ретпен қойып, өткен шақтағы сөйлем құрастырыңыз.", "ru": "Расставьте слова в правильном порядке, чтобы получилось предложение в Past Simple.", "en": "Put the words in the correct order to make a Past Simple sentence." },
+          "explanation": { "kk": "Сөз тәртібі: бастауыш + етістік + толықтауыш + уақыт мәндесі: She visited her grandmother two days ago.", "ru": "Порядок слов: подлежащее + глагол + дополнение + обстоятельство времени: She visited her grandmother two days ago." },
+          "hints": [
+            { "kk": "Сөйлем бастауыштан басталады.", "ru": "Предложение начинается с подлежащего." },
+            { "kk": "«Two days ago» тіркесі сөйлемнің соңында тұрады.", "ru": "Выражение «two days ago» стоит в конце." }
+          ],
+          "payload": { "items": [
+            { "id": "i1", "text": { "kk": "She", "ru": "She" } },
+            { "id": "i2", "text": { "kk": "visited", "ru": "visited" } },
+            { "id": "i3", "text": { "kk": "her grandmother", "ru": "her grandmother" } },
+            { "id": "i4", "text": { "kk": "two days ago", "ru": "two days ago" } }
+          ] },
+          "answer_key": { "order": ["i1", "i2", "i3", "i4"] }
+        },
+        {
+          "type": "short_answer",
+          "topic": "en.past_simple.verbs",
+          "difficulty": 3,
+          "base_xp": 35,
+          "time_limit_sec": 80,
+          "prompt": { "kk": "«Teach» етістігінің өткен шақ түрін жазыңыз.", "ru": "Напишите форму прошедшего времени глагола «teach».", "en": "Write the past form of the verb 'teach'." },
+          "explanation": { "kk": "Teach — дұрыс емес етістік: teach → taught. Жазылуында -gh әріптері бар, бірақ айтылмайды.", "ru": "Teach — неправильный глагол: teach → taught. В написании есть -gh, но она не произносится." },
+          "hints": [
+            { "kk": "Бұл етістік -ed жалғауымен жасалмайды.", "ru": "Этот глагол не образует форму с -ed." },
+            { "kk": "Сөз «taught» деп жазылады, «a» әрпі бар.", "ru": "Слово пишется «taught», с буквой «a»." }
+          ],
+          "payload": { "placeholder": { "kk": "Бір сөз жазыңыз", "ru": "Напишите одно слово" } },
+          "answer_key": { "accepted": ["taught", "Taught"], "case_sensitive": false }
+        },
+        {
+          "type": "cloze",
+          "topic": "en.past_simple.verbs",
+          "difficulty": 3,
+          "base_xp": 50,
+          "time_limit_sec": 160,
+          "prompt": { "kk": "Мәтінді оқып, әр бос орынға өткен шақтағы дұрыс етістікті қойыңыз.", "ru": "Прочитайте текст и выберите правильную форму глагола в прошедшем времени для каждого пропуска.", "en": "Read the text and choose the correct past form for each gap." },
+          "explanation": { "kk": "Оқиға «last weekend» кезінде болған, сондықтан барлық етістік Past Simple түрінде: visited, went, ate, watched.", "ru": "События происходили «last weekend», поэтому все глаголы стоят в Past Simple: visited, went, ate, watched." },
+          "hints": [
+            { "kk": "Мәтіннің бірінші сөзі «Last weekend» — өткен шақ белгісі.", "ru": "Первое слово текста «Last weekend» — маркер прошлого." },
+            { "kk": "«Go» және «eat» — дұрыс емес етістіктер: went, ate.", "ru": "«Go» и «eat» — неправильные глаголы: went, ate." }
+          ],
+          "payload": {
+            "text": {
+              "kk": "Last weekend Nurlan {{1}} his cousin in Almaty. They {{2}} to a small café near the park and {{3}} a lot of beshbarmak. In the evening they {{4}} a film and went to bed late.",
+              "ru": "Last weekend Nurlan {{1}} his cousin in Almaty. They {{2}} to a small café near the park and {{3}} a lot of beshbarmak. In the evening they {{4}} a film and went to bed late."
+            },
+            "blanks": [
+              { "id": "1", "options": [
+                { "id": "b1a", "text": { "kk": "visited", "ru": "visited" } },
+                { "id": "b1b", "text": { "kk": "visit", "ru": "visit" } },
+                { "id": "b1c", "text": { "kk": "visiting", "ru": "visiting" } }
+              ] },
+              { "id": "2", "options": [
+                { "id": "b2a", "text": { "kk": "went", "ru": "went" } },
+                { "id": "b2b", "text": { "kk": "go", "ru": "go" } },
+                { "id": "b2c", "text": { "kk": "gone", "ru": "gone" } }
+              ] },
+              { "id": "3", "options": [
+                { "id": "b3a", "text": { "kk": "eat", "ru": "eat" } },
+                { "id": "b3b", "text": { "kk": "ate", "ru": "ate" } },
+                { "id": "b3c", "text": { "kk": "eaten", "ru": "eaten" } }
+              ] },
+              { "id": "4", "options": [
+                { "id": "b4a", "text": { "kk": "watched", "ru": "watched" } },
+                { "id": "b4b", "text": { "kk": "watch", "ru": "watch" } },
+                { "id": "b4c", "text": { "kk": "watching", "ru": "watching" } }
+              ] }
+            ]
+          },
+          "answer_key": { "blanks": { "1": "b1a", "2": "b2a", "3": "b3b", "4": "b4a" } }
+        },
+        {
+          "type": "timed_quiz",
+          "topic": "en.past_simple.verbs",
+          "difficulty": 2,
+          "base_xp": 25,
+          "time_limit_sec": 25,
+          "prompt": { "kk": "Жылдам жауап беріңіз: «see» етістігінің өткен шақ түрі қандай?", "ru": "Отвечайте быстро: какая форма прошедшего времени у глагола «see»?", "en": "Answer quickly: what is the past form of 'see'?" },
+          "explanation": { "kk": "see → saw → seen. Past Simple үшін екінші форма — saw қолданылады.", "ru": "see → saw → seen. Для Past Simple используется вторая форма — saw." },
+          "hints": [
+            { "kk": "Бұл дұрыс емес етістік.", "ru": "Это неправильный глагол." },
+            { "kk": "«Seen» — үшінші форма (Past Participle).", "ru": "«Seen» — третья форма (Past Participle)." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "saw", "ru": "saw" } },
+            { "id": "b", "text": { "kk": "seen", "ru": "seen" } },
+            { "id": "c", "text": { "kk": "seed", "ru": "seed" } },
+            { "id": "d", "text": { "kk": "sees", "ru": "sees" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "single_choice",
+          "topic": "en.past_simple.timemarkers",
+          "difficulty": 3,
+          "base_xp": 40,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "Дұрыс уақыт белгісін таңдаңыз: She finished school ___.", "ru": "Выберите правильный указатель времени: She finished school ___.", "en": "Choose the correct time marker: She finished school ___." },
+          "explanation": { "kk": "«Ago» уақыт мөлшерінен кейін тұрады: two years ago. «Before» басқа тіркестерде қолданылады, «in» келешекке қатысты.", "ru": "«Ago» ставится после указания периода: two years ago. «Before» используется иначе, а «in» относится к будущему." },
+          "hints": [
+            { "kk": "«Ago» сөзі уақыт мөлшерінен кейін тұрады.", "ru": "«Ago» стоит после указания периода времени." },
+            { "kk": "Қалған нұсқаларда сөз тәртібі бұзылған.", "ru": "В остальных вариантах нарушен порядок слов." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "two years ago", "ru": "two years ago" } },
+            { "id": "b", "text": { "kk": "before two years", "ru": "before two years" } },
+            { "id": "c", "text": { "kk": "ago two years", "ru": "ago two years" } },
+            { "id": "d", "text": { "kk": "in two years ago", "ru": "in two years ago" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        }
+      ]
+    },
+    {
+      "order_no": 3,
+      "title": { "kk": "Articles және зат есімдер", "ru": "Артикли и существительные", "en": "Articles and nouns" },
+      "description": {
+        "kk": "a/an/the артиклін, саналатын және саналмайтын зат есімдерді, көпше түрді дұрыс қолдануды үйреніңіз.",
+        "ru": "Учимся правильно использовать артикли a/an/the, исчисляемые и неисчисляемые существительные, множественное число.",
+        "en": "Learn to use a/an/the, countable and uncountable nouns, and plurals correctly."
+      },
+      "icon": "category",
+      "is_boss": false,
+      "unlock_rules": { "min_xp": 260, "min_prev_accuracy": 0.6, "required_tasks": 10 },
+      "topics": [
+        { "code": "en.articles.rules", "name": { "kk": "Артикльдер: a, an, the", "ru": "Артикли: a, an, the", "en": "Articles: a, an, the" } },
+        { "code": "en.nouns.countability", "name": { "kk": "Саналатын және саналмайтын зат есімдер", "ru": "Исчисляемые и неисчисляемые существительные", "en": "Countable and uncountable nouns" } }
+      ],
+      "tasks": [
+        {
+          "type": "single_choice",
+          "topic": "en.articles.rules",
+          "difficulty": 3,
+          "base_xp": 45,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "Дұрыс артикльді таңдаңыз: I saw ___ elephant at the zoo. It was very big.", "ru": "Выберите правильный артикль: I saw ___ elephant at the zoo. It was very big.", "en": "Choose the correct article: I saw ___ elephant at the zoo. It was very big." },
+          "explanation": { "kk": "«Elephant» дауысты дыбыстан басталады, ал бірінші рет айтылып тұрған жеке зат туралы сөз болып отыр, сондықтан an қолданылады.", "ru": "«Elephant» начинается с гласного звука, а предмет упоминается впервые, поэтому используется an." },
+          "hints": [
+            { "kk": "Сөздің бірінші дыбысына назар аударыңыз: e — дауысты.", "ru": "Обратите внимание на первый звук: e — гласный." },
+            { "kk": "Белгісіз жеке зат үшін a немесе an қолданылады.", "ru": "Для неопределённого предмета используется a или an." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "an", "ru": "an" } },
+            { "id": "b", "text": { "kk": "a", "ru": "a" } },
+            { "id": "c", "text": { "kk": "the", "ru": "the" } },
+            { "id": "d", "text": { "kk": "no article", "ru": "no article" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "single_choice",
+          "topic": "en.articles.rules",
+          "difficulty": 3,
+          "base_xp": 45,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "Дұрыс артикльді таңдаңыз: ___ sun rises in the east.", "ru": "Выберите правильный артикль: ___ sun rises in the east.", "en": "Choose the correct article: ___ sun rises in the east." },
+          "explanation": { "kk": "Әлемде жалғыз, біреу-ақ заттар (the sun, the moon, the sky) әрқашан the артиклімен қолданылады.", "ru": "Единственные в своём роде предметы (the sun, the moon, the sky) всегда употребляются с артиклем the." },
+          "hints": [
+            { "kk": "Күн — әлемде жалғыз нәрсе.", "ru": "Солнце — единственный в своём роде объект." },
+            { "kk": "Белгілі, нақты зат үшін the қолданылады.", "ru": "Для определённого, известного предмета используется the." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "The", "ru": "The" } },
+            { "id": "b", "text": { "kk": "A", "ru": "A" } },
+            { "id": "c", "text": { "kk": "An", "ru": "An" } },
+            { "id": "d", "text": { "kk": "no article", "ru": "no article" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "true_false",
+          "topic": "en.articles.rules",
+          "difficulty": 3,
+          "base_xp": 35,
+          "time_limit_sec": 80,
+          "prompt": { "kk": "Тұжырым дұрыс па, әлде бұрыс па? Айтылуға назар аударыңыз.", "ru": "Верно или неверно утверждение? Обратите внимание на произношение.", "en": "Is the statement true or false? Pay attention to pronunciation." },
+          "explanation": { "kk": "«Hour» сөзінде h айтылмайды, сөз дауысты дыбыстан басталып естіледі, сондықтан an hour деп жазылады. Артикль әріпке емес, дыбысқа тәуелді.", "ru": "В слове «hour» h не произносится, слово начинается с гласного звука, поэтому пишется an hour. Артикль зависит от звука, а не от буквы." },
+          "hints": [
+            { "kk": "Артикль әріпке емес, дыбысқа байланысты таңдалады.", "ru": "Артикль выбирается по звуку, а не по букве." },
+            { "kk": "«Hour» сөзін дауыстап айтып көріңіз: [ˈaʊə].", "ru": "Произнесите «hour» вслух: [ˈaʊə]." }
+          ],
+          "payload": { "statement": { "kk": "We write 'an hour' because the word 'hour' starts with a vowel sound.", "ru": "We write 'an hour' because the word 'hour' starts with a vowel sound." } },
+          "answer_key": { "correct": true }
+        },
+        {
+          "type": "multiple_choice",
+          "topic": "en.articles.rules",
+          "difficulty": 4,
+          "base_xp": 55,
+          "time_limit_sec": 130,
+          "prompt": { "kk": "Артикльдері дұрыс қолданылған сөйлемдерді таңдаңыз.", "ru": "Выберите предложения, в которых артикли употреблены правильно.", "en": "Choose the sentences where the articles are used correctly." },
+          "explanation": { "kk": "Кәсіп атауы алдында a/an керек: He is an engineer. Саналмайтын зат есімдер (information, advice) артикльсіз қолданылады, оларға a/an жалғанбайды.", "ru": "Перед названием профессии нужен a/an: He is an engineer. Неисчисляемые существительные (information, advice) употребляются без артикля, a/an с ними не ставится." },
+          "hints": [
+            { "kk": "«Engineer» дауысты дыбыстан басталады — an.", "ru": "«Engineer» начинается с гласного звука — an." },
+            { "kk": "«Information» және «advice» — саналмайтын зат есімдер.", "ru": "«Information» и «advice» — неисчисляемые существительные." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "He is an engineer.", "ru": "He is an engineer." } },
+            { "id": "b", "text": { "kk": "He is engineer.", "ru": "He is engineer." } },
+            { "id": "c", "text": { "kk": "We need information.", "ru": "We need information." } },
+            { "id": "d", "text": { "kk": "We need an information.", "ru": "We need an information." } },
+            { "id": "e", "text": { "kk": "She gave me an advice.", "ru": "She gave me an advice." } },
+            { "id": "f", "text": { "kk": "She gave me a good advice.", "ru": "She gave me a good advice." } }
+          ] },
+          "answer_key": { "correct": ["a", "c"] }
+        },
+        {
+          "type": "matching",
+          "topic": "en.nouns.countability",
+          "difficulty": 3,
+          "base_xp": 50,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "Зат есімдерді көпше түрімен сәйкестендіріңіз.", "ru": "Сопоставьте существительные с их формой множественного числа.", "en": "Match the nouns with their plural forms." },
+          "explanation": { "kk": "child → children, mouse → mice, woman → women, foot → feet. Бұлар ережесіз көпше түр жасайтын зат есімдер.", "ru": "child → children, mouse → mice, woman → women, foot → feet. Это существительные с особой формой множественного числа." },
+          "hints": [
+            { "kk": "Бұл сөздерге -s жалғауы жалғанбайды.", "ru": "К этим словам не добавляется -s." },
+            { "kk": "«Woman» сөзінің көпше түрі «women» деп жазылады.", "ru": "Множественное число «woman» — «women»." }
+          ],
+          "payload": {
+            "left": [
+              { "id": "l1", "text": { "kk": "child", "ru": "child" } },
+              { "id": "l2", "text": { "kk": "mouse", "ru": "mouse" } },
+              { "id": "l3", "text": { "kk": "woman", "ru": "woman" } },
+              { "id": "l4", "text": { "kk": "foot", "ru": "foot" } }
+            ],
+            "right": [
+              { "id": "r1", "text": { "kk": "feet", "ru": "feet" } },
+              { "id": "r2", "text": { "kk": "children", "ru": "children" } },
+              { "id": "r3", "text": { "kk": "mice", "ru": "mice" } },
+              { "id": "r4", "text": { "kk": "women", "ru": "women" } }
+            ]
+          },
+          "answer_key": { "pairs": { "l1": "r2", "l2": "r3", "l3": "r4", "l4": "r1" } }
+        },
+        {
+          "type": "ordering",
+          "topic": "en.nouns.countability",
+          "difficulty": 3,
+          "base_xp": 45,
+          "time_limit_sec": 100,
+          "prompt": { "kk": "Сөздерді дұрыс ретпен қойыңыз.", "ru": "Расставьте слова в правильном порядке.", "en": "Put the words in the correct order." },
+          "explanation": { "kk": "There are құрылымында көпше зат есім (apples) қолданылады, ал орын мәндесі соңында тұрады: There are three apples on the table.", "ru": "В конструкции There are используется множественное число (apples), а обстоятельство места стоит в конце: There are three apples on the table." },
+          "hints": [
+            { "kk": "Сөйлем «There are» құрылымынан басталады.", "ru": "Предложение начинается с конструкции «There are»." },
+            { "kk": "Орын мәндесі (on the table) соңында тұрады.", "ru": "Обстоятельство места (on the table) стоит в конце." }
+          ],
+          "payload": { "items": [
+            { "id": "i1", "text": { "kk": "There", "ru": "There" } },
+            { "id": "i2", "text": { "kk": "are", "ru": "are" } },
+            { "id": "i3", "text": { "kk": "three apples", "ru": "three apples" } },
+            { "id": "i4", "text": { "kk": "on the table", "ru": "on the table" } }
+          ] },
+          "answer_key": { "order": ["i1", "i2", "i3", "i4"] }
+        },
+        {
+          "type": "short_answer",
+          "topic": "en.nouns.countability",
+          "difficulty": 3,
+          "base_xp": 40,
+          "time_limit_sec": 80,
+          "prompt": { "kk": "«Knife» сөзінің көпше түрін жазыңыз.", "ru": "Напишите форму множественного числа слова «knife».", "en": "Write the plural form of 'knife'." },
+          "explanation": { "kk": "«-fe» әріптерімен аяқталатын зат есімдерде fe ве-ге ауысып, -s қосылады: knife → knives. Басқа мысалдар: wife → wives, life → lives.", "ru": "У существительных на -fe окончание fe переходит в ve и добавляется -s: knife → knives. Другие примеры: wife → wives, life → lives." },
+          "hints": [
+            { "kk": "-fe әріптері өзгеретінін ұмытпаңыз.", "ru": "Не забудьте, что -fe изменяется." },
+            { "kk": "Жауапта «ve» тіркесі болады.", "ru": "В ответе будет сочетание «ve»." }
+          ],
+          "payload": { "placeholder": { "kk": "Бір сөз жазыңыз", "ru": "Напишите одно слово" } },
+          "answer_key": { "accepted": ["knives"], "case_sensitive": false }
+        },
+        {
+          "type": "cloze",
+          "topic": "en.articles.rules",
+          "difficulty": 4,
+          "base_xp": 60,
+          "time_limit_sec": 170,
+          "prompt": { "kk": "Мәтінді оқып, әр бос орынға дұрыс артикльді қойыңыз (кейбір бос орындарға артикль керек емес).", "ru": "Прочитайте текст и вставьте правильный артикль в каждый пропуск.", "en": "Read the text and put the correct article in each gap." },
+          "explanation": { "kk": "Бірінші ескертуде белгісіз жеке зат — a small village. Нақты жағажай — the beach. Жалғыз су — the water. «Old» дауысты дыбыстан басталады, сондықтан an old boat.", "ru": "При первом упоминании неопределённый предмет — a small village. Конкретный пляж — the beach. Единственная в контексте вода — the water. «Old» начинается с гласного звука, поэтому an old boat." },
+          "hints": [
+            { "kk": "Бірінші рет айтылған жеке затқа a/an қолданылады.", "ru": "При первом упоминании предмета используется a/an." },
+            { "kk": "Екінші сөйлемдегі жағажай бұрын айтылған, сондықтан the.", "ru": "Пляж уже упомянут, поэтому the." }
+          ],
+          "payload": {
+            "text": {
+              "kk": "Tom lives in {{1}} small village near the sea. Every morning he walks to {{2}} beach with his dog. {{3}} water is cold in winter, but Tom swims anyway. He wants to buy {{4}} old boat one day.",
+              "ru": "Tom lives in {{1}} small village near the sea. Every morning he walks to {{2}} beach with his dog. {{3}} water is cold in winter, but Tom swims anyway. He wants to buy {{4}} old boat one day."
+            },
+            "blanks": [
+              { "id": "1", "options": [
+                { "id": "b1a", "text": { "kk": "a", "ru": "a" } },
+                { "id": "b1b", "text": { "kk": "the", "ru": "the" } },
+                { "id": "b1c", "text": { "kk": "an", "ru": "an" } }
+              ] },
+              { "id": "2", "options": [
+                { "id": "b2a", "text": { "kk": "the", "ru": "the" } },
+                { "id": "b2b", "text": { "kk": "a", "ru": "a" } },
+                { "id": "b2c", "text": { "kk": "an", "ru": "an" } }
+              ] },
+              { "id": "3", "options": [
+                { "id": "b3a", "text": { "kk": "The", "ru": "The" } },
+                { "id": "b3b", "text": { "kk": "A", "ru": "A" } },
+                { "id": "b3c", "text": { "kk": "An", "ru": "An" } }
+              ] },
+              { "id": "4", "options": [
+                { "id": "b4a", "text": { "kk": "an", "ru": "an" } },
+                { "id": "b4b", "text": { "kk": "a", "ru": "a" } },
+                { "id": "b4c", "text": { "kk": "the", "ru": "the" } }
+              ] }
+            ]
+          },
+          "answer_key": { "blanks": { "1": "b1a", "2": "b2a", "3": "b3a", "4": "b4a" } }
+        },
+        {
+          "type": "timed_quiz",
+          "topic": "en.nouns.countability",
+          "difficulty": 3,
+          "base_xp": 30,
+          "time_limit_sec": 25,
+          "prompt": { "kk": "Жылдам жауап беріңіз: one box, two ___.", "ru": "Отвечайте быстро: one box, two ___.", "en": "Answer quickly: one box, two ___." },
+          "explanation": { "kk": "-x әрпімен аяқталатын зат есімдерге -es жалғанады: box → boxes.", "ru": "К существительным на -x добавляется -es: box → boxes." },
+          "hints": [
+            { "kk": "-x, -s, -ch, -sh әріптерінен кейін -es жазылады.", "ru": "После -x, -s, -ch, -sh пишется -es." },
+            { "kk": "Тек -s жалғауы жеткіліксіз.", "ru": "Одного -s недостаточно." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "boxs", "ru": "boxs" } },
+            { "id": "b", "text": { "kk": "boxes", "ru": "boxes" } },
+            { "id": "c", "text": { "kk": "boxies", "ru": "boxies" } },
+            { "id": "d", "text": { "kk": "box", "ru": "box" } }
+          ] },
+          "answer_key": { "correct": ["b"] }
+        },
+        {
+          "type": "numeric",
+          "topic": "en.nouns.countability",
+          "difficulty": 4,
+          "base_xp": 55,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "Мына зат есімдердің ішінде саналмайтын (uncountable) сөздердің санын жазыңыз: water, apple, money, chair, advice, information, book, bottle.", "ru": "Сколько из этих существительных неисчисляемые (uncountable): water, apple, money, chair, advice, information, book, bottle?", "en": "How many of these nouns are uncountable: water, apple, money, chair, advice, information, book, bottle?" },
+          "explanation": { "kk": "Саналмайтын сөздер: water, money, advice, information — барлығы 4. Apple, chair, book, bottle — саналатын зат есімдер.", "ru": "Неисчисляемые: water, money, advice, information — всего 4. Apple, chair, book, bottle — исчисляемые существительные." },
+          "hints": [
+            { "kk": "Саналмайтын зат есімдерді a/an артиклімен қолдануға болмайды.", "ru": "Неисчисляемые существительные нельзя употреблять с a/an." },
+            { "kk": "Сұйықтықтар мен дерексіз ұғымдар көбіне саналмайды.", "ru": "Жидкости и абстрактные понятия обычно неисчисляемы." }
+          ],
+          "payload": { "unit": { "kk": "сөз", "ru": "слова" } },
+          "answer_key": { "value": 4, "tolerance": 0 }
+        }
+      ]
+    },
+    {
+      "order_no": 4,
+      "title": { "kk": "BOSS: Оқу түсінігі", "ru": "BOSS: Понимание прочитанного", "en": "BOSS: Reading comprehension" },
+      "description": {
+        "kk": "A2 деңгейіндегі қысқа мәтіндерді оқып, сұрақтарға жауап беріңіз. Босс деңгейі барлық негізгі дағдыларды тексереді.",
+        "ru": "Читаем короткие тексты уровня A2 и отвечаем на вопросы. Босс-уровень проверяет все базовые навыки.",
+        "en": "Read short A2 texts and answer questions. This boss level tests all core skills."
+      },
+      "icon": "menu_book",
+      "is_boss": true,
+      "unlock_rules": { "min_xp": 420, "min_prev_accuracy": 0.7, "required_tasks": 10 },
+      "topics": [
+        { "code": "en.reading.a2", "name": { "kk": "A2 мәтінін түсіну", "ru": "Понимание текста A2", "en": "A2 reading comprehension" } },
+        { "code": "en.vocabulary.reading", "name": { "kk": "Мәтіннен сөздік қор", "ru": "Лексика из текста", "en": "Vocabulary from texts" } }
+      ],
+      "tasks": [
+        {
+          "type": "single_choice",
+          "topic": "en.reading.a2",
+          "difficulty": 4,
+          "base_xp": 55,
+          "time_limit_sec": 150,
+          "prompt": { "kk": "Мәтінді оқып, сұраққа жауап беріңіз.\n\nLast Saturday Amina went to the city library with her younger brother. They left home at nine o'clock and walked because the weather was warm. In the library Amina chose a book about space travel and her brother found a comic about pirates. They read for two hours. On the way back they bought two apples and a bottle of juice. Amina paid with her pocket money.\n\nWhere did Amina go last Saturday?", "ru": "Прочитайте текст и ответьте на вопрос.\n\nLast Saturday Amina went to the city library with her younger brother. They left home at nine o'clock and walked because the weather was warm. In the library Amina chose a book about space travel and her brother found a comic about pirates. They read for two hours. On the way back they bought two apples and a bottle of juice. Amina paid with her pocket money.\n\nWhere did Amina go last Saturday?", "en": "Read the text and answer the question.\n\nLast Saturday Amina went to the city library with her younger brother. They left home at nine o'clock and walked because the weather was warm. In the library Amina chose a book about space travel and her brother found a comic about pirates. They read for two hours. On the way back they bought two apples and a bottle of juice. Amina paid with her pocket money.\n\nWhere did Amina go last Saturday?" },
+          "explanation": { "kk": "Мәтіннің бірінші сөйлемінде анық айтылған: she went to the city library. Басқа нұсқалар мәтінде кездеспейді.", "ru": "В первом предложении текста сказано прямо: she went to the city library. Другие варианты в тексте не упоминаются." },
+          "hints": [
+            { "kk": "Мәтіннің бірінші сөйлеміне назар аударыңыз.", "ru": "Посмотрите на первое предложение текста." },
+            { "kk": "«City library» тіркесін мәтіннен табыңыз.", "ru": "Найдите в тексте выражение «city library»." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "To the city library", "ru": "To the city library" } },
+            { "id": "b", "text": { "kk": "To the cinema", "ru": "To the cinema" } },
+            { "id": "c", "text": { "kk": "To the market", "ru": "To the market" } },
+            { "id": "d", "text": { "kk": "To her school", "ru": "To her school" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "true_false",
+          "topic": "en.reading.a2",
+          "difficulty": 4,
+          "base_xp": 55,
+          "time_limit_sec": 150,
+          "prompt": { "kk": "Мәтінді оқып, тұжырымның дұрыс немесе бұрыс екенін анықтаңыз.\n\nLast Saturday Amina went to the city library with her younger brother. They left home at nine o'clock and walked because the weather was warm. In the library Amina chose a book about space travel and her brother found a comic about pirates. They read for two hours. On the way back they bought two apples and a bottle of juice. Amina paid with her pocket money.", "ru": "Прочитайте текст и определите, верно утверждение или нет.\n\nLast Saturday Amina went to the city library with her younger brother. They left home at nine o'clock and walked because the weather was warm. In the library Amina chose a book about space travel and her brother found a comic about pirates. They read for two hours. On the way back they bought two apples and a bottle of juice. Amina paid with her pocket money.", "en": "Read the text and decide if the statement is true or false.\n\nLast Saturday Amina went to the city library with her younger brother. They left home at nine o'clock and walked because the weather was warm. In the library Amina chose a book about space travel and her brother found a comic about pirates. They read for two hours. On the way back they bought two apples and a bottle of juice. Amina paid with her pocket money." },
+          "explanation": { "kk": "Мәтінде «they walked because the weather was warm» деп айтылған, яғни олар жаяу барған, автобуспен емес. Сондықтан тұжырым бұрыс.", "ru": "В тексте сказано «they walked because the weather was warm», то есть они шли пешком, а не ехали на автобусе. Поэтому утверждение неверно." },
+          "hints": [
+            { "kk": "Мәтінде көлік туралы ештеңе айтылмаған.", "ru": "В тексте ничего не сказано о транспорте." },
+            { "kk": "«Walked» етістігінің мағынасын есте сақтаңыз.", "ru": "Вспомните значение глагола «walked»." }
+          ],
+          "payload": { "statement": { "kk": "Amina and her brother went to the library by bus.", "ru": "Amina and her brother went to the library by bus." } },
+          "answer_key": { "correct": false }
+        },
+        {
+          "type": "short_answer",
+          "topic": "en.vocabulary.reading",
+          "difficulty": 4,
+          "base_xp": 60,
+          "time_limit_sec": 150,
+          "prompt": { "kk": "Бір сөз жазыңыз: A place where people read and borrow books is a ___ (it starts with 'l').", "ru": "Напишите одно слово: A place where people read and borrow books is a ___ (it starts with 'l').", "en": "Write one word: a place where people read and borrow books is a ___ (it starts with 'l')." },
+          "explanation": { "kk": "library — кітапхана. Бұл сөз оқу мәтінінде де кездеседі: Amina went to the city library.", "ru": "library — библиотека. Это слово встречается и в тексте для чтения: Amina went to the city library." },
+          "hints": [
+            { "kk": "Сөз «l» әрпінен басталады және кітапхананы білдіреді.", "ru": "Слово начинается с «l» и означает библиотеку." },
+            { "kk": "Мәтінде Амина дәл осы жерге барған.", "ru": "В тексте Амина ходила именно туда." }
+          ],
+          "payload": { "placeholder": { "kk": "Бір сөз жазыңыз", "ru": "Напишите одно слово" } },
+          "answer_key": { "accepted": ["library", "a library"], "case_sensitive": false }
+        },
+        {
+          "type": "single_choice",
+          "topic": "en.reading.a2",
+          "difficulty": 5,
+          "base_xp": 70,
+          "time_limit_sec": 180,
+          "prompt": { "kk": "Мәтінді оқып, сұраққа жауап беріңіз.\n\nDaniel works in a small office near the station. He starts at eight thirty and finishes at five. Usually he answers emails, writes reports and talks to clients on the phone. He does not like loud places, so he always eats lunch alone in the park. On Fridays he leaves work early because he plays football with his friends. Daniel says his job is quiet, but he never feels bored.\n\nWhat time does Daniel finish work?", "ru": "Прочитайте текст и ответьте на вопрос.\n\nDaniel works in a small office near the station. He starts at eight thirty and finishes at five. Usually he answers emails, writes reports and talks to clients on the phone. He does not like loud places, so he always eats lunch alone in the park. On Fridays he leaves work early because he plays football with his friends. Daniel says his job is quiet, but he never feels bored.\n\nWhat time does Daniel finish work?", "en": "Read the text and answer the question.\n\nDaniel works in a small office near the station. He starts at eight thirty and finishes at five. Usually he answers emails, writes reports and talks to clients on the phone. He does not like loud places, so he always eats lunch alone in the park. On Fridays he leaves work early because he plays football with his friends. Daniel says his job is quiet, but he never feels bored.\n\nWhat time does Daniel finish work?" },
+          "explanation": { "kk": "Мәтінде «He starts at eight thirty and finishes at five» деп айтылған. Сондықтан жұмысты сағат бесте аяқтайды.", "ru": "В тексте сказано «He starts at eight thirty and finishes at five». Значит, он заканчивает работу в пять." },
+          "hints": [
+            { "kk": "«Finishes» сөзі бар сөйлемді табыңыз.", "ru": "Найдите предложение со словом «finishes»." },
+            { "kk": "Eight thirty — басталу уақыты, ал аяқталуы басқа.", "ru": "Eight thirty — время начала, а окончание другое." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "At five o'clock", "ru": "At five o'clock" } },
+            { "id": "b", "text": { "kk": "At eight thirty", "ru": "At eight thirty" } },
+            { "id": "c", "text": { "kk": "At nine o'clock", "ru": "At nine o'clock" } },
+            { "id": "d", "text": { "kk": "At half past four", "ru": "At half past four" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "multiple_choice",
+          "topic": "en.reading.a2",
+          "difficulty": 5,
+          "base_xp": 80,
+          "time_limit_sec": 200,
+          "prompt": { "kk": "Мәтінді оқып, мәтінге сәйкес келетін ЕКІ тұжырымды таңдаңыз.\n\nDaniel works in a small office near the station. He starts at eight thirty and finishes at five. Usually he answers emails, writes reports and talks to clients on the phone. He does not like loud places, so he always eats lunch alone in the park. On Fridays he leaves work early because he plays football with his friends. Daniel says his job is quiet, but he never feels bored.", "ru": "Прочитайте текст и выберите ДВА утверждения, которые соответствуют тексту.\n\nDaniel works in a small office near the station. He starts at eight thirty and finishes at five. Usually he answers emails, writes reports and talks to clients on the phone. He does not like loud places, so he always eats lunch alone in the park. On Fridays he leaves work early because he plays football with his friends. Daniel says his job is quiet, but he never feels bored.", "en": "Read the text and choose TWO statements that are true according to the text.\n\nDaniel works in a small office near the station. He starts at eight thirty and finishes at five. Usually he answers emails, writes reports and talks to clients on the phone. He does not like loud places, so he always eats lunch alone in the park. On Fridays he leaves work early because he plays football with his friends. Daniel says his job is quiet, but he never feels bored." },
+          "explanation": { "kk": "«He always eats lunch alone in the park» және «On Fridays... he plays football with his friends» — дұрыс. Ол үйден жұмыс істемейді, loud places ұнамайды, жалықпайды, жұмысты тоғызда бастамайды.", "ru": "«He always eats lunch alone in the park» и «On Fridays... he plays football with his friends» — верно. Он не работает из дома, не любит шумные места, не скучает и начинает работу не в девять." },
+          "hints": [
+            { "kk": "Мәтіндегі нақты сөйлемдерге сүйеніңіз, болжам жасамаңыз.", "ru": "Опирайтесь на точные предложения текста, не домысливайте." },
+            { "kk": "«Loud places» және «never feels bored» тіркестеріне назар аударыңыз.", "ru": "Обратите внимание на «loud places» и «never feels bored»." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "Daniel eats lunch in the park.", "ru": "Daniel eats lunch in the park." } },
+            { "id": "b", "text": { "kk": "Daniel works at home.", "ru": "Daniel works at home." } },
+            { "id": "c", "text": { "kk": "Daniel plays football on Fridays.", "ru": "Daniel plays football on Fridays." } },
+            { "id": "d", "text": { "kk": "Daniel starts work at nine.", "ru": "Daniel starts work at nine." } },
+            { "id": "e", "text": { "kk": "Daniel feels bored at work.", "ru": "Daniel feels bored at work." } },
+            { "id": "f", "text": { "kk": "Daniel likes loud places.", "ru": "Daniel likes loud places." } }
+          ] },
+          "answer_key": { "correct": ["a", "c"] }
+        },
+        {
+          "type": "matching",
+          "topic": "en.vocabulary.reading",
+          "difficulty": 4,
+          "base_xp": 60,
+          "time_limit_sec": 150,
+          "prompt": { "kk": "Мәтіндерде кездескен сөздерді қазақша аудармасымен сәйкестендіріңіз.", "ru": "Сопоставьте слова из текстов с русским переводом.", "en": "Match the words from the texts with their translations." },
+          "explanation": { "kk": "library — кітапхана, weather — ауа райы, pocket money — қалта ақшасы, report — есеп.", "ru": "library — библиотека, weather — погода, pocket money — карманные деньги, report — отчёт." },
+          "hints": [
+            { "kk": "«Pocket money» — балалардың өз ақшасы.", "ru": "«Pocket money» — карманные деньги." },
+            { "kk": "«Report» — жұмыста жазылатын құжат.", "ru": "«Report» — документ, который пишут на работе." }
+          ],
+          "payload": {
+            "left": [
+              { "id": "l1", "text": { "kk": "library", "ru": "library" } },
+              { "id": "l2", "text": { "kk": "weather", "ru": "weather" } },
+              { "id": "l3", "text": { "kk": "pocket money", "ru": "pocket money" } },
+              { "id": "l4", "text": { "kk": "report", "ru": "report" } }
+            ],
+            "right": [
+              { "id": "r1", "text": { "kk": "ауа райы", "ru": "погода" } },
+              { "id": "r2", "text": { "kk": "кітапхана", "ru": "библиотека" } },
+              { "id": "r3", "text": { "kk": "есеп", "ru": "отчёт" } },
+              { "id": "r4", "text": { "kk": "қалта ақшасы", "ru": "карманные деньги" } }
+            ]
+          },
+          "answer_key": { "pairs": { "l1": "r2", "l2": "r1", "l3": "r4", "l4": "r3" } }
+        },
+        {
+          "type": "ordering",
+          "topic": "en.vocabulary.reading",
+          "difficulty": 4,
+          "base_xp": 65,
+          "time_limit_sec": 160,
+          "prompt": { "kk": "Мәтіндегі сөйлемді дұрыс ретпен қалпына келтіріңіз.", "ru": "Восстановите правильный порядок слов в предложении из текста.", "en": "Restore the correct word order of the sentence from the text." },
+          "explanation": { "kk": "Сөз тәртібі: бастауыш + етістік + толықтауыш + about тіркесі: Amina chose a book about space travel.", "ru": "Порядок слов: подлежащее + глагол + дополнение + сочетание с about: Amina chose a book about space travel." },
+          "hints": [
+            { "kk": "Сөйлем адамның атынан басталады.", "ru": "Предложение начинается с имени." },
+            { "kk": "«About space travel» тіркесі соңында тұрады.", "ru": "Сочетание «about space travel» стоит в конце." }
+          ],
+          "payload": { "items": [
+            { "id": "i1", "text": { "kk": "Amina", "ru": "Amina" } },
+            { "id": "i2", "text": { "kk": "chose", "ru": "chose" } },
+            { "id": "i3", "text": { "kk": "a book", "ru": "a book" } },
+            { "id": "i4", "text": { "kk": "about", "ru": "about" } },
+            { "id": "i5", "text": { "kk": "space travel", "ru": "space travel" } }
+          ] },
+          "answer_key": { "order": ["i1", "i2", "i3", "i4", "i5"] }
+        },
+        {
+          "type": "cloze",
+          "topic": "en.vocabulary.reading",
+          "difficulty": 5,
+          "base_xp": 75,
+          "time_limit_sec": 180,
+          "prompt": { "kk": "Daniel туралы мәтіннің қысқаша мазмұнын толықтырыңыз.", "ru": "Дополните краткое изложение текста о Дэниеле.", "en": "Complete the short summary of the text about Daniel." },
+          "explanation": { "kk": "Мәтінде: small office, writes reports, eats lunch in the park. Сондықтан дұрыс жауаптар: office, reports, park.", "ru": "В тексте: small office, writes reports, eats lunch in the park. Поэтому верные ответы: office, reports, park." },
+          "hints": [
+            { "kk": "Бірінші бос орын — жұмыс орны.", "ru": "Первый пропуск — место работы." },
+            { "kk": "Daniel хат жазады және есептер дайындайды.", "ru": "Дэниел пишет письма и готовит отчёты." }
+          ],
+          "payload": {
+            "text": {
+              "kk": "Daniel works in a small {{1}} near the station. He usually answers emails and writes {{2}}. He does not like loud places, so he always eats lunch in the {{3}}. On Fridays he leaves work early because he plays football.",
+              "ru": "Daniel works in a small {{1}} near the station. He usually answers emails and writes {{2}}. He does not like loud places, so he always eats lunch in the {{3}}. On Fridays he leaves work early because he plays football."
+            },
+            "blanks": [
+              { "id": "1", "options": [
+                { "id": "b1a", "text": { "kk": "office", "ru": "office" } },
+                { "id": "b1b", "text": { "kk": "station", "ru": "station" } },
+                { "id": "b1c", "text": { "kk": "shop", "ru": "shop" } }
+              ] },
+              { "id": "2", "options": [
+                { "id": "b2a", "text": { "kk": "reports", "ru": "reports" } },
+                { "id": "b2b", "text": { "kk": "report", "ru": "report" } },
+                { "id": "b2c", "text": { "kk": "reporting", "ru": "reporting" } }
+              ] },
+              { "id": "3", "options": [
+                { "id": "b3a", "text": { "kk": "park", "ru": "park" } },
+                { "id": "b3b", "text": { "kk": "office", "ru": "office" } },
+                { "id": "b3c", "text": { "kk": "station", "ru": "station" } }
+              ] }
+            ]
+          },
+          "answer_key": { "blanks": { "1": "b1a", "2": "b2a", "3": "b3a" } }
+        },
+        {
+          "type": "timed_quiz",
+          "topic": "en.vocabulary.reading",
+          "difficulty": 4,
+          "base_xp": 55,
+          "time_limit_sec": 35,
+          "prompt": { "kk": "Жылдам жауап беріңіз: «loud» сөзінің мағынасына сәйкес келетін сөзді таңдаңыз.", "ru": "Отвечайте быстро: выберите слово, близкое по значению к «loud».", "en": "Answer quickly: choose the word closest in meaning to 'loud'." },
+          "explanation": { "kk": "Loud — қатты, шулы. Синонимі noisy. Quiet — тыныш, slow — баяу, small — кішкентай.", "ru": "Loud — громкий, шумный. Синоним — noisy. Quiet — тихий, slow — медленный, small — маленький." },
+          "hints": [
+            { "kk": "Мәтінде Daniel шулы жерлерді ұнатпайды.", "ru": "В тексте Дэниел не любит шумные места." },
+            { "kk": "«Quiet» — қарама-қарсы мағына.", "ru": "«Quiet» — противоположное по смыслу слово." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "noisy", "ru": "noisy" } },
+            { "id": "b", "text": { "kk": "quiet", "ru": "quiet" } },
+            { "id": "c", "text": { "kk": "slow", "ru": "slow" } },
+            { "id": "d", "text": { "kk": "small", "ru": "small" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "single_choice",
+          "topic": "en.reading.a2",
+          "difficulty": 5,
+          "base_xp": 85,
+          "time_limit_sec": 200,
+          "prompt": { "kk": "Мәтінді оқып, себеп-салдарды түсініп, сұраққа жауап беріңіз.\n\nDaniel works in a small office near the station. He starts at eight thirty and finishes at five. Usually he answers emails, writes reports and talks to clients on the phone. He does not like loud places, so he always eats lunch alone in the park. On Fridays he leaves work early because he plays football with his friends. Daniel says his job is quiet, but he never feels bored.\n\nWhy does Daniel eat lunch in the park?", "ru": "Прочитайте текст, поймите причину и ответьте на вопрос.\n\nDaniel works in a small office near the station. He starts at eight thirty and finishes at five. Usually he answers emails, writes reports and talks to clients on the phone. He does not like loud places, so he always eats lunch alone in the park. On Fridays he leaves work early because he plays football with his friends. Daniel says his job is quiet, but he never feels bored.\n\nWhy does Daniel eat lunch in the park?", "en": "Read the text, understand the reason and answer the question.\n\nDaniel works in a small office near the station. He starts at eight thirty and finishes at five. Usually he answers emails, writes reports and talks to clients on the phone. He does not like loud places, so he always eats lunch alone in the park. On Fridays he leaves work early because he plays football with his friends. Daniel says his job is quiet, but he never feels bored.\n\nWhy does Daniel eat lunch in the park?" },
+          "explanation": { "kk": "Мәтіндегі «He does not like loud places, so he always eats lunch alone in the park» сөйлемі себепті көрсетеді. «So» — сондықтан деген байланыс.", "ru": "Причину показывает предложение «He does not like loud places, so he always eats lunch alone in the park». «So» связывает причину и следствие." },
+          "hints": [
+            { "kk": "«So» сөзі себеп пен салдарды байланыстырады.", "ru": "Слово «so» связывает причину и следствие." },
+            { "kk": "Мәтінде кафе жабық деп айтылмаған.", "ru": "В тексте не сказано, что кафе закрыто." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "Because he does not like loud places.", "ru": "Because he does not like loud places." } },
+            { "id": "b", "text": { "kk": "Because the café near the office is closed.", "ru": "Because the café near the office is closed." } },
+            { "id": "c", "text": { "kk": "Because his friends work in the park.", "ru": "Because his friends work in the park." } },
+            { "id": "d", "text": { "kk": "Because he has no money for lunch.", "ru": "Because he has no money for lunch." } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        }
+      ]
+    },
+    {
+      "order_no": 5,
+      "title": { "kk": "Lexicon: Жұмыс және оқу", "ru": "Lexicon: Работа и учёба", "en": "Lexicon: Work and study" },
+      "description": {
+        "kk": "Жұмыс пен оқуға қатысты сөздік қорды кеңейтіңіз: кәсіптер, кеңсе, университет лексикасы.",
+        "ru": "Расширяем словарный запас по темам работы и учёбы: профессии, офис, университетская лексика.",
+        "en": "Build vocabulary for work and study: jobs, office, university."
+      },
+      "icon": "work",
+      "is_boss": false,
+      "unlock_rules": { "min_xp": 600, "min_prev_accuracy": 0.6, "required_tasks": 10 },
+      "topics": [
+        { "code": "en.vocab.work", "name": { "kk": "Жұмыс және кеңсе лексикасы", "ru": "Лексика работы и офиса", "en": "Work and office vocabulary" } },
+        { "code": "en.vocab.study", "name": { "kk": "Оқу және университет лексикасы", "ru": "Лексика учёбы и университета", "en": "Study and university vocabulary" } }
+      ],
+      "tasks": [
+        {
+          "type": "matching",
+          "topic": "en.vocab.work",
+          "difficulty": 5,
+          "base_xp": 60,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "Кәсіп атауларын қазақша аудармасымен сәйкестендіріңіз.", "ru": "Сопоставьте названия профессий с русским переводом.", "en": "Match the jobs with their translations." },
+          "explanation": { "kk": "accountant — бухгалтер, lawyer — заңгер, engineer — инженер, nurse — медбике.", "ru": "accountant — бухгалтер, lawyer — юрист, engineer — инженер, nurse — медсестра." },
+          "hints": [
+            { "kk": "«Lawyer» сөзі заңмен жұмыс істейтін адамды білдіреді.", "ru": "«Lawyer» — человек, который работает с законом." },
+            { "kk": "«Accountant» ақша есебін жүргізеді.", "ru": "«Accountant» ведёт денежный учёт." }
+          ],
+          "payload": {
+            "left": [
+              { "id": "l1", "text": { "kk": "accountant", "ru": "accountant" } },
+              { "id": "l2", "text": { "kk": "lawyer", "ru": "lawyer" } },
+              { "id": "l3", "text": { "kk": "engineer", "ru": "engineer" } },
+              { "id": "l4", "text": { "kk": "nurse", "ru": "nurse" } }
+            ],
+            "right": [
+              { "id": "r1", "text": { "kk": "заңгер", "ru": "юрист" } },
+              { "id": "r2", "text": { "kk": "бухгалтер", "ru": "бухгалтер" } },
+              { "id": "r3", "text": { "kk": "инженер", "ru": "инженер" } },
+              { "id": "r4", "text": { "kk": "медбике", "ru": "медсестра" } }
+            ]
+          },
+          "answer_key": { "pairs": { "l1": "r2", "l2": "r1", "l3": "r3", "l4": "r4" } }
+        },
+        {
+          "type": "single_choice",
+          "topic": "en.vocab.work",
+          "difficulty": 5,
+          "base_xp": 60,
+          "time_limit_sec": 100,
+          "prompt": { "kk": "Дұрыс сөзді таңдаңыз: A person who designs buildings is an ___.", "ru": "Выберите правильное слово: A person who designs buildings is an ___.", "en": "Choose the correct word: A person who designs buildings is an ___." },
+          "explanation": { "kk": "Architect — сәулетші, ғимараттарды жобалайды. Accountant — бухгалтер, editor — редактор, electrician — электрик.", "ru": "Architect — архитектор, проектирует здания. Accountant — бухгалтер, editor — редактор, electrician — электрик." },
+          "hints": [
+            { "kk": "«Design buildings» — ғимарат жобалау.", "ru": "«Design buildings» — проектировать здания." },
+            { "kk": "Бұл кәсіп ағылшынша «architect» деп аталады.", "ru": "Эта профессия по-английски — «architect»." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "architect", "ru": "architect" } },
+            { "id": "b", "text": { "kk": "accountant", "ru": "accountant" } },
+            { "id": "c", "text": { "kk": "editor", "ru": "editor" } },
+            { "id": "d", "text": { "kk": "electrician", "ru": "electrician" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "multiple_choice",
+          "topic": "en.vocab.study",
+          "difficulty": 6,
+          "base_xp": 75,
+          "time_limit_sec": 150,
+          "prompt": { "kk": "Университетте оқуға қатысты сөздерді таңдаңыз.", "ru": "Выберите слова, связанные с учёбой в университете.", "en": "Choose the words connected with studying at university." },
+          "explanation": { "kk": "lecture — дәріс, seminar — семинар, thesis — дипломдық жұмыс, deadline — тапсыру мерзімі. Recipe — ас рецептісі, traffic — көлік қозғалысы, оқуға қатысы жоқ.", "ru": "lecture — лекция, seminar — семинар, thesis — дипломная работа, deadline — срок сдачи. Recipe — рецепт блюда, traffic — дорожное движение, к учёбе не относятся." },
+          "hints": [
+            { "kk": "Төрт сөз оқу процесіне тікелей қатысты.", "ru": "Четыре слова напрямую связаны с учебой." },
+            { "kk": "«Recipe» — тағам әзірлеуге қатысты сөз.", "ru": "«Recipe» связано с приготовлением еды." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "lecture", "ru": "lecture" } },
+            { "id": "b", "text": { "kk": "deadline", "ru": "deadline" } },
+            { "id": "c", "text": { "kk": "recipe", "ru": "recipe" } },
+            { "id": "d", "text": { "kk": "seminar", "ru": "seminar" } },
+            { "id": "e", "text": { "kk": "thesis", "ru": "thesis" } },
+            { "id": "f", "text": { "kk": "traffic", "ru": "traffic" } }
+          ] },
+          "answer_key": { "correct": ["a", "b", "d", "e"] }
+        },
+        {
+          "type": "true_false",
+          "topic": "en.vocab.work",
+          "difficulty": 5,
+          "base_xp": 55,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "Тұжырым дұрыс па, әлде бұрыс па? Бұл сөз жұмыс лексикасына қатысты.", "ru": "Верно или неверно утверждение? Это слово из рабочей лексики.", "en": "Is the statement true or false? It is about a word from work vocabulary." },
+          "explanation": { "kk": "Deadline — жұмысты тапсырудың соңғы мерзімі. Мысалы: The deadline for the report is Friday.", "ru": "Deadline — последний срок сдачи работы. Например: The deadline for the report is Friday." },
+          "hints": [
+            { "kk": "Бұл сөз жұмыстың аяқталу мерзімін білдіреді.", "ru": "Это слово обозначает срок завершения работы." },
+            { "kk": "«Dead» және «line» сөздерінен құралған, мағынасы ауыспалы.", "ru": "Слово образовано от «dead» и «line», значение переносное." }
+          ],
+          "payload": { "statement": { "kk": "A deadline is the date when work must be finished.", "ru": "A deadline is the date when work must be finished." } },
+          "answer_key": { "correct": true }
+        },
+        {
+          "type": "ordering",
+          "topic": "en.vocab.work",
+          "difficulty": 6,
+          "base_xp": 70,
+          "time_limit_sec": 140,
+          "prompt": { "kk": "Сөздерді дұрыс ретпен қойып, жұмыс туралы сөйлем құрастырыңыз.", "ru": "Расставьте слова в правильном порядке, чтобы получилось предложение о работе.", "en": "Put the words in the correct order to make a sentence about work." },
+          "explanation": { "kk": "Сөз тәртібі: бастауыш + етістік + толықтауыш + мақсат + уақыт: My manager asked me to finish the report by Friday.", "ru": "Порядок слов: подлежащее + глагол + дополнение + цель + время: My manager asked me to finish the report by Friday." },
+          "hints": [
+            { "kk": "Сөйлем «My manager» тіркесінен басталады.", "ru": "Предложение начинается с «My manager»." },
+            { "kk": "«To finish» инфинитиві «asked me»-ден кейін тұрады.", "ru": "Инфинитив «to finish» стоит после «asked me»." }
+          ],
+          "payload": { "items": [
+            { "id": "i1", "text": { "kk": "My manager", "ru": "My manager" } },
+            { "id": "i2", "text": { "kk": "asked me", "ru": "asked me" } },
+            { "id": "i3", "text": { "kk": "to finish", "ru": "to finish" } },
+            { "id": "i4", "text": { "kk": "the report", "ru": "the report" } },
+            { "id": "i5", "text": { "kk": "by Friday", "ru": "by Friday" } }
+          ] },
+          "answer_key": { "order": ["i1", "i2", "i3", "i4", "i5"] }
+        },
+        {
+          "type": "short_answer",
+          "topic": "en.vocab.study",
+          "difficulty": 5,
+          "base_xp": 60,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "Бір сөз жазыңыз: A talk that a teacher gives to a large group of students at university is a ___ (it starts with 'l').", "ru": "Напишите одно слово: A talk that a teacher gives to a large group of students at university is a ___ (it starts with 'l').", "en": "Write one word: a talk that a teacher gives to a large group of students at university is a ___ (it starts with 'l')." },
+          "explanation": { "kk": "Lecture — дәріс, яғни оқытушының үлкен топқа арнап оқитын сабағы.", "ru": "Lecture — лекция, занятие, которое преподаватель проводит для большой группы." },
+          "hints": [
+            { "kk": "Сөз «l» әрпінен басталады.", "ru": "Слово начинается с буквы «l»." },
+            { "kk": "Университетте бұл сөз «дәріс» деп аударылады.", "ru": "В университете это слово переводится как «лекция»." }
+          ],
+          "payload": { "placeholder": { "kk": "Бір сөз жазыңыз", "ru": "Напишите одно слово" } },
+          "answer_key": { "accepted": ["lecture", "a lecture"], "case_sensitive": false }
+        },
+        {
+          "type": "cloze",
+          "topic": "en.vocab.work",
+          "difficulty": 6,
+          "base_xp": 75,
+          "time_limit_sec": 170,
+          "prompt": { "kk": "Жұмыс туралы хабарламаны толықтырыңыз: әр бос орынға мағынасы сай сөзді қойыңыз.", "ru": "Дополните рабочее объявление: в каждый пропуск вставьте подходящее по смыслу слово.", "en": "Complete the work announcement with the best word for each gap." },
+          "explanation": { "kk": "project — жоба, meeting — жиналыс, documents — құжаттар, deadline — тапсыру мерзімі. Бұл сөздер кеңсе контекстіне сай.", "ru": "project — проект, meeting — совещание, documents — документы, deadline — срок сдачи. Эти слова подходят к офисному контексту." },
+          "hints": [
+            { "kk": "Бірінші бос орын — жаңа басталатын іс.", "ru": "Первый пропуск — новое начинание." },
+            { "kk": "Соңғы бос орын — 15 мамыр күніне қатысты мерзім.", "ru": "Последний пропуск — срок, связанный с 15 мая." }
+          ],
+          "payload": {
+            "text": {
+              "kk": "Dear team, the new {{1}} starts on Monday. We will have a short {{2}} at nine in the main office. Please bring your {{3}} and your laptop. The final {{4}} for the first part is the 15th of May.",
+              "ru": "Dear team, the new {{1}} starts on Monday. We will have a short {{2}} at nine in the main office. Please bring your {{3}} and your laptop. The final {{4}} for the first part is the 15th of May."
+            },
+            "blanks": [
+              { "id": "1", "options": [
+                { "id": "b1a", "text": { "kk": "project", "ru": "project" } },
+                { "id": "b1b", "text": { "kk": "office", "ru": "office" } },
+                { "id": "b1c", "text": { "kk": "holiday", "ru": "holiday" } }
+              ] },
+              { "id": "2", "options": [
+                { "id": "b2a", "text": { "kk": "meeting", "ru": "meeting" } },
+                { "id": "b2b", "text": { "kk": "lunch", "ru": "lunch" } },
+                { "id": "b2c", "text": { "kk": "holiday", "ru": "holiday" } }
+              ] },
+              { "id": "3", "options": [
+                { "id": "b3a", "text": { "kk": "documents", "ru": "documents" } },
+                { "id": "b3b", "text": { "kk": "document", "ru": "document" } },
+                { "id": "b3c", "text": { "kk": "documenting", "ru": "documenting" } }
+              ] },
+              { "id": "4", "options": [
+                { "id": "b4a", "text": { "kk": "deadline", "ru": "deadline" } },
+                { "id": "b4b", "text": { "kk": "schedule", "ru": "schedule" } },
+                { "id": "b4c", "text": { "kk": "weekend", "ru": "weekend" } }
+              ] }
+            ]
+          },
+          "answer_key": { "blanks": { "1": "b1a", "2": "b2a", "3": "b3a", "4": "b4a" } }
+        },
+        {
+          "type": "timed_quiz",
+          "topic": "en.vocab.work",
+          "difficulty": 5,
+          "base_xp": 50,
+          "time_limit_sec": 30,
+          "prompt": { "kk": "Жылдам жауап беріңіз: қай сөз «жалақы» дегенді білдіреді?", "ru": "Отвечайте быстро: какое слово означает «зарплата»?", "en": "Answer quickly: which word means 'salary'?" },
+          "explanation": { "kk": "Salary — жалақы. Furniture — жиһаз, weather — ауа райы, homework — үй тапсырмасы.", "ru": "Salary — зарплата. Furniture — мебель, weather — погода, homework — домашнее задание." },
+          "hints": [
+            { "kk": "Бұл сөз жұмысқа ай сайын төленетін ақшаға қатысты.", "ru": "Слово связано с деньгами, которые платят за работу." },
+            { "kk": "Сөз «s» әрпінен басталады.", "ru": "Слово начинается с буквы «s»." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "salary", "ru": "salary" } },
+            { "id": "b", "text": { "kk": "furniture", "ru": "furniture" } },
+            { "id": "c", "text": { "kk": "weather", "ru": "weather" } },
+            { "id": "d", "text": { "kk": "homework", "ru": "homework" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "single_choice",
+          "topic": "en.vocab.study",
+          "difficulty": 6,
+          "base_xp": 65,
+          "time_limit_sec": 110,
+          "prompt": { "kk": "Дұрыс сөзді таңдаңыз: He is doing a ___ in economics at university.", "ru": "Выберите правильное слово: He is doing a ___ in economics at university.", "en": "Choose the correct word: He is doing a ___ in economics at university." },
+          "explanation": { "kk": "Degree in economics — экономика бойынша жоғары білім дәрежесі. Lesson және class — сабақ, mark — баға.", "ru": "Degree in economics — степень по экономике. Lesson и class — урок, mark — оценка." },
+          "hints": [
+            { "kk": "«Doing a ... in economics» — білім дәрежесі туралы.", "ru": "«Doing a ... in economics» — речь о степени образования." },
+            { "kk": "Бұл сөз дипломмен байланысты.", "ru": "Это слово связано с дипломом." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "degree", "ru": "degree" } },
+            { "id": "b", "text": { "kk": "lesson", "ru": "lesson" } },
+            { "id": "c", "text": { "kk": "class", "ru": "class" } },
+            { "id": "d", "text": { "kk": "mark", "ru": "mark" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "single_choice",
+          "topic": "en.vocab.study",
+          "difficulty": 6,
+          "base_xp": 65,
+          "time_limit_sec": 110,
+          "prompt": { "kk": "Дұрыс етістікті таңдаңыз: I need to ___ for my exam this weekend.", "ru": "Выберите правильный глагол: I need to ___ for my exam this weekend.", "en": "Choose the correct verb: I need to ___ for my exam this weekend." },
+          "explanation": { "kk": "Revise for an exam — емтиханға дайындалып қайталау. Repeat — қайталау, repair — жөндеу, refuse — бас тарту.", "ru": "Revise for an exam — повторять материал к экзамену. Repeat — повторять, repair — ремонтировать, refuse — отказываться." },
+          "hints": [
+            { "kk": "Бұл етістік оқу материалын қайталап дайындалуды білдіреді.", "ru": "Глагол означает повторять материал при подготовке." },
+            { "kk": "«Refuse» — бас тарту, ол жерде келмейді.", "ru": "«Refuse» — отказываться, здесь не подходит." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "revise", "ru": "revise" } },
+            { "id": "b", "text": { "kk": "repeat", "ru": "repeat" } },
+            { "id": "c", "text": { "kk": "repair", "ru": "repair" } },
+            { "id": "d", "text": { "kk": "refuse", "ru": "refuse" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        }
+      ]
+    },
+    {
+      "order_no": 6,
+      "title": { "kk": "Comparatives & Superlatives", "ru": "Сравнительные и превосходные степени", "en": "Comparatives and superlatives" },
+      "description": {
+        "kk": "Сын есімдердің салыстырмалы және күшейтпелі шырайын, as...as құрылымын және ережесіз формаларды үйреніңіз.",
+        "ru": "Изучаем сравнительную и превосходную степени прилагательных, конструкцию as...as и неправильные формы.",
+        "en": "Learn comparative and superlative adjectives, as...as and irregular forms."
+      },
+      "icon": "bar_chart",
+      "is_boss": false,
+      "unlock_rules": { "min_xp": 780, "min_prev_accuracy": 0.6, "required_tasks": 10 },
+      "topics": [
+        { "code": "en.comparatives", "name": { "kk": "Салыстырмалы шырай", "ru": "Сравнительная степень", "en": "Comparative degree" } },
+        { "code": "en.superlatives", "name": { "kk": "Күшейтпелі шырай және ережесіз формалар", "ru": "Превосходная степень и неправильные формы", "en": "Superlative degree and irregular forms" } }
+      ],
+      "tasks": [
+        {
+          "type": "single_choice",
+          "topic": "en.comparatives",
+          "difficulty": 6,
+          "base_xp": 70,
+          "time_limit_sec": 110,
+          "prompt": { "kk": "Дұрыс нұсқаны таңдаңыз: This book is ___ than the one I read last year.", "ru": "Выберите правильный вариант: This book is ___ than the one I read last year.", "en": "Choose the correct option: This book is ___ than the one I read last year." },
+          "explanation": { "kk": "Үш буыннан тұратын сын есімдер (interesting) салыстырмалы шырайда өзгермейді, оның алдына more қойылады: more interesting than.", "ru": "Прилагательные из трёх и более слогов (interesting) в сравнительной степени не изменяются, перед ними ставится more: more interesting than." },
+          "hints": [
+            { "kk": "«Interesting» сөзінің буын санын санаңыз — үшеу.", "ru": "Посчитайте слоги в «interesting» — их три." },
+            { "kk": "Көп буынды сын есімдерге -er жалғанбайды.", "ru": "К многосложным прилагательным -er не добавляется." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "more interesting", "ru": "more interesting" } },
+            { "id": "b", "text": { "kk": "interesting", "ru": "interesting" } },
+            { "id": "c", "text": { "kk": "most interesting", "ru": "most interesting" } },
+            { "id": "d", "text": { "kk": "interestinger", "ru": "interestinger" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "single_choice",
+          "topic": "en.superlatives",
+          "difficulty": 6,
+          "base_xp": 70,
+          "time_limit_sec": 100,
+          "prompt": { "kk": "Дұрыс нұсқаны таңдаңыз: She is the ___ student in our class.", "ru": "Выберите правильный вариант: She is the ___ student in our class.", "en": "Choose the correct option: She is the ___ student in our class." },
+          "explanation": { "kk": "«Good» — ережесіз сын есім: good → better → the best. Сондықтан the best student деп айтылады.", "ru": "«Good» — неправильное прилагательное: good → better → the best. Поэтому говорим the best student." },
+          "hints": [
+            { "kk": "«Good» сын есімінің шырайлары ережесіз жасалады.", "ru": "Степени «good» образуются неправильно." },
+            { "kk": "Артикль the күшейтпелі шыраймен бірге қолданылады.", "ru": "Артикль the употребляется с превосходной степенью." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "best", "ru": "best" } },
+            { "id": "b", "text": { "kk": "better", "ru": "better" } },
+            { "id": "c", "text": { "kk": "goodest", "ru": "goodest" } },
+            { "id": "d", "text": { "kk": "most good", "ru": "most good" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "true_false",
+          "topic": "en.comparatives",
+          "difficulty": 6,
+          "base_xp": 60,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "Тұжырым дұрыс па, әлде бұрыс па? Сын есім шырайлары туралы.", "ru": "Верно или неверно утверждение? Речь о степенях прилагательных.", "en": "Is the statement true or false? It is about adjective degrees." },
+          "explanation": { "kk": "Good → better → the best — ережесіз формалар. «Gooder» деген форма жоқ.", "ru": "Good → better → the best — неправильные формы. Формы «gooder» не существует." },
+          "hints": [
+            { "kk": "Бұл сын есім ережесіз шырай жасайды.", "ru": "Это прилагательное образует степени неправильно." },
+            { "kk": "«Better than» тіркесін еске түсіріңіз.", "ru": "Вспомните выражение «better than»." }
+          ],
+          "payload": { "statement": { "kk": "'Good' has the irregular comparative form 'better'.", "ru": "'Good' has the irregular comparative form 'better'." } },
+          "answer_key": { "correct": true }
+        },
+        {
+          "type": "multiple_choice",
+          "topic": "en.comparatives",
+          "difficulty": 7,
+          "base_xp": 85,
+          "time_limit_sec": 160,
+          "prompt": { "kk": "Дұрыс құрастырылған сөйлемдерді таңдаңыз.", "ru": "Выберите грамматически правильные предложения.", "en": "Choose the grammatically correct sentences." },
+          "explanation": { "kk": "Қысқа сын есімдерге -er қосылады (faster), ал «more fast» қате. Күшейтпелі шырайда the biggest қолданылады. as...as арасында сын есім өзгермейді: as tall as.", "ru": "К коротким прилагательным добавляется -er (faster), а «more fast» — ошибка. В превосходной степени используется the biggest. В конструкции as...as прилагательное не меняется: as tall as." },
+          "hints": [
+            { "kk": "«Fast» — бір буынды сын есім.", "ru": "«Fast» — односложное прилагательное." },
+            { "kk": "as...as арасында сын есім түбір түрінде тұрады.", "ru": "В as...as прилагательное стоит в начальной форме." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "My car is faster than yours.", "ru": "My car is faster than yours." } },
+            { "id": "b", "text": { "kk": "My car is more fast than yours.", "ru": "My car is more fast than yours." } },
+            { "id": "c", "text": { "kk": "This is the biggest room in the house.", "ru": "This is the biggest room in the house." } },
+            { "id": "d", "text": { "kk": "This is the most big room in the house.", "ru": "This is the most big room in the house." } },
+            { "id": "e", "text": { "kk": "He is as tall as his father.", "ru": "He is as tall as his father." } },
+            { "id": "f", "text": { "kk": "He is as taller as his father.", "ru": "He is as taller as his father." } }
+          ] },
+          "answer_key": { "correct": ["a", "c", "e"] }
+        },
+        {
+          "type": "matching",
+          "topic": "en.comparatives",
+          "difficulty": 6,
+          "base_xp": 70,
+          "time_limit_sec": 140,
+          "prompt": { "kk": "Сын есімдерді салыстырмалы шырайымен сәйкестендіріңіз.", "ru": "Сопоставьте прилагательные с их сравнительной степенью.", "en": "Match the adjectives with their comparative forms." },
+          "explanation": { "kk": "hot → hotter (қосарланады), easy → easier (y → i), expensive → more expensive (көп буынды), bad → worse (ережесіз).", "ru": "hot → hotter (удвоение), easy → easier (y → i), expensive → more expensive (многосложное), bad → worse (неправильное)." },
+          "hints": [
+            { "kk": "«Easy» сөзінде y әрпі i-ге ауысады.", "ru": "В «easy» буква y переходит в i." },
+            { "kk": "«Bad» сын есімінің шырайы ережесіз: worse.", "ru": "Степень «bad» неправильная: worse." }
+          ],
+          "payload": {
+            "left": [
+              { "id": "l1", "text": { "kk": "hot", "ru": "hot" } },
+              { "id": "l2", "text": { "kk": "easy", "ru": "easy" } },
+              { "id": "l3", "text": { "kk": "expensive", "ru": "expensive" } },
+              { "id": "l4", "text": { "kk": "bad", "ru": "bad" } }
+            ],
+            "right": [
+              { "id": "r1", "text": { "kk": "worse", "ru": "worse" } },
+              { "id": "r2", "text": { "kk": "hotter", "ru": "hotter" } },
+              { "id": "r3", "text": { "kk": "easier", "ru": "easier" } },
+              { "id": "r4", "text": { "kk": "more expensive", "ru": "more expensive" } }
+            ]
+          },
+          "answer_key": { "pairs": { "l1": "r2", "l2": "r3", "l3": "r4", "l4": "r1" } }
+        },
+        {
+          "type": "ordering",
+          "topic": "en.comparatives",
+          "difficulty": 7,
+          "base_xp": 80,
+          "time_limit_sec": 150,
+          "prompt": { "kk": "Сөздерді дұрыс ретпен қойыңыз. much сөзі шырайды күшейтеді.", "ru": "Расставьте слова в правильном порядке. Слово much усиливает степень.", "en": "Put the words in the correct order. The word much intensifies the comparison." },
+          "explanation": { "kk": "Сөз тәртібі: бастауыш + be + much + салыстырмалы шырай + than: This exam is much harder than the last one.", "ru": "Порядок слов: подлежащее + be + much + сравнительная степень + than: This exam is much harder than the last one." },
+          "hints": [
+            { "kk": "«Much» салыстырмалы шырайдың алдында тұрады.", "ru": "«Much» стоит перед сравнительной степенью." },
+            { "kk": "«Than the last one» тіркесі соңында тұрады.", "ru": "Сочетание «than the last one» стоит в конце." }
+          ],
+          "payload": { "items": [
+            { "id": "i1", "text": { "kk": "This exam", "ru": "This exam" } },
+            { "id": "i2", "text": { "kk": "is", "ru": "is" } },
+            { "id": "i3", "text": { "kk": "much", "ru": "much" } },
+            { "id": "i4", "text": { "kk": "harder", "ru": "harder" } },
+            { "id": "i5", "text": { "kk": "than the last one", "ru": "than the last one" } }
+          ] },
+          "answer_key": { "order": ["i1", "i2", "i3", "i4", "i5"] }
+        },
+        {
+          "type": "short_answer",
+          "topic": "en.superlatives",
+          "difficulty": 7,
+          "base_xp": 75,
+          "time_limit_sec": 110,
+          "prompt": { "kk": "«Far» сын есімінің күшейтпелі шырайын жазыңыз («ең алыс» мағынасында).", "ru": "Напишите превосходную степень прилагательного «far» (в значении «самый далёкий»).", "en": "Write the superlative form of 'far' (meaning 'the most distant')." },
+          "explanation": { "kk": "Far — ережесіз сын есім: far → farther → the farthest (немесе further → the furthest). Екі нұсқа да дұрыс.", "ru": "Far — неправильное прилагательное: far → farther → the farthest (или further → the furthest). Оба варианта верны." },
+          "hints": [
+            { "kk": "Бұл сын есім ережесіз шырай жасайды.", "ru": "Это прилагательное образует степени неправильно." },
+            { "kk": "Екі нұсқа бар: farthest және furthest.", "ru": "Есть два варианта: farthest и furthest." }
+          ],
+          "payload": { "placeholder": { "kk": "Бір сөз немесе тіркес жазыңыз", "ru": "Напишите слово или словосочетание" } },
+          "answer_key": { "accepted": ["farthest", "the farthest", "furthest", "the furthest"], "case_sensitive": false }
+        },
+        {
+          "type": "cloze",
+          "topic": "en.superlatives",
+          "difficulty": 7,
+          "base_xp": 85,
+          "time_limit_sec": 190,
+          "prompt": { "kk": "Мәтінді оқып, әр бос орынға сын есімнің дұрыс шырайын қойыңыз.", "ru": "Прочитайте текст и выберите правильную степень прилагательного для каждого пропуска.", "en": "Read the text and choose the correct degree of the adjective for each gap." },
+          "explanation": { "kk": "Екі адамды салыстырғанда -er/more қолданылады: older, better. Топтың ішінен біреуін бөліп көрсеткенде күшейтпелі шырай: the best.", "ru": "При сравнении двух людей используется -er/more: older, better. При выделении одного из группы — превосходная степень: the best." },
+          "hints": [
+            { "kk": "«Than» сөзі бар жерде салыстырмалы шырай керек.", "ru": "Там, где есть «than», нужна сравнительная степень." },
+            { "kk": "«In the family» тобынан біреуді бөліп көрсету — күшейтпелі шырай.", "ru": "Выделение одного из группы «in the family» — превосходная степень." }
+          ],
+          "payload": {
+            "text": {
+              "kk": "Ben is {{1}} than his brother Tom. Ben is 14 and Tom is 12. Tom is {{2}} at maths because he practises every day. Their sister Anna is the {{3}} student in the family — she always gets the best marks.",
+              "ru": "Ben is {{1}} than his brother Tom. Ben is 14 and Tom is 12. Tom is {{2}} at maths because he practises every day. Their sister Anna is the {{3}} student in the family — she always gets the best marks."
+            },
+            "blanks": [
+              { "id": "1", "options": [
+                { "id": "b1a", "text": { "kk": "older", "ru": "older" } },
+                { "id": "b1b", "text": { "kk": "old", "ru": "old" } },
+                { "id": "b1c", "text": { "kk": "oldest", "ru": "oldest" } }
+              ] },
+              { "id": "2", "options": [
+                { "id": "b2a", "text": { "kk": "better", "ru": "better" } },
+                { "id": "b2b", "text": { "kk": "good", "ru": "good" } },
+                { "id": "b2c", "text": { "kk": "best", "ru": "best" } }
+              ] },
+              { "id": "3", "options": [
+                { "id": "b3a", "text": { "kk": "best", "ru": "best" } },
+                { "id": "b3b", "text": { "kk": "better", "ru": "better" } },
+                { "id": "b3c", "text": { "kk": "good", "ru": "good" } }
+              ] }
+            ]
+          },
+          "answer_key": { "blanks": { "1": "b1a", "2": "b2a", "3": "b3a" } }
+        },
+        {
+          "type": "timed_quiz",
+          "topic": "en.comparatives",
+          "difficulty": 6,
+          "base_xp": 55,
+          "time_limit_sec": 30,
+          "prompt": { "kk": "Жылдам жауап беріңіз: «big» сын есімінің салыстырмалы шырайы қандай?", "ru": "Отвечайте быстро: какая сравнительная степень у прилагательного «big»?", "en": "Answer quickly: what is the comparative form of 'big'?" },
+          "explanation": { "kk": "Дауыссыз-дауысты-дауыссыз үлгісіндегі бір буынды сын есімдерде соңғы дауыссыз қосарланады: big → bigger.", "ru": "В односложных прилагательных по схеме «согласный-гласный-согласный» последняя согласная удваивается: big → bigger." },
+          "hints": [
+            { "kk": "Соңғы «g» әрпі екі рет жазылады.", "ru": "Последняя «g» пишется дважды." },
+            { "kk": "«More big» қате нұсқа.", "ru": "«More big» — ошибочный вариант." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "biger", "ru": "biger" } },
+            { "id": "b", "text": { "kk": "bigger", "ru": "bigger" } },
+            { "id": "c", "text": { "kk": "more big", "ru": "more big" } },
+            { "id": "d", "text": { "kk": "bigest", "ru": "bigest" } }
+          ] },
+          "answer_key": { "correct": ["b"] }
+        },
+        {
+          "type": "numeric",
+          "topic": "en.comparatives",
+          "difficulty": 6,
+          "base_xp": 70,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "Есепті шығарыңыз: One ticket costs 40 euros and another ticket costs 55 euros. How many euros more expensive is the second ticket?", "ru": "Решите задачу: One ticket costs 40 euros and another ticket costs 55 euros. How many euros more expensive is the second ticket?", "en": "Solve: one ticket costs 40 euros and another ticket costs 55 euros. How many euros more expensive is the second ticket?" },
+          "explanation": { "kk": "55 − 40 = 15. Екінші билет 15 еуроға қымбат, сондықтан «more expensive» айырманы сұрап тұр.", "ru": "55 − 40 = 15. Второй билет дороже на 15 евро, именно эту разницу спрашивает «more expensive»." },
+          "hints": [
+            { "kk": "«More expensive» айырманы сұрайды.", "ru": "«More expensive» спрашивает разницу в цене." },
+            { "kk": "55-тен 40-ты азайтыңыз.", "ru": "Вычтите 40 из 55." }
+          ],
+          "payload": { "unit": { "kk": "еуро", "ru": "евро" } },
+          "answer_key": { "value": 15, "tolerance": 0 }
+        }
+      ]
+    },
+    {
+      "order_no": 7,
+      "title": { "kk": "Prepositions & Phrasal verbs", "ru": "Предлоги и фразовые глаголы", "en": "Prepositions and phrasal verbs" },
+      "description": {
+        "kk": "Орын мен уақыт предлогтарын (in/on/at) және жиі қолданылатын фразалық етістіктерді үйреніңіз.",
+        "ru": "Изучаем предлоги места и времени (in/on/at) и распространённые фразовые глаголы.",
+        "en": "Learn prepositions of place and time (in/on/at) and common phrasal verbs."
+      },
+      "icon": "place",
+      "is_boss": false,
+      "unlock_rules": { "min_xp": 980, "min_prev_accuracy": 0.6, "required_tasks": 10 },
+      "topics": [
+        { "code": "en.prepositions.place_time", "name": { "kk": "Орын және уақыт предлогтары", "ru": "Предлоги места и времени", "en": "Prepositions of place and time" } },
+        { "code": "en.phrasal_verbs", "name": { "kk": "Фразалық етістіктер", "ru": "Фразовые глаголы", "en": "Phrasal verbs" } }
+      ],
+      "tasks": [
+        {
+          "type": "single_choice",
+          "topic": "en.prepositions.place_time",
+          "difficulty": 7,
+          "base_xp": 80,
+          "time_limit_sec": 110,
+          "prompt": { "kk": "Дұрыс предлогты таңдаңыз: We arrived ___ the airport at six o'clock.", "ru": "Выберите правильный предлог: We arrived ___ the airport at six o'clock.", "en": "Choose the correct preposition: We arrived ___ the airport at six o'clock." },
+          "explanation": { "kk": "Arrive at нүктелік орындармен (the airport, the station, the door) қолданылады, ал arrive in — қала немесе ел атауымен.", "ru": "Arrive at употребляется с точечными местами (the airport, the station, the door), а arrive in — с названиями городов и стран." },
+          "hints": [
+            { "kk": "Әуежай — нақты бір нүкте.", "ru": "Аэропорт — конкретная точка." },
+            { "kk": "Қалалармен «in» қолданылады, нүктелік орынмен — басқа предлог.", "ru": "С городами используется «in», с точечными местами — другой предлог." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "at", "ru": "at" } },
+            { "id": "b", "text": { "kk": "in", "ru": "in" } },
+            { "id": "c", "text": { "kk": "on", "ru": "on" } },
+            { "id": "d", "text": { "kk": "to", "ru": "to" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "single_choice",
+          "topic": "en.prepositions.place_time",
+          "difficulty": 7,
+          "base_xp": 80,
+          "time_limit_sec": 110,
+          "prompt": { "kk": "Дұрыс предлогты таңдаңыз: I'll see you ___ Friday morning.", "ru": "Выберите правильный предлог: I'll see you ___ Friday morning.", "en": "Choose the correct preposition: I'll see you ___ Friday morning." },
+          "explanation": { "kk": "Нақты күндермен және күннің бөлігімен on қолданылады: on Friday, on Friday morning. Тек «morning» жалғыз тұрса — in the morning.", "ru": "С конкретными днями и частью дня используется on: on Friday, on Friday morning. Если «morning» стоит отдельно — in the morning." },
+          "hints": [
+            { "kk": "Апта күндерімен «on» қолданылады.", "ru": "С днями недели используется «on»." },
+            { "kk": "«Friday morning» тіркесінде күн нақты аталған.", "ru": "В «Friday morning» день назван конкретно." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "on", "ru": "on" } },
+            { "id": "b", "text": { "kk": "in", "ru": "in" } },
+            { "id": "c", "text": { "kk": "at", "ru": "at" } },
+            { "id": "d", "text": { "kk": "by", "ru": "by" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "true_false",
+          "topic": "en.prepositions.place_time",
+          "difficulty": 7,
+          "base_xp": 70,
+          "time_limit_sec": 100,
+          "prompt": { "kk": "Тұжырым дұрыс па, әлде бұрыс па? Уақыт предлогтары туралы.", "ru": "Верно или неверно утверждение? Речь о предлогах времени.", "en": "Is the statement true or false? It is about prepositions of time." },
+          "explanation": { "kk": "At нақты уақытпен қолданылады: at 7 o'clock, at noon, at midnight. Ал in — ай, жыл, ғасырмен.", "ru": "At употребляется с точным временем: at 7 o'clock, at noon, at midnight. А in — с месяцем, годом, веком." },
+          "hints": [
+            { "kk": "«At 7 o'clock» тіркесін еске түсіріңіз.", "ru": "Вспомните выражение «at 7 o'clock»." },
+            { "kk": "At нүктелік уақытты, in ұзақ кезеңді білдіреді.", "ru": "At обозначает точку во времени, in — длительный период." }
+          ],
+          "payload": { "statement": { "kk": "We use 'at' with exact times, for example 'at 7 o'clock'.", "ru": "We use 'at' with exact times, for example 'at 7 o'clock'." } },
+          "answer_key": { "correct": true }
+        },
+        {
+          "type": "multiple_choice",
+          "topic": "en.prepositions.place_time",
+          "difficulty": 8,
+          "base_xp": 95,
+          "time_limit_sec": 170,
+          "prompt": { "kk": "Предлогтары дұрыс қолданылған сөйлемдерді таңдаңыз.", "ru": "Выберите предложения с правильными предлогами.", "en": "Choose the sentences with the correct prepositions." },
+          "explanation": { "kk": "Тұрақты тіркестер: good at, interested in, depend on. «Good in», «interested on», «depend of» — қате.", "ru": "Устойчивые сочетания: good at, interested in, depend on. «Good in», «interested on», «depend of» — ошибки." },
+          "hints": [
+            { "kk": "Бұл предлогтар сын есім мен етістікке тіркесіп тұрады.", "ru": "Эти предлоги закреплены за прилагательными и глаголами." },
+            { "kk": "«Interested» сөзімен тек «in» қолданылады.", "ru": "С «interested» используется только «in»." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "He is good at maths.", "ru": "He is good at maths." } },
+            { "id": "b", "text": { "kk": "He is good in maths.", "ru": "He is good in maths." } },
+            { "id": "c", "text": { "kk": "I am interested in history.", "ru": "I am interested in history." } },
+            { "id": "d", "text": { "kk": "I am interested on history.", "ru": "I am interested on history." } },
+            { "id": "e", "text": { "kk": "She depends on her parents.", "ru": "She depends on her parents." } },
+            { "id": "f", "text": { "kk": "She depends of her parents.", "ru": "She depends of her parents." } }
+          ] },
+          "answer_key": { "correct": ["a", "c", "e"] }
+        },
+        {
+          "type": "matching",
+          "topic": "en.phrasal_verbs",
+          "difficulty": 7,
+          "base_xp": 80,
+          "time_limit_sec": 150,
+          "prompt": { "kk": "Фразалық етістіктерді қазақша мағынасымен сәйкестендіріңіз.", "ru": "Сопоставьте фразовые глаголы с их значением.", "en": "Match the phrasal verbs with their meanings." },
+          "explanation": { "kk": "give up — бас тарту, look after — қамқорлық жасау, turn on — құрылғыны ашу, find out — білу, анықтау.", "ru": "give up — бросить, look after — заботиться, turn on — включить, find out — выяснить." },
+          "hints": [
+            { "kk": "«Look after» балаға немесе жануарға қамқорлық жасауды білдіреді.", "ru": "«Look after» означает заботиться о ребёнке или животном." },
+            { "kk": "«Find out» — ақпаратты білу.", "ru": "«Find out» — узнать информацию." }
+          ],
+          "payload": {
+            "left": [
+              { "id": "l1", "text": { "kk": "give up", "ru": "give up" } },
+              { "id": "l2", "text": { "kk": "look after", "ru": "look after" } },
+              { "id": "l3", "text": { "kk": "turn on", "ru": "turn on" } },
+              { "id": "l4", "text": { "kk": "find out", "ru": "find out" } }
+            ],
+            "right": [
+              { "id": "r1", "text": { "kk": "ашу (құрылғыны)", "ru": "включить" } },
+              { "id": "r2", "text": { "kk": "бас тарту, әдеттен қалу", "ru": "бросить привычку" } },
+              { "id": "r3", "text": { "kk": "білу, анықтау", "ru": "выяснить" } },
+              { "id": "r4", "text": { "kk": "қамқорлық жасау", "ru": "заботиться" } }
+            ]
+          },
+          "answer_key": { "pairs": { "l1": "r2", "l2": "r4", "l3": "r1", "l4": "r3" } }
+        },
+        {
+          "type": "ordering",
+          "topic": "en.phrasal_verbs",
+          "difficulty": 8,
+          "base_xp": 90,
+          "time_limit_sec": 160,
+          "prompt": { "kk": "Сөздерді дұрыс ретпен қойыңыз. Фразалық етістік бірге тұрады.", "ru": "Расставьте слова в правильном порядке. Фразовый глагол стоит вместе.", "en": "Put the words in the correct order. The phrasal verb stays together." },
+          "explanation": { "kk": "Сөз тәртібі: Please + turn off + the lights + before + you leave. «Turn off» — фразалық етістік, ол біртұтас тұрады.", "ru": "Порядок слов: Please + turn off + the lights + before + you leave. «Turn off» — фразовый глагол, стоит вместе." },
+          "hints": [
+            { "kk": "Сөйлем «Please» сөзінен басталады.", "ru": "Предложение начинается со слова «Please»." },
+            { "kk": "«Before you leave» шарт мәндесі соңында тұрады.", "ru": "Обстоятельство «before you leave» стоит в конце." }
+          ],
+          "payload": { "items": [
+            { "id": "i1", "text": { "kk": "Please", "ru": "Please" } },
+            { "id": "i2", "text": { "kk": "turn off", "ru": "turn off" } },
+            { "id": "i3", "text": { "kk": "the lights", "ru": "the lights" } },
+            { "id": "i4", "text": { "kk": "before", "ru": "before" } },
+            { "id": "i5", "text": { "kk": "you leave", "ru": "you leave" } }
+          ] },
+          "answer_key": { "order": ["i1", "i2", "i3", "i4", "i5"] }
+        },
+        {
+          "type": "short_answer",
+          "topic": "en.phrasal_verbs",
+          "difficulty": 7,
+          "base_xp": 85,
+          "time_limit_sec": 110,
+          "prompt": { "kk": "Бір сөз жазыңыз: Don't forget to ___ off your phone during the exam.", "ru": "Напишите одно слово: Don't forget to ___ off your phone during the exam.", "en": "Write one word: Don't forget to ___ off your phone during the exam." },
+          "explanation": { "kk": "Turn off — өшіру. «Switch off» де дұрыс, сондықтан екі жауап та қабылданады.", "ru": "Turn off — выключить. «Switch off» тоже верно, поэтому принимаются оба ответа." },
+          "hints": [
+            { "kk": "Бұл етістік «off» предлогымен тіркесіп, өшіруді білдіреді.", "ru": "Глагол с «off» означает выключить." },
+            { "kk": "Етістік «t» немесе «s» әрпінен басталады.", "ru": "Глагол начинается с «t» или «s»." }
+          ],
+          "payload": { "placeholder": { "kk": "Бір сөз жазыңыз", "ru": "Напишите одно слово" } },
+          "answer_key": { "accepted": ["turn", "switch"], "case_sensitive": false }
+        },
+        {
+          "type": "cloze",
+          "topic": "en.prepositions.place_time",
+          "difficulty": 8,
+          "base_xp": 100,
+          "time_limit_sec": 200,
+          "prompt": { "kk": "Мәтінді оқып, әр бос орынға дұрыс предлогты қойыңыз.", "ru": "Прочитайте текст и вставьте правильный предлог в каждый пропуск.", "en": "Read the text and put the correct preposition in each gap." },
+          "explanation": { "kk": "on the third floor (қабат), arrive at work (мекеме), on Friday afternoons (нақты күн), in the evening (күннің бөлігі).", "ru": "on the third floor (этаж), arrive at work (место), on Friday afternoons (конкретный день), in the evening (часть дня)." },
+          "hints": [
+            { "kk": "Қабат атауымен «on» қолданылады.", "ru": "С номером этажа используется «on»." },
+            { "kk": "«The evening» — күннің бөлігі, онымен «in» тіркеседі.", "ru": "«The evening» — часть дня, с ней сочетается «in»." }
+          ],
+          "payload": {
+            "text": {
+              "kk": "My office is {{1}} the third floor of a tall building. I usually arrive {{2}} work at half past eight. {{3}} Friday afternoons we have a short meeting, and {{4}} the evening I go to the gym.",
+              "ru": "My office is {{1}} the third floor of a tall building. I usually arrive {{2}} work at half past eight. {{3}} Friday afternoons we have a short meeting, and {{4}} the evening I go to the gym."
+            },
+            "blanks": [
+              { "id": "1", "options": [
+                { "id": "b1a", "text": { "kk": "on", "ru": "on" } },
+                { "id": "b1b", "text": { "kk": "in", "ru": "in" } },
+                { "id": "b1c", "text": { "kk": "at", "ru": "at" } }
+              ] },
+              { "id": "2", "options": [
+                { "id": "b2a", "text": { "kk": "at", "ru": "at" } },
+                { "id": "b2b", "text": { "kk": "to", "ru": "to" } },
+                { "id": "b2c", "text": { "kk": "in", "ru": "in" } }
+              ] },
+              { "id": "3", "options": [
+                { "id": "b3a", "text": { "kk": "On", "ru": "On" } },
+                { "id": "b3b", "text": { "kk": "In", "ru": "In" } },
+                { "id": "b3c", "text": { "kk": "At", "ru": "At" } }
+              ] },
+              { "id": "4", "options": [
+                { "id": "b4a", "text": { "kk": "in", "ru": "in" } },
+                { "id": "b4b", "text": { "kk": "on", "ru": "on" } },
+                { "id": "b4c", "text": { "kk": "at", "ru": "at" } }
+              ] }
+            ]
+          },
+          "answer_key": { "blanks": { "1": "b1a", "2": "b2a", "3": "b3a", "4": "b4a" } }
+        },
+        {
+          "type": "timed_quiz",
+          "topic": "en.prepositions.place_time",
+          "difficulty": 7,
+          "base_xp": 65,
+          "time_limit_sec": 35,
+          "prompt": { "kk": "Жылдам жауап беріңіз: I was born ___ May.", "ru": "Отвечайте быстро: I was born ___ May.", "en": "Answer quickly: I was born ___ May." },
+          "explanation": { "kk": "Айлармен, жылдармен және ғасырлармен in қолданылады: in May, in 2010, in the 21st century.", "ru": "С месяцами, годами и веками используется in: in May, in 2010, in the 21st century." },
+          "hints": [
+            { "kk": "Мамыр — ай атауы.", "ru": "Май — название месяца." },
+            { "kk": "Айлармен «in» тіркеседі.", "ru": "С месяцами сочетается «in»." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "in", "ru": "in" } },
+            { "id": "b", "text": { "kk": "on", "ru": "on" } },
+            { "id": "c", "text": { "kk": "at", "ru": "at" } },
+            { "id": "d", "text": { "kk": "by", "ru": "by" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "single_choice",
+          "topic": "en.phrasal_verbs",
+          "difficulty": 8,
+          "base_xp": 95,
+          "time_limit_sec": 140,
+          "prompt": { "kk": "Дұрыс нұсқаны таңдаңыз: The meeting was put ___ until next week.", "ru": "Выберите правильный вариант: The meeting was put ___ until next week.", "en": "Choose the correct option: The meeting was put ___ until next week." },
+          "explanation": { "kk": "Put off — кейінге қалдыру. «Until next week» тіркесі осы мағынаны растайды. Put on — кию, put up — орнату, put out — сөндіру.", "ru": "Put off — отложить. Сочетание «until next week» подтверждает это значение. Put on — надеть, put up — установить, put out — потушить." },
+          "hints": [
+            { "kk": "Жиналыс кейінге қалдырылды.", "ru": "Совещание перенесли на более поздний срок." },
+            { "kk": "«Until next week» — кейінге қалдырудың белгісі.", "ru": "«Until next week» — признак переноса." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "off", "ru": "off" } },
+            { "id": "b", "text": { "kk": "on", "ru": "on" } },
+            { "id": "c", "text": { "kk": "up", "ru": "up" } },
+            { "id": "d", "text": { "kk": "out", "ru": "out" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        }
+      ]
+    },
+    {
+      "order_no": 8,
+      "title": { "kk": "BOSS: Аралас грамматика және лексика", "ru": "BOSS: Смешанная грамматика и лексика", "en": "BOSS: Mixed grammar and vocabulary" },
+      "description": {
+        "kk": "B1 деңгейіндегі қиын тапсырмалар: шартты сөйлемдер, төлеу сөз, Present Perfect және B1 лексикасы. Курстың қорытынды сынағы.",
+        "ru": "Сложные задания уровня B1: условные предложения, косвенная речь, Present Perfect и лексика B1. Итоговый экзамен курса.",
+        "en": "Challenging B1 tasks: conditionals, reported speech, Present Perfect and B1 vocabulary. The final exam of the course."
+      },
+      "icon": "workspace_premium",
+      "is_boss": true,
+      "unlock_rules": { "min_xp": 1200, "min_prev_accuracy": 0.7, "required_tasks": 10 },
+      "topics": [
+        { "code": "en.grammar.mixed_b1", "name": { "kk": "Аралас грамматика B1", "ru": "Смешанная грамматика B1", "en": "Mixed grammar B1" } },
+        { "code": "en.vocab.b1", "name": { "kk": "B1 деңгейіндегі лексика", "ru": "Лексика уровня B1", "en": "B1 vocabulary" } }
+      ],
+      "tasks": [
+        {
+          "type": "single_choice",
+          "topic": "en.grammar.mixed_b1",
+          "difficulty": 8,
+          "base_xp": 95,
+          "time_limit_sec": 140,
+          "prompt": { "kk": "Дұрыс нұсқаны таңдаңыз: If I ___ more time, I would learn to play the guitar.", "ru": "Выберите правильный вариант: If I ___ more time, I would learn to play the guitar.", "en": "Choose the correct option: If I ___ more time, I would learn to play the guitar." },
+          "explanation": { "kk": "Екінші шартты сөйлем (Second Conditional) осылай құрылады: If + Past Simple, would + етістік. «Would» болғандықтан, if бөлігінде had қолданылады.", "ru": "Второе условное предложение (Second Conditional) строится так: If + Past Simple, would + глагол. Раз есть «would», в части с if используется had." },
+          "hints": [
+            { "kk": "Сөйлемде «would learn» бар — бұл екінші шартты сөйлем.", "ru": "В предложении есть «would learn» — это второе условное." },
+            { "kk": "If бөлігінде өткен шақ формасы тұрады.", "ru": "В части с if стоит форма прошедшего времени." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "had", "ru": "had" } },
+            { "id": "b", "text": { "kk": "have", "ru": "have" } },
+            { "id": "c", "text": { "kk": "will have", "ru": "will have" } },
+            { "id": "d", "text": { "kk": "would have", "ru": "would have" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "single_choice",
+          "topic": "en.grammar.mixed_b1",
+          "difficulty": 9,
+          "base_xp": 110,
+          "time_limit_sec": 160,
+          "prompt": { "kk": "Дұрыс нұсқаны таңдаңыз: She asked me where I ___ from.", "ru": "Выберите правильный вариант: She asked me where I ___ from.", "en": "Choose the correct option: She asked me where I ___ from." },
+          "explanation": { "kk": "Төлеу сөзде (reported speech) сұрақта тура сөз тәртібі қолданылады: where I came from. Көмекші did алынып тасталады, етістік өткен шаққа ауысады.", "ru": "В косвенной речи (reported speech) в вопросе используется прямой порядок слов: where I came from. Вспомогательный did убирается, глагол переходит в прошедшее время." },
+          "hints": [
+            { "kk": "Бұл төлеу сөз — сұрақ енді тура сұрақ емес.", "ru": "Это косвенная речь — вопрос больше не прямой." },
+            { "kk": "Төлеу сөзде бастауыш етістіктің алдында тұрады.", "ru": "В косвенной речи подлежащее стоит перед глаголом." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "came", "ru": "came" } },
+            { "id": "b", "text": { "kk": "come", "ru": "come" } },
+            { "id": "c", "text": { "kk": "did I come", "ru": "did I come" } },
+            { "id": "d", "text": { "kk": "was coming", "ru": "was coming" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "true_false",
+          "topic": "en.grammar.mixed_b1",
+          "difficulty": 8,
+          "base_xp": 85,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "Тұжырым дұрыс па, әлде бұрыс па? Present Perfect ережесі туралы.", "ru": "Верно или неверно утверждение? Речь о правиле Present Perfect.", "en": "Is the statement true or false? It is about the Present Perfect rule." },
+          "explanation": { "kk": "Since бастапқы нүктені (since 2010), for уақыт мөлшерін (for five years) білдіреді. Екеуі де Present Perfect-пен қолданылады.", "ru": "Since указывает на начальную точку (since 2010), for — на длительность (for five years). Оба используются с Present Perfect." },
+          "hints": [
+            { "kk": "«Since» басталу нүктесін көрсетеді.", "ru": "«Since» указывает на точку отсчёта." },
+            { "kk": "«For» уақыт ұзақтығын білдіреді.", "ru": "«For» обозначает длительность." }
+          ],
+          "payload": { "statement": { "kk": "In 'I have lived here since 2010', Present Perfect is used with 'since' for a starting point in time.", "ru": "In 'I have lived here since 2010', Present Perfect is used with 'since' for a starting point in time." } },
+          "answer_key": { "correct": true }
+        },
+        {
+          "type": "multiple_choice",
+          "topic": "en.grammar.mixed_b1",
+          "difficulty": 9,
+          "base_xp": 120,
+          "time_limit_sec": 200,
+          "prompt": { "kk": "Грамматикалық тұрғыдан дұрыс сөйлемдерді таңдаңыз.", "ru": "Выберите грамматически правильные предложения.", "en": "Choose the grammatically correct sentences." },
+          "explanation": { "kk": "«For five years» — ұзақтық, «since» емес. «Never» болымсыз мағына береді, «ever» ондай мағына бермейді. «Didn't use to» — дұрыс форма, «didn't used to» — қате.", "ru": "«For five years» — длительность, а не «since». «Never» даёт отрицание, «ever» — нет. «Didn't use to» — правильная форма, «didn't used to» — ошибка." },
+          "hints": [
+            { "kk": "Ұзақтық for-мен, бастапқы нүкте since-пен беріледі.", "ru": "Длительность — с for, точка отсчёта — с since." },
+            { "kk": "didn't-тан кейін «use to» жазылады.", "ru": "После didn't пишется «use to»." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "He has been working here for five years.", "ru": "He has been working here for five years." } },
+            { "id": "b", "text": { "kk": "He has been working here since five years.", "ru": "He has been working here since five years." } },
+            { "id": "c", "text": { "kk": "I have never been to London.", "ru": "I have never been to London." } },
+            { "id": "d", "text": { "kk": "I have ever been to London.", "ru": "I have ever been to London." } },
+            { "id": "e", "text": { "kk": "They didn't use to travel much.", "ru": "They didn't use to travel much." } },
+            { "id": "f", "text": { "kk": "They didn't used to travel much.", "ru": "They didn't used to travel much." } }
+          ] },
+          "answer_key": { "correct": ["a", "c", "e"] }
+        },
+        {
+          "type": "matching",
+          "topic": "en.vocab.b1",
+          "difficulty": 8,
+          "base_xp": 95,
+          "time_limit_sec": 160,
+          "prompt": { "kk": "B1 деңгейіндегі етістіктерді қазақша мағынасымен сәйкестендіріңіз.", "ru": "Сопоставьте глаголы уровня B1 с их значением.", "en": "Match the B1 verbs with their meanings." },
+          "explanation": { "kk": "achieve — қол жеткізу, improve — жақсарту, avoid — аулақ болу, suggest — ұсыну.", "ru": "achieve — достигать, improve — улучшать, avoid — избегать, suggest — предлагать." },
+          "hints": [
+            { "kk": "«Improve» — жақсырақ ету.", "ru": "«Improve» — делать лучше." },
+            { "kk": "«Avoid» — бір нәрседен қашу, аулақ болу.", "ru": "«Avoid» — держаться в стороне от чего-то." }
+          ],
+          "payload": {
+            "left": [
+              { "id": "l1", "text": { "kk": "achieve", "ru": "achieve" } },
+              { "id": "l2", "text": { "kk": "improve", "ru": "improve" } },
+              { "id": "l3", "text": { "kk": "avoid", "ru": "avoid" } },
+              { "id": "l4", "text": { "kk": "suggest", "ru": "suggest" } }
+            ],
+            "right": [
+              { "id": "r1", "text": { "kk": "жақсарту", "ru": "улучшать" } },
+              { "id": "r2", "text": { "kk": "қол жеткізу", "ru": "достигать" } },
+              { "id": "r3", "text": { "kk": "ұсыну", "ru": "предлагать" } },
+              { "id": "r4", "text": { "kk": "аулақ болу", "ru": "избегать" } }
+            ]
+          },
+          "answer_key": { "pairs": { "l1": "r2", "l2": "r1", "l3": "r4", "l4": "r3" } }
+        },
+        {
+          "type": "ordering",
+          "topic": "en.grammar.mixed_b1",
+          "difficulty": 9,
+          "base_xp": 110,
+          "time_limit_sec": 180,
+          "prompt": { "kk": "Сөздерді дұрыс ретпен қойып, төлеу сөзді қалпына келтіріңіз.", "ru": "Расставьте слова в правильном порядке, восстановив косвенную речь.", "en": "Put the words in the correct order to restore the reported speech sentence." },
+          "explanation": { "kk": "Төлеу сөзде: She told me + she had finished + the project + the day before. «The day before» — «yesterday» сөзінің төлеу сөздегі баламасы.", "ru": "В косвенной речи: She told me + she had finished + the project + the day before. «The day before» — замена «yesterday» в косвенной речи." },
+          "hints": [
+            { "kk": "Сөйлем «She told me»-ден басталады.", "ru": "Предложение начинается с «She told me»." },
+            { "kk": "«The day before» уақыт мәндесі ретінде соңында тұрады.", "ru": "«The day before» стоит в конце как обстоятельство времени." }
+          ],
+          "payload": { "items": [
+            { "id": "i1", "text": { "kk": "She told me", "ru": "She told me" } },
+            { "id": "i2", "text": { "kk": "she had finished", "ru": "she had finished" } },
+            { "id": "i3", "text": { "kk": "the project", "ru": "the project" } },
+            { "id": "i4", "text": { "kk": "the day before", "ru": "the day before" } }
+          ] },
+          "answer_key": { "order": ["i1", "i2", "i3", "i4"] }
+        },
+        {
+          "type": "cloze",
+          "topic": "en.grammar.mixed_b1",
+          "difficulty": 9,
+          "base_xp": 130,
+          "time_limit_sec": 240,
+          "prompt": { "kk": "Мәтінді оқып, әр бос орынға дұрыс нұсқаны қойыңыз. Бұл тапсырма бірнеше шақты тексереді.", "ru": "Прочитайте текст и выберите правильный вариант для каждого пропуска. Задание проверяет несколько времён.", "en": "Read the text and choose the correct option for each gap. This task tests several tenses." },
+          "explanation": { "kk": "had worked — Past Perfect (он жылғы іс бұрын аяқталған); runs — Present Simple 3-ші жақ; if she had — екінші шартты сөйлем; the best — күшейтпелі шырай.", "ru": "had worked — Past Perfect (десять лет работы до момента в прошлом); runs — Present Simple 3-е лицо; if she had — второе условное; the best — превосходная степень." },
+          "hints": [
+            { "kk": "«For ten years» тіркесі әрекеттің бұрын басталғанын көрсетеді.", "ru": "«For ten years» указывает на действие, начавшееся раньше." },
+            { "kk": "«Today she...» — қазіргі жағдай, Present Simple керек.", "ru": "«Today she...» — текущая ситуация, нужен Present Simple." }
+          ],
+          "payload": {
+            "text": {
+              "kk": "Last year Sara decided to change her career. She had {{1}} as a teacher for ten years, but she wanted a new challenge. Today she {{2}} her own small company. If she {{3}} more free time, she would travel around Asia. She says it was the {{4}} decision of her life.",
+              "ru": "Last year Sara decided to change her career. She had {{1}} as a teacher for ten years, but she wanted a new challenge. Today she {{2}} her own small company. If she {{3}} more free time, she would travel around Asia. She says it was the {{4}} decision of her life."
+            },
+            "blanks": [
+              { "id": "1", "options": [
+                { "id": "b1a", "text": { "kk": "worked", "ru": "worked" } },
+                { "id": "b1b", "text": { "kk": "works", "ru": "works" } },
+                { "id": "b1c", "text": { "kk": "work", "ru": "work" } }
+              ] },
+              { "id": "2", "options": [
+                { "id": "b2a", "text": { "kk": "runs", "ru": "runs" } },
+                { "id": "b2b", "text": { "kk": "run", "ru": "run" } },
+                { "id": "b2c", "text": { "kk": "running", "ru": "running" } }
+              ] },
+              { "id": "3", "options": [
+                { "id": "b3a", "text": { "kk": "had", "ru": "had" } },
+                { "id": "b3b", "text": { "kk": "has", "ru": "has" } },
+                { "id": "b3c", "text": { "kk": "will have", "ru": "will have" } }
+              ] },
+              { "id": "4", "options": [
+                { "id": "b4a", "text": { "kk": "best", "ru": "best" } },
+                { "id": "b4b", "text": { "kk": "better", "ru": "better" } },
+                { "id": "b4c", "text": { "kk": "good", "ru": "good" } }
+              ] }
+            ]
+          },
+          "answer_key": { "blanks": { "1": "b1a", "2": "b2a", "3": "b3a", "4": "b4a" } }
+        },
+        {
+          "type": "timed_quiz",
+          "topic": "en.vocab.b1",
+          "difficulty": 8,
+          "base_xp": 80,
+          "time_limit_sec": 40,
+          "prompt": { "kk": "Жылдам жауап беріңіз: «difficult» сөзінің синонимін таңдаңыз.", "ru": "Отвечайте быстро: выберите синоним слова «difficult».", "en": "Answer quickly: choose the synonym of 'difficult'." },
+          "explanation": { "kk": "Difficult және hard — қиын. Easy — жеңіл, cheap — арзан, slow — баяу.", "ru": "Difficult и hard — сложный. Easy — лёгкий, cheap — дешёвый, slow — медленный." },
+          "hints": [
+            { "kk": "Синоним қиындықты білдіреді.", "ru": "Синоним обозначает сложность." },
+            { "kk": "«Easy» — қарама-қарсы мағына.", "ru": "«Easy» — противоположное значение." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "hard", "ru": "hard" } },
+            { "id": "b", "text": { "kk": "easy", "ru": "easy" } },
+            { "id": "c", "text": { "kk": "cheap", "ru": "cheap" } },
+            { "id": "d", "text": { "kk": "slow", "ru": "slow" } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "short_answer",
+          "topic": "en.grammar.mixed_b1",
+          "difficulty": 9,
+          "base_xp": 105,
+          "time_limit_sec": 140,
+          "prompt": { "kk": "Бір сөз жазыңыз: I'm looking forward ___ hearing from you.", "ru": "Напишите одно слово: I'm looking forward ___ hearing from you.", "en": "Write one word: I'm looking forward ___ hearing from you." },
+          "explanation": { "kk": "Look forward to — тұрақты тіркес, «to» предлогынан кейін етістік -ing түрінде тұрады: looking forward to hearing.", "ru": "Look forward to — устойчивое сочетание, после предлога «to» глагол стоит в форме -ing: looking forward to hearing." },
+          "hints": [
+            { "kk": "Бұл тіркес әрқашан «to» предлогымен жүреді.", "ru": "Это сочетание всегда идёт с предлогом «to»." },
+            { "kk": "«To»-дан кейін «hearing» тұрғаны — предлог екенін көрсетеді.", "ru": "После «to» стоит «hearing» — значит, это предлог." }
+          ],
+          "payload": { "placeholder": { "kk": "Бір сөз жазыңыз", "ru": "Напишите одно слово" } },
+          "answer_key": { "accepted": ["to"], "case_sensitive": false }
+        },
+        {
+          "type": "single_choice",
+          "topic": "en.grammar.mixed_b1",
+          "difficulty": 10,
+          "base_xp": 140,
+          "time_limit_sec": 250,
+          "prompt": { "kk": "Ең қиын тапсырма: инверсия қолданылған дұрыс сөйлемді таңдаңыз.", "ru": "Самое сложное задание: выберите правильное предложение с инверсией.", "en": "The hardest task: choose the correct sentence with inversion." },
+          "explanation": { "kk": "Hardly сөйлем басында тұрса, инверсия қолданылады: Hardly had I sat down when... Яғни көмекші етістік бастауыштан бұрын тұрады, ал «when» жалғаулығы сақталады.", "ru": "Если hardly стоит в начале предложения, используется инверсия: Hardly had I sat down when... Вспомогательный глагол стоит перед подлежащим, союз «when» сохраняется." },
+          "hints": [
+            { "kk": "Инверсияда көмекші етістік бастауыштан бұрын тұрады.", "ru": "При инверсии вспомогательный глагол стоит перед подлежащим." },
+            { "kk": "«Hardly ... when» тіркесінде «than» қолданылмайды.", "ru": "В конструкции «Hardly ... when» не используется «than»." }
+          ],
+          "payload": { "options": [
+            { "id": "a", "text": { "kk": "Hardly had I sat down when the phone rang.", "ru": "Hardly had I sat down when the phone rang." } },
+            { "id": "b", "text": { "kk": "Hardly I had sat down when the phone rang.", "ru": "Hardly I had sat down when the phone rang." } },
+            { "id": "c", "text": { "kk": "Hardly had I sat down than the phone rang.", "ru": "Hardly had I sat down than the phone rang." } },
+            { "id": "d", "text": { "kk": "Hardly I sat down when the phone rang.", "ru": "Hardly I sat down when the phone rang." } }
+          ] },
+          "answer_key": { "correct": ["a"] }
+        }
+      ]
+    }
+  ]
+}

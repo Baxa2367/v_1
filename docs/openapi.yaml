@@ -1,0 +1,702 @@
+openapi: 3.0.3
+info:
+  title: Lumina — Gamified Learning System API
+  version: 1.0.0
+  description: |
+    Server-authoritative gamified LMS. Every XP point, star, achievement and
+    leaderboard rank is computed and stored on the server (PostgreSQL).
+    Localisation: send `Accept-Language: kk|ru|en` or `X-Locale`.
+    All successful responses are wrapped as `{"data": ...}`; errors are
+    `{"error": {"code": "...", "message": "...", "details": {...}}}`.
+servers:
+  - url: http://127.0.0.1:8080/api/v1
+    description: Local development
+security:
+  - bearerAuth: []
+tags:
+  - name: Auth
+  - name: Learning
+  - name: Attempts
+  - name: AI
+  - name: Gamification
+  - name: Social
+  - name: Reports
+  - name: Staff
+  - name: System
+paths:
+  /auth/register:
+    post:
+      tags: [Auth]
+      security: []
+      summary: Register a student
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password, display_name]
+              properties:
+                email: { type: string, format: email }
+                password: { type: string, minLength: 8 }
+                display_name: { type: string }
+                nickname: { type: string }
+                locale: { type: string, enum: [kk, ru, en] }
+      responses:
+        '201': { description: Created, content: { application/json: { schema: { $ref: '#/components/schemas/AuthResponse' } } } }
+        '422': { $ref: '#/components/responses/Validation' }
+        '409': { $ref: '#/components/responses/Conflict' }
+  /auth/login:
+    post:
+      tags: [Auth]
+      security: []
+      summary: Log in and receive access + refresh tokens
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                email: { type: string }
+                password: { type: string }
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/AuthResponse' } } } }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+  /auth/refresh:
+    post:
+      tags: [Auth]
+      security: []
+      summary: Rotate refresh token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [refresh_token]
+              properties:
+                refresh_token: { type: string }
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/AuthResponse' } } } }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+  /auth/logout:
+    post:
+      tags: [Auth]
+      security: []
+      summary: Revoke a refresh token
+      responses:
+        '200': { description: OK }
+  /me:
+    get:
+      tags: [Auth]
+      summary: Current user and profile
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      user: { type: object }
+                      profile: { $ref: '#/components/schemas/Profile' }
+                      unread_notifications: { type: integer }
+    patch:
+      tags: [Auth]
+      summary: Update profile / preferences
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                display_name: { type: string }
+                nickname: { type: string }
+                avatar: { type: string }
+                bio: { type: string }
+                locale: { type: string, enum: [kk, ru, en] }
+                daily_goal_xp: { type: integer }
+                privacy_flags: { type: object }
+      responses:
+        '200': { description: OK }
+  /me/dashboard:
+    get:
+      tags: [Auth]
+      summary: Aggregated dashboard payload
+      responses:
+        '200': { description: OK }
+  /courses:
+    get:
+      tags: [Learning]
+      summary: List published courses with progress
+      parameters:
+        - { in: query, name: category, schema: { type: string } }
+        - { in: query, name: q, schema: { type: string } }
+        - { in: query, name: enrolled, schema: { type: string, enum: ['1'] } }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items: { $ref: '#/components/schemas/Course' }
+  /courses/{id}:
+    get:
+      tags: [Learning]
+      summary: Course with levels and progress
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '200': { description: OK }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /courses/{id}/map:
+    get:
+      tags: [Learning]
+      summary: Learning map (level states, stars, recommendation)
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '200': { description: OK }
+  /courses/{id}/enroll:
+    post:
+      tags: [Learning]
+      summary: Enroll in a course
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '200': { description: OK }
+  /courses/{id}/unenroll:
+    post:
+      tags: [Learning]
+      summary: Leave a course
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '200': { description: OK }
+  /levels/{id}:
+    get:
+      tags: [Learning]
+      summary: Level details with task summaries (answers never included)
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '200': { description: OK }
+  /levels/{id}/next-task:
+    get:
+      tags: [Learning]
+      summary: Next unsolved task in a level
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data: { $ref: '#/components/schemas/Task' }
+  /tasks/{id}:
+    get:
+      tags: [Attempts]
+      summary: Task payload without the answer key
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { type: object, properties: { data: { $ref: '#/components/schemas/Task' } } } } } }
+  /tasks/{id}/attempts:
+    post:
+      tags: [Attempts]
+      summary: Submit an answer (idempotent by attempt_token)
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [attempt_token, answer]
+              properties:
+                attempt_token: { type: string, minLength: 8, maxLength: 120 }
+                answer: { type: object }
+                time_spent_ms: { type: integer }
+                hints_used: { type: integer }
+                context: { type: string, enum: [normal, duel, tournament, season, daily] }
+      responses:
+        '200':
+          description: Graded attempt
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data: { $ref: '#/components/schemas/AttemptResult' }
+        '409': { description: Cooldown or duplicate }
+        '429': { description: Attempt limit reached }
+  /tasks/{id}/hint:
+    post:
+      tags: [Attempts]
+      summary: Reveal a hint (XP penalty applies)
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '200': { description: OK }
+  /attempts/history:
+    get:
+      tags: [Attempts]
+      summary: Attempt history
+      parameters:
+        - { in: query, name: limit, schema: { type: integer, default: 20 } }
+        - { in: query, name: offset, schema: { type: integer, default: 0 } }
+      responses:
+        '200': { description: OK }
+  /ai/next-task:
+    get:
+      tags: [AI]
+      summary: Adaptive next task with explainable decision
+      parameters:
+        - { in: query, name: course_id, schema: { type: string, format: uuid } }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      task: { $ref: '#/components/schemas/Task' }
+                      decision:
+                        type: object
+                        properties:
+                          id: { type: string }
+                          reason_code: { type: string, enum: [zpd, challenge, support, review, new_topic, daily_goal] }
+                          expected_success: { type: number }
+                          explanation: { type: string }
+                          features: { type: object }
+  /ai/explain/{id}:
+    get:
+      tags: [AI]
+      summary: Explain a stored AI decision
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '200': { description: OK }
+  /ai/tips:
+    get:
+      tags: [AI]
+      summary: Personalised tips
+      responses:
+        '200': { description: OK }
+  /ai/forecast:
+    get:
+      tags: [AI]
+      summary: Level forecast and dropout risk
+      responses:
+        '200': { description: OK }
+  /ai/mastery:
+    get:
+      tags: [AI]
+      summary: Topic mastery map for a course
+      parameters:
+        - { in: query, name: course_id, schema: { type: string, format: uuid } }
+      responses:
+        '200': { description: OK }
+  /ai/generate:
+    post:
+      tags: [AI]
+      summary: Optional LLM task generation (teacher/admin)
+      responses:
+        '200': { description: OK }
+  /me/xp:
+    get:
+      tags: [Gamification]
+      summary: XP, level, title, today and week totals
+      responses:
+        '200': { description: OK }
+  /me/xp/events:
+    get:
+      tags: [Gamification]
+      summary: Append-only XP journal
+      responses:
+        '200': { description: OK }
+  /me/achievements:
+    get:
+      tags: [Gamification]
+      summary: Achievement collection with progress
+      responses:
+        '200': { description: OK }
+  /me/streak:
+    get:
+      tags: [Gamification]
+      summary: Streak, freeze count and 90-day calendar
+      responses:
+        '200': { description: OK }
+  /me/quests:
+    get:
+      tags: [Gamification]
+      summary: Today's daily and weekly quests
+      responses:
+        '200': { description: OK }
+  /quests/{id}/claim:
+    post:
+      tags: [Gamification]
+      summary: Claim a completed quest
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '200': { description: OK }
+        '409': { description: Already claimed }
+  /leaderboards:
+    get:
+      tags: [Social]
+      summary: Leaderboard by scope
+      parameters:
+        - { in: query, name: scope, schema: { type: string, enum: [global, weekly, course, season, team, friends] } }
+        - { in: query, name: course_id, schema: { type: string } }
+        - { in: query, name: season_id, schema: { type: string } }
+        - { in: query, name: limit, schema: { type: integer, default: 20 } }
+        - { in: query, name: offset, schema: { type: integer, default: 0 } }
+      responses:
+        '200': { description: OK }
+  /leaderboards/me:
+    get:
+      tags: [Social]
+      summary: Current user's rank
+      responses:
+        '200': { description: OK }
+  /shop:
+    get:
+      tags: [Social]
+      summary: Shop catalogue with balance and ownership
+      responses:
+        '200': { description: OK }
+  /shop/{id}/buy:
+    post:
+      tags: [Social]
+      summary: Buy an item with coins
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '200': { description: OK }
+        '400': { description: Not enough coins }
+  /inventory:
+    get:
+      tags: [Social]
+      summary: Owned items
+      responses:
+        '200': { description: OK }
+  /seasons:
+    get:
+      tags: [Social]
+      summary: All seasons
+      responses:
+        '200': { description: OK }
+  /seasons/current:
+    get:
+      tags: [Social]
+      summary: Active season, rewards and progress
+      responses:
+        '200': { description: OK }
+  /seasons/{id}/claim/{tier}:
+    post:
+      tags: [Social]
+      summary: Claim a season reward tier
+      parameters:
+        - { $ref: '#/components/parameters/Id' }
+        - { in: path, name: tier, required: true, schema: { type: integer } }
+      responses:
+        '200': { description: OK }
+  /teams:
+    get:
+      tags: [Social]
+      summary: Teams list
+      responses:
+        '200': { description: OK }
+    post:
+      tags: [Social]
+      summary: Create a team
+      responses:
+        '200': { description: OK }
+  /teams/mine:
+    get:
+      tags: [Social]
+      summary: My team with members
+      responses:
+        '200': { description: OK }
+  /teams/join:
+    post:
+      tags: [Social]
+      summary: Join a team by invite code
+      responses:
+        '200': { description: OK }
+  /teams/leave:
+    post:
+      tags: [Social]
+      summary: Leave the current team
+      responses:
+        '200': { description: OK }
+  /tournaments:
+    get:
+      tags: [Social]
+      summary: Tournaments
+      responses:
+        '200': { description: OK }
+  /tournaments/{id}/standings:
+    get:
+      tags: [Social]
+      summary: Team standings
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '200': { description: OK }
+  /reports/progress:
+    get:
+      tags: [Reports]
+      summary: Course progress report
+      responses:
+        '200': { description: OK }
+  /reports/xp:
+    get:
+      tags: [Reports]
+      summary: XP dynamics and sources
+      parameters:
+        - { in: query, name: days, schema: { type: integer, default: 30 } }
+      responses:
+        '200': { description: OK }
+  /reports/topics:
+    get:
+      tags: [Reports]
+      summary: Topic mastery / accuracy report
+      responses:
+        '200': { description: OK }
+  /reports/achievements:
+    get:
+      tags: [Reports]
+      summary: Achievements report
+      responses:
+        '200': { description: OK }
+  /reports/leaderboard:
+    get:
+      tags: [Reports]
+      summary: Leaderboard report
+      responses:
+        '200': { description: OK }
+  /reports/heatmap:
+    get:
+      tags: [Reports]
+      summary: Activity heatmap
+      parameters:
+        - { in: query, name: days, schema: { type: integer, default: 120 } }
+      responses:
+        '200': { description: OK }
+  /reports/export:
+    get:
+      tags: [Reports]
+      summary: Export a report
+      parameters:
+        - { in: query, name: type, schema: { type: string, enum: [progress, xp, topics, achievements, leaderboard] } }
+        - { in: query, name: format, schema: { type: string, enum: [csv, xlsx, pdf] } }
+      responses:
+        '200':
+          description: File download
+          content:
+            text/csv: {}
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet: {}
+            application/pdf: {}
+  /teacher/courses:
+    get:
+      tags: [Staff]
+      summary: Courses authored by the teacher
+      responses:
+        '200': { description: OK }
+    post:
+      tags: [Staff]
+      summary: Create a course
+      responses:
+        '200': { description: OK }
+  /teacher/courses/{id}/analytics:
+    get:
+      tags: [Staff]
+      summary: Group analytics (progress, weak topics, at-risk students)
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '200': { description: OK }
+  /teacher/tasks:
+    post:
+      tags: [Staff]
+      summary: Create a task
+      responses:
+        '200': { description: OK }
+  /teacher/tasks/import:
+    post:
+      tags: [Staff]
+      summary: Bulk import tasks
+      responses:
+        '200': { description: OK }
+  /admin/users:
+    get:
+      tags: [Staff]
+      summary: List users (admin)
+      responses:
+        '200': { description: OK }
+  /admin/anticheat:
+    get:
+      tags: [Staff]
+      summary: Anti-cheat flags
+      responses:
+        '200': { description: OK }
+  /admin/metrics:
+    get:
+      tags: [Staff]
+      summary: Platform metrics
+      responses:
+        '200': { description: OK }
+  /admin/seasons:
+    get:
+      tags: [Staff]
+      summary: Seasons management
+      responses:
+        '200': { description: OK }
+    post:
+      tags: [Staff]
+      summary: Create a season
+      responses:
+        '200': { description: OK }
+  /meta:
+    get:
+      tags: [System]
+      security: []
+      summary: Public platform metadata
+      responses:
+        '200': { description: OK }
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  parameters:
+    Id:
+      in: path
+      name: id
+      required: true
+      schema: { type: string, format: uuid }
+  responses:
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+    NotFound:
+      description: Not found
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+    Conflict:
+      description: Conflict
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+    Validation:
+      description: Validation error
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code: { type: string }
+            message: { type: string }
+            details: { type: object }
+    AuthResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            access_token: { type: string }
+            refresh_token: { type: string }
+            token_type: { type: string, example: Bearer }
+            expires_in: { type: integer }
+            user: { type: object }
+            profile: { $ref: '#/components/schemas/Profile' }
+    Profile:
+      type: object
+      properties:
+        id: { type: string, format: uuid }
+        email: { type: string }
+        nickname: { type: string }
+        avatar: { type: string }
+        locale: { type: string, enum: [kk, ru, en] }
+        total_xp: { type: integer }
+        level: { type: integer }
+        title: { type: string }
+        xp_in_level: { type: integer }
+        xp_to_next: { type: integer }
+        coins: { type: integer }
+        current_streak: { type: integer }
+        longest_streak: { type: integer }
+        daily_goal_xp: { type: integer }
+        league: { type: string }
+    Course:
+      type: object
+      properties:
+        id: { type: string, format: uuid }
+        slug: { type: string }
+        title: { type: string }
+        description: { type: string }
+        category: { type: string }
+        cover: { type: string }
+        difficulty: { type: integer }
+        levels_count: { type: integer }
+        tasks_count: { type: integer }
+        enrolled: { type: boolean }
+        progress_pct: { type: number }
+    Task:
+      type: object
+      properties:
+        id: { type: string, format: uuid }
+        level_id: { type: string, format: uuid }
+        type:
+          type: string
+          enum: [single_choice, multiple_choice, true_false, short_answer, matching, ordering, cloze, numeric, timed_quiz, code]
+        prompt: { type: string }
+        payload: { type: object, description: Type-specific options; never contains answers }
+        hints: { type: array, items: { type: object, properties: { index: { type: integer }, text: { type: string } } } }
+        difficulty: { type: integer }
+        base_xp: { type: integer }
+        time_limit_sec: { type: integer }
+    AttemptResult:
+      type: object
+      properties:
+        attempt_id: { type: string }
+        result: { type: string, enum: [correct, partial, wrong] }
+        score: { type: number }
+        suspicious: { type: boolean }
+        xp:
+          type: object
+          properties:
+            amount: { type: integer }
+            total_xp: { type: integer }
+            level: { type: integer }
+            level_up: { type: boolean }
+            title: { type: string }
+            breakdown: { type: object }
+        streak:
+          type: object
+          properties:
+            current: { type: integer }
+            longest: { type: integer }
+            increased: { type: boolean }
+        daily_goal: { type: object }
+        level: { type: object }
+        achievements:
+          type: array
+          items: { type: object }
+        explanation: { type: string }
+        answer_key: { type: object, description: Revealed after submitting }
+        next_task_id: { type: string, nullable: true }

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html lang="kk"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#3525cd", "on-secondary-fixed-variant": "#005236", "on-tertiary": "#ffffff", "surface-container": "#e5eeff", "background": "#f8f9ff", "on-surface-variant": "#464555", "surface-container-low": "#eff4ff", "secondary": "#006c49", "tertiary-container": "#885500", "on-tertiary-fixed-variant": "#653e00", "inverse-primary": "#c3c0ff", "error": "#ba1a1a", "on-secondary": "#ffffff", "on-primary-fixed-variant": "#3323cc", "surface-bright": "#f8f9ff", "surface-container-highest": "#d3e4fe", "primary-container": "#4f46e5", "on-secondary-fixed": "#002113", "surface-dim": "#cbdbf5", "on-primary-container": "#dad7ff", "inverse-surface": "#213145", "on-primary": "#ffffff", "primary-fixed": "#e2dfff", "on-primary-fixed": "#0f0069", "tertiary-fixed-dim": "#ffb95f", "surface": "#f8f9ff", "tertiary": "#684000", "error-container": "#ffdad6", "secondary-container": "#6cf8bb", "on-background": "#0b1c30", "inverse-on-surface": "#eaf1ff", "secondary-fixed-dim": "#4edea3", "surface-tint": "#4d44e3", "surface-container-high": "#dce9ff", "on-tertiary-fixed": "#2a1700", "surface-container-lowest": "#ffffff", "on-surface": "#0b1c30", "on-secondary-container": "#00714d", "tertiary-fixed": "#ffddb8", "secondary-fixed": "#6ffbbe", "on-error": "#ffffff", "primary-fixed-dim": "#c3c0ff", "on-error-container": "#93000a", "surface-variant": "#d3e4fe", "outline": "#777587", "on-tertiary-container": "#ffd4a4", "outline-variant": "#c7c4d8" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1rem", "margin": "2rem", "space-xl": "2.5rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-md": "1rem", "gutter-mobile": "0.75rem", "space-xs": "0.25rem" }, "fontFamily": { "body-md": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "label-sm": [ "JetBrains Mono" ], "display-lg-mobile": [ "Plus Jakarta Sans" ], "label-md": [ "JetBrains Mono" ], "display-lg": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ] }, "fontSize": { "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "display-lg-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "display-lg": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest flex flex-col justify-between z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-lg flex items-center justify-between flex-shrink-0"><div class="flex items-center gap-space-sm"><img alt="Lumina Learn Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VR59ElxEo1g27AxnXqJu5jExnSOLLt11yUZO6Bg2tgIKt_Eb3xBXSw-vMV-UeMYbJrJcNDTCK6szlUkvOj3b9t1ZmGbFuJX1vmobpLfVZS0t8B0qXbGk79V5yipBLOZKpK5HCIfGvaVwyPq1ew0EfCic0vANDW2q6xovsRztsEgdxJLzsy1JNqq6cls15uV0lLqoDY3cHKe59esAzzW_4DhfrvXwA7sYs_YcWlK5QfBDVk7SA64jkrNWM"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Lumina</span><span class="px-space-xs py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider">PRO</span></div><button class="text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">menu_open</span></button></div><div class="px-space-md py-space-xs"><div class="h-px w-full bg-surface-container-high"></div></div><div class="flex-1 overflow-y-auto px-space-md py-space-sm"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Жұмыс кеңістігі</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary shadow-sm font-semibold"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Басқару панелі</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="courses" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>Курстар</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="learning-path" href="#"><span class="material-symbols-outlined text-[20px]">account_tree</span><span>Оқу траекториясы</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl transition-colors bg-primary-container text-on-primary shadow-sm font-semibold" data-path="tasks-and-quizzes" href="#"><span class="material-symbols-outlined text-[20px]">task_alt</span><span>Тапсырмалар мен тесттер</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="ai-assistant" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-primary">auto_awesome</span><span>AI Көмекші</span></div><span class="px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Тьютор</span></a><div class="pt-space-sm px-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Прогресс</div><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="achievements" href="#"><span class="material-symbols-outlined text-[20px]">military_tech</span><span>Жетістіктер</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="leaderboard" href="#"><span class="material-symbols-outlined text-[20px]">leaderboard</span><span>Көшбасшылар тақтасы</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="statistics" href="#"><span class="material-symbols-outlined text-[20px]">insights</span><span>Статистика</span></a></nav></div></div><div class="p-space-md flex-shrink-0 flex flex-col gap-space-sm"><a class="w-full flex items-center justify-between px-space-md py-2 rounded-xl bg-surface-container-low hover:bg-surface-container hover:text-on-surface transition-colors text-on-surface-variant font-body-sm text-body-sm" data-path="teacher-portal" href="#"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px]">swap_horiz</span><span>Оқытушы порталы</span></div><span class="material-symbols-outlined text-[16px]">north_east</span></a><div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-2 shadow-[0_1px_4px_rgba(0,0,0,0.03)]"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs min-w-0"><img alt="Профиль" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6uyvcKHr0ilws8XFsQYklsZ4OFf4ta5sH4KY4nXXi_kNZ_OCgERpltD9JFGIzwEkktSfGca6Q0dx8qSJNMMQ-L4h_VIiiuQZmQ3Wh0_DMwfXeKidZZr5F3i9w-r-_w8NcphF6D7dimiarQNF5F2Q1LkXtE1yIpWhuXjDh7YYy1Eifn20v0CtKtDxJ__poR7ufdfugdTg7DXuApBSICWRVyYQeVV7UTGrT_UPTzQ4c6RATreJNkmG0dQ"/><div class="min-w-0"><div class="font-headline-sm text-body-sm text-on-surface truncate leading-tight">Әлішер Серіков</div><div class="font-label-sm text-label-sm text-on-surface-variant truncate">14-деңгей · Жүйелік сәулетші</div></div></div><span class="px-1.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm flex items-center gap-0.5">🔥 12</span></div><div class="w-full flex flex-col gap-1"><div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Прогресс</span><span>3,450 / 4,000 XP</span></div><div class="w-full h-1.5 rounded-full bg-surface-container"><div class="h-1.5 rounded-full bg-gradient-to-r from-primary-container to-secondary" style="width: 86.25%"></div></div></div></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full max-w-md"><div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">search</span></div><input class="w-full pl-9 pr-14 py-1.5 rounded-full bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary/20 placeholder:text-on-surface-variant/70" placeholder="Сабақтарды, тапсырмаларды іздеу немесе Lumina AI..." type="text"/><div class="absolute inset-y-0 right-0 pr-2.5 flex items-center pointer-events-none"><kbd class="px-1.5 py-0.5 text-label-sm font-label-sm bg-surface-container-lowest text-on-surface-variant rounded border border-surface-container shadow-sm">⌘K</kbd></div></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="flex items-center p-0.5 bg-surface-container-low rounded-full"><button class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-primary shadow-sm font-semibold transition-all">ҚАЗ</button><button class="px-2 py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors">РУС</button><button class="px-2 py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors">ENG</button></div><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm"><span>🔥</span><span>12 Күн</span></div><div class="flex items-center gap-2 px-space-sm py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface"><span class="flex items-center gap-0.5 text-primary font-semibold"><span>⚡</span><span>3,450 XP</span></span><span class="text-outline-variant">·</span><span class="flex items-center gap-0.5 text-secondary font-semibold"><span>💎</span><span>420</span></span></div><button class="relative p-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Профиль" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-high" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6uyvcKHr0ilws8XFsQYklsZ4OFf4ta5sH4KY4nXXi_kNZ_OCgERpltD9JFGIzwEkktSfGca6Q0dx8qSJNMMQ-L4h_VIiiuQZmQ3Wh0_DMwfXeKidZZr5F3i9w-r-_w8NcphF6D7dimiarQNF5F2Q1LkXtE1yIpWhuXjDh7YYy1Eifn20v0CtKtDxJ__poR7ufdfugdTg7DXuApBSICWRVyYQeVV7UTGrT_UPTzQ4c6RATreJNkmG0dQ"/><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div></div></header><main class="w-full pt-16 bg-background flex-1 px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Progress & Mission Header Bar -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-md flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<!-- Breadcrumb & Topic Meta -->
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm min-w-0">
+<span class="hover:text-primary transition-colors cursor-pointer truncate">Алгоритмдер және деректер құрылымы</span>
+<span class="material-symbols-outlined text-[16px] text-outline-variant flex-shrink-0">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer truncate">4-модуль</span>
+<span class="material-symbols-outlined text-[16px] text-outline-variant flex-shrink-0">chevron_right</span>
+<span class="font-headline-sm text-body-sm text-on-surface font-semibold truncate">4.2-тапсырма: Динамикалық мемоизация</span>
+</div>
+<!-- Quick Metrics & Statuses -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<!-- Language Localizer -->
+<div class="flex items-center bg-surface-container-low p-0.5 rounded-full">
+<button class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-primary font-semibold shadow-sm transition-all" id="lang-kz" onclick="switchTaskLang('kz')">ҚАЗ</button>
+<button class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all" id="lang-ru" onclick="switchTaskLang('ru')">РУС</button>
+<button class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all" id="lang-en" onclick="switchTaskLang('en')">ENG</button>
+</div>
+<!-- Lives Counter -->
+<div class="flex items-center gap-1 px-space-sm py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">
+<span>❤️</span>
+<span class="font-semibold font-label-md text-label-md">4/5 Өмір / Жан</span>
+</div>
+<!-- Potential Bounty -->
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span class="font-semibold font-label-md text-label-md">+140 XP Әлеуетті сыйлық</span>
+</div>
+<!-- Session Timer -->
+<div class="flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">timer</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">14:18 Қалған уақыт</span>
+</div>
+</div>
+</div>
+<!-- Lesson Stage Tracker -->
+<div class="w-full flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-primary uppercase tracking-wider">3 / 5 СҰРАҚ</span>
+<span>•</span>
+<span id="topic-state">Рекурсивті ағашты оңтайландыру</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">60% Аяқталды</span>
+</div>
+<!-- Track -->
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden relative">
+<div class="h-full rounded-full bg-gradient-to-r from-primary-container via-primary to-secondary transition-all duration-700 ease-out" style="width: 60%"></div>
+</div>
+</div>
+</div>
+<!-- Main Split-Pane Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start w-full">
+<!-- Left Panel: Problem Statement & Code Artifact -->
+<section class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<!-- Ambient decorative flare -->
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-primary/5 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Meta Header Badges -->
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase font-semibold">
+              АЛГОРИТМДЕР · ДИНАМИКАЛЫҚ БАҒДАРЛАМАЛАУ
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+              Орташа деңгей
+            </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">workspace_premium</span>
+            Мақсат: LeetCode #509
+          </span>
+</div>
+<!-- Problem Title -->
+<div class="flex flex-col gap-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight" id="task-title">
+            Мемоизация арқылы экспоненциалды рекурсияны оңтайландыру
+          </h1>
+<p class="font-label-sm text-label-sm text-primary flex items-center gap-1 cursor-pointer hover:underline" onclick="switchTaskLang('kz')">
+<span class="material-symbols-outlined text-[14px]">translate</span>
+<span id="trans-toggle-label">Қазақша / Орысша нұсқасын көру (Тапсырманы аудару)</span>
+</p>
+</div>
+<!-- Problem Markdown Narrative -->
+<div class="font-body-md text-body-md text-on-surface flex flex-col gap-3 leading-relaxed" id="task-desc">
+<p>
+            Фибоначчи сандарын табудың қарапайым <code class="px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary font-semibold">O(2^n)</code> экспоненциалды рекурсивті алгоритмі берілген. Неліктен <code class="px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface font-semibold">n = 50</code> мәні үшін бұл алгоритм қайталанатын қосалқы есептердің салдарынан стектің толып кетуіне (stack overflow) әкелетінін анықтаңыз.
+          </p>
+<p>
+            Бағытталған ациклдік графтың (DAG) <code class="px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary">fib(3)</code> сияқты бірдей тармақтарды мыңдаған рет қайта есептейтініне назар аударыңыз. Шақырулар ағашын сызықтық тізбекке сығу үшін оңтайлы күй кэштеу стратегиясын таңдаңыз.
+          </p>
+</div>
+<!-- Code Preview Card -->
+<div class="rounded-xl overflow-hidden bg-inverse-surface shadow-md flex flex-col">
+<!-- Editor Titlebar -->
+<div class="flex items-center justify-between px-space-md py-2 bg-inverse-surface/90 border-b border-surface-variant/10 text-inverse-on-surface">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-secondary-container inline-block"></span>
+<span class="font-label-sm text-label-sm font-semibold ml-2 text-surface-container-high tracking-wide">fibonacci_memo.py</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.5 rounded bg-surface-variant/20 font-label-sm text-label-sm text-surface-container-high">Python 3.11</span>
+<button class="text-surface-container-high hover:text-white transition-colors" onclick="navigator.clipboard?.writeText('def fib(n, memo={}):\n    if n in memo: return memo[n]\n    if n &lt;= 1: return n\n    memo[n] = fib(n-1, memo) + fib(n-2, memo)\n    return memo[n]')" title="Кодты көшіру">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<!-- Code content with line numbering -->
+<div class="p-space-md font-label-md text-label-md overflow-x-auto text-inverse-on-surface selection:bg-primary-container selection:text-white">
+<table class="w-full border-collapse">
+<tbody>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="text-surface-variant/40 pr-4 select-none text-right w-6 font-label-sm text-label-sm">1</td>
+<td><span class="text-inverse-primary font-semibold">def</span> <span class="text-secondary-fixed">fib</span>(n, memo={}):</td>
+</tr>
+<tr class="bg-secondary/15 hover:bg-secondary/25 transition-colors">
+<td class="text-secondary-fixed pr-4 select-none text-right w-6 font-label-sm text-label-sm font-bold">2</td>
+<td>    <span class="text-tertiary-fixed-dim">if</span> n <span class="text-inverse-primary">in</span> memo: <span class="text-tertiary-fixed-dim">return</span> memo[n]  <span class="text-surface-variant/60 font-body-sm text-body-sm italic"># ← Кэштен іздеу (Memo Cache Lookup)</span></td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="text-surface-variant/40 pr-4 select-none text-right w-6 font-label-sm text-label-sm">3</td>
+<td>    <span class="text-tertiary-fixed-dim">if</span> n &lt;= <span class="text-secondary-fixed">1</span>: <span class="text-tertiary-fixed-dim">return</span> n</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="text-surface-variant/40 pr-4 select-none text-right w-6 font-label-sm text-label-sm">4</td>
+<td>    memo[n] = fib(n-<span class="text-secondary-fixed">1</span>, memo) + fib(n-<span class="text-secondary-fixed">2</span>, memo)</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="text-surface-variant/40 pr-4 select-none text-right w-6 font-label-sm text-label-sm">5</td>
+<td>    <span class="text-tertiary-fixed-dim">return</span> memo[n]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Visual Micro Chart: Exponential Tree vs Linear Memoization -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-headline-sm text-body-sm font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">account_tree</span>
+              Шақырулар ағашының күрделілігін салыстыру
+            </span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">99.8% Азайтылған операциялар</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-2">
+<!-- Unmemoized Call Burden -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Қарапайым $O(2^n)$</span>
+<span class="text-error font-semibold">20,485,760 операция</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<!-- Memoized Call Burden -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Мемоизацияланған $O(n)$</span>
+<span class="text-secondary font-semibold">50 операция</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 2%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Collapsible Hint Drawer -->
+<div class="rounded-xl bg-surface-container-low overflow-hidden transition-all duration-300">
+<button class="w-full flex items-center justify-between px-space-md py-3 text-left hover:bg-surface-container transition-colors" id="hint-toggle-btn" onclick="toggleHint()">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[20px] text-tertiary">lightbulb</span>
+<span class="font-headline-sm text-body-sm font-semibold text-on-surface">💡 Көмек керек пе? 1-кеңесті ашу</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-medium">-10 XP жұмсалады</span>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transition-transform" id="hint-chevron">expand_more</span>
+</div>
+</button>
+<div class="hidden px-space-md pb-space-md pt-1 font-body-sm text-body-sm text-on-surface-variant border-t border-surface-container" id="hint-content">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px] flex-shrink-0 mt-0.5">psychology</span>
+<div>
+<p class="font-semibold text-on-surface">Қайталанатын күй сұрауларын байқаңыз:</p>
+<p class="mt-0.5"><code class="px-1 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary">fib(3)</code> сияқты қосалқы шақырулар қайталанғанда рекурсивті ағашта не болатынына көңіл бөліңіз. Хэш-іздеу бала түйіндерді қайта араламай-ақ, нәтижені лезде қайтарады.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Panel: Interactive Submission & Feedback Engine -->
+<section class="lg:col-span-6 flex flex-col gap-space-md">
+<!-- Sub-Task 1: MCQ Selection -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-primary-container text-white flex items-center justify-center font-label-sm text-label-sm font-bold">1</span>
+<span class="font-headline-sm text-body-sm font-semibold text-on-surface uppercase tracking-wider">КӨП НҰСҚАЛЫ СҰРАҚ</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span> Жалғыз таңдау
+          </span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug" id="mcq-question">
+          Жоғарыда көрсетілген мемоизацияланған Фибоначчи алгоритмінің жалпы асимптотикалық уақыт күрделілігі қандай?
+        </h2>
+<!-- Interactive Answer Options -->
+<div class="flex flex-col gap-space-xs" id="mcq-options-container">
+<!-- Option 1: Incorrect Simulation -->
+<div class="group w-full p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer flex items-center justify-between shadow-sm" onclick="selectOption(this, false)">
+<div class="flex items-center gap-space-md">
+<div class="w-7 h-7 rounded-lg bg-surface-container-lowest flex items-center justify-center font-label-md text-label-md font-semibold text-on-surface-variant group-hover:text-primary transition-colors">
+                A
+              </div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">O(2^n) — Экспоненциалды</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Әлі де барлық тармақтарды қайта есептейді.</span>
+</div>
+</div>
+<span class="opt-status material-symbols-outlined text-[20px] text-outline-variant">radio_button_unchecked</span>
+</div>
+<!-- Option 2: Correct Selected Option -->
+<div class="option-card active-correct group w-full p-space-md rounded-xl bg-secondary-container/30 transition-all cursor-pointer flex items-center justify-between shadow-sm" onclick="selectOption(this, true)">
+<div class="flex items-center gap-space-md">
+<div class="w-7 h-7 rounded-lg bg-secondary text-white flex items-center justify-center font-label-md text-label-md font-bold">
+                B
+              </div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">O(n) — Сызықтық</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">Әрбір ішкі есеп 0-ден n-ге дейін бір рет қана шешіледі.</span>
+</div>
+</div>
+<span class="opt-status material-symbols-outlined text-[22px] text-secondary">check_circle</span>
+</div>
+<!-- Option 3 -->
+<div class="group w-full p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer flex items-center justify-between shadow-sm" onclick="selectOption(this, false)">
+<div class="flex items-center gap-space-md">
+<div class="w-7 h-7 rounded-lg bg-surface-container-lowest flex items-center justify-center font-label-md text-label-md font-semibold text-on-surface-variant group-hover:text-primary transition-colors">
+                C
+              </div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">O(n log n) — Сызықтық-логарифмдік</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Бөліп ал да билей бер алгоритмдеріне тән.</span>
+</div>
+</div>
+<span class="opt-status material-symbols-outlined text-[20px] text-outline-variant">radio_button_unchecked</span>
+</div>
+<!-- Option 4 -->
+<div class="group w-full p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer flex items-center justify-between shadow-sm" onclick="selectOption(this, false)">
+<div class="flex items-center gap-space-md">
+<div class="w-7 h-7 rounded-lg bg-surface-container-lowest flex items-center justify-center font-label-md text-label-md font-semibold text-on-surface-variant group-hover:text-primary transition-colors">
+                D
+              </div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">O(1) — Тұрақты</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Бине формуласы бойынша тікелей есептеу.</span>
+</div>
+</div>
+<span class="opt-status material-symbols-outlined text-[20px] text-outline-variant">radio_button_unchecked</span>
+</div>
+</div>
+</div>
+<!-- Sub-Task 2: Code Syntax Input Task -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-primary-container text-white flex items-center justify-center font-label-sm text-label-sm font-bold">2</span>
+<span class="font-headline-sm text-body-sm font-semibold text-on-surface uppercase tracking-wider">СИНТАКСИСТІ АЯҚТАУ</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Python синтаксисін тексеру</span>
+</div>
+<label class="font-body-sm text-body-sm text-on-surface-variant" for="code-input">
+          Қайталанатын рекурсивті шақырулардан қорғайтын Python сөздігінен іздеу тексеруін толықтырыңыз:
+        </label>
+<!-- Monospace Interactive Code Input Area -->
+<div class="rounded-xl bg-surface-container-low p-space-sm flex flex-col gap-1">
+<div class="flex items-center gap-2 px-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">terminal</span>
+<span>2-жолдың жүзеге асырылуы:</span>
+</div>
+<div class="relative flex items-center bg-surface-container-lowest rounded-lg p-space-sm shadow-sm">
+<span class="font-label-md text-label-md text-outline-variant select-none pr-3">&gt;&gt;&gt;</span>
+<input autocomplete="off" class="w-full bg-transparent font-label-md text-label-md text-on-surface focus:outline-none selection:bg-primary-container selection:text-white" id="code-input" spellcheck="false" type="text" value="if n in memo: return memo[n]"/>
+<span class="material-symbols-outlined text-secondary text-[20px] ml-2 flex-shrink-0" title="Дұрыс синтаксис">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Gamified Feedback Card (Active Success State) -->
+<div class="bg-gradient-to-br from-surface-container-lowest via-secondary-container/20 to-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col gap-space-md relative overflow-hidden" id="feedback-card">
+<!-- Radial celebration blur -->
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-secondary/15 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-secondary text-white flex items-center justify-center shadow-[0_8px_24px_-4px_rgba(16,185,129,0.30)] flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]">verified</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-sm font-bold text-on-surface" id="congrats-header">🎉 Керемет! Дұрыс жауап!</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Жылдамдық бонусы: 1.4x көбейткіші белсендірілді</span>
+</div>
+</div>
+<!-- Confetti / Milestone Badge -->
+<div class="flex items-center gap-1 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold shadow-sm">
+<span>🔥 Серия +1</span>
+</div>
+</div>
+<!-- Analytical Explanation -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm font-body-sm text-body-sm text-on-surface flex flex-col gap-1.5 leading-relaxed">
+<span class="font-label-sm text-label-sm font-bold uppercase text-on-surface-variant tracking-wider">ТҰЖЫРЫМДАМАНЫ ТАЛДАУ</span>
+<p id="feedback-explanation">
+            Мемоизация бұрын есептелген нәтижелерді <code class="px-1 py-0.2 rounded bg-surface-container font-label-sm text-label-sm text-primary font-semibold">O(1)</code> іздеу уақытына ие хэш-кестеде кілт-мән жұптары ретінде сақтайды. Бұл экспоненциалды шешімдер ағашын <code class="font-label-sm text-label-sm">2^n</code> түйіннен тура <code class="font-label-sm text-label-sm">n</code> бірегей ішкі есепке дейін қысқартады.
+          </p>
+</div>
+<!-- Earned Reward Banner -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm p-space-sm rounded-xl bg-secondary text-white shadow-sm">
+<div class="flex items-center gap-2">
+<span class="text-xl">🏆</span>
+<span class="font-headline-sm text-body-sm font-semibold">+140 XP 14-деңгей прогресіне қосылды!</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm">
+<span class="bg-white/20 px-2 py-0.5 rounded-full font-mono">+15 Асыл тас</span>
+<span class="bg-white/20 px-2 py-0.5 rounded-full font-mono">Дәлдік: 100%</span>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-1">
+<div class="flex items-center gap-space-md">
+<button class="text-on-surface-variant hover:text-error transition-colors font-body-sm text-body-sm flex items-center gap-1" onclick="reportIssue()">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+<span>Қате туралы хабарлау</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-body-sm text-body-sm font-semibold transition-all flex items-center gap-1.5 shadow-sm" onclick="askAITutor()">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+<span>✨ Lumina AI-мен талдау</span>
+</button>
+</div>
+<button class="px-6 py-2.5 rounded-xl bg-secondary hover:bg-on-secondary-container text-white font-headline-sm text-body-sm font-semibold transition-all shadow-md hover:shadow-lg flex items-center gap-2 group" onclick="nextQuestion()">
+<span>Келесі сұраққа өту</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+<!-- Embedded Script for Trilingual Support & Dynamic Actions -->
+<script>
+    const translations = {
+      kz: {
+        title: "Мемоизация арқылы экспоненциалды рекурсияны оңтайландыру",
+        desc: "Фибоначчи сандарын табудың қарапайым O(2^n) экспоненциалды рекурсивті алгоритмі берілген. Неліктен n = 50 мәні үшін бұл алгоритм қайталанатын қосалқы есептердің салдарынан стектің толып кетуіне (stack overflow) әкелетінін анықтаңыз. Бағытталған ациклдік графтың (DAG) fib(3) сияқты бірдей тармақтарды мыңдаған рет қайта есептейтініне назар аударыңыз. Шақырулар ағашын сызықтық тізбекке сығу үшін оңтайлы күй кэштеу стратегиясын таңдаңыз.",
+        transLabel: "Switch back to English / Орысша нұсқасы",
+        mcqQ: "Жоғарыда көрсетілген мемоизацияланған Фибоначчи алгоритмінің жалпы асимптотикалық уақыт күрделілігі қандай?",
+        congrats: "🎉 Керемет! Дұрыс жауап!",
+        exp: "Мемоизация бұрын есептелген нәтижелерді O(1) іздеу уақытына ие хэш-кестеде кілт-мән жұптары ретінде сақтайды. Бұл экспоненциалды шешімдер ағашын 2^n түйіннен тура n бірегей ішкі есепке дейін қысқартады.",
+        topic: "Рекурсивті ағашты оңтайландыру"
+      },
+      ru: {
+        title: "Оптимизация экспоненциальной рекурсии через мемоизацию",
+        desc: "Дана наивная рекурсивная реализация Фибоначчи с экспоненциальной временной сложностью O(2^n). Объясните, почему повторяющиеся подзадачи приводят к переполнению стека при n = 50. Обратите внимание, что одинаковые вызовы, такие как fib(3), пересчитываются тысячи раз.",
+        transLabel: "Қазақша / English нұсқасы",
+        mcqQ: "Какова асимптотическая временная сложность приведенного выше алгоритма Фибоначчи с мемоизацией?",
+        congrats: "🎉 Отлично! Правильный ответ!",
+        exp: "Мемоизация кэширует ранее вычисленные результаты в хэш-таблицу с временем выборки O(1). Это уменьшает экспоненциальное дерево вызовов с 2^n узлов ровно до n уникальных подзадач.",
+        topic: "Оптимизация дерева рекурсии"
+      },
+      en: {
+        title: "Optimizing Exponential Recursion via Memoization",
+        desc: "Given a naive recursive Fibonacci implementation with O(2^n) exponential time complexity, identify why redundant overlapping subproblems cause stack overflow when evaluating for n = 50. Notice that identical branches like fib(3) are recalculated thousands of times. Determine the optimal state caching strategy to compress the call tree into a strictly linear sequence.",
+        transLabel: "Қазақша / Орысша нұсқасын көру (Translate task)",
+        mcqQ: "What is the overall asymptotic time complexity of the memoized Fibonacci algorithm shown above?",
+        congrats: "🎉 Great job! Correct Answer!",
+        exp: "Memoization caches previously computed results into hash table key-value pairs with O(1) lookup time. This reduces the exponential decision tree with 2^n nodes down to exactly n unique subproblems.",
+        topic: "Recursive Tree Optimization"
+      }
+    };
+
+    function switchTaskLang(lang) {
+      ['kz', 'ru', 'en'].forEach(l => {
+        const btn = document.getElementById('lang-' + l);
+        if (btn) {
+          if (l === lang) {
+            btn.className = "px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-primary font-semibold shadow-sm transition-all";
+          } else {
+            btn.className = "px-2.5 py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all";
+          }
+        }
+      });
+
+      const t = translations[lang] || translations.kz;
+      document.getElementById('task-title').innerText = t.title;
+      document.getElementById('task-desc').innerHTML = '<p>' + t.desc + '</p>';
+      document.getElementById('trans-toggle-label').innerText = t.transLabel;
+      document.getElementById('mcq-question').innerText = t.mcqQ;
+      document.getElementById('congrats-header').innerText = t.congrats;
+      document.getElementById('feedback-explanation').innerText = t.exp;
+      document.getElementById('topic-state').innerText = t.topic;
+    }
+
+    function toggleHint() {
+      const content = document.getElementById('hint-content');
+      const chevron = document.getElementById('hint-chevron');
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        chevron.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        chevron.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    function selectOption(el, isCorrect) {
+      const container = document.getElementById('mcq-options-container');
+      const allCards = container.querySelectorAll('.group');
+      
+      allCards.forEach(card => {
+        card.classList.remove('bg-secondary-container/30', 'bg-error-container/30');
+        card.classList.add('bg-surface-container-low');
+        const icon = card.querySelector('.opt-status');
+        if (icon) {
+          icon.textContent = 'radio_button_unchecked';
+          icon.className = 'opt-status material-symbols-outlined text-[20px] text-outline-variant';
+        }
+      });
+
+      if (isCorrect) {
+        el.classList.remove('bg-surface-container-low');
+        el.classList.add('bg-secondary-container/30');
+        const icon = el.querySelector('.opt-status');
+        if (icon) {
+          icon.textContent = 'check_circle';
+          icon.className = 'opt-status material-symbols-outlined text-[22px] text-secondary';
+        }
+      } else {
+        el.classList.remove('bg-surface-container-low');
+        el.classList.add('bg-error-container/30');
+        const icon = el.querySelector('.opt-status');
+        if (icon) {
+          icon.textContent = 'cancel';
+          icon.className = 'opt-status material-symbols-outlined text-[22px] text-error';
+        }
+      }
+    }
+
+    function askAITutor() {
+      alert("Lumina AI Тьютор: Мемоизация функцияның аргументтерін жадта сақтау (кэштеу) арқылы экспоненциалды шешімдер ағашын бағытталған ациклдік графқа (DAG) айналдырады!");
+    }
+
+    function reportIssue() {
+      alert("Кері байланыс: 4.2-тапсырма бойынша хабарлама жіберілді.");
+    }
+
+    function nextQuestion() {
+      alert("4-сұраққа өту: Кеңістік күрделілігі және табуляция ($O(n)$ жадты оңтайландыру)!");
+    }
+  </script>
+</div></main></div></body></html>

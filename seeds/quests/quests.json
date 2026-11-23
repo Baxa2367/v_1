@@ -1,0 +1,632 @@
+[
+  {
+    "code": "d_solve_3",
+    "kind": "daily",
+    "target": 3,
+    "reward_xp": 30,
+    "reward_coins": 10,
+    "icon": "task_alt",
+    "title": {
+      "kk": "3 С‚Р°РїСЃС‹СЂРјР°",
+      "ru": "3 Р·Р°РґР°РЅРёСЏ",
+      "en": "3 Tasks"
+    },
+    "description": {
+      "kk": "Р‘ТЇРіС–РЅ 3 С‚Р°РїСЃС‹СЂРјР°РЅС‹ РґТ±СЂС‹СЃ С€РµС€.",
+      "ru": "Р РµС€Рё 3 Р·Р°РґР°РЅРёСЏ СЃРµРіРѕРґРЅСЏ.",
+      "en": "Solve 3 tasks today."
+    },
+    "rule": {
+      "type": "solve_tasks"
+    }
+  },
+  {
+    "code": "d_solve_5",
+    "kind": "daily",
+    "target": 5,
+    "reward_xp": 50,
+    "reward_coins": 15,
+    "icon": "checklist",
+    "title": {
+      "kk": "5 С‚Р°РїСЃС‹СЂРјР°",
+      "ru": "5 Р·Р°РґР°РЅРёР№",
+      "en": "5 Tasks"
+    },
+    "description": {
+      "kk": "Р‘ТЇРіС–РЅ 5 С‚Р°РїСЃС‹СЂРјР° РѕСЂС‹РЅРґР°.",
+      "ru": "Р’С‹РїРѕР»РЅРё 5 Р·Р°РґР°РЅРёР№ СЃРµРіРѕРґРЅСЏ.",
+      "en": "Complete 5 tasks today."
+    },
+    "rule": {
+      "type": "solve_tasks"
+    }
+  },
+  {
+    "code": "d_accuracy_80",
+    "kind": "daily",
+    "target": 80,
+    "reward_xp": 40,
+    "reward_coins": 10,
+    "icon": "target",
+    "title": {
+      "kk": "80% РґУ™Р»РґС–Рє",
+      "ru": "РўРѕС‡РЅРѕСЃС‚СЊ 80%",
+      "en": "80% Accuracy"
+    },
+    "description": {
+      "kk": "Р‘ТЇРіС–РЅ 80% РґУ™Р»РґС–РєРїРµРЅ РѕСЂС‹РЅРґР°.",
+      "ru": "Р”РµСЂР¶Рё С‚РѕС‡РЅРѕСЃС‚СЊ 80% СЃРµРіРѕРґРЅСЏ.",
+      "en": "Keep 80% accuracy today."
+    },
+    "rule": {
+      "type": "accuracy"
+    }
+  },
+  {
+    "code": "d_accuracy_90",
+    "kind": "daily",
+    "target": 90,
+    "reward_xp": 60,
+    "reward_coins": 20,
+    "icon": "gps_fixed",
+    "title": {
+      "kk": "90% РґУ™Р»РґС–Рє",
+      "ru": "РўРѕС‡РЅРѕСЃС‚СЊ 90%",
+      "en": "90% Accuracy"
+    },
+    "description": {
+      "kk": "Р‘ТЇРіС–РЅ 90% РґУ™Р»РґС–РєРєРµ Р¶РµС‚.",
+      "ru": "Р”РѕСЃС‚РёРіРЅРё 90% С‚РѕС‡РЅРѕСЃС‚Рё.",
+      "en": "Reach 90% accuracy today."
+    },
+    "rule": {
+      "type": "accuracy"
+    }
+  },
+  {
+    "code": "d_no_hint_2",
+    "kind": "daily",
+    "target": 2,
+    "reward_xp": 35,
+    "reward_coins": 10,
+    "icon": "lightbulb",
+    "title": {
+      "kk": "РџРѕРґСЃРєР°Р·РєР°СЃС‹Р· 2",
+      "ru": "2 Р±РµР· РїРѕРґСЃРєР°Р·РѕРє",
+      "en": "2 Hint-Free"
+    },
+    "description": {
+      "kk": "Р•РєС– С‚Р°РїСЃС‹СЂРјР°РЅС‹ РїРѕРґСЃРєР°Р·РєР°СЃС‹Р· С€РµС€.",
+      "ru": "Р”РІР° Р·Р°РґР°РЅРёСЏ Р±РµР· РїРѕРґСЃРєР°Р·РѕРє.",
+      "en": "Solve two tasks without hints."
+    },
+    "rule": {
+      "type": "no_hints"
+    }
+  },
+  {
+    "code": "d_no_hint_5",
+    "kind": "daily",
+    "target": 5,
+    "reward_xp": 70,
+    "reward_coins": 25,
+    "icon": "wb_incandescent",
+    "title": {
+      "kk": "РџРѕРґСЃРєР°Р·РєР°СЃС‹Р· 5",
+      "ru": "5 Р±РµР· РїРѕРґСЃРєР°Р·РѕРє",
+      "en": "5 Hint-Free"
+    },
+    "description": {
+      "kk": "Р‘РµСЃ С‚Р°РїСЃС‹СЂРјР° РїРѕРґСЃРєР°Р·РєР°СЃС‹Р·.",
+      "ru": "РџСЏС‚СЊ Р·Р°РґР°РЅРёР№ Р±РµР· РїРѕРґСЃРєР°Р·РѕРє.",
+      "en": "Five tasks without hints."
+    },
+    "rule": {
+      "type": "no_hints"
+    }
+  },
+  {
+    "code": "d_xp_50",
+    "kind": "daily",
+    "target": 50,
+    "reward_xp": 20,
+    "reward_coins": 5,
+    "icon": "bolt",
+    "title": {
+      "kk": "50 XP",
+      "ru": "50 XP",
+      "en": "50 XP"
+    },
+    "description": {
+      "kk": "Р‘ТЇРіС–РЅ 50 XP Р¶РёРЅР°.",
+      "ru": "РќР°Р±РµСЂРё 50 XP СЃРµРіРѕРґРЅСЏ.",
+      "en": "Earn 50 XP today."
+    },
+    "rule": {
+      "type": "xp_gain"
+    }
+  },
+  {
+    "code": "d_xp_100",
+    "kind": "daily",
+    "target": 100,
+    "reward_xp": 40,
+    "reward_coins": 10,
+    "icon": "electric_bolt",
+    "title": {
+      "kk": "100 XP",
+      "ru": "100 XP",
+      "en": "100 XP"
+    },
+    "description": {
+      "kk": "Р‘ТЇРіС–РЅ 100 XP Р¶РёРЅР°.",
+      "ru": "РќР°Р±РµСЂРё 100 XP СЃРµРіРѕРґРЅСЏ.",
+      "en": "Earn 100 XP today."
+    },
+    "rule": {
+      "type": "xp_gain"
+    }
+  },
+  {
+    "code": "d_combo_3",
+    "kind": "daily",
+    "target": 3,
+    "reward_xp": 35,
+    "reward_coins": 10,
+    "icon": "local_fire_department",
+    "title": {
+      "kk": "3 РґТ±СЂС‹СЃ Т›Р°С‚Р°СЂ",
+      "ru": "3 РІРµСЂРЅС‹С… РїРѕРґСЂСЏРґ",
+      "en": "3 In a Row"
+    },
+    "description": {
+      "kk": "ТљР°С‚Р°СЂС‹РЅР°РЅ ТЇС€ РґТ±СЂС‹СЃ Р¶Р°СѓР°Рї.",
+      "ru": "РўСЂРё РІРµСЂРЅС‹С… РѕС‚РІРµС‚Р° РїРѕРґСЂСЏРґ.",
+      "en": "Three correct answers in a row."
+    },
+    "rule": {
+      "type": "correct_streak"
+    }
+  },
+  {
+    "code": "d_combo_5",
+    "kind": "daily",
+    "target": 5,
+    "reward_xp": 60,
+    "reward_coins": 20,
+    "icon": "whatshot",
+    "title": {
+      "kk": "5 РґТ±СЂС‹СЃ Т›Р°С‚Р°СЂ",
+      "ru": "5 РІРµСЂРЅС‹С… РїРѕРґСЂСЏРґ",
+      "en": "5 In a Row"
+    },
+    "description": {
+      "kk": "ТљР°С‚Р°СЂС‹РЅР°РЅ Р±РµСЃ РґТ±СЂС‹СЃ Р¶Р°СѓР°Рї.",
+      "ru": "РџСЏС‚СЊ РІРµСЂРЅС‹С… РѕС‚РІРµС‚РѕРІ РїРѕРґСЂСЏРґ.",
+      "en": "Five correct answers in a row."
+    },
+    "rule": {
+      "type": "correct_streak"
+    }
+  },
+  {
+    "code": "d_level_1",
+    "kind": "daily",
+    "target": 1,
+    "reward_xp": 70,
+    "reward_coins": 25,
+    "icon": "flag",
+    "title": {
+      "kk": "Р”РµТЈРіРµР№РґС– Р°СЏТ›С‚Р°",
+      "ru": "Р—Р°РІРµСЂС€Рё СѓСЂРѕРІРµРЅСЊ",
+      "en": "Finish a Level"
+    },
+    "description": {
+      "kk": "Р‘С–СЂ РґРµТЈРіРµР№РґС– С‚РѕР»С‹Т› Р°СЏТ›С‚Р°.",
+      "ru": "РџСЂРѕР№РґРё РѕРґРёРЅ СѓСЂРѕРІРµРЅСЊ РїРѕР»РЅРѕСЃС‚СЊСЋ.",
+      "en": "Complete one level."
+    },
+    "rule": {
+      "type": "complete_level"
+    }
+  },
+  {
+    "code": "d_topics_3",
+    "kind": "daily",
+    "target": 3,
+    "reward_xp": 40,
+    "reward_coins": 10,
+    "icon": "category",
+    "title": {
+      "kk": "3 С‚Р°Т›С‹СЂС‹Рї",
+      "ru": "3 С‚РµРјС‹",
+      "en": "3 Topics"
+    },
+    "description": {
+      "kk": "Т®С€ С‚ТЇСЂР»С– С‚Р°Т›С‹СЂС‹РїТ›Р° Р¶Р°СѓР°Рї Р±РµСЂ.",
+      "ru": "РћС‚РІРµС‚СЊ РїРѕ С‚СЂС‘Рј СЂР°Р·РЅС‹Рј С‚РµРјР°Рј.",
+      "en": "Answer across three topics."
+    },
+    "rule": {
+      "type": "distinct_topics"
+    }
+  },
+  {
+    "code": "d_hard_2",
+    "kind": "daily",
+    "target": 2,
+    "reward_xp": 55,
+    "reward_coins": 20,
+    "icon": "fitness_center",
+    "title": {
+      "kk": "2 Т›РёС‹РЅ С‚Р°РїСЃС‹СЂРјР°",
+      "ru": "2 СЃР»РѕР¶РЅС‹С… Р·Р°РґР°РЅРёСЏ",
+      "en": "2 Hard Tasks"
+    },
+    "description": {
+      "kk": "Р•РєС– Т›РёС‹РЅ (7+) С‚Р°РїСЃС‹СЂРјР° С€РµС€.",
+      "ru": "Р РµС€Рё РґРІР° СЃР»РѕР¶РЅС‹С… (7+) Р·Р°РґР°РЅРёСЏ.",
+      "en": "Solve two hard (7+) tasks."
+    },
+    "rule": {
+      "type": "hard_tasks"
+    }
+  },
+  {
+    "code": "d_xp_150",
+    "kind": "daily",
+    "target": 150,
+    "reward_xp": 60,
+    "reward_coins": 20,
+    "icon": "trending_up",
+    "title": {
+      "kk": "150 XP",
+      "ru": "150 XP",
+      "en": "150 XP"
+    },
+    "description": {
+      "kk": "Р‘ТЇРіС–РЅ 150 XP Р¶РёРЅР°.",
+      "ru": "РќР°Р±РµСЂРё 150 XP СЃРµРіРѕРґРЅСЏ.",
+      "en": "Earn 150 XP today."
+    },
+    "rule": {
+      "type": "xp_gain"
+    }
+  },
+  {
+    "code": "d_solve_1",
+    "kind": "daily",
+    "target": 1,
+    "reward_xp": 15,
+    "reward_coins": 5,
+    "icon": "done",
+    "title": {
+      "kk": "Р‘С–СЂ С‚Р°РїСЃС‹СЂРјР°",
+      "ru": "РћРґРЅРѕ Р·Р°РґР°РЅРёРµ",
+      "en": "One Task"
+    },
+    "description": {
+      "kk": "Р–С‹Р»С‹РЅС‹Рї Р°Р»: Р±С–СЂ С‚Р°РїСЃС‹СЂРјР°.",
+      "ru": "Р Р°Р·РѕРјРЅРёСЃСЊ: РѕРґРЅРѕ Р·Р°РґР°РЅРёРµ.",
+      "en": "Warm up with one task."
+    },
+    "rule": {
+      "type": "solve_tasks"
+    }
+  },
+  {
+    "code": "d_accuracy_70",
+    "kind": "daily",
+    "target": 70,
+    "reward_xp": 30,
+    "reward_coins": 8,
+    "icon": "percent",
+    "title": {
+      "kk": "70% РґУ™Р»РґС–Рє",
+      "ru": "РўРѕС‡РЅРѕСЃС‚СЊ 70%",
+      "en": "70% Accuracy"
+    },
+    "description": {
+      "kk": "Р‘ТЇРіС–РЅ 70% РґУ™Р»РґС–Рє.",
+      "ru": "Р”РµСЂР¶Рё 70% С‚РѕС‡РЅРѕСЃС‚Рё.",
+      "en": "Keep 70% accuracy today."
+    },
+    "rule": {
+      "type": "accuracy"
+    }
+  },
+  {
+    "code": "d_no_hint_3",
+    "kind": "daily",
+    "target": 3,
+    "reward_xp": 45,
+    "reward_coins": 12,
+    "icon": "emoji_objects",
+    "title": {
+      "kk": "РџРѕРґСЃРєР°Р·РєР°СЃС‹Р· 3",
+      "ru": "3 Р±РµР· РїРѕРґСЃРєР°Р·РѕРє",
+      "en": "3 Hint-Free"
+    },
+    "description": {
+      "kk": "Т®С€ С‚Р°РїСЃС‹СЂРјР° РїРѕРґСЃРєР°Р·РєР°СЃС‹Р·.",
+      "ru": "РўСЂРё Р·Р°РґР°РЅРёСЏ Р±РµР· РїРѕРґСЃРєР°Р·РѕРє.",
+      "en": "Three tasks without hints."
+    },
+    "rule": {
+      "type": "no_hints"
+    }
+  },
+  {
+    "code": "d_topics_2",
+    "kind": "daily",
+    "target": 2,
+    "reward_xp": 25,
+    "reward_coins": 8,
+    "icon": "hub",
+    "title": {
+      "kk": "2 С‚Р°Т›С‹СЂС‹Рї",
+      "ru": "2 С‚РµРјС‹",
+      "en": "2 Topics"
+    },
+    "description": {
+      "kk": "Р•РєС– С‚ТЇСЂР»С– С‚Р°Т›С‹СЂС‹Рї.",
+      "ru": "Р”РІРµ СЂР°Р·РЅС‹Рµ С‚РµРјС‹.",
+      "en": "Two different topics."
+    },
+    "rule": {
+      "type": "distinct_topics"
+    }
+  },
+  {
+    "code": "d_combo_2",
+    "kind": "daily",
+    "target": 2,
+    "reward_xp": 25,
+    "reward_coins": 8,
+    "icon": "flash_on",
+    "title": {
+      "kk": "2 РґТ±СЂС‹СЃ Т›Р°С‚Р°СЂ",
+      "ru": "2 РІРµСЂРЅС‹С… РїРѕРґСЂСЏРґ",
+      "en": "2 In a Row"
+    },
+    "description": {
+      "kk": "ТљР°С‚Р°СЂС‹РЅР°РЅ РµРєС– РґТ±СЂС‹СЃ Р¶Р°СѓР°Рї.",
+      "ru": "Р”РІР° РІРµСЂРЅС‹С… РѕС‚РІРµС‚Р° РїРѕРґСЂСЏРґ.",
+      "en": "Two correct answers in a row."
+    },
+    "rule": {
+      "type": "correct_streak"
+    }
+  },
+  {
+    "code": "d_xp_75",
+    "kind": "daily",
+    "target": 75,
+    "reward_xp": 30,
+    "reward_coins": 8,
+    "icon": "offline_bolt",
+    "title": {
+      "kk": "75 XP",
+      "ru": "75 XP",
+      "en": "75 XP"
+    },
+    "description": {
+      "kk": "Р‘ТЇРіС–РЅ 75 XP Р¶РёРЅР°.",
+      "ru": "РќР°Р±РµСЂРё 75 XP СЃРµРіРѕРґРЅСЏ.",
+      "en": "Earn 75 XP today."
+    },
+    "rule": {
+      "type": "xp_gain"
+    }
+  },
+  {
+    "code": "w_solve_15",
+    "kind": "weekly",
+    "target": 15,
+    "reward_xp": 150,
+    "reward_coins": 50,
+    "icon": "date_range",
+    "title": {
+      "kk": "РђРїС‚Р°РґР° 15 С‚Р°РїСЃС‹СЂРјР°",
+      "ru": "15 Р·Р°РґР°РЅРёР№ Р·Р° РЅРµРґРµР»СЋ",
+      "en": "15 Weekly Tasks"
+    },
+    "description": {
+      "kk": "РђРїС‚Р° С–С€С–РЅРґРµ 15 С‚Р°РїСЃС‹СЂРјР° С€РµС€.",
+      "ru": "Р РµС€Рё 15 Р·Р°РґР°РЅРёР№ Р·Р° РЅРµРґРµР»СЋ.",
+      "en": "Solve 15 tasks this week."
+    },
+    "rule": {
+      "type": "solve_tasks"
+    }
+  },
+  {
+    "code": "w_xp_300",
+    "kind": "weekly",
+    "target": 300,
+    "reward_xp": 180,
+    "reward_coins": 60,
+    "icon": "insights",
+    "title": {
+      "kk": "РђРїС‚Р°РґР° 300 XP",
+      "ru": "300 XP Р·Р° РЅРµРґРµР»СЋ",
+      "en": "300 Weekly XP"
+    },
+    "description": {
+      "kk": "РђРїС‚Р° С–С€С–РЅРґРµ 300 XP Р¶РёРЅР°.",
+      "ru": "РќР°Р±РµСЂРё 300 XP Р·Р° РЅРµРґРµР»СЋ.",
+      "en": "Earn 300 XP this week."
+    },
+    "rule": {
+      "type": "xp_gain"
+    }
+  },
+  {
+    "code": "w_xp_600",
+    "kind": "weekly",
+    "target": 600,
+    "reward_xp": 300,
+    "reward_coins": 100,
+    "icon": "monitoring",
+    "title": {
+      "kk": "РђРїС‚Р°РґР° 600 XP",
+      "ru": "600 XP Р·Р° РЅРµРґРµР»СЋ",
+      "en": "600 Weekly XP"
+    },
+    "description": {
+      "kk": "РђРїС‚Р° С–С€С–РЅРґРµ 600 XP.",
+      "ru": "РќР°Р±РµСЂРё 600 XP Р·Р° РЅРµРґРµР»СЋ.",
+      "en": "Earn 600 XP this week."
+    },
+    "rule": {
+      "type": "xp_gain"
+    }
+  },
+  {
+    "code": "w_accuracy_85",
+    "kind": "weekly",
+    "target": 85,
+    "reward_xp": 200,
+    "reward_coins": 60,
+    "icon": "track_changes",
+    "title": {
+      "kk": "РђРїС‚Р°РґР° 85% РґУ™Р»РґС–Рє",
+      "ru": "РўРѕС‡РЅРѕСЃС‚СЊ 85% Р·Р° РЅРµРґРµР»СЋ",
+      "en": "85% Weekly Accuracy"
+    },
+    "description": {
+      "kk": "РђРїС‚Р° Р±РѕР№С‹ 85% РґУ™Р»РґС–Рє.",
+      "ru": "Р”РµСЂР¶Рё 85% С‚РѕС‡РЅРѕСЃС‚Рё Р·Р° РЅРµРґРµР»СЋ.",
+      "en": "Keep 85% accuracy all week."
+    },
+    "rule": {
+      "type": "accuracy"
+    }
+  },
+  {
+    "code": "w_levels_3",
+    "kind": "weekly",
+    "target": 3,
+    "reward_xp": 220,
+    "reward_coins": 70,
+    "icon": "flag_circle",
+    "title": {
+      "kk": "РђРїС‚Р°РґР° 3 РґРµТЈРіРµР№",
+      "ru": "3 СѓСЂРѕРІРЅСЏ Р·Р° РЅРµРґРµР»СЋ",
+      "en": "3 Levels Weekly"
+    },
+    "description": {
+      "kk": "Т®С€ РґРµТЈРіРµР№РґС– С‚РѕР»С‹Т› Р°СЏТ›С‚Р°.",
+      "ru": "РџСЂРѕР№РґРё С‚СЂРё СѓСЂРѕРІРЅСЏ РїРѕР»РЅРѕСЃС‚СЊСЋ.",
+      "en": "Complete three levels."
+    },
+    "rule": {
+      "type": "complete_level"
+    }
+  },
+  {
+    "code": "w_no_hint_10",
+    "kind": "weekly",
+    "target": 10,
+    "reward_xp": 180,
+    "reward_coins": 60,
+    "icon": "highlight",
+    "title": {
+      "kk": "РђРїС‚Р°РґР° 10 РїРѕРґСЃРєР°Р·РєР°СЃС‹Р·",
+      "ru": "10 Р±РµР· РїРѕРґСЃРєР°Р·РѕРє Р·Р° РЅРµРґРµР»СЋ",
+      "en": "10 Hint-Free Weekly"
+    },
+    "description": {
+      "kk": "РћРЅ С‚Р°РїСЃС‹СЂРјР° РїРѕРґСЃРєР°Р·РєР°СЃС‹Р·.",
+      "ru": "Р”РµСЃСЏС‚СЊ Р·Р°РґР°РЅРёР№ Р±РµР· РїРѕРґСЃРєР°Р·РѕРє.",
+      "en": "Ten tasks without hints."
+    },
+    "rule": {
+      "type": "no_hints"
+    }
+  },
+  {
+    "code": "w_topics_8",
+    "kind": "weekly",
+    "target": 8,
+    "reward_xp": 160,
+    "reward_coins": 50,
+    "icon": "account_tree",
+    "title": {
+      "kk": "РђРїС‚Р°РґР° 8 С‚Р°Т›С‹СЂС‹Рї",
+      "ru": "8 С‚РµРј Р·Р° РЅРµРґРµР»СЋ",
+      "en": "8 Topics Weekly"
+    },
+    "description": {
+      "kk": "РЎРµРіС–Р· С‚ТЇСЂР»С– С‚Р°Т›С‹СЂС‹Рї.",
+      "ru": "Р’РѕСЃРµРјСЊ СЂР°Р·РЅС‹С… С‚РµРј.",
+      "en": "Eight different topics."
+    },
+    "rule": {
+      "type": "distinct_topics"
+    }
+  },
+  {
+    "code": "w_streak_5",
+    "kind": "weekly",
+    "target": 5,
+    "reward_xp": 200,
+    "reward_coins": 60,
+    "icon": "event_repeat",
+    "title": {
+      "kk": "5 РєТЇРЅ СЃРµСЂРёСЏ",
+      "ru": "РЎРµСЂРёСЏ 5 РґРЅРµР№",
+      "en": "5-Day Streak"
+    },
+    "description": {
+      "kk": "Р‘РµСЃ РєТЇРЅ Т›Р°С‚Р°СЂС‹РЅР°РЅ РѕТ›С‹.",
+      "ru": "РЈС‡РёСЃСЊ РїСЏС‚СЊ РґРЅРµР№ РїРѕРґСЂСЏРґ.",
+      "en": "Study five days in a row."
+    },
+    "rule": {
+      "type": "streak_days"
+    }
+  },
+  {
+    "code": "w_hard_10",
+    "kind": "weekly",
+    "target": 10,
+    "reward_xp": 240,
+    "reward_coins": 80,
+    "icon": "military_tech",
+    "title": {
+      "kk": "РђРїС‚Р°РґР° 10 Т›РёС‹РЅ",
+      "ru": "10 СЃР»РѕР¶РЅС‹С… Р·Р° РЅРµРґРµР»СЋ",
+      "en": "10 Hard Weekly"
+    },
+    "description": {
+      "kk": "РћРЅ Т›РёС‹РЅ (7+) С‚Р°РїСЃС‹СЂРјР°.",
+      "ru": "Р”РµСЃСЏС‚СЊ СЃР»РѕР¶РЅС‹С… (7+) Р·Р°РґР°РЅРёР№.",
+      "en": "Ten hard (7+) tasks."
+    },
+    "rule": {
+      "type": "hard_tasks"
+    }
+  },
+  {
+    "code": "w_combo_10",
+    "kind": "weekly",
+    "target": 10,
+    "reward_xp": 220,
+    "reward_coins": 70,
+    "icon": "local_fire_department",
+    "title": {
+      "kk": "РђРїС‚Р°РґР° 10 Т›Р°С‚Р°СЂ",
+      "ru": "10 РїРѕРґСЂСЏРґ Р·Р° РЅРµРґРµР»СЋ",
+      "en": "10 Weekly Combo"
+    },
+    "description": {
+      "kk": "ТљР°С‚Р°СЂС‹РЅР°РЅ РѕРЅ РґТ±СЂС‹СЃ Р¶Р°СѓР°Рї.",
+      "ru": "Р”РµСЃСЏС‚СЊ РІРµСЂРЅС‹С… РѕС‚РІРµС‚РѕРІ РїРѕРґСЂСЏРґ.",
+      "en": "Ten correct answers in a row."
+    },
+    "rule": {
+      "type": "correct_streak"
+    }
+  }
+]

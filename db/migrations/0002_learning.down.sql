@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS level_progress;
+DROP TABLE IF EXISTS attempts;
+DROP TABLE IF EXISTS tasks;
+DROP TABLE IF EXISTS levels;
+DROP TABLE IF EXISTS topics;
+DROP TABLE IF EXISTS course_enrollments;
+DROP TABLE IF EXISTS courses;

@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS notifications;
+DROP TABLE IF EXISTS inventory;
+DROP TABLE IF EXISTS purchases;
+DROP TABLE IF EXISTS shop_items;
+DROP TABLE IF EXISTS tournament_teams;
+DROP TABLE IF EXISTS tournaments;
+DROP TABLE IF EXISTS team_members;
+DROP TABLE IF EXISTS teams;

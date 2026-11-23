@@ -1,0 +1,23 @@
+# build artifacts
+build/
+frontend/dist/
+frontend/node_modules/
+*.tsbuildinfo
+logs/
+.logs/
+uploads/
+*.obj
+*.exe
+*.pdb
+*.ilk
+
+# environment & local data
+.env
+.env.local
+pgdata/
+*.log
+
+# editor
+.vscode/
+.idea/
+.DS_Store

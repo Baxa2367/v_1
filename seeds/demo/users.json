@@ -1,0 +1,426 @@
+{
+  "teachers": [
+    {
+      "email": "aigerim@lumina.kz",
+      "name": "РђР№РіТЇР» РЎРјР°Т“Т±Р»РѕРІР°",
+      "locale": "kk"
+    },
+    {
+      "email": "dmitry@lumina.kz",
+      "name": "Р”РјРёС‚СЂРёР№ РљРёРј",
+      "locale": "ru"
+    },
+    {
+      "email": "aliya@lumina.kz",
+      "name": "РђР»РёСЏ Р‘РµРєРѕРІР°",
+      "locale": "kk"
+    }
+  ],
+  "students": [
+    {
+      "name": "РђР»РёС€РµСЂ РЎРµСЂРёРєРѕРІ",
+      "email": "alisher@lumina.kz",
+      "nickname": "alisher",
+      "profile": "excellent",
+      "avatar": "face",
+      "locale": "kk",
+      "daily_goal_xp": 100,
+      "course": 0
+    },
+    {
+      "name": "РђСЂСѓР¶Р°РЅ РЎР°РїР°СЂРѕРІР°",
+      "email": "aruzhan@lumina.kz",
+      "nickname": "aruzhan",
+      "profile": "excellent",
+      "avatar": "face_2",
+      "locale": "ru",
+      "daily_goal_xp": 100,
+      "course": 1
+    },
+    {
+      "name": "Р›Р°СѓСЂР° РљР°РјРёР»РѕРІР°",
+      "email": "laura@lumina.kz",
+      "nickname": "laura",
+      "profile": "excellent",
+      "avatar": "face_3",
+      "locale": "kk",
+      "daily_goal_xp": 100,
+      "course": 2
+    },
+    {
+      "name": "Р•Р»РµРЅР° Р РѕСЃС‚РѕРІР°",
+      "email": "elena@lumina.kz",
+      "nickname": "elena",
+      "profile": "excellent",
+      "avatar": "face_4",
+      "locale": "kk",
+      "daily_goal_xp": 100,
+      "course": 3
+    },
+    {
+      "name": "Р”Р°РЅРёСЏСЂ РђС…РјРµС‚РѕРІ",
+      "email": "daniyar@lumina.kz",
+      "nickname": "daniyar",
+      "profile": "excellent",
+      "avatar": "face_5",
+      "locale": "ru",
+      "daily_goal_xp": 100,
+      "course": 0
+    },
+    {
+      "name": "РњР°РґРёРЅР° РќТ±СЂР»Р°РЅ",
+      "email": "madina@lumina.kz",
+      "nickname": "madina",
+      "profile": "excellent",
+      "avatar": "face_6",
+      "locale": "kk",
+      "daily_goal_xp": 100,
+      "course": 1
+    },
+    {
+      "name": "РўРёРјСѓСЂ Р‘РµРєР±РѕР»Р°С‚",
+      "email": "timur@lumina.kz",
+      "nickname": "timur",
+      "profile": "excellent",
+      "avatar": "face",
+      "locale": "kk",
+      "daily_goal_xp": 100,
+      "course": 2
+    },
+    {
+      "name": "РђР№РіРµСЂРёРј РћСЃРїР°РЅ",
+      "email": "aigerim.s@lumina.kz",
+      "nickname": "aigerim_s",
+      "profile": "excellent",
+      "avatar": "face_2",
+      "locale": "ru",
+      "daily_goal_xp": 100,
+      "course": 3
+    },
+    {
+      "name": "РќТ±СЂСЃТ±Р»С‚Р°РЅ УР»С–РјРѕРІ",
+      "email": "nursultan@lumina.kz",
+      "nickname": "nursultan",
+      "profile": "excellent",
+      "avatar": "face_3",
+      "locale": "kk",
+      "daily_goal_xp": 100,
+      "course": 0
+    },
+    {
+      "name": "Р–Р°РЅРЅР° ТљСѓР°РЅС‹С€",
+      "email": "zhanna@lumina.kz",
+      "nickname": "zhanna",
+      "profile": "excellent",
+      "avatar": "face_4",
+      "locale": "kk",
+      "daily_goal_xp": 100,
+      "course": 1
+    },
+    {
+      "name": "Р”РѕСЃР¶Р°РЅ РњТ±СЂР°С‚РѕРІ",
+      "email": "doszhan@lumina.kz",
+      "nickname": "doszhan",
+      "profile": "steady",
+      "avatar": "face_5",
+      "locale": "ru",
+      "daily_goal_xp": 50,
+      "course": 2
+    },
+    {
+      "name": "РљР°РјРёР»Р° РўТ±СЂСЃС‹РЅ",
+      "email": "kamila@lumina.kz",
+      "nickname": "kamila",
+      "profile": "steady",
+      "avatar": "face_6",
+      "locale": "kk",
+      "daily_goal_xp": 50,
+      "course": 3
+    },
+    {
+      "name": "РЎР°РЅР¶Р°СЂ Р‘Р°Р№Р¶Р°РЅРѕРІ",
+      "email": "sanzhar@lumina.kz",
+      "nickname": "sanzhar",
+      "profile": "steady",
+      "avatar": "face",
+      "locale": "kk",
+      "daily_goal_xp": 50,
+      "course": 0
+    },
+    {
+      "name": "РђСЏРіУ©Р· РќТ±СЂР»Р°РЅРѕРІР°",
+      "email": "ayagoz@lumina.kz",
+      "nickname": "ayagoz",
+      "profile": "steady",
+      "avatar": "face_2",
+      "locale": "ru",
+      "daily_goal_xp": 50,
+      "course": 1
+    },
+    {
+      "name": "Р•СЂР°СЃС‹Р» ТљР°Р№СЂР°С‚",
+      "email": "erasyl@lumina.kz",
+      "nickname": "erasyl",
+      "profile": "steady",
+      "avatar": "face_3",
+      "locale": "kk",
+      "daily_goal_xp": 50,
+      "course": 2
+    },
+    {
+      "name": "Р”РёРЅР°СЂР° РЎРµР№С–С‚",
+      "email": "dinara@lumina.kz",
+      "nickname": "dinara",
+      "profile": "steady",
+      "avatar": "face_4",
+      "locale": "kk",
+      "daily_goal_xp": 50,
+      "course": 3
+    },
+    {
+      "name": "УР»РёС…Р°РЅ Р–Т±РјР°Р±Р°Р№",
+      "email": "alikhan@lumina.kz",
+      "nickname": "alikhan",
+      "profile": "steady",
+      "avatar": "face_5",
+      "locale": "ru",
+      "daily_goal_xp": 50,
+      "course": 0
+    },
+    {
+      "name": "РђТ›Р±РѕС‚Р° РњТ±С…Р°РјРµРґ",
+      "email": "akbota@lumina.kz",
+      "nickname": "akbota",
+      "profile": "steady",
+      "avatar": "face_6",
+      "locale": "kk",
+      "daily_goal_xp": 50,
+      "course": 1
+    },
+    {
+      "name": "Р‘РµРєР·Р°С‚ РћСЂР°Р·РѕРІ",
+      "email": "bekzat@lumina.kz",
+      "nickname": "bekzat",
+      "profile": "steady",
+      "avatar": "face",
+      "locale": "kk",
+      "daily_goal_xp": 50,
+      "course": 2
+    },
+    {
+      "name": "Р“ТЇР»naz ТљР°СЃС‹Рј",
+      "email": "gulnaz@lumina.kz",
+      "nickname": "gulnaz",
+      "profile": "steady",
+      "avatar": "face_2",
+      "locale": "ru",
+      "daily_goal_xp": 50,
+      "course": 3
+    },
+    {
+      "name": "Р”Р°РјРёСЂ РР±СЂР°РµРІ",
+      "email": "damir@lumina.kz",
+      "nickname": "damir",
+      "profile": "steady",
+      "avatar": "face_3",
+      "locale": "kk",
+      "daily_goal_xp": 50,
+      "course": 0
+    },
+    {
+      "name": "Р–Р°СЃРјРёРЅ УР±РґС–",
+      "email": "zhasmin@lumina.kz",
+      "nickname": "zhasmin",
+      "profile": "steady",
+      "avatar": "face_4",
+      "locale": "kk",
+      "daily_goal_xp": 50,
+      "course": 1
+    },
+    {
+      "name": "Р†Р»РёСЏСЃ РЎРјР°Т“Т±Р»",
+      "email": "iliyas@lumina.kz",
+      "nickname": "iliyas",
+      "profile": "steady",
+      "avatar": "face_5",
+      "locale": "ru",
+      "daily_goal_xp": 50,
+      "course": 2
+    },
+    {
+      "name": "РљР°СЂРёРЅР° Р’РѕР»РєРѕРІР°",
+      "email": "karina@lumina.kz",
+      "nickname": "karina",
+      "profile": "steady",
+      "avatar": "face_6",
+      "locale": "kk",
+      "daily_goal_xp": 50,
+      "course": 3
+    },
+    {
+      "name": "РњРёСЂР°СЃ РўУ©Р»РµРіРµРЅ",
+      "email": "miras@lumina.kz",
+      "nickname": "miras",
+      "profile": "steady",
+      "avatar": "face",
+      "locale": "kk",
+      "daily_goal_xp": 50,
+      "course": 0
+    },
+    {
+      "name": "РќР°Р·РµСЂРєРµ РЎУ™СЂСЃРµРЅ",
+      "email": "nazerke@lumina.kz",
+      "nickname": "nazerke",
+      "profile": "steady",
+      "avatar": "face_2",
+      "locale": "ru",
+      "daily_goal_xp": 50,
+      "course": 1
+    },
+    {
+      "name": "РћР»Р¶Р°СЃ ТљР°Р±С‹Р»РѕРІ",
+      "email": "olzhas@lumina.kz",
+      "nickname": "olzhas",
+      "profile": "irregular",
+      "avatar": "face_3",
+      "locale": "kk",
+      "daily_goal_xp": 50,
+      "course": 2
+    },
+    {
+      "name": "РџРµСЂРёР·Р°С‚ РђС…РјРµС‚",
+      "email": "perizat@lumina.kz",
+      "nickname": "perizat",
+      "profile": "irregular",
+      "avatar": "face_4",
+      "locale": "kk",
+      "daily_goal_xp": 50,
+      "course": 3
+    },
+    {
+      "name": "Р СѓСЃР»Р°РЅ Р”РѕСЃРѕРІ",
+      "email": "ruslan@lumina.kz",
+      "nickname": "ruslan",
+      "profile": "irregular",
+      "avatar": "face_5",
+      "locale": "ru",
+      "daily_goal_xp": 50,
+      "course": 0
+    },
+    {
+      "name": "РЎР°Р±РёРЅР° ТљР°Р»Рё",
+      "email": "sabina@lumina.kz",
+      "nickname": "sabina",
+      "profile": "irregular",
+      "avatar": "face_6",
+      "locale": "kk",
+      "daily_goal_xp": 50,
+      "course": 1
+    },
+    {
+      "name": "РўУ™Р¶С–РіТЇР» РќТ±СЂ",
+      "email": "tazhigul@lumina.kz",
+      "nickname": "tazhigul",
+      "profile": "irregular",
+      "avatar": "face",
+      "locale": "kk",
+      "daily_goal_xp": 50,
+      "course": 2
+    },
+    {
+      "name": "РЈУ™Р»РёС…Р°РЅ РњТ±СЂР°С‚",
+      "email": "ualikhan@lumina.kz",
+      "nickname": "ualikhan",
+      "profile": "irregular",
+      "avatar": "face_2",
+      "locale": "ru",
+      "daily_goal_xp": 50,
+      "course": 3
+    },
+    {
+      "name": "Р¤Р°СЂРёР·Р° Р•СЂР¶Р°РЅ",
+      "email": "fariza@lumina.kz",
+      "nickname": "fariza",
+      "profile": "irregular",
+      "avatar": "face_3",
+      "locale": "kk",
+      "daily_goal_xp": 50,
+      "course": 0
+    },
+    {
+      "name": "РҐР°РјРёС‚ Р‘РµРєРѕРІР°",
+      "email": "khamit@lumina.kz",
+      "nickname": "khamit",
+      "profile": "irregular",
+      "avatar": "face_4",
+      "locale": "kk",
+      "daily_goal_xp": 50,
+      "course": 1
+    },
+    {
+      "name": "РЁС‹РЅР°СЂ РћСЃРїР°РЅРѕРІР°",
+      "email": "shynar@lumina.kz",
+      "nickname": "shynar",
+      "profile": "stuck",
+      "avatar": "face_5",
+      "locale": "ru",
+      "daily_goal_xp": 20,
+      "course": 2
+    },
+    {
+      "name": "Р«Р±С‹СЂР°Р№ РЎР°РґС‹Т›",
+      "email": "ybyrai@lumina.kz",
+      "nickname": "ybyrai",
+      "profile": "stuck",
+      "avatar": "face_6",
+      "locale": "kk",
+      "daily_goal_xp": 20,
+      "course": 3
+    },
+    {
+      "name": "Р­Р»СЊРјРёСЂР° ТљР°СЃС‹РјРѕРІР°",
+      "email": "elmira@lumina.kz",
+      "nickname": "elmira",
+      "profile": "stuck",
+      "avatar": "face",
+      "locale": "kk",
+      "daily_goal_xp": 20,
+      "course": 0
+    },
+    {
+      "name": "Р®Р»РёСЏ РЎРјРёСЂРЅРѕРІР°",
+      "email": "yulia@lumina.kz",
+      "nickname": "yulia",
+      "profile": "stuck",
+      "avatar": "face_2",
+      "locale": "ru",
+      "daily_goal_xp": 20,
+      "course": 1
+    },
+    {
+      "name": "РЇСЃРјРёРЅ РђС…РјРµС‚РѕРІР°",
+      "email": "yasmin@lumina.kz",
+      "nickname": "yasmin",
+      "profile": "stuck",
+      "avatar": "face_3",
+      "locale": "kk",
+      "daily_goal_xp": 20,
+      "course": 2
+    },
+    {
+      "name": "УСЃРµР» Р–Р°Т›СЃС‹Р»С‹Т›",
+      "email": "asel@lumina.kz",
+      "nickname": "asel",
+      "profile": "stuck",
+      "avatar": "face_4",
+      "locale": "kk",
+      "daily_goal_xp": 20,
+      "course": 3
+    }
+  ],
+  "admin": {
+    "email": "admin@lumina.kz",
+    "name": "Lumina Admin",
+    "locale": "kk"
+  }
+}

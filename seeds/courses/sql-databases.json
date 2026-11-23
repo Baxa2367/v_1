@@ -1,0 +1,1889 @@
+{
+  "slug": "sql-databases",
+  "title": { "kk": "Деректер қоры және SQL", "ru": "Базы данных и SQL", "en": "Databases and SQL" },
+  "description": { "kk": "Деректер қорының негіздерін, SQL сұраныстарын, агрегаттарды, JOIN түрлерін, ішкі сұраныстарды, нормализацияны және транзакцияларды үйреніңіз. Сегіз деңгей, 80 практикалық тапсырма.", "ru": "Изучите основы баз данных, SQL-запросы, агрегаты, виды JOIN, подзапросы, нормализацию и транзакции. Восемь уровней и 80 практических заданий.", "en": "Learn database fundamentals, SQL queries, aggregates, JOIN types, subqueries, normalization and transactions. Eight levels with 80 practice tasks." },
+  "category": "database",
+  "difficulty": 5,
+  "tags": ["sql", "database", "select", "join", "transactions"],
+  "cover": "database",
+  "levels": [
+    {
+      "order_no": 1,
+      "title": { "kk": "SELECT негіздері", "ru": "Основы SELECT", "en": "SELECT basics" },
+      "description": { "kk": "Кестеден қажет бағандарды таңдауды, бүркеншік аттарды, қайталанбайтын жолдарды және нәтижені шектеуді үйреніңіз.", "ru": "Учитесь выбирать нужные столбцы, задавать псевдонимы, убирать дубликаты и ограничивать результат.", "en": "Learn to pick columns, use aliases, remove duplicates and limit the result." },
+      "icon": "table_chart",
+      "is_boss": false,
+      "unlock_rules": { "min_xp": 0, "min_prev_accuracy": 0, "required_tasks": 0 },
+      "topics": [
+        { "code": "sql.select", "name": { "kk": "SELECT және бағандар", "ru": "SELECT и столбцы", "en": "SELECT and columns" } },
+        { "code": "sql.distinct", "name": { "kk": "DISTINCT және LIMIT", "ru": "DISTINCT и LIMIT", "en": "DISTINCT and LIMIT" } }
+      ],
+      "tasks": [
+        {
+          "type": "single_choice",
+          "topic": "sql.select",
+          "difficulty": 1,
+          "base_xp": 20,
+          "time_limit_sec": 60,
+          "prompt": { "kk": "students кестесінен тек name және city бағандарын қайтаратын сұранысты таңдаңыз.", "ru": "Выберите запрос, который вернёт из таблицы students только столбцы name и city." },
+          "explanation": { "kk": "Бағандарды SELECT-тен кейін үтірмен тізіп жазамыз: SELECT name, city FROM students;. Жұлдызша (*) барлық бағандарды қайтарады.", "ru": "Столбцы перечисляются через запятую после SELECT: SELECT name, city FROM students;. Звёздочка (*) возвращает все столбцы." },
+          "hints": [
+            { "kk": "FROM-нан кейін дереккөз кестенің аты жазылады.", "ru": "После FROM указывается имя таблицы-источника." },
+            { "kk": "Екі баған атының арасында үтір болуы керек.", "ru": "Между именами двух столбцов нужна запятая." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "SELECT * FROM students;", "ru": "SELECT * FROM students;" } },
+              { "id": "b", "text": { "kk": "SELECT name, city FROM students;", "ru": "SELECT name, city FROM students;" } },
+              { "id": "c", "text": { "kk": "SELECT name AND city FROM students;", "ru": "SELECT name AND city FROM students;" } },
+              { "id": "d", "text": { "kk": "SELECT students(name, city);", "ru": "SELECT students(name, city);" } }
+            ]
+          },
+          "answer_key": { "correct": ["b"] }
+        },
+        {
+          "type": "multiple_choice",
+          "topic": "sql.select",
+          "difficulty": 2,
+          "base_xp": 30,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "Қай сұраныстар синтаксистік тұрғыдан дұрыс? Бірнеше дұрыс жауап болуы мүмкін.", "ru": "Какие запросы синтаксически корректны? Правильных ответов может быть несколько." },
+          "explanation": { "kk": "Бағандар тізімінен кейін артық үтір қалмауы керек, ал FROM әрқашан SELECT-тен кейін тұрады. LIMIT 10 нәтижені 10 жолмен шектейді.", "ru": "После списка столбцов не должно оставаться лишней запятой, а FROM всегда идёт после SELECT. LIMIT 10 ограничивает результат десятью строками." },
+          "hints": [
+            { "kk": "SELECT-тен кейін дереу FROM жазылмайды, алдымен бағандар тізімі тұрады.", "ru": "После SELECT сразу не пишется FROM: сначала идёт список столбцов." },
+            { "kk": "Тізімнің соңындағы үтір қате.", "ru": "Запятая в конце списка — ошибка." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "SELECT name, age FROM users;", "ru": "SELECT name, age FROM users;" } },
+              { "id": "b", "text": { "kk": "SELECT name, FROM users;", "ru": "SELECT name, FROM users;" } },
+              { "id": "c", "text": { "kk": "SELECT * FROM users LIMIT 10;", "ru": "SELECT * FROM users LIMIT 10;" } },
+              { "id": "d", "text": { "kk": "FROM users SELECT name;", "ru": "FROM users SELECT name;" } }
+            ]
+          },
+          "answer_key": { "correct": ["a", "c"] }
+        },
+        {
+          "type": "true_false",
+          "topic": "sql.select",
+          "difficulty": 1,
+          "base_xp": 20,
+          "time_limit_sec": 60,
+          "prompt": { "kk": "SELECT * жұмысы туралы тұжырымды бағалаңыз.", "ru": "Оцените утверждение о работе SELECT *." },
+          "explanation": { "kk": "Жұлдызша барлық бағандарды білдіреді және олар кесте анықтамасындағы ретпен қайтады. Тұрақты код үшін бағандарды атымен тізіп жазған дұрыс.", "ru": "Звёздочка означает все столбцы, и они возвращаются в порядке определения таблицы. Для стабильного кода лучше перечислять столбцы по именам." },
+          "hints": [
+            { "kk": "* таңбасының мағынасын еске түсіріңіз.", "ru": "Вспомните значение символа *." },
+            { "kk": "Бағандардың реті кесте құрылымына тәуелді.", "ru": "Порядок столбцов зависит от структуры таблицы." }
+          ],
+          "payload": {
+            "statement": { "kk": "SELECT * сұранысы кестенің барлық бағандарын кестедегі ретімен қайтарады.", "ru": "Запрос SELECT * возвращает все столбцы таблицы в порядке их следования в таблице." }
+          },
+          "answer_key": { "correct": true }
+        },
+        {
+          "type": "short_answer",
+          "topic": "sql.distinct",
+          "difficulty": 2,
+          "base_xp": 30,
+          "time_limit_sec": 75,
+          "prompt": { "kk": "Қайталанатын жолдарды нәтижеден жою үшін SELECT-тен кейін қандай кілт сөз жазылады? Бір сөзбен жауап беріңіз.", "ru": "Какое ключевое слово пишется после SELECT, чтобы убрать повторяющиеся строки из результата? Ответьте одним словом." },
+          "explanation": { "kk": "DISTINCT қайталанатын жолдарды біріктіреді: SELECT DISTINCT city FROM students;. Салыстыру барлық таңдалған бағандардың тіркесімі бойынша жүреді.", "ru": "DISTINCT объединяет повторяющиеся строки: SELECT DISTINCT city FROM students;. Сравнение идёт по комбинации всех выбранных столбцов." },
+          "hints": [
+            { "kk": "Бұл сөз «ерекшеленген» деген мағынаны білдіреді.", "ru": "Это слово означает «отличный, отдельный»." },
+            { "kk": "Ол SELECT пен бағандар тізімінің арасында тұрады.", "ru": "Оно стоит между SELECT и списком столбцов." }
+          ],
+          "payload": {
+            "placeholder": { "kk": "кілт сөз", "ru": "ключевое слово" }
+          },
+          "answer_key": { "accepted": ["distinct", "DISTINCT"], "case_sensitive": false }
+        },
+        {
+          "type": "cloze",
+          "topic": "sql.distinct",
+          "difficulty": 2,
+          "base_xp": 30,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "Сұранысты толықтырыңыз: студенттердің қайталанбайтын қалаларының алғашқы 5-еуін қайтарыңыз.", "ru": "Дополните запрос: верните первые пять уникальных городов студентов." },
+          "explanation": { "kk": "DISTINCT қайталанатын қалаларды жояды, ал LIMIT 5 нәтижені бес жолмен шектейді. Екеуі де SELECT-тен кейінгі тиісті орындарында тұр.", "ru": "DISTINCT убирает повторяющиеся города, а LIMIT 5 ограничивает результат пятью строками. Оба стоят на своих местах после SELECT." },
+          "hints": [
+            { "kk": "Бірінші бос орынға қайталануды жоятын кілт сөз керек.", "ru": "В первую пропуск нужно ключевое слово, убирающее дубликаты." },
+            { "kk": "Екінші бос орын жол санын шектейді.", "ru": "Второй пропуск ограничивает количество строк." }
+          ],
+          "payload": {
+            "text": { "kk": "SELECT {{1}} city FROM students {{2}} 5;", "ru": "SELECT {{1}} city FROM students {{2}} 5;" },
+            "blanks": [
+              { "id": "1", "options": [
+                { "id": "o1", "text": { "kk": "DISTINCT", "ru": "DISTINCT" } },
+                { "id": "o2", "text": { "kk": "ALL", "ru": "ALL" } },
+                { "id": "o3", "text": { "kk": "COUNT", "ru": "COUNT" } }
+              ] },
+              { "id": "2", "options": [
+                { "id": "o1", "text": { "kk": "LIMIT", "ru": "LIMIT" } },
+                { "id": "o2", "text": { "kk": "TOP", "ru": "TOP" } },
+                { "id": "o3", "text": { "kk": "OFFSET", "ru": "OFFSET" } }
+              ] }
+            ]
+          },
+          "answer_key": { "blanks": { "1": "o1", "2": "o1" } }
+        },
+        {
+          "type": "ordering",
+          "topic": "sql.select",
+          "difficulty": 3,
+          "base_xp": 35,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "SQL сұранысының бөліктерін дұрыс жазылу ретімен орналастырыңыз.", "ru": "Расположите части SQL-запроса в правильном порядке записи." },
+          "explanation": { "kk": "Жазылу реті: SELECT → FROM → ORDER BY → LIMIT. ORDER BY нәтижені сұрыптайды, ал LIMIT соңғы қадамда жол санын шектейді.", "ru": "Порядок записи: SELECT → FROM → ORDER BY → LIMIT. ORDER BY сортирует результат, а LIMIT на последнем шаге ограничивает число строк." },
+          "hints": [
+            { "kk": "Сұраныс әрқашан SELECT-тен басталады.", "ru": "Запрос всегда начинается с SELECT." },
+            { "kk": "LIMIT ең соңында тұрады.", "ru": "LIMIT стоит в самом конце." }
+          ],
+          "payload": {
+            "items": [
+              { "id": "i1", "text": { "kk": "SELECT бағандар", "ru": "SELECT столбцы" } },
+              { "id": "i2", "text": { "kk": "FROM кесте", "ru": "FROM таблица" } },
+              { "id": "i3", "text": { "kk": "ORDER BY сұрыптау", "ru": "ORDER BY сортировка" } },
+              { "id": "i4", "text": { "kk": "LIMIT шектеу", "ru": "LIMIT ограничение" } }
+            ]
+          },
+          "answer_key": { "order": ["i1", "i2", "i3", "i4"] }
+        },
+        {
+          "type": "matching",
+          "topic": "sql.select",
+          "difficulty": 2,
+          "base_xp": 30,
+          "time_limit_sec": 100,
+          "prompt": { "kk": "SQL элементтерін олардың қызметімен сәйкестендіріңіз.", "ru": "Сопоставьте элементы SQL с их назначением." },
+          "explanation": { "kk": "SELECT бағандарды таңдайды, FROM дереккөзді көрсетеді, DISTINCT қайталануларды жояды, LIMIT жол санын шектейді, AS бүркеншік ат береді.", "ru": "SELECT выбирает столбцы, FROM указывает источник, DISTINCT убирает дубликаты, LIMIT ограничивает число строк, AS задаёт псевдоним." },
+          "hints": [
+            { "kk": "AS тек атауға қатысты, деректерді өзгертпейді.", "ru": "AS относится только к имени и не меняет данные." },
+            { "kk": "LIMIT нәтиженің көлемін анықтайды.", "ru": "LIMIT определяет объём результата." }
+          ],
+          "payload": {
+            "left": [
+              { "id": "l1", "text": { "kk": "SELECT", "ru": "SELECT" } },
+              { "id": "l2", "text": { "kk": "FROM", "ru": "FROM" } },
+              { "id": "l3", "text": { "kk": "DISTINCT", "ru": "DISTINCT" } },
+              { "id": "l4", "text": { "kk": "LIMIT", "ru": "LIMIT" } },
+              { "id": "l5", "text": { "kk": "AS", "ru": "AS" } }
+            ],
+            "right": [
+              { "id": "r1", "text": { "kk": "Жол санын шектейді", "ru": "Ограничивает число строк" } },
+              { "id": "r2", "text": { "kk": "Бағандарды таңдайды", "ru": "Выбирает столбцы" } },
+              { "id": "r3", "text": { "kk": "Бағанға бүркеншік ат береді", "ru": "Задаёт псевдоним столбца" } },
+              { "id": "r4", "text": { "kk": "Қайталанатын жолдарды жояды", "ru": "Удаляет повторяющиеся строки" } },
+              { "id": "r5", "text": { "kk": "Дереккөз кестені көрсетеді", "ru": "Указывает таблицу-источник" } }
+            ]
+          },
+          "answer_key": { "pairs": { "l1": "r2", "l2": "r5", "l3": "r4", "l4": "r1", "l5": "r3" } }
+        },
+        {
+          "type": "numeric",
+          "topic": "sql.distinct",
+          "difficulty": 3,
+          "base_xp": 35,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "students кестесіндегі city мәндері:\nАлматы, Астана, Алматы, Шымкент, Астана, Ақтөбе.\n\nSELECT DISTINCT city FROM students; сұранысы неше жол қайтарады?", "ru": "Значения city в таблице students:\nАлматы, Астана, Алматы, Шымкент, Астана, Ақтөбе.\n\nСколько строк вернёт запрос SELECT DISTINCT city FROM students;?" },
+          "explanation": { "kk": "Бірегей мәндер: Алматы, Астана, Шымкент, Ақтөбе — барлығы 4 жол. Қайталанған Алматы мен Астана бір-бір рет қана қалады.", "ru": "Уникальные значения: Алматы, Астана, Шымкент, Ақтөбе — всего 4 строки. Повторяющиеся Алматы и Астана остаются по одному разу." },
+          "hints": [
+            { "kk": "Бірдей қалаларды бір рет қана санаңыз.", "ru": "Каждый одинаковый город считайте только один раз." },
+            { "kk": "Қайталанбайтын қалалар санын санаңыз.", "ru": "Посчитайте количество различных городов." }
+          ],
+          "payload": {
+            "unit": { "kk": "жол", "ru": "строк" }
+          },
+          "answer_key": { "value": 4, "tolerance": 0.01 }
+        },
+        {
+          "type": "timed_quiz",
+          "topic": "sql.distinct",
+          "difficulty": 2,
+          "base_xp": 30,
+          "time_limit_sec": 25,
+          "prompt": { "kk": "Нәтижедегі жолдар санын шектейтін кілт сөзді таңдаңыз.", "ru": "Выберите ключевое слово, ограничивающее число строк в результате." },
+          "explanation": { "kk": "LIMIT нәтиженің соңында қолданылып, қайтарылатын жол санын анықтайды: LIMIT 10. WHERE жолдарды сүзеді, бірақ санын кепілді шектемейді.", "ru": "LIMIT применяется в конце результата и задаёт число возвращаемых строк: LIMIT 10. WHERE фильтрует строки, но не гарантирует их количество." },
+          "hints": [
+            { "kk": "Бұл бөлім сұраныстың ең соңында тұрады.", "ru": "Эта часть стоит в самом конце запроса." },
+            { "kk": "Ол санмен бірге жазылады.", "ru": "Она записывается вместе с числом." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "LIMIT", "ru": "LIMIT" } },
+              { "id": "b", "text": { "kk": "WHERE", "ru": "WHERE" } },
+              { "id": "c", "text": { "kk": "ORDER BY", "ru": "ORDER BY" } },
+              { "id": "d", "text": { "kk": "GROUP BY", "ru": "GROUP BY" } }
+            ]
+          },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "single_choice",
+          "topic": "sql.select",
+          "difficulty": 3,
+          "base_xp": 40,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "full_name бағанын aty деген бүркеншік атпен қайтаратын сұранысты таңдаңыз.", "ru": "Выберите запрос, который вернёт столбец full_name под псевдонимом aty." },
+          "explanation": { "kk": "Бүркеншік ат AS кілт сөзі арқылы беріледі: SELECT full_name AS aty FROM students;. Баған аты мен бүркеншік аттың орнын ауыстыруға болмайды.", "ru": "Псевдоним задаётся ключевым словом AS: SELECT full_name AS aty FROM students;. Менять местами имя столбца и псевдоним нельзя." },
+          "hints": [
+            { "kk": "AS-тан кейін жаңа атау тұрады.", "ru": "После AS стоит новое имя." },
+            { "kk": "Дереккөз бағаны full_name, ал нәтижедегі атауы aty.", "ru": "Исходный столбец — full_name, а имя в результате — aty." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "SELECT full_name AS aty FROM students;", "ru": "SELECT full_name AS aty FROM students;" } },
+              { "id": "b", "text": { "kk": "SELECT aty AS full_name FROM students;", "ru": "SELECT aty AS full_name FROM students;" } },
+              { "id": "c", "text": { "kk": "SELECT full_name = aty FROM students;", "ru": "SELECT full_name = aty FROM students;" } },
+              { "id": "d", "text": { "kk": "SELECT full_name TO aty FROM students;", "ru": "SELECT full_name TO aty FROM students;" } }
+            ]
+          },
+          "answer_key": { "correct": ["a"] }
+        }
+      ]
+    },
+    {
+      "order_no": 2,
+      "title": { "kk": "WHERE және сүзгілеу", "ru": "WHERE и фильтрация", "en": "WHERE and filtering" },
+      "description": { "kk": "Жолдарды шарт бойынша сүзуді, логикалық операторларды, аралықты, тізімді, үлгіні және NULL мәндерін тексеруді меңгеріңіз.", "ru": "Освойте фильтрацию строк по условию, логические операторы, диапазоны, списки, шаблоны и проверку NULL.", "en": "Master row filtering, logical operators, ranges, lists, patterns and NULL checks." },
+      "icon": "filter_alt",
+      "is_boss": false,
+      "unlock_rules": { "min_xp": 120, "min_prev_accuracy": 0.6, "required_tasks": 8 },
+      "topics": [
+        { "code": "sql.where", "name": { "kk": "WHERE және шарттар", "ru": "WHERE и условия", "en": "WHERE and conditions" } },
+        { "code": "sql.filter", "name": { "kk": "Операторлар және NULL", "ru": "Операторы и NULL", "en": "Operators and NULL" } }
+      ],
+      "tasks": [
+        {
+          "type": "single_choice",
+          "topic": "sql.filter",
+          "difficulty": 2,
+          "base_xp": 30,
+          "time_limit_sec": 60,
+          "prompt": { "kk": "email бағанында мәні жоқ (NULL) пайдаланушыларды табудың дұрыс жолын таңдаңыз.", "ru": "Выберите правильный способ найти пользователей, у которых email не имеет значения (NULL)." },
+          "explanation": { "kk": "NULL — белгісіз мән, оны = немесе == арқылы салыстыруға болмайды. Тек IS NULL дұрыс нәтиже береді: WHERE email IS NULL.", "ru": "NULL — неопределённое значение, его нельзя сравнивать через = или ==. Верный результат даёт только IS NULL: WHERE email IS NULL." },
+          "hints": [
+            { "kk": "NULL ешбір мәнге тең емес, тіпті өзіне де.", "ru": "NULL не равен ни одному значению, даже самому себе." },
+            { "kk": "Арнайы IS операторын қолданыңыз.", "ru": "Используйте специальный оператор IS." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "SELECT * FROM users WHERE email = NULL;", "ru": "SELECT * FROM users WHERE email = NULL;" } },
+              { "id": "b", "text": { "kk": "SELECT * FROM users WHERE email IS NULL;", "ru": "SELECT * FROM users WHERE email IS NULL;" } },
+              { "id": "c", "text": { "kk": "SELECT * FROM users WHERE email == NULL;", "ru": "SELECT * FROM users WHERE email == NULL;" } },
+              { "id": "d", "text": { "kk": "SELECT * FROM users WHERE NULL = email;", "ru": "SELECT * FROM users WHERE NULL = email;" } }
+            ]
+          },
+          "answer_key": { "correct": ["b"] }
+        },
+        {
+          "type": "multiple_choice",
+          "topic": "sql.where",
+          "difficulty": 3,
+          "base_xp": 40,
+          "time_limit_sec": 100,
+          "prompt": { "kk": "Бағасы 100-ден 200-ге дейін (екі шегі қоса) болатын жолдарды дұрыс сүзетін шарттарды таңдаңыз.", "ru": "Выберите условия, которые правильно отбирают строки с ценой от 100 до 200 включительно." },
+          "explanation": { "kk": "BETWEEN шектерді қоса алады, сондықтан price BETWEEN 100 AND 200 де, price >= 100 AND price <= 200 де бірдей нәтиже береді. IN (100, 200) тек екі нақты мәнді тексереді.", "ru": "BETWEEN включает границы, поэтому price BETWEEN 100 AND 200 и price >= 100 AND price <= 200 дают одинаковый результат. IN (100, 200) проверяет только два конкретных значения." },
+          "hints": [
+            { "kk": "«Қоса» деген сөзге назар аударыңыз: шекаралық мәндер де кіреді.", "ru": "Обратите внимание на слово «включительно»: граничные значения входят." },
+            { "kk": "IN операторы нақты мәндер тізіміне арналған, аралыққа емес.", "ru": "Оператор IN предназначен для списка конкретных значений, а не для диапазона." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "WHERE price BETWEEN 100 AND 200", "ru": "WHERE price BETWEEN 100 AND 200" } },
+              { "id": "b", "text": { "kk": "WHERE price >= 100 AND price <= 200", "ru": "WHERE price >= 100 AND price <= 200" } },
+              { "id": "c", "text": { "kk": "WHERE price > 100 AND price < 200", "ru": "WHERE price > 100 AND price < 200" } },
+              { "id": "d", "text": { "kk": "WHERE price IN (100, 200)", "ru": "WHERE price IN (100, 200)" } }
+            ]
+          },
+          "answer_key": { "correct": ["a", "b"] }
+        },
+        {
+          "type": "true_false",
+          "topic": "sql.filter",
+          "difficulty": 3,
+          "base_xp": 30,
+          "time_limit_sec": 60,
+          "prompt": { "kk": "NULL мәндерімен салыстыру туралы тұжырымды бағалаңыз.", "ru": "Оцените утверждение о сравнении с NULL." },
+          "explanation": { "kk": "NULL-мен = салыстыруы әрқашан UNKNOWN қайтарады, сондықтан жол табылмайды. Мұндай жағдайда IS NULL қолдану керек.", "ru": "Сравнение с NULL через = всегда возвращает UNKNOWN, поэтому строки не находятся. В таком случае нужно использовать IS NULL." },
+          "hints": [
+            { "kk": "NULL — мән емес, ол «белгісіз» күй.", "ru": "NULL — это не значение, а состояние «неизвестно»." },
+            { "kk": "SQL-де NULL-мен теңдік салыстыруы үш мәнді логикаға бағынады.", "ru": "В SQL сравнение равенства с NULL подчиняется трёхзначной логике." }
+          ],
+          "payload": {
+            "statement": { "kk": "WHERE city = NULL шарты city мәні NULL болатын жолдарды табады.", "ru": "Условие WHERE city = NULL находит строки, в которых city имеет значение NULL." }
+          },
+          "answer_key": { "correct": false }
+        },
+        {
+          "type": "short_answer",
+          "topic": "sql.where",
+          "difficulty": 2,
+          "base_xp": 30,
+          "time_limit_sec": 75,
+          "prompt": { "kk": "Мәтіннің үлгісі бойынша іздеу үшін қандай оператор қолданылады? Бір сөзбен жауап беріңіз.", "ru": "Какой оператор используется для поиска по шаблону текста? Ответьте одним словом." },
+          "explanation": { "kk": "LIKE үлгімен салыстырады: % — кез келген таңбалар тізбегі, _ — бір ғана таңба. Мысалы: WHERE name LIKE 'А%'.", "ru": "LIKE сравнивает с шаблоном: % — любая последовательность символов, _ — ровно один символ. Например: WHERE name LIKE 'А%'." },
+          "hints": [
+            { "kk": "Бұл оператор % және _ таңбаларымен бірге қолданылады.", "ru": "Этот оператор используется вместе с символами % и _." },
+            { "kk": "Ол «ұқсас» деген мағынаны білдіреді.", "ru": "Он означает «похоже на»." }
+          ],
+          "payload": {
+            "placeholder": { "kk": "оператор", "ru": "оператор" }
+          },
+          "answer_key": { "accepted": ["like", "LIKE"], "case_sensitive": false }
+        },
+        {
+          "type": "cloze",
+          "topic": "sql.where",
+          "difficulty": 3,
+          "base_xp": 40,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "Бағасы 1000-нан 5000-ға дейінгі (екі шегі қоса) тауарларды таңдайтын сұранысты толықтырыңыз.", "ru": "Дополните запрос, который выбирает товары с ценой от 1000 до 5000 включительно." },
+          "explanation": { "kk": "Аралық үшін BETWEEN ... AND ... қолданылады: WHERE price BETWEEN 1000 AND 5000. Екі шек те нәтижеге кіреді.", "ru": "Для диапазона используется BETWEEN ... AND ...: WHERE price BETWEEN 1000 AND 5000. Обе границы входят в результат." },
+          "hints": [
+            { "kk": "Бірінші бос орынға аралық операторы керек.", "ru": "В первый пропуск нужен оператор диапазона." },
+            { "kk": "Екінші бос орын екі шекті байланыстырады.", "ru": "Второй пропуск связывает две границы." }
+          ],
+          "payload": {
+            "text": { "kk": "SELECT * FROM products WHERE price {{1}} 1000 {{2}} 5000;", "ru": "SELECT * FROM products WHERE price {{1}} 1000 {{2}} 5000;" },
+            "blanks": [
+              { "id": "1", "options": [
+                { "id": "o1", "text": { "kk": "BETWEEN", "ru": "BETWEEN" } },
+                { "id": "o2", "text": { "kk": "IN", "ru": "IN" } },
+                { "id": "o3", "text": { "kk": "LIKE", "ru": "LIKE" } }
+              ] },
+              { "id": "2", "options": [
+                { "id": "o1", "text": { "kk": "AND", "ru": "AND" } },
+                { "id": "o2", "text": { "kk": "OR", "ru": "OR" } },
+                { "id": "o3", "text": { "kk": "NOT", "ru": "NOT" } }
+              ] }
+            ]
+          },
+          "answer_key": { "blanks": { "1": "o1", "2": "o1" } }
+        },
+        {
+          "type": "ordering",
+          "topic": "sql.where",
+          "difficulty": 4,
+          "base_xp": 50,
+          "time_limit_sec": 100,
+          "prompt": { "kk": "Логикалық операторларды орындалу басымдылығы бойынша орналастырыңыз: ең жоғары басымдылық жоғарыда тұрсын.", "ru": "Расположите логические операторы по приоритету выполнения: самый высокий приоритет — сверху." },
+          "explanation": { "kk": "NOT ең жоғары басымдылыққа ие, одан кейін AND, ең соңында OR орындалады. Сондықтан A OR B AND C шарты A OR (B AND C) деп түсініледі.", "ru": "Наивысший приоритет у NOT, затем выполняется AND и в конце OR. Поэтому A OR B AND C понимается как A OR (B AND C)." },
+          "hints": [
+            { "kk": "Терістеу (NOT) бірінші орындалады.", "ru": "Отрицание (NOT) выполняется первым." },
+            { "kk": "OR ең төменгі басымдылыққа ие.", "ru": "OR имеет самый низкий приоритет." }
+          ],
+          "payload": {
+            "items": [
+              { "id": "i1", "text": { "kk": "NOT", "ru": "NOT" } },
+              { "id": "i2", "text": { "kk": "AND", "ru": "AND" } },
+              { "id": "i3", "text": { "kk": "OR", "ru": "OR" } }
+            ]
+          },
+          "answer_key": { "order": ["i1", "i2", "i3"] }
+        },
+        {
+          "type": "matching",
+          "topic": "sql.filter",
+          "difficulty": 3,
+          "base_xp": 40,
+          "time_limit_sec": 110,
+          "prompt": { "kk": "SQL операторларын олардың қызметімен сәйкестендіріңіз.", "ru": "Сопоставьте операторы SQL с их назначением." },
+          "explanation": { "kk": "= теңдікті, <> тең еместікті тексереді; BETWEEN аралықты, IN тізімді, LIKE үлгіні тексереді; IS NULL мәннің жоқтығын анықтайды.", "ru": "= проверяет равенство, <> — неравенство; BETWEEN проверяет диапазон, IN — список, LIKE — шаблон; IS NULL определяет отсутствие значения." },
+          "hints": [
+            { "kk": "<> — тең емес дегенді білдіреді.", "ru": "<> означает «не равно»." },
+            { "kk": "IS NULL тек NULL-ға қатысты қолданылады.", "ru": "IS NULL применяется только к NULL." }
+          ],
+          "payload": {
+            "left": [
+              { "id": "l1", "text": { "kk": "=", "ru": "=" } },
+              { "id": "l2", "text": { "kk": "<>", "ru": "<>" } },
+              { "id": "l3", "text": { "kk": "BETWEEN", "ru": "BETWEEN" } },
+              { "id": "l4", "text": { "kk": "IN", "ru": "IN" } },
+              { "id": "l5", "text": { "kk": "LIKE", "ru": "LIKE" } },
+              { "id": "l6", "text": { "kk": "IS NULL", "ru": "IS NULL" } }
+            ],
+            "right": [
+              { "id": "r1", "text": { "kk": "Мәннің жоқтығын тексереді", "ru": "Проверяет отсутствие значения" } },
+              { "id": "r2", "text": { "kk": "Аралыққа кіретінін тексереді", "ru": "Проверяет попадание в диапазон" } },
+              { "id": "r3", "text": { "kk": "Теңдікті тексереді", "ru": "Проверяет равенство" } },
+              { "id": "r4", "text": { "kk": "Үлгі бойынша сәйкестікті тексереді", "ru": "Проверяет соответствие шаблону" } },
+              { "id": "r5", "text": { "kk": "Тізімнің ішінде бар-жоғын тексереді", "ru": "Проверяет наличие в списке" } },
+              { "id": "r6", "text": { "kk": "Тең еместікті тексереді", "ru": "Проверяет неравенство" } }
+            ]
+          },
+          "answer_key": { "pairs": { "l1": "r3", "l2": "r6", "l3": "r2", "l4": "r5", "l5": "r4", "l6": "r1" } }
+        },
+        {
+          "type": "numeric",
+          "topic": "sql.where",
+          "difficulty": 4,
+          "base_xp": 50,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "users кестесі (name — city — status):\nАйгүл — Алматы — active\nДанияр — Астана — active\nЕржан — Алматы — blocked\nМадина — Алматы — active\nНұрлан — Шымкент — active\nСая — Астана — blocked\nТимур — Алматы — active\n\nSELECT * FROM users WHERE city = 'Алматы' AND status = 'active'; неше жол қайтарады?", "ru": "Таблица users (name — city — status):\nАйгүл — Алматы — active\nДанияр — Астана — active\nЕржан — Алматы — blocked\nМадина — Алматы — active\nНұрлан — Шымкент — active\nСая — Астана — blocked\nТимур — Алматы — active\n\nСколько строк вернёт SELECT * FROM users WHERE city = 'Алматы' AND status = 'active';?" },
+          "explanation": { "kk": "Алматыдағы төрт жазбаның үшеуі active: Айгүл, Мадина, Тимур. Ержан blocked болғандықтан шартқа сай келмейді.", "ru": "Из четырёх записей по Алматы три имеют статус active: Айгүл, Мадина, Тимур. Ержан имеет статус blocked и не подходит под условие." },
+          "hints": [
+            { "kk": "AND екі шарттың да орындалуын талап етеді.", "ru": "AND требует выполнения обоих условий." },
+            { "kk": "Алматы жолдарын тауып, олардың ішінен blocked жолды алып тастаңыз.", "ru": "Найдите строки по Алматы и исключите среди них blocked." }
+          ],
+          "payload": {
+            "unit": { "kk": "жол", "ru": "строк" }
+          },
+          "answer_key": { "value": 3, "tolerance": 0.01 }
+        },
+        {
+          "type": "timed_quiz",
+          "topic": "sql.filter",
+          "difficulty": 3,
+          "base_xp": 40,
+          "time_limit_sec": 30,
+          "prompt": { "kk": "Қай сұраныс email мәні жоқ пайдаланушыларды дұрыс табады?", "ru": "Какой запрос правильно находит пользователей без значения email?" },
+          "explanation": { "kk": "email = NULL ешқашан TRUE болмайды, ал email = '' бос жолды тексереді, ол NULL-ға тең емес. Дұрыс нұсқа — email IS NULL.", "ru": "email = NULL никогда не даёт TRUE, а email = '' проверяет пустую строку, которая не равна NULL. Верный вариант — email IS NULL." },
+          "hints": [
+            { "kk": "Бос жол мен NULL — екі бөлек нәрсе.", "ru": "Пустая строка и NULL — разные вещи." },
+            { "kk": "NULL тек IS арқылы тексеріледі.", "ru": "NULL проверяется только через IS." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "SELECT * FROM users WHERE email IS NULL;", "ru": "SELECT * FROM users WHERE email IS NULL;" } },
+              { "id": "b", "text": { "kk": "SELECT * FROM users WHERE email = '';", "ru": "SELECT * FROM users WHERE email = '';" } },
+              { "id": "c", "text": { "kk": "SELECT * FROM users WHERE email = NULL;", "ru": "SELECT * FROM users WHERE email = NULL;" } },
+              { "id": "d", "text": { "kk": "SELECT * FROM users WHERE email IS NOT NULL;", "ru": "SELECT * FROM users WHERE email IS NOT NULL;" } }
+            ]
+          },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "single_choice",
+          "topic": "sql.where",
+          "difficulty": 4,
+          "base_xp": 50,
+          "time_limit_sec": 100,
+          "prompt": { "kk": "category мәні 'кітап' немесе 'қалам' болатын және бағасы 500-ден кем тауарларды таңдайтын дұрыс сұранысты табыңыз.", "ru": "Найдите правильный запрос для товаров с категорией 'кітап' или 'қалам' и ценой меньше 500." },
+          "explanation": { "kk": "IN тізімді тексереді, AND екі шартты біріктіреді. '=' пен '<' бірігіп '=<' болмайды, салыстыру операторы '<=' деп жазылады.", "ru": "IN проверяет список, AND объединяет два условия. '=' и '<' не образуют '=<', оператор сравнения пишется '<='." },
+          "hints": [
+            { "kk": "Екі категорияны бір шартта тексеру үшін IN қолданыңыз.", "ru": "Для проверки двух категорий в одном условии используйте IN." },
+            { "kk": "Кем немесе тең емес, тек «кем» делінген: < операторы.", "ru": "Сказано «меньше», а не «меньше или равно»: оператор <." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "SELECT * FROM products WHERE category IN ('кітап', 'қалам') AND price < 500;", "ru": "SELECT * FROM products WHERE category IN ('кітап', 'қалам') AND price < 500;" } },
+              { "id": "b", "text": { "kk": "SELECT * FROM products WHERE category = 'кітап' OR 'қалам' AND price < 500;", "ru": "SELECT * FROM products WHERE category = 'кітап' OR 'қалам' AND price < 500;" } },
+              { "id": "c", "text": { "kk": "SELECT * FROM products WHERE category IN ('кітап', 'қалам') AND price =< 500;", "ru": "SELECT * FROM products WHERE category IN ('кітап', 'қалам') AND price =< 500;" } },
+              { "id": "d", "text": { "kk": "SELECT * FROM products WHERE category BETWEEN 'кітап' AND 'қалам' AND price < 500;", "ru": "SELECT * FROM products WHERE category BETWEEN 'кітап' AND 'қалам' AND price < 500;" } }
+            ]
+          },
+          "answer_key": { "correct": ["a"] }
+        }
+      ]
+    },
+    {
+      "order_no": 3,
+      "title": { "kk": "Агрегаттар және GROUP BY", "ru": "Агрегаты и GROUP BY", "en": "Aggregates and GROUP BY" },
+      "description": { "kk": "Деректерді санауды, қосуды, орташалауды, жолдарды топтауды және топтарды HAVING арқылы сүзуді үйреніңіз.", "ru": "Учитесь считать, суммировать и усреднять данные, группировать строки и фильтровать группы через HAVING.", "en": "Learn to count, sum and average data, group rows and filter groups with HAVING." },
+      "icon": "functions",
+      "is_boss": false,
+      "unlock_rules": { "min_xp": 280, "min_prev_accuracy": 0.65, "required_tasks": 9 },
+      "topics": [
+        { "code": "sql.aggregates", "name": { "kk": "Агрегаттық функциялар", "ru": "Агрегатные функции", "en": "Aggregate functions" } },
+        { "code": "sql.grouping", "name": { "kk": "GROUP BY және HAVING", "ru": "GROUP BY и HAVING", "en": "GROUP BY and HAVING" } }
+      ],
+      "tasks": [
+        {
+          "type": "single_choice",
+          "topic": "sql.aggregates",
+          "difficulty": 3,
+          "base_xp": 40,
+          "time_limit_sec": 75,
+          "prompt": { "kk": "Кестенің барлық жолдарын, соның ішінде бағандарында NULL бар жолдарды да, дәл санайтын функцияны таңдаңыз.", "ru": "Выберите функцию, которая точно считает все строки таблицы, включая строки с NULL в столбцах." },
+          "explanation": { "kk": "COUNT(*) жолдар санын санайды және NULL-ға қарамайды. COUNT(price) тек price мәні NULL емес жолдарды санайды, сондықтан нәтижесі кішірек болуы мүмкін.", "ru": "COUNT(*) считает количество строк и не смотрит на NULL. COUNT(price) считает только строки, где price не NULL, поэтому результат может быть меньше." },
+          "hints": [
+            { "kk": "Жұлдызша бар нұсқа барлық жолды білдіреді.", "ru": "Вариант со звёздочкой означает все строки." },
+            { "kk": "Нақты баған көрсетілсе, NULL мәндер есептен шығады.", "ru": "Если указан конкретный столбец, значения NULL не учитываются." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "COUNT(*)", "ru": "COUNT(*)" } },
+              { "id": "b", "text": { "kk": "COUNT(price)", "ru": "COUNT(price)" } },
+              { "id": "c", "text": { "kk": "SUM(*)", "ru": "SUM(*)" } },
+              { "id": "d", "text": { "kk": "AVG(*)", "ru": "AVG(*)" } }
+            ]
+          },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "multiple_choice",
+          "topic": "sql.aggregates",
+          "difficulty": 3,
+          "base_xp": 40,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "Қай функциялар агрегаттық болып табылады? Бірнеше дұрыс жауап болуы мүмкін.", "ru": "Какие функции являются агрегатными? Правильных ответов может быть несколько." },
+          "explanation": { "kk": "COUNT, SUM, AVG, MIN, MAX — агрегаттық функциялар, олар бірнеше жолды бір мәнге жинақтайды. UPPER мәтіндік функция, ол жолдарды біріктірмейді.", "ru": "COUNT, SUM, AVG, MIN, MAX — агрегатные функции, они сворачивают несколько строк в одно значение. UPPER — строковая функция, она не объединяет строки." },
+          "hints": [
+            { "kk": "Агрегат бірнеше жолдан бір мән шығарады.", "ru": "Агрегат получает одно значение из нескольких строк." },
+            { "kk": "Мәтінді үлкен әріпке айналдыратын функция агрегат емес.", "ru": "Функция, переводящая текст в верхний регистр, не является агрегатом." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "COUNT", "ru": "COUNT" } },
+              { "id": "b", "text": { "kk": "SUM", "ru": "SUM" } },
+              { "id": "c", "text": { "kk": "UPPER", "ru": "UPPER" } },
+              { "id": "d", "text": { "kk": "AVG", "ru": "AVG" } }
+            ]
+          },
+          "answer_key": { "correct": ["a", "b", "d"] }
+        },
+        {
+          "type": "true_false",
+          "topic": "sql.grouping",
+          "difficulty": 4,
+          "base_xp": 45,
+          "time_limit_sec": 75,
+          "prompt": { "kk": "Агрегаттарды WHERE-де қолдану туралы тұжырымды бағалаңыз.", "ru": "Оцените утверждение об использовании агрегатов в WHERE." },
+          "explanation": { "kk": "WHERE жеке жолдарды топтауға дейін сүзеді және агрегаттық функцияларды қабылдамайды. Топтарды агрегат бойынша сүзу үшін HAVING қолданылады: HAVING SUM(price) > 1000.", "ru": "WHERE фильтрует отдельные строки до группировки и не принимает агрегатные функции. Для фильтрации групп по агрегату используется HAVING: HAVING SUM(price) > 1000." },
+          "hints": [
+            { "kk": "WHERE қай кезеңде орындалады?", "ru": "На каком этапе выполняется WHERE?" },
+            { "kk": "Агрегат шарты топтаудан кейін пайда болады.", "ru": "Условие по агрегату появляется после группировки." }
+          ],
+          "payload": {
+            "statement": { "kk": "SUM(price) > 1000 тәрізді агрегат шартын WHERE бөлімінде жазуға болады.", "ru": "Условие по агрегату вида SUM(price) > 1000 можно записать в разделе WHERE." }
+          },
+          "answer_key": { "correct": false }
+        },
+        {
+          "type": "short_answer",
+          "topic": "sql.grouping",
+          "difficulty": 4,
+          "base_xp": 45,
+          "time_limit_sec": 75,
+          "prompt": { "kk": "GROUP BY арқылы топтағаннан кейін топтарды сүзу үшін қандай кілт сөз қолданылады? Бір сөзбен жауап беріңіз.", "ru": "Какое ключевое слово используется для фильтрации групп после GROUP BY? Ответьте одним словом." },
+          "explanation": { "kk": "HAVING топтарға қолданылады: ... GROUP BY category HAVING SUM(price) > 1000. WHERE болса жеке жолдарды сүзеді және агрегаттарды қабылдамайды.", "ru": "HAVING применяется к группам: ... GROUP BY category HAVING SUM(price) > 1000. WHERE фильтрует отдельные строки и не принимает агрегаты." },
+          "hints": [
+            { "kk": "Бұл сөз GROUP BY-дан кейін тұрады.", "ru": "Это слово стоит после GROUP BY." },
+            { "kk": "Ол WHERE-ға ұқсайды, бірақ топтарға арналған.", "ru": "Оно похоже на WHERE, но предназначено для групп." }
+          ],
+          "payload": {
+            "placeholder": { "kk": "кілт сөз", "ru": "ключевое слово" }
+          },
+          "answer_key": { "accepted": ["having", "HAVING"], "case_sensitive": false }
+        },
+        {
+          "type": "cloze",
+          "topic": "sql.grouping",
+          "difficulty": 4,
+          "base_xp": 50,
+          "time_limit_sec": 100,
+          "prompt": { "kk": "Әр санат бойынша тауарлардың жалпы құны 1000-нан асатын санаттарды қайтаратын сұранысты толықтырыңыз.", "ru": "Дополните запрос, который возвращает категории с общей стоимостью товаров больше 1000." },
+          "explanation": { "kk": "SUM(price) әр топтың жалпы құнын есептейді, GROUP BY category санат бойынша топтайды, HAVING топтарды сүзеді. SELECT-тегі category топтау бағанымен сәйкес болуы керек.", "ru": "SUM(price) вычисляет общую стоимость каждой группы, GROUP BY category группирует по категории, HAVING фильтрует группы. Столбец category в SELECT должен совпадать с группировкой." },
+          "hints": [
+            { "kk": "GROUP BY-дан кейін қай баған бойынша топтайтынымызды жазамыз.", "ru": "После GROUP BY указываем столбец группировки." },
+            { "kk": "HAVING ішінде жалпы құнды SUM арқылы есептеңіз.", "ru": "В HAVING вычисляйте общую стоимость через SUM." }
+          ],
+          "payload": {
+            "text": { "kk": "SELECT category, SUM(price) AS total FROM products GROUP BY {{1}} HAVING {{2}}(price) > 1000;", "ru": "SELECT category, SUM(price) AS total FROM products GROUP BY {{1}} HAVING {{2}}(price) > 1000;" },
+            "blanks": [
+              { "id": "1", "options": [
+                { "id": "o1", "text": { "kk": "category", "ru": "category" } },
+                { "id": "o2", "text": { "kk": "price", "ru": "price" } },
+                { "id": "o3", "text": { "kk": "id", "ru": "id" } }
+              ] },
+              { "id": "2", "options": [
+                { "id": "o1", "text": { "kk": "SUM", "ru": "SUM" } },
+                { "id": "o2", "text": { "kk": "COUNT", "ru": "COUNT" } },
+                { "id": "o3", "text": { "kk": "UPPER", "ru": "UPPER" } }
+              ] }
+            ]
+          },
+          "answer_key": { "blanks": { "1": "o1", "2": "o1" } }
+        },
+        {
+          "type": "matching",
+          "topic": "sql.aggregates",
+          "difficulty": 3,
+          "base_xp": 40,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "Агрегаттық функцияларды олардың нәтижесімен сәйкестендіріңіз.", "ru": "Сопоставьте агрегатные функции с их результатом." },
+          "explanation": { "kk": "COUNT(*) жолдар санын, SUM(price) қосындыны, AVG(price) орташа мәнді, MIN(price) ең кіші мәнді, MAX(price) ең үлкен мәнді қайтарады.", "ru": "COUNT(*) возвращает число строк, SUM(price) — сумму, AVG(price) — среднее, MIN(price) — минимум, MAX(price) — максимум." },
+          "hints": [
+            { "kk": "MIN және MAX атаулары мағынасын тікелей білдіреді.", "ru": "Названия MIN и MAX прямо указывают на смысл." },
+            { "kk": "AVG — average, яғни орташа.", "ru": "AVG — average, то есть среднее." }
+          ],
+          "payload": {
+            "left": [
+              { "id": "l1", "text": { "kk": "COUNT(*)", "ru": "COUNT(*)" } },
+              { "id": "l2", "text": { "kk": "SUM(price)", "ru": "SUM(price)" } },
+              { "id": "l3", "text": { "kk": "AVG(price)", "ru": "AVG(price)" } },
+              { "id": "l4", "text": { "kk": "MIN(price)", "ru": "MIN(price)" } },
+              { "id": "l5", "text": { "kk": "MAX(price)", "ru": "MAX(price)" } }
+            ],
+            "right": [
+              { "id": "r1", "text": { "kk": "Ең үлкен мән", "ru": "Наибольшее значение" } },
+              { "id": "r2", "text": { "kk": "Жолдар саны", "ru": "Количество строк" } },
+              { "id": "r3", "text": { "kk": "Орташа мән", "ru": "Среднее значение" } },
+              { "id": "r4", "text": { "kk": "Мәндер қосындысы", "ru": "Сумма значений" } },
+              { "id": "r5", "text": { "kk": "Ең кіші мән", "ru": "Наименьшее значение" } }
+            ]
+          },
+          "answer_key": { "pairs": { "l1": "r2", "l2": "r4", "l3": "r3", "l4": "r5", "l5": "r1" } }
+        },
+        {
+          "type": "ordering",
+          "topic": "sql.grouping",
+          "difficulty": 5,
+          "base_xp": 55,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "SQL сұранысының логикалық өңделу ретін орналастырыңыз. Бұл жазылу реті емес, орындалу тәртібі.", "ru": "Расположите шаги логической обработки SQL-запроса. Это не порядок записи, а порядок выполнения." },
+          "explanation": { "kk": "Логикалық өңдеу: FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY. Сондықтан SELECT-тегі бүркеншік ат ORDER BY-де қолжетімді, ал WHERE-де агрегат қолданылмайды.", "ru": "Логическая обработка: FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY. Поэтому псевдоним из SELECT доступен в ORDER BY, а агрегаты в WHERE не используются." },
+          "hints": [
+            { "kk": "Дереккөз ең бірінші анықталады.", "ru": "Источник определяется первым." },
+            { "kk": "SELECT өз ішінде топтау мен сүзуден кейін есептеледі.", "ru": "SELECT вычисляется после группировки и фильтрации." }
+          ],
+          "payload": {
+            "items": [
+              { "id": "i1", "text": { "kk": "FROM — дереккөзді анықтау", "ru": "FROM — определение источника" } },
+              { "id": "i2", "text": { "kk": "WHERE — жолдарды сүзу", "ru": "WHERE — фильтрация строк" } },
+              { "id": "i3", "text": { "kk": "GROUP BY — топтау", "ru": "GROUP BY — группировка" } },
+              { "id": "i4", "text": { "kk": "HAVING — топтарды сүзу", "ru": "HAVING — фильтрация групп" } },
+              { "id": "i5", "text": { "kk": "SELECT — бағандарды таңдау", "ru": "SELECT — выбор столбцов" } },
+              { "id": "i6", "text": { "kk": "ORDER BY — сұрыптау", "ru": "ORDER BY — сортировка" } }
+            ]
+          },
+          "answer_key": { "order": ["i1", "i2", "i3", "i4", "i5", "i6"] }
+        },
+        {
+          "type": "numeric",
+          "topic": "sql.grouping",
+          "difficulty": 5,
+          "base_xp": 55,
+          "time_limit_sec": 150,
+          "prompt": { "kk": "orders кестесі (customer — amount):\nАйгүл — 120\nАйгүл — 90\nДанияр — 200\nДанияр — 150\nЕржан — 80\nМадина — 300\nМадина — 50\nНұрлан — 400\n\nSELECT customer, SUM(amount) FROM orders GROUP BY customer HAVING SUM(amount) > 250; неше топ қайтарады?", "ru": "Таблица orders (customer — amount):\nАйгүл — 120\nАйгүл — 90\nДанияр — 200\nДанияр — 150\nЕржан — 80\nМадина — 300\nМадина — 50\nНұрлан — 400\n\nСколько групп вернёт SELECT customer, SUM(amount) FROM orders GROUP BY customer HAVING SUM(amount) > 250;?" },
+          "explanation": { "kk": "Топтар сомасы: Айгүл 210, Данияр 350, Ержан 80, Мадина 350, Нұрлан 400. 250-ден астам сома үш топта: Данияр, Мадина және Нұрлан.", "ru": "Суммы по группам: Айгүл 210, Данияр 350, Ержан 80, Мадина 350, Нұрлан 400. Больше 250 дают три группы: Данияр, Мадина и Нұрлан." },
+          "hints": [
+            { "kk": "Алдымен әр клиенттің барлық сомасын қосыңыз.", "ru": "Сначала сложите все суммы по каждому клиенту." },
+            { "kk": "Тек 250-ден қатаң үлкен сомаларды санаңыз.", "ru": "Считайте только суммы строго больше 250." }
+          ],
+          "payload": {
+            "unit": { "kk": "топ", "ru": "групп" }
+          },
+          "answer_key": { "value": 3, "tolerance": 0.01 }
+        },
+        {
+          "type": "timed_quiz",
+          "topic": "sql.aggregates",
+          "difficulty": 4,
+          "base_xp": 40,
+          "time_limit_sec": 30,
+          "prompt": { "kk": "Орташа мәнді қай функция есептейді?", "ru": "Какая функция вычисляет среднее значение?" },
+          "explanation": { "kk": "AVG — average, яғни орташа мән. SUM қосады, COUNT санайды, MAX ең үлкен мәнді қайтарады.", "ru": "AVG — average, то есть среднее значение. SUM суммирует, COUNT считает, MAX возвращает максимум." },
+          "hints": [
+            { "kk": "Функция атауы ағылшынша average сөзінен шыққан.", "ru": "Название функции происходит от английского average." },
+            { "kk": "Ол қосындыны жол санына бөледі.", "ru": "Она делит сумму на количество строк." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "AVG", "ru": "AVG" } },
+              { "id": "b", "text": { "kk": "SUM", "ru": "SUM" } },
+              { "id": "c", "text": { "kk": "COUNT", "ru": "COUNT" } },
+              { "id": "d", "text": { "kk": "MAX", "ru": "MAX" } }
+            ]
+          },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "single_choice",
+          "topic": "sql.grouping",
+          "difficulty": 5,
+          "base_xp": 55,
+          "time_limit_sec": 100,
+          "prompt": { "kk": "Санат бойынша тауар санын дұрыс есептейтін сұранысты табыңыз.", "ru": "Найдите запрос, который корректно считает количество товаров по категориям." },
+          "explanation": { "kk": "GROUP BY category әр санатты бір топқа жинайды, ал COUNT(*) топтағы жолдар санын береді. GROUP BY-дан кейін BY міндетті, ал COUNT жақшасыз жазылса, қате болады.", "ru": "GROUP BY category собирает каждую категорию в группу, а COUNT(*) даёт число строк в группе. После GROUP BY обязателен BY, а запись COUNTS — ошибка." },
+          "hints": [
+            { "kk": "Топтау үшін GROUP BY екі сөзі толық жазылады.", "ru": "Для группировки пишутся оба слова GROUP BY." },
+            { "kk": "Агрегатты WHERE-де қолдануға болмайды.", "ru": "Агрегат нельзя использовать в WHERE." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "SELECT category, COUNT(*) FROM products GROUP BY category;", "ru": "SELECT category, COUNT(*) FROM products GROUP BY category;" } },
+              { "id": "b", "text": { "kk": "SELECT category, COUNT(*) FROM products GROUP category;", "ru": "SELECT category, COUNT(*) FROM products GROUP category;" } },
+              { "id": "c", "text": { "kk": "SELECT category, COUNT(*) FROM products WHERE COUNT(*) > 1 GROUP BY category;", "ru": "SELECT category, COUNT(*) FROM products WHERE COUNT(*) > 1 GROUP BY category;" } },
+              { "id": "d", "text": { "kk": "SELECT category, COUNT FROM products GROUP BY category;", "ru": "SELECT category, COUNT FROM products GROUP BY category;" } }
+            ]
+          },
+          "answer_key": { "correct": ["a"] }
+        }
+      ]
+    },
+    {
+      "order_no": 4,
+      "title": { "kk": "Аналитикалық сұраныстар", "ru": "Аналитические запросы", "en": "Analytical queries" },
+      "description": { "kk": "Топтау, агрегаттау, сұрыптау және шектеуді бір сұраныста біріктіріп, нақты бизнес-есептерді шығарыңыз.", "ru": "Объединяйте группировку, агрегацию, сортировку и ограничение в одном запросе и решайте реальные бизнес-задачи.", "en": "Combine grouping, aggregation, sorting and limiting in one query to solve real business tasks." },
+      "icon": "query_stats",
+      "is_boss": true,
+      "unlock_rules": { "min_xp": 480, "min_prev_accuracy": 0.7, "required_tasks": 9 },
+      "topics": [
+        { "code": "sql.analytics", "name": { "kk": "Аналитикалық сұраныстар", "ru": "Аналитические запросы", "en": "Analytical queries" } },
+        { "code": "sql.reporting", "name": { "kk": "Есептер және метрикалар", "ru": "Отчёты и метрики", "en": "Reports and metrics" } }
+      ],
+      "tasks": [
+        {
+          "type": "single_choice",
+          "topic": "sql.analytics",
+          "difficulty": 6,
+          "base_xp": 70,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "Әр санат бойынша жалпы түсімді есептеп, ең үлкен 3 санатты қайтаратын сұранысты таңдаңыз.", "ru": "Выберите запрос, который считает общую выручку по категориям и возвращает три крупнейшие категории." },
+          "explanation": { "kk": "Түсімді SUM(amount) арқылы есептеп, ORDER BY revenue DESC кему ретімен сұрыптаймыз, LIMIT 3 үштікпен шектейді. GROUP BY category міндетті, әйтпесе бір жалпы сома шығады.", "ru": "Выручку считаем через SUM(amount), сортируем по ORDER BY revenue DESC и ограничиваем LIMIT 3. GROUP BY category обязателен, иначе получится одна общая сумма." },
+          "hints": [
+            { "kk": "Әр санат бойынша бөлек сома керек, сондықтан GROUP BY қажет.", "ru": "Нужна отдельная сумма по каждой категории, поэтому необходим GROUP BY." },
+            { "kk": "Ең үлкен мәндер үшін кему реті (DESC) қолданылады.", "ru": "Для наибольших значений используется убывающий порядок (DESC)." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "SELECT category, SUM(amount) AS revenue FROM sales GROUP BY category ORDER BY revenue DESC LIMIT 3;", "ru": "SELECT category, SUM(amount) AS revenue FROM sales GROUP BY category ORDER BY revenue DESC LIMIT 3;" } },
+              { "id": "b", "text": { "kk": "SELECT category, SUM(amount) AS revenue FROM sales GROUP BY category ORDER BY SUM(amount) ASC LIMIT 3;", "ru": "SELECT category, SUM(amount) AS revenue FROM sales GROUP BY category ORDER BY SUM(amount) ASC LIMIT 3;" } },
+              { "id": "c", "text": { "kk": "SELECT category, SUM(amount) AS revenue FROM sales ORDER BY revenue DESC LIMIT 3;", "ru": "SELECT category, SUM(amount) AS revenue FROM sales ORDER BY revenue DESC LIMIT 3;" } },
+              { "id": "d", "text": { "kk": "SELECT category, SUM(amount) AS revenue FROM sales GROUP BY category HAVING COUNT(*) > 3 ORDER BY revenue DESC LIMIT 3;", "ru": "SELECT category, SUM(amount) AS revenue FROM sales GROUP BY category HAVING COUNT(*) > 3 ORDER BY revenue DESC LIMIT 3;" } }
+            ]
+          },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "multiple_choice",
+          "topic": "sql.analytics",
+          "difficulty": 6,
+          "base_xp": 70,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "Аналитикалық сұраныстардың қайсысы синтаксистік тұрғыдан дұрыс? Бірнеше дұрыс жауап болуы мүмкін.", "ru": "Какие аналитические запросы синтаксически корректны? Правильных ответов может быть несколько." },
+          "explanation": { "kk": "Агрегат шарты HAVING-де тұрады, WHERE-де агрегат қолданылмайды. ORDER BY агрегатты қабылдайды, ал GROUP BY-дан кейін баған немесе өрнек міндетті.", "ru": "Условие по агрегату стоит в HAVING, в WHERE агрегат не используется. ORDER BY принимает агрегат, а после GROUP BY обязателен столбец или выражение." },
+          "hints": [
+            { "kk": "WHERE топтауға дейін орындалады, сондықтан онда COUNT болмайды.", "ru": "WHERE выполняется до группировки, поэтому COUNT в нём невозможен." },
+            { "kk": "GROUP BY-дан кейін топтайтын өрнек жазылуы керек.", "ru": "После GROUP BY должно быть выражение группировки." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "SELECT city, COUNT(*) AS n FROM users GROUP BY city HAVING COUNT(*) > 5;", "ru": "SELECT city, COUNT(*) AS n FROM users GROUP BY city HAVING COUNT(*) > 5;" } },
+              { "id": "b", "text": { "kk": "SELECT city FROM users GROUP BY city ORDER BY COUNT(*) DESC;", "ru": "SELECT city FROM users GROUP BY city ORDER BY COUNT(*) DESC;" } },
+              { "id": "c", "text": { "kk": "SELECT city, COUNT(*) FROM users WHERE COUNT(*) > 5 GROUP BY city;", "ru": "SELECT city, COUNT(*) FROM users WHERE COUNT(*) > 5 GROUP BY city;" } },
+              { "id": "d", "text": { "kk": "SELECT COUNT(*) FROM users GROUP BY;", "ru": "SELECT COUNT(*) FROM users GROUP BY;" } }
+            ]
+          },
+          "answer_key": { "correct": ["a", "b"] }
+        },
+        {
+          "type": "true_false",
+          "topic": "sql.analytics",
+          "difficulty": 5,
+          "base_xp": 60,
+          "time_limit_sec": 75,
+          "prompt": { "kk": "ORDER BY және бүркеншік аттар туралы тұжырымды бағалаңыз.", "ru": "Оцените утверждение об ORDER BY и псевдонимах." },
+          "explanation": { "kk": "ORDER BY SELECT-тен кейін логикалық өңделеді, сондықтан revenue бүркеншік аты қолжетімді. WHERE мен HAVING-де бүркеншік атқа сену әр СҚБЖ-де бірдей емес.", "ru": "ORDER BY логически обрабатывается после SELECT, поэтому псевдоним revenue доступен. Полагаться на псевдоним в WHERE и HAVING в разных СУБД небезопасно." },
+          "hints": [
+            { "kk": "ORDER BY нәтижені қалыптастырғаннан кейін орындалады.", "ru": "ORDER BY выполняется после формирования результата." },
+            { "kk": "Бұл мүмкіндік көптеген жүйелерде бар.", "ru": "Эта возможность есть во многих системах." }
+          ],
+          "payload": {
+            "statement": { "kk": "Көптеген деректер қорында ORDER BY бөлімінде SELECT-те берілген бүркеншік атты қолдануға болады.", "ru": "Во многих базах данных в разделе ORDER BY можно использовать псевдоним, заданный в SELECT." }
+          },
+          "answer_key": { "correct": true }
+        },
+        {
+          "type": "short_answer",
+          "topic": "sql.reporting",
+          "difficulty": 6,
+          "base_xp": 70,
+          "time_limit_sec": 150,
+          "prompt": { "kk": "customers кестесіндегі қайталанбайтын қалалар санын қайтаратын толық SQL сұранысын жазыңыз.", "ru": "Напишите полный SQL-запрос, который возвращает количество уникальных городов в таблице customers." },
+          "explanation": { "kk": "COUNT(DISTINCT city) әр қаланы бір рет қана санайды; DISTINCT функцияның ішінде тұрады, FROM customers дереккөзді көрсетеді.", "ru": "COUNT(DISTINCT city) считает каждый город только один раз; DISTINCT стоит внутри функции, а FROM customers задаёт источник." },
+          "hints": [
+            { "kk": "Бірегей мәндер саны үшін COUNT(DISTINCT ...) қолданыңыз.", "ru": "Для количества уникальных значений используйте COUNT(DISTINCT ...)." },
+            { "kk": "Сұраныс SELECT-тен басталып, FROM customers-пен аяқталады.", "ru": "Запрос начинается с SELECT и заканчивается FROM customers." }
+          ],
+          "payload": {
+            "placeholder": { "kk": "SQL сұранысы", "ru": "SQL-запрос" }
+          },
+          "answer_key": { "accepted": ["SELECT COUNT(DISTINCT city) FROM customers", "SELECT COUNT(DISTINCT city) FROM customers;", "SELECT COUNT(DISTINCT city) AS n FROM customers", "SELECT COUNT(DISTINCT city) AS n FROM customers;", "SELECT COUNT(DISTINCT(city)) FROM customers", "SELECT COUNT(DISTINCT(city)) FROM customers;", "SELECT COUNT(DISTINCT city) AS total FROM customers", "SELECT COUNT(DISTINCT city) AS total FROM customers;"], "case_sensitive": false }
+        },
+        {
+          "type": "cloze",
+          "topic": "sql.reporting",
+          "difficulty": 6,
+          "base_xp": 70,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "Түсімі 5000-нан асатын санаттарды кему ретімен қайтаратын сұранысты толықтырыңыз.", "ru": "Дополните запрос, который возвращает категории с выручкой больше 5000 в порядке убывания." },
+          "explanation": { "kk": "SUM(price * qty) түсімді береді, GROUP BY category санат бойынша топтайды, HAVING топтарды сүзеді, DESC кему ретін орнатады.", "ru": "SUM(price * qty) даёт выручку, GROUP BY category группирует по категориям, HAVING фильтрует группы, DESC задаёт убывающий порядок." },
+          "hints": [
+            { "kk": "Түсім — баға мен санының көбейтінділерінің қосындысы.", "ru": "Выручка — сумма произведений цены и количества." },
+            { "kk": "Кему реті DESC кілт сөзімен беріледі.", "ru": "Убывающий порядок задаётся словом DESC." }
+          ],
+          "payload": {
+            "text": { "kk": "SELECT category, SUM(price * qty) AS revenue FROM order_items GROUP BY {{1}} HAVING {{2}}(price * qty) > 5000 ORDER BY revenue {{3}};", "ru": "SELECT category, SUM(price * qty) AS revenue FROM order_items GROUP BY {{1}} HAVING {{2}}(price * qty) > 5000 ORDER BY revenue {{3}};" },
+            "blanks": [
+              { "id": "1", "options": [
+                { "id": "o1", "text": { "kk": "category", "ru": "category" } },
+                { "id": "o2", "text": { "kk": "price", "ru": "price" } },
+                { "id": "o3", "text": { "kk": "id", "ru": "id" } }
+              ] },
+              { "id": "2", "options": [
+                { "id": "o1", "text": { "kk": "SUM", "ru": "SUM" } },
+                { "id": "o2", "text": { "kk": "AVG", "ru": "AVG" } },
+                { "id": "o3", "text": { "kk": "COUNT", "ru": "COUNT" } }
+              ] },
+              { "id": "3", "options": [
+                { "id": "o1", "text": { "kk": "ASC", "ru": "ASC" } },
+                { "id": "o2", "text": { "kk": "BY", "ru": "BY" } },
+                { "id": "o3", "text": { "kk": "DESC", "ru": "DESC" } }
+              ] }
+            ]
+          },
+          "answer_key": { "blanks": { "1": "o1", "2": "o1", "3": "o3" } }
+        },
+        {
+          "type": "ordering",
+          "topic": "sql.analytics",
+          "difficulty": 7,
+          "base_xp": 80,
+          "time_limit_sec": 130,
+          "prompt": { "kk": "Аналитикалық есепті құру қадамдарын дұрыс ретпен орналастырыңыз.", "ru": "Расположите шаги построения аналитического отчёта в правильном порядке." },
+          "explanation": { "kk": "Алдымен мақсат анықталады, кейін кестелер таңдалып, қосылады, жолдар сүзіледі, топтау мен агрегаттау орындалады, ең соңында нәтиже сұрыпталып шектеледі.", "ru": "Сначала определяется цель, затем выбираются и соединяются таблицы, фильтруются строки, выполняется группировка и агрегация, и в конце результат сортируется и ограничивается." },
+          "hints": [
+            { "kk": "Есептің мақсаты барлық қадамды анықтайды.", "ru": "Цель отчёта определяет все шаги." },
+            { "kk": "Сұрыптау мен шектеу ең соңында орындалады.", "ru": "Сортировка и ограничение выполняются в конце." }
+          ],
+          "payload": {
+            "items": [
+              { "id": "i1", "text": { "kk": "Есептің мақсатын анықтау", "ru": "Определить цель отчёта" } },
+              { "id": "i2", "text": { "kk": "Қажетті кестелерді таңдау", "ru": "Выбрать нужные таблицы" } },
+              { "id": "i3", "text": { "kk": "Кестелерді қосылу шартымен байланыстыру", "ru": "Связать таблицы условием соединения" } },
+              { "id": "i4", "text": { "kk": "Жолдарды сүзгілеу", "ru": "Отфильтровать строки" } },
+              { "id": "i5", "text": { "kk": "Топтау және агрегаттау", "ru": "Сгруппировать и агрегировать" } },
+              { "id": "i6", "text": { "kk": "Нәтижені сұрыптау және шектеу", "ru": "Отсортировать и ограничить результат" } }
+            ]
+          },
+          "answer_key": { "order": ["i1", "i2", "i3", "i4", "i5", "i6"] }
+        },
+        {
+          "type": "matching",
+          "topic": "sql.reporting",
+          "difficulty": 6,
+          "base_xp": 70,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "Бизнес-метрикаларды оларды есептейтін SQL өрнектерімен сәйкестендіріңіз.", "ru": "Сопоставьте бизнес-метрики с SQL-выражениями, которые их вычисляют." },
+          "explanation": { "kk": "Орташа чек — AVG(total), жалпы түсім — SUM(total), тапсырыс саны — COUNT(*), бірегей клиенттер — COUNT(DISTINCT customer_id), ең үлкен тапсырыс — MAX(total).", "ru": "Средний чек — AVG(total), общая выручка — SUM(total), число заказов — COUNT(*), уникальные клиенты — COUNT(DISTINCT customer_id), максимальный заказ — MAX(total)." },
+          "hints": [
+            { "kk": "Орташа мән AVG арқылы есептеледі.", "ru": "Среднее значение вычисляется через AVG." },
+            { "kk": "Бірегей клиенттер үшін DISTINCT керек.", "ru": "Для уникальных клиентов нужен DISTINCT." }
+          ],
+          "payload": {
+            "left": [
+              { "id": "l1", "text": { "kk": "Орташа чек", "ru": "Средний чек" } },
+              { "id": "l2", "text": { "kk": "Жалпы түсім", "ru": "Общая выручка" } },
+              { "id": "l3", "text": { "kk": "Тапсырыс саны", "ru": "Количество заказов" } },
+              { "id": "l4", "text": { "kk": "Бірегей клиенттер", "ru": "Уникальные клиенты" } },
+              { "id": "l5", "text": { "kk": "Ең үлкен тапсырыс", "ru": "Самый большой заказ" } }
+            ],
+            "right": [
+              { "id": "r1", "text": { "kk": "SUM(total)", "ru": "SUM(total)" } },
+              { "id": "r2", "text": { "kk": "COUNT(DISTINCT customer_id)", "ru": "COUNT(DISTINCT customer_id)" } },
+              { "id": "r3", "text": { "kk": "MAX(total)", "ru": "MAX(total)" } },
+              { "id": "r4", "text": { "kk": "AVG(total)", "ru": "AVG(total)" } },
+              { "id": "r5", "text": { "kk": "COUNT(*)", "ru": "COUNT(*)" } }
+            ]
+          },
+          "answer_key": { "pairs": { "l1": "r4", "l2": "r1", "l3": "r5", "l4": "r2", "l5": "r3" } }
+        },
+        {
+          "type": "numeric",
+          "topic": "sql.reporting",
+          "difficulty": 6,
+          "base_xp": 70,
+          "time_limit_sec": 150,
+          "prompt": { "kk": "order_items кестесі:\nКітап — бағасы 2000 — саны 2\nКітап — бағасы 1500 — саны 1\nҚалам — бағасы 500 — саны 10\nДәптер — бағасы 800 — саны 3\n\nSELECT SUM(price * qty) FROM order_items; нәтижесі қандай?", "ru": "Таблица order_items:\nКітап — цена 2000 — количество 2\nКітап — цена 1500 — количество 1\nҚалам — цена 500 — количество 10\nДәптер — цена 800 — количество 3\n\nКаков результат SELECT SUM(price * qty) FROM order_items;?" },
+          "explanation": { "kk": "Әр жолдың құны: 2000×2=4000, 1500×1=1500, 500×10=5000, 800×3=2400. Қосындысы 4000+1500+5000+2400=12900.", "ru": "Стоимость каждой строки: 2000×2=4000, 1500×1=1500, 500×10=5000, 800×3=2400. Сумма 4000+1500+5000+2400=12900." },
+          "hints": [
+            { "kk": "SUM(price * qty) әр жолдағы көбейтіндінің қосындысын алады.", "ru": "SUM(price * qty) суммирует произведение в каждой строке." },
+            { "kk": "Алдымен әр жолдың құнын бөлек есептеңіз.", "ru": "Сначала посчитайте стоимость каждой строки отдельно." }
+          ],
+          "payload": {
+            "unit": { "kk": "теңге", "ru": "тенге" }
+          },
+          "answer_key": { "value": 12900, "tolerance": 0.01 }
+        },
+        {
+          "type": "timed_quiz",
+          "topic": "sql.analytics",
+          "difficulty": 5,
+          "base_xp": 60,
+          "time_limit_sec": 30,
+          "prompt": { "kk": "Нәтижені үлкен мәннен кіші мәнге қарай сұрыптайтын бөлімді таңдаңыз.", "ru": "Выберите часть запроса, которая сортирует результат от большего к меньшему." },
+          "explanation": { "kk": "ORDER BY amount DESC үлкен мәндерді бірінші қояды. ASC кему емес, өсу ретін береді, ал SORT BY стандартты SQL-де жоқ.", "ru": "ORDER BY amount DESC ставит большие значения первыми. ASC даёт возрастающий порядок, а SORT BY отсутствует в стандартном SQL." },
+          "hints": [
+            { "kk": "Кему реті DESC кілт сөзімен беріледі.", "ru": "Убывающий порядок задаётся словом DESC." },
+            { "kk": "Сұрыптау бөлімі ORDER BY деп аталады.", "ru": "Раздел сортировки называется ORDER BY." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "ORDER BY amount DESC", "ru": "ORDER BY amount DESC" } },
+              { "id": "b", "text": { "kk": "ORDER BY amount ASC", "ru": "ORDER BY amount ASC" } },
+              { "id": "c", "text": { "kk": "GROUP BY amount DESC", "ru": "GROUP BY amount DESC" } },
+              { "id": "d", "text": { "kk": "SORT BY amount DESC", "ru": "SORT BY amount DESC" } }
+            ]
+          },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "single_choice",
+          "topic": "sql.analytics",
+          "difficulty": 7,
+          "base_xp": 80,
+          "time_limit_sec": 140,
+          "prompt": { "kk": "Күні бойынша тапсырыс санын есептеп, тек аяқталған (status = 'done') тапсырыстарды қосатын дұрыс сұранысты табыңыз.", "ru": "Найдите правильный запрос, который считает число заказов по дням и учитывает только завершённые (status = 'done')." },
+          "explanation": { "kk": "WHERE status = 'done' GROUP BY-ға дейін тұрып, жолдарды сүзеді, содан кейін order_date бойынша топтау және COUNT(*) орындалады. WHERE-ді GROUP BY-дан кейін жазуға болмайды.", "ru": "WHERE status = 'done' стоит до GROUP BY и фильтрует строки, затем выполняется группировка по order_date и COUNT(*). Ставить WHERE после GROUP BY нельзя." },
+          "hints": [
+            { "kk": "Сүзу топтауға дейін орындалуы керек.", "ru": "Фильтрация должна выполняться до группировки." },
+            { "kk": "COUNT жақшасыз жазылмайды.", "ru": "COUNT не пишется без скобок." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "SELECT order_date, COUNT(*) FROM orders WHERE status = 'done' GROUP BY order_date ORDER BY order_date;", "ru": "SELECT order_date, COUNT(*) FROM orders WHERE status = 'done' GROUP BY order_date ORDER BY order_date;" } },
+              { "id": "b", "text": { "kk": "SELECT order_date, COUNT(*) FROM orders GROUP BY order_date WHERE status = 'done';", "ru": "SELECT order_date, COUNT(*) FROM orders GROUP BY order_date WHERE status = 'done';" } },
+              { "id": "c", "text": { "kk": "SELECT order_date, COUNT(*) FROM orders WHERE status = 'done';", "ru": "SELECT order_date, COUNT(*) FROM orders WHERE status = 'done';" } },
+              { "id": "d", "text": { "kk": "SELECT order_date, COUNT FROM orders WHERE status = 'done' GROUP BY order_date;", "ru": "SELECT order_date, COUNT FROM orders WHERE status = 'done' GROUP BY order_date;" } }
+            ]
+          },
+          "answer_key": { "correct": ["a"] }
+        }
+      ]
+    },
+    {
+      "order_no": 5,
+      "title": { "kk": "JOIN түрлері", "ru": "Виды JOIN", "en": "JOIN types" },
+      "description": { "kk": "INNER, LEFT, RIGHT және FULL қосылуларын, ON шартын және кестені өзімен қосуды үйреніңіз.", "ru": "Изучите соединения INNER, LEFT, RIGHT и FULL, условие ON и соединение таблицы с самой собой.", "en": "Learn INNER, LEFT, RIGHT and FULL joins, the ON condition and self joins." },
+      "icon": "join_inner",
+      "is_boss": false,
+      "unlock_rules": { "min_xp": 720, "min_prev_accuracy": 0.7, "required_tasks": 9 },
+      "topics": [
+        { "code": "sql.joins", "name": { "kk": "JOIN түрлері", "ru": "Виды JOIN", "en": "JOIN types" } },
+        { "code": "sql.selfjoin", "name": { "kk": "Өзімен қосылу", "ru": "Self join", "en": "Self join" } }
+      ],
+      "tasks": [
+        {
+          "type": "matching",
+          "topic": "sql.joins",
+          "difficulty": 7,
+          "base_xp": 70,
+          "time_limit_sec": 130,
+          "prompt": { "kk": "JOIN түрлерін олардың сипаттамасымен сәйкестендіріңіз.", "ru": "Сопоставьте виды JOIN с их описанием." },
+          "explanation": { "kk": "INNER тек екі кестеде де сәйкестігі бар жолдарды қалдырады, LEFT сол жақтың барлығын, RIGHT оң жақтың барлығын, FULL екі жақтың барлығын сақтайды, CROSS декарттық көбейтінді береді.", "ru": "INNER оставляет только строки с совпадением в обеих таблицах, LEFT сохраняет все строки левой, RIGHT — правой, FULL — обеих, CROSS даёт декартово произведение." },
+          "hints": [
+            { "kk": "LEFT және RIGHT кестенің қай жағы сақталатынын көрсетеді.", "ru": "LEFT и RIGHT указывают, какая сторона сохраняется." },
+            { "kk": "CROSS ешбір шартсыз барлық жұптарды жасайды.", "ru": "CROSS без условия создаёт все пары." }
+          ],
+          "payload": {
+            "left": [
+              { "id": "l1", "text": { "kk": "INNER JOIN", "ru": "INNER JOIN" } },
+              { "id": "l2", "text": { "kk": "LEFT JOIN", "ru": "LEFT JOIN" } },
+              { "id": "l3", "text": { "kk": "RIGHT JOIN", "ru": "RIGHT JOIN" } },
+              { "id": "l4", "text": { "kk": "FULL OUTER JOIN", "ru": "FULL OUTER JOIN" } },
+              { "id": "l5", "text": { "kk": "CROSS JOIN", "ru": "CROSS JOIN" } }
+            ],
+            "right": [
+              { "id": "r1", "text": { "kk": "Екі кестенің барлық жолдары", "ru": "Все строки обеих таблиц" } },
+              { "id": "r2", "text": { "kk": "Тек екі кестеде де сәйкестігі бар жолдар", "ru": "Только строки с совпадением в обеих таблицах" } },
+              { "id": "r3", "text": { "kk": "Декарттық көбейтінді", "ru": "Декартово произведение" } },
+              { "id": "r4", "text": { "kk": "Сол жақ кестенің барлық жолдары, сәйкессіздері NULL", "ru": "Все строки левой таблицы, несовпавшие — NULL" } },
+              { "id": "r5", "text": { "kk": "Оң жақ кестенің барлық жолдары", "ru": "Все строки правой таблицы" } }
+            ]
+          },
+          "answer_key": { "pairs": { "l1": "r2", "l2": "r4", "l3": "r5", "l4": "r1", "l5": "r3" } }
+        },
+        {
+          "type": "single_choice",
+          "topic": "sql.joins",
+          "difficulty": 6,
+          "base_xp": 65,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "Сол жақ кестенің барлық жолдарын сақтайтын қосылу түрін таңдаңыз.", "ru": "Выберите вид соединения, который сохраняет все строки левой таблицы." },
+          "explanation": { "kk": "LEFT JOIN сол жақ кестенің әр жолын нәтижеге қосады; оң жақта сәйкестік болмаса, оның бағандары NULL болады. INNER JOIN сәйкессіз жолдарды жояды.", "ru": "LEFT JOIN включает каждую строку левой таблицы; если справа нет совпадения, её столбцы становятся NULL. INNER JOIN удаляет несовпавшие строки." },
+          "hints": [
+            { "kk": "Атауындағы бірінші сөз қай кестенің сақталатынын білдіреді.", "ru": "Первое слово в названии указывает, какая таблица сохраняется." },
+            { "kk": "RIGHT JOIN қарама-қарсы әрекет жасайды.", "ru": "RIGHT JOIN действует наоборот." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "INNER JOIN", "ru": "INNER JOIN" } },
+              { "id": "b", "text": { "kk": "LEFT JOIN", "ru": "LEFT JOIN" } },
+              { "id": "c", "text": { "kk": "RIGHT JOIN", "ru": "RIGHT JOIN" } },
+              { "id": "d", "text": { "kk": "CROSS JOIN", "ru": "CROSS JOIN" } }
+            ]
+          },
+          "answer_key": { "correct": ["b"] }
+        },
+        {
+          "type": "true_false",
+          "topic": "sql.joins",
+          "difficulty": 6,
+          "base_xp": 60,
+          "time_limit_sec": 75,
+          "prompt": { "kk": "INNER JOIN нәтижесі туралы тұжырымды бағалаңыз.", "ru": "Оцените утверждение о результате INNER JOIN." },
+          "explanation": { "kk": "INNER JOIN тек ON шарты орындалатын жолдарды қайтарады. Сәйкестігі жоқ жолдар нәтижеге түспейді — оларды сақтау үшін LEFT немесе FULL JOIN керек.", "ru": "INNER JOIN возвращает только строки, для которых выполняется условие ON. Строки без совпадения не попадают в результат — для их сохранения нужен LEFT или FULL JOIN." },
+          "hints": [
+            { "kk": "INNER — «ішкі» дегенді білдіреді, яғни ортақ бөлік.", "ru": "INNER означает «внутренний», то есть общая часть." },
+            { "kk": "Сәйкессіз жолдар үшін NULL қажет болса, басқа JOIN керек.", "ru": "Если для несовпавших строк нужны NULL, нужен другой JOIN." }
+          ],
+          "payload": {
+            "statement": { "kk": "INNER JOIN сәйкестігі жоқ жолдарды да нәтижеге қосады.", "ru": "INNER JOIN включает в результат и строки без совпадения." }
+          },
+          "answer_key": { "correct": false }
+        },
+        {
+          "type": "multiple_choice",
+          "topic": "sql.joins",
+          "difficulty": 7,
+          "base_xp": 70,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "LEFT JOIN туралы қай тұжырымдар дұрыс? Бірнеше дұрыс жауап болуы мүмкін.", "ru": "Какие утверждения о LEFT JOIN верны? Правильных ответов может быть несколько." },
+          "explanation": { "kk": "LEFT JOIN сол жақ кестенің барлық жолдарын сақтайды, ал сәйкестік табылмағанда оң жақ бағандарға NULL жазылады. Ол INNER JOIN-мен әрқашан бірдей бола бермейді.", "ru": "LEFT JOIN сохраняет все строки левой таблицы, а при отсутствии совпадения в правых столбцах оказывается NULL. Он не всегда совпадает с INNER JOIN." },
+          "hints": [
+            { "kk": "LEFT JOIN-ның басты мақсаты — сол жақты жоғалтпау.", "ru": "Главная цель LEFT JOIN — не потерять левую сторону." },
+            { "kk": "Сәйкестік болмағанда қандай мән пайда болады?", "ru": "Какое значение появляется при отсутствии совпадения?" }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "Сол жақ кестенің барлық жолдары нәтижеде қалады", "ru": "Все строки левой таблицы остаются в результате" } },
+              { "id": "b", "text": { "kk": "Сәйкестік болмаса, оң жақ бағандар NULL болады", "ru": "При отсутствии совпадения правые столбцы становятся NULL" } },
+              { "id": "c", "text": { "kk": "LEFT JOIN әрқашан INNER JOIN-мен бірдей нәтиже береді", "ru": "LEFT JOIN всегда даёт тот же результат, что и INNER JOIN" } },
+              { "id": "d", "text": { "kk": "LEFT JOIN тек үш кестені қоса алады", "ru": "LEFT JOIN соединяет только три таблицы" } }
+            ]
+          },
+          "answer_key": { "correct": ["a", "b"] }
+        },
+        {
+          "type": "cloze",
+          "topic": "sql.joins",
+          "difficulty": 7,
+          "base_xp": 70,
+          "time_limit_sec": 110,
+          "prompt": { "kk": "Студенттердің аты мен бағаларын тек сәйкес жазбалар бойынша қайтаратын сұранысты толықтырыңыз.", "ru": "Дополните запрос, который возвращает имена студентов и их оценки только по совпадающим записям." },
+          "explanation": { "kk": "INNER JOIN тек екі кестеде де сәйкестігі бар жолдарды қалдырады, ал қосылу шарты ON-нан кейін жазылады: ON s.id = g.student_id.", "ru": "INNER JOIN оставляет только строки с совпадением в обеих таблицах, а условие соединения пишется после ON: ON s.id = g.student_id." },
+          "hints": [
+            { "kk": "Тек сәйкес жазбалар керек, сондықтан INNER қолданыңыз.", "ru": "Нужны только совпадающие записи, поэтому используйте INNER." },
+            { "kk": "Қосылу шарты ON кілт сөзінен кейін тұрады.", "ru": "Условие соединения стоит после слова ON." }
+          ],
+          "payload": {
+            "text": { "kk": "SELECT s.name, g.grade FROM students s {{1}} JOIN grades g {{2}} s.id = g.student_id;", "ru": "SELECT s.name, g.grade FROM students s {{1}} JOIN grades g {{2}} s.id = g.student_id;" },
+            "blanks": [
+              { "id": "1", "options": [
+                { "id": "o1", "text": { "kk": "INNER", "ru": "INNER" } },
+                { "id": "o2", "text": { "kk": "CROSS", "ru": "CROSS" } },
+                { "id": "o3", "text": { "kk": "FULL", "ru": "FULL" } }
+              ] },
+              { "id": "2", "options": [
+                { "id": "o1", "text": { "kk": "ON", "ru": "ON" } },
+                { "id": "o2", "text": { "kk": "WHERE", "ru": "WHERE" } },
+                { "id": "o3", "text": { "kk": "AND", "ru": "AND" } }
+              ] }
+            ]
+          },
+          "answer_key": { "blanks": { "1": "o1", "2": "o1" } }
+        },
+        {
+          "type": "ordering",
+          "topic": "sql.joins",
+          "difficulty": 7,
+          "base_xp": 75,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "LEFT JOIN орындалу қадамдарын дұрыс ретпен орналастырыңыз.", "ru": "Расположите шаги выполнения LEFT JOIN в правильном порядке." },
+          "explanation": { "kk": "LEFT JOIN сол жақ кестенің әр жолын алады, оң жақтан ON шартына сай жолдарды іздейді, табылғандарын біріктіреді, ал табылмағандарын NULL-мен толықтырады.", "ru": "LEFT JOIN берёт каждую строку левой таблицы, ищет справа строки по условию ON, совпавшие соединяет, а при отсутствии совпадения дополняет NULL." },
+          "hints": [
+            { "kk": "Барлық әрекет сол жақ кестенің жолдарынан басталады.", "ru": "Всё начинается со строк левой таблицы." },
+            { "kk": "NULL-мен толықтыру ең соңғы қадам.", "ru": "Дополнение NULL — последний шаг." }
+          ],
+          "payload": {
+            "items": [
+              { "id": "i1", "text": { "kk": "Сол жақ кестеден кезекті жолды алу", "ru": "Взять очередную строку левой таблицы" } },
+              { "id": "i2", "text": { "kk": "Оң жақ кестеден ON шартына сай жолдарды іздеу", "ru": "Найти справа строки по условию ON" } },
+              { "id": "i3", "text": { "kk": "Сәйкес жолдарды біріктіру", "ru": "Соединить совпавшие строки" } },
+              { "id": "i4", "text": { "kk": "Сәйкестік болмаса, оң жақ бағандарды NULL-мен толтыру", "ru": "При отсутствии совпадения заполнить правые столбцы NULL" } }
+            ]
+          },
+          "answer_key": { "order": ["i1", "i2", "i3", "i4"] }
+        },
+        {
+          "type": "numeric",
+          "topic": "sql.joins",
+          "difficulty": 7,
+          "base_xp": 75,
+          "time_limit_sec": 150,
+          "prompt": { "kk": "students кестесінде 5 оқушы бар. grades кестесіндегі жазба саны: Айгүл — 2, Данияр — 1, Ержан — 3, Мадина — 0, Нұрлан — 1.\n\nSELECT * FROM students s LEFT JOIN grades g ON s.id = g.student_id; неше жол қайтарады?", "ru": "В таблице students 5 студентов. Количество записей в grades: Айгүл — 2, Данияр — 1, Ержан — 3, Мадина — 0, Нұрлан — 1.\n\nСколько строк вернёт SELECT * FROM students s LEFT JOIN grades g ON s.id = g.student_id;?" },
+          "explanation": { "kk": "LEFT JOIN барлық 5 оқушыны сақтайды: 2+1+3+0+1=7 сәйкес жазба, ал Мадинаға сәйкестік жоқ, ол бір NULL жолымен қосылады. Барлығы 8 жол.", "ru": "LEFT JOIN сохраняет всех 5 студентов: 2+1+3+0+1=7 совпадающих записей, а у Мадины совпадений нет, она добавляется одной строкой с NULL. Итого 8 строк." },
+          "hints": [
+            { "kk": "LEFT JOIN ешбір оқушыны жоғалтпайды.", "ru": "LEFT JOIN не теряет ни одного студента." },
+            { "kk": "Сәйкестігі жоқ оқушы бір жолмен қосылады.", "ru": "Студент без совпадений добавляется одной строкой." }
+          ],
+          "payload": {
+            "unit": { "kk": "жол", "ru": "строк" }
+          },
+          "answer_key": { "value": 8, "tolerance": 0.01 }
+        },
+        {
+          "type": "timed_quiz",
+          "topic": "sql.joins",
+          "difficulty": 6,
+          "base_xp": 60,
+          "time_limit_sec": 30,
+          "prompt": { "kk": "Кестелерді қосу шартын қай кілт сөзбен береміз?", "ru": "Каким ключевым словом задаётся условие соединения таблиц?" },
+          "explanation": { "kk": "Қосылу шарты ON кілт сөзінен кейін жазылады: JOIN grades g ON s.id = g.student_id. WHERE жалпы сүзуге арналған.", "ru": "Условие соединения пишется после слова ON: JOIN grades g ON s.id = g.student_id. WHERE предназначен для общей фильтрации." },
+          "hints": [
+            { "kk": "Бұл сөз JOIN мен кесте атынан кейін тұрады.", "ru": "Это слово стоит после JOIN и имени таблицы." },
+            { "kk": "Ол екі бағанның теңдігін сипаттайды.", "ru": "Оно описывает равенство двух столбцов." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "ON", "ru": "ON" } },
+              { "id": "b", "text": { "kk": "BY", "ru": "BY" } },
+              { "id": "c", "text": { "kk": "WITH", "ru": "WITH" } },
+              { "id": "d", "text": { "kk": "SET", "ru": "SET" } }
+            ]
+          },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "short_answer",
+          "topic": "sql.joins",
+          "difficulty": 7,
+          "base_xp": 70,
+          "time_limit_sec": 100,
+          "prompt": { "kk": "Екі кестенің де барлық жолдарын сақтайтын қосылу түрінің атауын жазыңыз.", "ru": "Напишите название вида соединения, которое сохраняет все строки обеих таблиц." },
+          "explanation": { "kk": "FULL OUTER JOIN екі жақтың да жолдарын қалдырады; сәйкестік болмаған жағы NULL-мен толады. Кейбір СҚБЖ-де қысқаша FULL JOIN деп те жазылады.", "ru": "FULL OUTER JOIN сохраняет строки обеих сторон; недостающая сторона заполняется NULL. В некоторых СУБД допускается краткая запись FULL JOIN." },
+          "hints": [
+            { "kk": "Атауында «full» және «outer» сөздері бар.", "ru": "В названии есть слова full и outer." },
+            { "kk": "Бұл INNER-ге қарама-қарсы — ешнәрсе жоғалмайды.", "ru": "Это противоположность INNER — ничего не теряется." }
+          ],
+          "payload": {
+            "placeholder": { "kk": "қосылу түрі", "ru": "вид соединения" }
+          },
+          "answer_key": { "accepted": ["FULL OUTER JOIN", "full outer join", "FULL JOIN", "full join", "FULL OUTER", "full outer"], "case_sensitive": false }
+        },
+        {
+          "type": "single_choice",
+          "topic": "sql.selfjoin",
+          "difficulty": 8,
+          "base_xp": 85,
+          "time_limit_sec": 130,
+          "prompt": { "kk": "employees(id, name, manager_id) кестесінде әр қызметкердің атын және оның басшысының атын қайтаратын сұранысты таңдаңыз.", "ru": "В таблице employees(id, name, manager_id) выберите запрос, который возвращает имя каждого сотрудника и имя его руководителя." },
+          "explanation": { "kk": "Кесте өзімен екі бүркеншік ат арқылы қосылады: e — қызметкер, m — басшы. Шарт e.manager_id = m.id басшының жазбасын табады.", "ru": "Таблица соединяется сама с собой через два псевдонима: e — сотрудник, m — руководитель. Условие e.manager_id = m.id находит запись руководителя." },
+          "hints": [
+            { "kk": "Бір кестені екі рет қолдану үшін екі түрлі бүркеншік ат керек.", "ru": "Чтобы использовать одну таблицу дважды, нужны два разных псевдонима." },
+            { "kk": "Қызметкердің manager_id мәні басшының id мәніне тең.", "ru": "manager_id сотрудника равен id руководителя." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "SELECT e.name, m.name AS manager FROM employees e JOIN employees m ON e.manager_id = m.id;", "ru": "SELECT e.name, m.name AS manager FROM employees e JOIN employees m ON e.manager_id = m.id;" } },
+              { "id": "b", "text": { "kk": "SELECT e.name, m.name FROM employees e JOIN employees m ON e.id = m.manager_id;", "ru": "SELECT e.name, m.name FROM employees e JOIN employees m ON e.id = m.manager_id;" } },
+              { "id": "c", "text": { "kk": "SELECT name, manager FROM employees;", "ru": "SELECT name, manager FROM employees;" } },
+              { "id": "d", "text": { "kk": "SELECT e.name, m.name FROM employees e, employees m;", "ru": "SELECT e.name, m.name FROM employees e, employees m;" } }
+            ]
+          },
+          "answer_key": { "correct": ["a"] }
+        }
+      ]
+    },
+    {
+      "order_no": 6,
+      "title": { "kk": "Ішкі сұраныстар", "ru": "Подзапросы", "en": "Subqueries" },
+      "description": { "kk": "Ішкі сұраныстарды, IN және EXISTS операторларын, корреляцияланған сұраныстарды және CTE-ні қолдануды үйреніңіз.", "ru": "Освойте подзапросы, операторы IN и EXISTS, коррелированные запросы и CTE.", "en": "Master subqueries, IN and EXISTS, correlated queries and CTEs." },
+      "icon": "account_tree",
+      "is_boss": false,
+      "unlock_rules": { "min_xp": 980, "min_prev_accuracy": 0.7, "required_tasks": 9 },
+      "topics": [
+        { "code": "sql.subqueries", "name": { "kk": "Ішкі сұраныстар", "ru": "Подзапросы", "en": "Subqueries" } },
+        { "code": "sql.cte", "name": { "kk": "CTE және WITH", "ru": "CTE и WITH", "en": "CTE and WITH" } }
+      ],
+      "tasks": [
+        {
+          "type": "single_choice",
+          "topic": "sql.subqueries",
+          "difficulty": 8,
+          "base_xp": 80,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "Бағасы орташа бағадан қымбат тауарларды қайтаратын сұранысты таңдаңыз.", "ru": "Выберите запрос, который возвращает товары дороже средней цены." },
+          "explanation": { "kk": "Ішкі сұраныс (SELECT AVG(price) FROM products) бір скаляр мән қайтарады, оны WHERE ішіндегі салыстыруда қолданамыз. Агрегатты WHERE ішінде тікелей шақыруға болмайды.", "ru": "Подзапрос (SELECT AVG(price) FROM products) возвращает одно скалярное значение, его используем в сравнении внутри WHERE. Вызывать агрегат прямо в WHERE нельзя." },
+          "hints": [
+            { "kk": "Орташа мәнді бөлек ішкі сұраныспен есептеңіз.", "ru": "Вычислите среднее отдельным подзапросом." },
+            { "kk": "Ішкі сұраныс жақшаға алынады.", "ru": "Подзапрос заключается в скобки." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "SELECT * FROM products WHERE price > (SELECT AVG(price) FROM products);", "ru": "SELECT * FROM products WHERE price > (SELECT AVG(price) FROM products);" } },
+              { "id": "b", "text": { "kk": "SELECT * FROM products WHERE price > AVG(price);", "ru": "SELECT * FROM products WHERE price > AVG(price);" } },
+              { "id": "c", "text": { "kk": "SELECT * FROM products HAVING price > AVG(price);", "ru": "SELECT * FROM products HAVING price > AVG(price);" } },
+              { "id": "d", "text": { "kk": "SELECT * FROM products WHERE price > SELECT AVG(price) FROM products;", "ru": "SELECT * FROM products WHERE price > SELECT AVG(price) FROM products;" } }
+            ]
+          },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "multiple_choice",
+          "topic": "sql.subqueries",
+          "difficulty": 8,
+          "base_xp": 80,
+          "time_limit_sec": 130,
+          "prompt": { "kk": "Ішкі сұранысты қай жерлерде қолдануға болады? Бірнеше дұрыс жауап болуы мүмкін.", "ru": "Где можно использовать подзапрос? Правильных ответов может быть несколько." },
+          "explanation": { "kk": "Ішкі сұраныс WHERE ішінде IN-мен, FROM ішінде туынды кесте ретінде және SELECT тізімінде скаляр мән ретінде қолданылады. Индекс атының орнына оны жазуға болмайды.", "ru": "Подзапрос используется в WHERE с IN, в FROM как производная таблица и в списке SELECT как скалярное значение. Подставлять его вместо имени индекса нельзя." },
+          "hints": [
+            { "kk": "Ішкі сұраныс кестенің орнын да, мәннің орнын да ала алады.", "ru": "Подзапрос может занять место и таблицы, и значения." },
+            { "kk": "Индекстер сұраныс ішінде аталмайды.", "ru": "Индексы не указываются внутри запроса." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "WHERE бөлімінде IN операторымен", "ru": "В разделе WHERE с оператором IN" } },
+              { "id": "b", "text": { "kk": "FROM бөлімінде туынды кесте ретінде", "ru": "В разделе FROM как производная таблица" } },
+              { "id": "c", "text": { "kk": "SELECT тізімінде скаляр мән ретінде", "ru": "В списке SELECT как скалярное значение" } },
+              { "id": "d", "text": { "kk": "Кесте атының орнына индекстің атын жазу үшін", "ru": "Вместо имени таблицы для указания имени индекса" } }
+            ]
+          },
+          "answer_key": { "correct": ["a", "b", "c"] }
+        },
+        {
+          "type": "true_false",
+          "topic": "sql.subqueries",
+          "difficulty": 8,
+          "base_xp": 75,
+          "time_limit_sec": 80,
+          "prompt": { "kk": "Корреляцияланған ішкі сұраныстар туралы тұжырымды бағалаңыз.", "ru": "Оцените утверждение о коррелированных подзапросах." },
+          "explanation": { "kk": "Корреляцияланған ішкі сұраныс әр сыртқы жол үшін қайта есептеледі және сыртқы сұраныстың бағандарына сілтеме жасай алады. Мысалы: WHERE EXISTS (SELECT 1 FROM orders o WHERE o.customer_id = c.id).", "ru": "Коррелированный подзапрос пересчитывается для каждой внешней строки и может ссылаться на столбцы внешнего запроса. Например: WHERE EXISTS (SELECT 1 FROM orders o WHERE o.customer_id = c.id)." },
+          "hints": [
+            { "kk": "Корреляция сыртқы және ішкі сұранысты байланыстырады.", "ru": "Корреляция связывает внешний и внутренний запросы." },
+            { "kk": "Мұндай сұраныс әр сыртқы жол үшін қайта орындалады.", "ru": "Такой запрос выполняется заново для каждой внешней строки." }
+          ],
+          "payload": {
+            "statement": { "kk": "Корреляцияланған ішкі сұраныс сыртқы сұраныстың бағандарына сілтеме жасай алады.", "ru": "Коррелированный подзапрос может ссылаться на столбцы внешнего запроса." }
+          },
+          "answer_key": { "correct": true }
+        },
+        {
+          "type": "short_answer",
+          "topic": "sql.subqueries",
+          "difficulty": 8,
+          "base_xp": 80,
+          "time_limit_sec": 180,
+          "prompt": { "kk": "Тапсырысы бар клиенттердің атын қайтаратын сұранысты IN ішкі сұранысымен жазыңыз.", "ru": "Напишите запрос с подзапросом IN, который возвращает имена клиентов, имеющих заказы." },
+          "explanation": { "kk": "Ішкі сұраныс orders кестесінен customer_id мәндерін жинайды, ал сыртқы сұраныс id осы тізімге кіретін клиенттерді таңдайды: WHERE id IN (SELECT customer_id FROM orders).", "ru": "Подзапрос собирает значения customer_id из orders, а внешний запрос выбирает клиентов, чей id входит в этот список: WHERE id IN (SELECT customer_id FROM orders)." },
+          "hints": [
+            { "kk": "Ішкі сұраныс тек customer_id бағанын қайтаруы керек.", "ru": "Подзапрос должен возвращать только столбец customer_id." },
+            { "kk": "Сыртқы сұраныста WHERE id IN (...) шарты қолданылады.", "ru": "Во внешнем запросе используется условие WHERE id IN (...)." }
+          ],
+          "payload": {
+            "placeholder": { "kk": "SQL сұранысы", "ru": "SQL-запрос" }
+          },
+          "answer_key": { "accepted": ["SELECT name FROM customers WHERE id IN (SELECT customer_id FROM orders)", "SELECT name FROM customers WHERE id IN (SELECT customer_id FROM orders);", "SELECT name FROM customers WHERE id IN(SELECT customer_id FROM orders)", "SELECT name FROM customers WHERE id IN(SELECT customer_id FROM orders);"], "case_sensitive": false }
+        },
+        {
+          "type": "cloze",
+          "topic": "sql.cte",
+          "difficulty": 8,
+          "base_xp": 80,
+          "time_limit_sec": 110,
+          "prompt": { "kk": "CTE көмегімен белсенді пайдаланушылар санын есептейтін сұранысты толықтырыңыз.", "ru": "Дополните запрос, который считает число активных пользователей с помощью CTE." },
+          "explanation": { "kk": "CTE WITH кілт сөзімен басталады, атауы мен AS, содан кейін жақшадағы сұраныс жазылады. Негізгі SELECT осы атауға кесте ретінде сілтеме жасайды.", "ru": "CTE начинается со слова WITH, затем имя и AS, после чего в скобках идёт запрос. Основной SELECT ссылается на это имя как на таблицу." },
+          "hints": [
+            { "kk": "CTE әрқашан WITH-тен басталады.", "ru": "CTE всегда начинается с WITH." },
+            { "kk": "Негізгі сұраныс CTE атауына сілтеме жасайды.", "ru": "Основной запрос ссылается на имя CTE." }
+          ],
+          "payload": {
+            "text": { "kk": "{{1}} active_users AS (SELECT * FROM users WHERE active = 1) SELECT COUNT(*) FROM {{2}};", "ru": "{{1}} active_users AS (SELECT * FROM users WHERE active = 1) SELECT COUNT(*) FROM {{2}};" },
+            "blanks": [
+              { "id": "1", "options": [
+                { "id": "o1", "text": { "kk": "WITH", "ru": "WITH" } },
+                { "id": "o2", "text": { "kk": "BEGIN", "ru": "BEGIN" } },
+                { "id": "o3", "text": { "kk": "CREATE", "ru": "CREATE" } }
+              ] },
+              { "id": "2", "options": [
+                { "id": "o1", "text": { "kk": "active_users", "ru": "active_users" } },
+                { "id": "o2", "text": { "kk": "users", "ru": "users" } },
+                { "id": "o3", "text": { "kk": "active", "ru": "active" } }
+              ] }
+            ]
+          },
+          "answer_key": { "blanks": { "1": "o1", "2": "o1" } }
+        },
+        {
+          "type": "ordering",
+          "topic": "sql.cte",
+          "difficulty": 8,
+          "base_xp": 85,
+          "time_limit_sec": 130,
+          "prompt": { "kk": "CTE жазылуының бөліктерін дұрыс ретпен орналастырыңыз.", "ru": "Расположите части записи CTE в правильном порядке." },
+          "explanation": { "kk": "Алдымен WITH кілт сөзі, одан кейін CTE атауы мен AS, жақшада ішкі сұраныс, ең соңында негізгі SELECT сұранысы жазылады.", "ru": "Сначала идёт ключевое слово WITH, затем имя CTE и AS, в скобках подзапрос, и в конце основной запрос SELECT." },
+          "hints": [
+            { "kk": "WITH ең басында тұрады.", "ru": "WITH стоит в самом начале." },
+            { "kk": "Негізгі SELECT ең соңында жазылады.", "ru": "Основной SELECT пишется в конце." }
+          ],
+          "payload": {
+            "items": [
+              { "id": "i1", "text": { "kk": "WITH кілт сөзі", "ru": "Ключевое слово WITH" } },
+              { "id": "i2", "text": { "kk": "CTE атауы мен AS", "ru": "Имя CTE и AS" } },
+              { "id": "i3", "text": { "kk": "Жақшадағы ішкі сұраныс", "ru": "Подзапрос в скобках" } },
+              { "id": "i4", "text": { "kk": "Негізгі SELECT сұранысы", "ru": "Основной запрос SELECT" } }
+            ]
+          },
+          "answer_key": { "order": ["i1", "i2", "i3", "i4"] }
+        },
+        {
+          "type": "matching",
+          "topic": "sql.subqueries",
+          "difficulty": 8,
+          "base_xp": 80,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "Ішкі сұраныстардың түрлерін сипаттамаларымен сәйкестендіріңіз.", "ru": "Сопоставьте виды подзапросов с их описанием." },
+          "explanation": { "kk": "Скалярлық ішкі сұраныс бір жол мен бір баған қайтарады, IN мәндер тізімін, туынды кесте FROM-да кесте орнын алады, корреляцияланған сұраныс сыртқы бағандарға тәуелді, EXISTS жол болса TRUE береді.", "ru": "Скалярный подзапрос возвращает одну строку и один столбец, IN — список значений, производная таблица занимает место таблицы в FROM, коррелированный подзапрос зависит от внешних столбцов, EXISTS даёт TRUE при наличии строк." },
+          "hints": [
+            { "kk": "Скалярлық деген — бір мән.", "ru": "Скалярный означает одно значение." },
+            { "kk": "EXISTS «бар ма?» деген сұраққа жауап береді.", "ru": "EXISTS отвечает на вопрос «есть ли?»." }
+          ],
+          "payload": {
+            "left": [
+              { "id": "l1", "text": { "kk": "Скалярлық ішкі сұраныс", "ru": "Скалярный подзапрос" } },
+              { "id": "l2", "text": { "kk": "IN ішкі сұранысы", "ru": "Подзапрос IN" } },
+              { "id": "l3", "text": { "kk": "Туынды кесте (FROM)", "ru": "Производная таблица (FROM)" } },
+              { "id": "l4", "text": { "kk": "Корреляцияланған сұраныс", "ru": "Коррелированный запрос" } },
+              { "id": "l5", "text": { "kk": "EXISTS", "ru": "EXISTS" } }
+            ],
+            "right": [
+              { "id": "r1", "text": { "kk": "Бір жол, бір баған қайтарады", "ru": "Возвращает одну строку и один столбец" } },
+              { "id": "r2", "text": { "kk": "Мәндер тізімін қайтарады", "ru": "Возвращает список значений" } },
+              { "id": "r3", "text": { "kk": "FROM бөлімінде кесте орнында тұрады", "ru": "Стоит на месте таблицы в разделе FROM" } },
+              { "id": "r4", "text": { "kk": "Сыртқы сұраныс бағандарына сілтеме жасайды", "ru": "Ссылается на столбцы внешнего запроса" } },
+              { "id": "r5", "text": { "kk": "Ішкі сұраныс жол қайтарса, TRUE болады", "ru": "Становится TRUE, если подзапрос вернул строки" } }
+            ]
+          },
+          "answer_key": { "pairs": { "l1": "r1", "l2": "r2", "l3": "r3", "l4": "r4", "l5": "r5" } }
+        },
+        {
+          "type": "numeric",
+          "topic": "sql.subqueries",
+          "difficulty": 8,
+          "base_xp": 80,
+          "time_limit_sec": 150,
+          "prompt": { "kk": "products кестесіндегі бағалар: 100, 200, 300, 400.\n\nSELECT COUNT(*) FROM products WHERE price > (SELECT AVG(price) FROM products); неше жол қайтарады?", "ru": "Цены в таблице products: 100, 200, 300, 400.\n\nСколько строк вернёт SELECT COUNT(*) FROM products WHERE price > (SELECT AVG(price) FROM products);?" },
+          "explanation": { "kk": "Орташа баға (100+200+300+400)/4 = 250. Одан қымбат екі тауар бар: 300 және 400, сондықтан COUNT(*) нәтижесі 2.", "ru": "Средняя цена (100+200+300+400)/4 = 250. Дороже неё два товара: 300 и 400, поэтому COUNT(*) равен 2." },
+          "hints": [
+            { "kk": "Алдымен ішкі сұраныс орташа мәнді есептейді.", "ru": "Сначала подзапрос вычисляет среднее." },
+            { "kk": "Қатаң үлкен (>) шартын қолданыңыз.", "ru": "Используйте строгое условие больше (>)." }
+          ],
+          "payload": {
+            "unit": { "kk": "жол", "ru": "строк" }
+          },
+          "answer_key": { "value": 2, "tolerance": 0.01 }
+        },
+        {
+          "type": "timed_quiz",
+          "topic": "sql.cte",
+          "difficulty": 7,
+          "base_xp": 65,
+          "time_limit_sec": 30,
+          "prompt": { "kk": "CTE-ні қай кілт сөз бастайды?", "ru": "Какое ключевое слово начинает CTE?" },
+          "explanation": { "kk": "CTE WITH кілт сөзінен басталады: WITH active_users AS (...). CREATE кесте жасайды, SELECT тек оқиды.", "ru": "CTE начинается с ключевого слова WITH: WITH active_users AS (...). CREATE создаёт таблицу, SELECT только читает." },
+          "hints": [
+            { "kk": "Бұл сөз «бірге» дегенді білдіреді.", "ru": "Это слово означает «вместе»." },
+            { "kk": "Ол негізгі SELECT-тен бұрын тұрады.", "ru": "Оно стоит перед основным SELECT." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "WITH", "ru": "WITH" } },
+              { "id": "b", "text": { "kk": "SELECT", "ru": "SELECT" } },
+              { "id": "c", "text": { "kk": "CREATE", "ru": "CREATE" } },
+              { "id": "d", "text": { "kk": "USING", "ru": "USING" } }
+            ]
+          },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "single_choice",
+          "topic": "sql.subqueries",
+          "difficulty": 9,
+          "base_xp": 95,
+          "time_limit_sec": 150,
+          "prompt": { "kk": "orders.customer_id бағанында NULL болуы мүмкін. Тапсырысы жоқ клиенттерді әрқашан дұрыс табатын сұранысты таңдаңыз.", "ru": "В столбце orders.customer_id может быть NULL. Выберите запрос, который всегда корректно находит клиентов без заказов." },
+          "explanation": { "kk": "NOT IN тізімінде NULL болса, нәтиже бос болып қалуы мүмкін. NOT EXISTS бұл мәселеден ада: ол әр клиент үшін ішкі сұранысты тексереді және NULL-ға тәуелді емес.", "ru": "Если в списке NOT IN есть NULL, результат может оказаться пустым. NOT EXISTS лишён этой проблемы: он проверяет подзапрос для каждого клиента и не зависит от NULL." },
+          "hints": [
+            { "kk": "NULL бар тізімде NOT IN күтпеген нәтиже береді.", "ru": "NOT IN по списку с NULL даёт неожиданный результат." },
+            { "kk": "EXISTS ішкі сұраныстың жол қайтаруына қарайды.", "ru": "EXISTS смотрит, вернул ли подзапрос строки." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "SELECT * FROM customers c WHERE NOT EXISTS (SELECT 1 FROM orders o WHERE o.customer_id = c.id);", "ru": "SELECT * FROM customers c WHERE NOT EXISTS (SELECT 1 FROM orders o WHERE o.customer_id = c.id);" } },
+              { "id": "b", "text": { "kk": "SELECT * FROM customers WHERE id NOT IN (SELECT customer_id FROM orders);", "ru": "SELECT * FROM customers WHERE id NOT IN (SELECT customer_id FROM orders);" } },
+              { "id": "c", "text": { "kk": "SELECT * FROM customers WHERE id <> (SELECT customer_id FROM orders);", "ru": "SELECT * FROM customers WHERE id <> (SELECT customer_id FROM orders);" } },
+              { "id": "d", "text": { "kk": "SELECT * FROM customers WHERE NOT id IN orders;", "ru": "SELECT * FROM customers WHERE NOT id IN orders;" } }
+            ]
+          },
+          "answer_key": { "correct": ["a"] }
+        }
+      ]
+    },
+    {
+      "order_no": 7,
+      "title": { "kk": "Нормализация және индекстер", "ru": "Нормализация и индексы", "en": "Normalization and indexes" },
+      "description": { "kk": "Қалыпты формаларды, кілттерді, индекстерді және сұраныстың орындалу жоспарын оқудың негіздерін меңгеріңіз.", "ru": "Освойте нормальные формы, ключи, индексы и основы чтения плана выполнения запроса.", "en": "Master normal forms, keys, indexes and the basics of reading a query plan." },
+      "icon": "schema",
+      "is_boss": false,
+      "unlock_rules": { "min_xp": 1260, "min_prev_accuracy": 0.75, "required_tasks": 10 },
+      "topics": [
+        { "code": "sql.normalization", "name": { "kk": "Нормализация", "ru": "Нормализация", "en": "Normalization" } },
+        { "code": "sql.indexes", "name": { "kk": "Индекстер", "ru": "Индексы", "en": "Indexes" } }
+      ],
+      "tasks": [
+        {
+          "type": "single_choice",
+          "topic": "sql.normalization",
+          "difficulty": 8,
+          "base_xp": 80,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "Жартылай тәуелділікті жоятын қалыпты форманы таңдаңыз.", "ru": "Выберите нормальную форму, которая устраняет частичную зависимость." },
+          "explanation": { "kk": "2NF 1NF-тің үстіне қосымша шарт қояды: кілттің бір бөлігіне тәуелділік (жартылай тәуелділік) болмауы керек. 3NF транзитивті тәуелділікті жояды.", "ru": "2NF добавляет к 1NF условие отсутствия зависимости от части составного ключа (частичной зависимости). 3NF устраняет транзитивную зависимость." },
+          "hints": [
+            { "kk": "Бұл форма құрама кілттің бір бөлігіне тәуелділікке қатысты.", "ru": "Эта форма касается зависимости от части составного ключа." },
+            { "kk": "1NF атомдық мәндерді талап етеді, бірақ бұл жеткіліксіз.", "ru": "1NF требует атомарных значений, но этого недостаточно." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "1NF", "ru": "1NF" } },
+              { "id": "b", "text": { "kk": "2NF", "ru": "2NF" } },
+              { "id": "c", "text": { "kk": "3NF", "ru": "3NF" } },
+              { "id": "d", "text": { "kk": "BCNF", "ru": "BCNF" } }
+            ]
+          },
+          "answer_key": { "correct": ["b"] }
+        },
+        {
+          "type": "matching",
+          "topic": "sql.normalization",
+          "difficulty": 9,
+          "base_xp": 90,
+          "time_limit_sec": 130,
+          "prompt": { "kk": "Қалыпты формаларды олардың талаптарымен сәйкестендіріңіз.", "ru": "Сопоставьте нормальные формы с их требованиями." },
+          "explanation": { "kk": "1NF атомдық мәндерді талап етеді, 2NF жартылай тәуелділікті, 3NF транзитивті тәуелділікті жояды, ал BCNF әр детерминант кандидат кілт болуын талап етеді.", "ru": "1NF требует атомарных значений, 2NF устраняет частичную зависимость, 3NF — транзитивную, а BCNF требует, чтобы каждый детерминант был кандидатным ключом." },
+          "hints": [
+            { "kk": "1NF ең негізгі талап — бөлінбейтін мәндер.", "ru": "Базовое требование 1NF — неделимые значения." },
+            { "kk": "BCNF — 3NF-тен де қатаңырақ.", "ru": "BCNF строже, чем 3NF." }
+          ],
+          "payload": {
+            "left": [
+              { "id": "l1", "text": { "kk": "1NF", "ru": "1NF" } },
+              { "id": "l2", "text": { "kk": "2NF", "ru": "2NF" } },
+              { "id": "l3", "text": { "kk": "3NF", "ru": "3NF" } },
+              { "id": "l4", "text": { "kk": "BCNF", "ru": "BCNF" } }
+            ],
+            "right": [
+              { "id": "r1", "text": { "kk": "Транзитивті тәуелділік жойылған", "ru": "Устранена транзитивная зависимость" } },
+              { "id": "r2", "text": { "kk": "Әр детерминант кандидат кілт", "ru": "Каждый детерминант — кандидатный ключ" } },
+              { "id": "r3", "text": { "kk": "Атомдық мәндер, қайталанатын топтар жоқ", "ru": "Атомарные значения, нет повторяющихся групп" } },
+              { "id": "r4", "text": { "kk": "Жартылай тәуелділік жойылған", "ru": "Устранена частичная зависимость" } }
+            ]
+          },
+          "answer_key": { "pairs": { "l1": "r3", "l2": "r4", "l3": "r1", "l4": "r2" } }
+        },
+        {
+          "type": "true_false",
+          "topic": "sql.indexes",
+          "difficulty": 8,
+          "base_xp": 75,
+          "time_limit_sec": 75,
+          "prompt": { "kk": "Индекстердің жұмысқа әсері туралы тұжырымды бағалаңыз.", "ru": "Оцените утверждение о влиянии индексов на работу." },
+          "explanation": { "kk": "Индекс іздеуді жылдамдатады, бірақ әр INSERT, UPDATE және DELETE кезінде оны да жаңарту керек, сондықтан жазу амалдары баяулайды және қосымша орын алады.", "ru": "Индекс ускоряет поиск, но при каждом INSERT, UPDATE и DELETE его тоже нужно обновлять, поэтому операции записи замедляются и требуется дополнительное место." },
+          "hints": [
+            { "kk": "Индекс — бұл қосымша құрылым, оны жаңарту керек.", "ru": "Индекс — дополнительная структура, которую нужно обновлять." },
+            { "kk": "Жазу амалдары туралы ойланыңыз.", "ru": "Подумайте об операциях записи." }
+          ],
+          "payload": {
+            "statement": { "kk": "Индекс кез келген сұранысты әрқашан жылдамдатады және INSERT жылдамдығына әсер етпейді.", "ru": "Индекс всегда ускоряет любой запрос и не влияет на скорость INSERT." }
+          },
+          "answer_key": { "correct": false }
+        },
+        {
+          "type": "multiple_choice",
+          "topic": "sql.indexes",
+          "difficulty": 9,
+          "base_xp": 90,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "Қай бағандар индекс үшін жақсы кандидат? Бірнеше дұрыс жауап болуы мүмкін.", "ru": "Какие столбцы — хорошие кандидаты для индекса? Правильных ответов может быть несколько." },
+          "explanation": { "kk": "Жиі сүзілетін жоғары селективті бағандар мен сыртқы кілттер индекске жақсы кандидат. Аз мәнді және әрқашан бірдей болатын бағандарға индекс аз пайда әкеледі.", "ru": "Часто фильтруемые высокоселективные столбцы и внешние ключи — хорошие кандидаты для индекса. Индекс по малозначному или постоянному столбцу даёт мало пользы." },
+          "hints": [
+            { "kk": "Индекс іздеуге көмектеседі, сондықтан сүзу жиілігі маңызды.", "ru": "Индекс помогает поиску, поэтому важна частота фильтрации." },
+            { "kk": "Барлық жолда бірдей мән болса, индекстің пайдасы жоқ.", "ru": "Если во всех строках одинаковое значение, пользы от индекса нет." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "Жиі WHERE шартында қолданылатын жоғары селективті баған", "ru": "Часто используемый в WHERE высокоселективный столбец" } },
+              { "id": "b", "text": { "kk": "Басқа кестеге сілтейтін сыртқы кілт", "ru": "Внешний ключ, ссылающийся на другую таблицу" } },
+              { "id": "c", "text": { "kk": "Тек екі мәні бар және сирек сүзілетін баған", "ru": "Столбец всего с двумя значениями, который редко фильтруется" } },
+              { "id": "d", "text": { "kk": "Кестедегі барлық жолдарда бірдей мән болатын баған", "ru": "Столбец с одинаковым значением во всех строках" } }
+            ]
+          },
+          "answer_key": { "correct": ["a", "b"] }
+        },
+        {
+          "type": "cloze",
+          "topic": "sql.indexes",
+          "difficulty": 8,
+          "base_xp": 80,
+          "time_limit_sec": 100,
+          "prompt": { "kk": "Тапсырыстарды клиент бойынша іздеуді жылдамдататын индексті құрыңыз.", "ru": "Создайте индекс, ускоряющий поиск заказов по клиенту." },
+          "explanation": { "kk": "Индекс CREATE INDEX командасымен жасалады, ал индекс құрылатын баған жақшада көрсетіледі: ON orders(customer_id). Бұл WHERE customer_id = ... сүзуін жылдамдатады.", "ru": "Индекс создаётся командой CREATE INDEX, а столбец указывается в скобках: ON orders(customer_id). Это ускоряет фильтрацию WHERE customer_id = ...." },
+          "hints": [
+            { "kk": "CREATE-тен кейін нені жасайтынымызды жазамыз.", "ru": "После CREATE пишем, что создаём." },
+            { "kk": "Индекс сыртқы кілт бағанына салынады.", "ru": "Индекс строится по столбцу внешнего ключа." }
+          ],
+          "payload": {
+            "text": { "kk": "CREATE {{1}} idx_orders_customer ON orders({{2}});", "ru": "CREATE {{1}} idx_orders_customer ON orders({{2}});" },
+            "blanks": [
+              { "id": "1", "options": [
+                { "id": "o1", "text": { "kk": "INDEX", "ru": "INDEX" } },
+                { "id": "o2", "text": { "kk": "TABLE", "ru": "TABLE" } },
+                { "id": "o3", "text": { "kk": "VIEW", "ru": "VIEW" } }
+              ] },
+              { "id": "2", "options": [
+                { "id": "o1", "text": { "kk": "customer_id", "ru": "customer_id" } },
+                { "id": "o2", "text": { "kk": "id", "ru": "id" } },
+                { "id": "o3", "text": { "kk": "status", "ru": "status" } }
+              ] }
+            ]
+          },
+          "answer_key": { "blanks": { "1": "o1", "2": "o1" } }
+        },
+        {
+          "type": "ordering",
+          "topic": "sql.normalization",
+          "difficulty": 9,
+          "base_xp": 90,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "Қалыпты формаларды талаптары күшейетін ретпен орналастырыңыз.", "ru": "Расположите нормальные формы в порядке усиления требований." },
+          "explanation": { "kk": "Реті: 1NF → 2NF → 3NF → BCNF. Әр келесі форма алдыңғысының талаптарын сақтай отырып, қосымша шектеу қояды.", "ru": "Порядок: 1NF → 2NF → 3NF → BCNF. Каждая следующая форма сохраняет требования предыдущей и добавляет новое ограничение." },
+          "hints": [
+            { "kk": "1NF ең негізгі талаптан басталады.", "ru": "1NF начинается с базового требования." },
+            { "kk": "BCNF ең қатаң форма.", "ru": "BCNF — самая строгая форма." }
+          ],
+          "payload": {
+            "items": [
+              { "id": "i1", "text": { "kk": "1NF", "ru": "1NF" } },
+              { "id": "i2", "text": { "kk": "2NF", "ru": "2NF" } },
+              { "id": "i3", "text": { "kk": "3NF", "ru": "3NF" } },
+              { "id": "i4", "text": { "kk": "BCNF", "ru": "BCNF" } }
+            ]
+          },
+          "answer_key": { "order": ["i1", "i2", "i3", "i4"] }
+        },
+        {
+          "type": "short_answer",
+          "topic": "sql.indexes",
+          "difficulty": 9,
+          "base_xp": 90,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "Сұраныстың орындалу жоспарын көру үшін қандай команда қолданылады? Бір сөзбен жауап беріңіз.", "ru": "Какая команда показывает план выполнения запроса? Ответьте одним словом." },
+          "explanation": { "kk": "EXPLAIN сұраныстың алдына қойылып, оның орындалу жоспарын көрсетеді. Жоспар индекс қолданылғанын және кестенің толық оқылғанын көрсетеді.", "ru": "EXPLAIN ставится перед запросом и показывает план его выполнения. План показывает, использован ли индекс или выполнено полное сканирование таблицы." },
+          "hints": [
+            { "kk": "Бұл команда «түсіндіру» деген мағынаны білдіреді.", "ru": "Эта команда означает «объяснить»." },
+            { "kk": "Ол сұраныстың алдына жазылады.", "ru": "Она пишется перед запросом." }
+          ],
+          "payload": {
+            "placeholder": { "kk": "команда", "ru": "команда" }
+          },
+          "answer_key": { "accepted": ["explain", "EXPLAIN", "explain query plan", "EXPLAIN QUERY PLAN"], "case_sensitive": false }
+        },
+        {
+          "type": "numeric",
+          "topic": "sql.normalization",
+          "difficulty": 8,
+          "base_xp": 80,
+          "time_limit_sec": 130,
+          "prompt": { "kk": "orders кестесіндегі клиент жазбалары (customer — city):\nАйгүл — Алматы\nАйгүл — Алматы\nДанияр — Астана\nДанияр — Астана\nМадина — Шымкент\n\nКлиент деректерін жеке customers кестесіне шығарса, ол кестеде неше жол болады?", "ru": "Записи клиентов в таблице orders (customer — city):\nАйгүл — Алматы\nАйгүл — Алматы\nДанияр — Астана\nДанияр — Астана\nМадина — Шымкент\n\nЕсли вынести данные клиентов в отдельную таблицу customers, сколько строк в ней будет?" },
+          "explanation": { "kk": "Қайталанатын клиент жазбалары бір рет қана сақталады: Айгүл, Данияр, Мадина — барлығы 3 жол. Осылайша қайталану жойылып, жаңарту аномалиясының алды алынады.", "ru": "Повторяющиеся записи клиентов хранятся по одному разу: Айгүл, Данияр, Мадина — всего 3 строки. Так устраняется дублирование и предотвращается аномалия обновления." },
+          "hints": [
+            { "kk": "Әр клиент тек бір рет сақталады.", "ru": "Каждый клиент хранится только один раз." },
+            { "kk": "Бірегей есімдер санын санаңыз.", "ru": "Посчитайте число уникальных имён." }
+          ],
+          "payload": {
+            "unit": { "kk": "жол", "ru": "строк" }
+          },
+          "answer_key": { "value": 3, "tolerance": 0.01 }
+        },
+        {
+          "type": "timed_quiz",
+          "topic": "sql.normalization",
+          "difficulty": 8,
+          "base_xp": 75,
+          "time_limit_sec": 30,
+          "prompt": { "kk": "Бастапқы кілт (PRIMARY KEY) нені кепілдейді?", "ru": "Что гарантирует первичный ключ (PRIMARY KEY)?" },
+          "explanation": { "kk": "PRIMARY KEY бағанның (немесе бағандар тіркесімінің) бірегей болуын және NULL болмауын қамтамасыз етеді, сонымен қатар индекс құрылады.", "ru": "PRIMARY KEY обеспечивает уникальность столбца (или комбинации столбцов) и отсутствие NULL, а также создаёт индекс." },
+          "hints": [
+            { "kk": "Кілт екі қасиетті біріктіреді.", "ru": "Ключ объединяет два свойства." },
+            { "kk": "NULL мәні кілтке жіберілмейді.", "ru": "NULL не допускается в ключе." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "Бірегейлік пен NULL еместігін", "ru": "Уникальность и отсутствие NULL" } },
+              { "id": "b", "text": { "kk": "Тек бірегейлікті", "ru": "Только уникальность" } },
+              { "id": "c", "text": { "kk": "Тек NULL еместігін", "ru": "Только отсутствие NULL" } },
+              { "id": "d", "text": { "kk": "Индекстің болмауын", "ru": "Отсутствие индекса" } }
+            ]
+          },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "single_choice",
+          "topic": "sql.normalization",
+          "difficulty": 9,
+          "base_xp": 95,
+          "time_limit_sec": 150,
+          "prompt": { "kk": "Үшінші қалыпты формаға (3NF) сай келетін схеманы таңдаңыз.", "ru": "Выберите схему, соответствующую третьей нормальной форме (3NF)." },
+          "explanation": { "kk": "3NF транзитивті тәуелділікке жол бермейді. orders ішінде customer_name мен city сақтау клиент деректерін қайталайды; оларды customers кестесіне шығарып, сыртқы кілтпен байланыстыру дұрыс.", "ru": "3NF не допускает транзитивных зависимостей. Хранение customer_name и city внутри orders дублирует данные клиента; правильно вынести их в customers и связать внешним ключом." },
+          "hints": [
+            { "kk": "Клиент туралы деректер клиент кестесінде тұруы керек.", "ru": "Данные клиента должны храниться в таблице клиентов." },
+            { "kk": "orders тек клиенттің идентификаторын сақтасын.", "ru": "Пусть orders хранит только идентификатор клиента." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "orders(id, customer_id, customer_name, city)", "ru": "orders(id, customer_id, customer_name, city)" } },
+              { "id": "b", "text": { "kk": "orders(id, customer_id) және customers(id, name, city)", "ru": "orders(id, customer_id) и customers(id, name, city)" } },
+              { "id": "c", "text": { "kk": "orders(id, product_name, product_price, quantity)", "ru": "orders(id, product_name, product_price, quantity)" } },
+              { "id": "d", "text": { "kk": "orders(id, customer_id, customer_city, customer_email)", "ru": "orders(id, customer_id, customer_city, customer_email)" } }
+            ]
+          },
+          "answer_key": { "correct": ["b"] }
+        }
+      ]
+    },
+    {
+      "order_no": 8,
+      "title": { "kk": "Транзакциялар және жобалау", "ru": "Транзакции и проектирование", "en": "Transactions and design" },
+      "description": { "kk": "ACID қасиеттерін, транзакцияларды басқаруды, оқшаулану деңгейлерін және сенімді схеманы жобалауды меңгеріңіз.", "ru": "Освойте свойства ACID, управление транзакциями, уровни изоляции и проектирование надёжной схемы.", "en": "Master ACID properties, transaction control, isolation levels and reliable schema design." },
+      "icon": "database",
+      "is_boss": true,
+      "unlock_rules": { "min_xp": 1580, "min_prev_accuracy": 0.75, "required_tasks": 10 },
+      "topics": [
+        { "code": "sql.transactions", "name": { "kk": "Транзакциялар", "ru": "Транзакции", "en": "Transactions" } },
+        { "code": "sql.design", "name": { "kk": "Схеманы жобалау", "ru": "Проектирование схемы", "en": "Schema design" } }
+      ],
+      "tasks": [
+        {
+          "type": "single_choice",
+          "topic": "sql.transactions",
+          "difficulty": 9,
+          "base_xp": 100,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "ACID қысқартуы нені білдіреді?", "ru": "Что означает аббревиатура ACID?" },
+          "explanation": { "kk": "ACID — Atomicity (атомдық), Consistency (дәйектілік), Isolation (оқшаулану), Durability (беріктік). Бұл төрт қасиет транзакцияның сенімділігін анықтайды.", "ru": "ACID — Atomicity (атомарность), Consistency (согласованность), Isolation (изоляция), Durability (устойчивость). Эти четыре свойства определяют надёжность транзакций." },
+          "hints": [
+            { "kk": "Бірінші әріп — атомдық.", "ru": "Первая буква — атомарность." },
+            { "kk": "Соңғы әріп — беріктік (сақталу).", "ru": "Последняя буква — устойчивость (сохранность)." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "Atomicity, Consistency, Isolation, Durability", "ru": "Atomicity, Consistency, Isolation, Durability" } },
+              { "id": "b", "text": { "kk": "Accuracy, Consistency, Integrity, Durability", "ru": "Accuracy, Consistency, Integrity, Durability" } },
+              { "id": "c", "text": { "kk": "Atomicity, Coordination, Isolation, Distribution", "ru": "Atomicity, Coordination, Isolation, Distribution" } },
+              { "id": "d", "text": { "kk": "Access, Consistency, Isolation, Data", "ru": "Access, Consistency, Isolation, Data" } }
+            ]
+          },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "matching",
+          "topic": "sql.transactions",
+          "difficulty": 9,
+          "base_xp": 100,
+          "time_limit_sec": 140,
+          "prompt": { "kk": "ACID қасиеттерін олардың сипаттамасымен сәйкестендіріңіз.", "ru": "Сопоставьте свойства ACID с их описанием." },
+          "explanation": { "kk": "Atomicity — «бәрі немесе ештеңе жоқ», Consistency — деректердің дұрыс күйі, Isolation — транзакциялардың бір-бірінен тәуелсіздігі, Durability — бекітілген өзгерістердің сақталуы.", "ru": "Atomicity — «всё или ничего», Consistency — корректное состояние данных, Isolation — независимость транзакций друг от друга, Durability — сохранность зафиксированных изменений." },
+          "hints": [
+            { "kk": "Atomicity «бәрі немесе ештеңе» принципі.", "ru": "Atomicity — принцип «всё или ничего»." },
+            { "kk": "Durability апаттан кейінгі сақталуға қатысты.", "ru": "Durability касается сохранности после сбоя." }
+          ],
+          "payload": {
+            "left": [
+              { "id": "l1", "text": { "kk": "Atomicity", "ru": "Atomicity" } },
+              { "id": "l2", "text": { "kk": "Consistency", "ru": "Consistency" } },
+              { "id": "l3", "text": { "kk": "Isolation", "ru": "Isolation" } },
+              { "id": "l4", "text": { "kk": "Durability", "ru": "Durability" } }
+            ],
+            "right": [
+              { "id": "r1", "text": { "kk": "COMMIT-тен кейінгі өзгерістер сақталады", "ru": "Изменения после COMMIT сохраняются" } },
+              { "id": "r2", "text": { "kk": "Транзакция толық орындалады немесе мүлдем болмайды", "ru": "Транзакция выполняется целиком или не выполняется вовсе" } },
+              { "id": "r3", "text": { "kk": "Қатар жүрген транзакциялар бір-бірін көрмейді", "ru": "Параллельные транзакции не видят друг друга" } },
+              { "id": "r4", "text": { "kk": "Деректер қоры бір дұрыс күйден екіншісіне өтеді", "ru": "База данных переходит из одного корректного состояния в другое" } }
+            ]
+          },
+          "answer_key": { "pairs": { "l1": "r2", "l2": "r4", "l3": "r3", "l4": "r1" } }
+        },
+        {
+          "type": "true_false",
+          "topic": "sql.transactions",
+          "difficulty": 9,
+          "base_xp": 90,
+          "time_limit_sec": 80,
+          "prompt": { "kk": "COMMIT және ROLLBACK туралы тұжырымды бағалаңыз.", "ru": "Оцените утверждение о COMMIT и ROLLBACK." },
+          "explanation": { "kk": "COMMIT транзакцияны бекітеді және өзгерістерді тұрақты етеді. Одан кейін ROLLBACK сол өзгерістерді қайтара алмайды — тек жаңа транзакцияны басқаруға болады.", "ru": "COMMIT фиксирует транзакцию и делает изменения постоянными. После этого ROLLBACK не может их отменить — управлять можно только новой транзакцией." },
+          "hints": [
+            { "kk": "COMMIT — бекіту нүктесі.", "ru": "COMMIT — точка фиксации." },
+            { "kk": "Бекітілгеннен кейін өзгерістер тұрақты болады.", "ru": "После фиксации изменения становятся постоянными." }
+          ],
+          "payload": {
+            "statement": { "kk": "COMMIT орындалғаннан кейін ROLLBACK арқылы өзгерістерді қайтаруға болады.", "ru": "После выполнения COMMIT можно отменить изменения с помощью ROLLBACK." }
+          },
+          "answer_key": { "correct": false }
+        },
+        {
+          "type": "multiple_choice",
+          "topic": "sql.transactions",
+          "difficulty": 10,
+          "base_xp": 110,
+          "time_limit_sec": 140,
+          "prompt": { "kk": "Оқшаулану деңгейлері туралы қай тұжырымдар дұрыс? Бірнеше дұрыс жауап болуы мүмкін.", "ru": "Какие утверждения об уровнях изоляции верны? Правильных ответов может быть несколько." },
+          "explanation": { "kk": "READ UNCOMMITTED лас оқуға жол береді, SERIALIZABLE ең қатаң деңгей. READ COMMITTED фантомдық оқуларды толық жоймайды, ал деңгей жоғарылағанда параллельдік азаяды.", "ru": "READ UNCOMMITTED допускает грязное чтение, SERIALIZABLE — самый строгий уровень. READ COMMITTED не устраняет фантомные чтения полностью, а при повышении уровня параллелизм снижается." },
+          "hints": [
+            { "kk": "Ең әлсіз деңгей ең көп аномалияға жол береді.", "ru": "Самый слабый уровень допускает больше всего аномалий." },
+            { "kk": "Қатаңдық артса, қатарлық азаяды.", "ru": "Чем строже уровень, тем ниже параллелизм." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "READ UNCOMMITTED лас оқуға (dirty read) жол береді", "ru": "READ UNCOMMITTED допускает грязное чтение (dirty read)" } },
+              { "id": "b", "text": { "kk": "SERIALIZABLE ең қатаң деңгей", "ru": "SERIALIZABLE — самый строгий уровень" } },
+              { "id": "c", "text": { "kk": "READ COMMITTED фантомдық оқуларды толық жояды", "ru": "READ COMMITTED полностью устраняет фантомные чтения" } },
+              { "id": "d", "text": { "kk": "Оқшаулану деңгейі жоғарылағанда параллельдік артады", "ru": "При повышении уровня изоляции параллелизм растёт" } }
+            ]
+          },
+          "answer_key": { "correct": ["a", "b"] }
+        },
+        {
+          "type": "cloze",
+          "topic": "sql.transactions",
+          "difficulty": 9,
+          "base_xp": 100,
+          "time_limit_sec": 120,
+          "prompt": { "kk": "Ақша аударымын толықтырыңыз: транзакцияны бастап, екі жаңартудан кейін өзгерістерді бекітіңіз.", "ru": "Дополните перевод: начните транзакцию и после двух обновлений зафиксируйте изменения." },
+          "explanation": { "kk": "BEGIN TRANSACTION транзакцияны ашады, ал COMMIT барлық өзгерістерді бірге бекітеді. Екі UPDATE бір транзакцияда орындалғандықтан, олар бірге сәтті немесе бірге кері қайтарылады.", "ru": "BEGIN TRANSACTION открывает транзакцию, а COMMIT фиксирует все изменения вместе. Оба UPDATE выполняются в одной транзакции, поэтому вместе применяются или вместе откатываются." },
+          "hints": [
+            { "kk": "Транзакцияны BEGIN бастайды.", "ru": "Транзакцию начинает BEGIN." },
+            { "kk": "Сәтті аяқталу COMMIT-пен бекітіледі.", "ru": "Успешное завершение фиксируется через COMMIT." }
+          ],
+          "payload": {
+            "text": { "kk": "{{1}} TRANSACTION; UPDATE accounts SET balance = balance - 100 WHERE id = 1; UPDATE accounts SET balance = balance + 100 WHERE id = 2; {{2}};", "ru": "{{1}} TRANSACTION; UPDATE accounts SET balance = balance - 100 WHERE id = 1; UPDATE accounts SET balance = balance + 100 WHERE id = 2; {{2}};" },
+            "blanks": [
+              { "id": "1", "options": [
+                { "id": "o1", "text": { "kk": "BEGIN", "ru": "BEGIN" } },
+                { "id": "o2", "text": { "kk": "COMMIT", "ru": "COMMIT" } },
+                { "id": "o3", "text": { "kk": "ROLLBACK", "ru": "ROLLBACK" } }
+              ] },
+              { "id": "2", "options": [
+                { "id": "o1", "text": { "kk": "COMMIT", "ru": "COMMIT" } },
+                { "id": "o2", "text": { "kk": "ROLLBACK", "ru": "ROLLBACK" } },
+                { "id": "o3", "text": { "kk": "SAVEPOINT", "ru": "SAVEPOINT" } }
+              ] }
+            ]
+          },
+          "answer_key": { "blanks": { "1": "o1", "2": "o1" } }
+        },
+        {
+          "type": "ordering",
+          "topic": "sql.transactions",
+          "difficulty": 9,
+          "base_xp": 100,
+          "time_limit_sec": 130,
+          "prompt": { "kk": "Ақша аударымы транзакциясының қадамдарын дұрыс ретпен орналастырыңыз.", "ru": "Расположите шаги транзакции денежного перевода в правильном порядке." },
+          "explanation": { "kk": "Аударым BEGIN-мен басталады, бірінші шоттан сома шегеріледі, екінші шотқа қосылады, содан кейін COMMIT-пен бекітіледі. Қате болса, осы қадамдардың орнына ROLLBACK орындалады.", "ru": "Перевод начинается с BEGIN, с первого счёта списывается сумма, на второй зачисляется, затем изменения фиксируются через COMMIT. При ошибке вместо этого выполняется ROLLBACK." },
+          "hints": [
+            { "kk": "Транзакция әрқашан BEGIN-мен ашылады.", "ru": "Транзакция всегда открывается через BEGIN." },
+            { "kk": "Бекіту ең соңғы қадам.", "ru": "Фиксация — последний шаг." }
+          ],
+          "payload": {
+            "items": [
+              { "id": "i1", "text": { "kk": "BEGIN — транзакцияны бастау", "ru": "BEGIN — начать транзакцию" } },
+              { "id": "i2", "text": { "kk": "Бірінші шоттан соманы шегеру", "ru": "Списать сумму с первого счёта" } },
+              { "id": "i3", "text": { "kk": "Екінші шотқа соманы қосу", "ru": "Зачислить сумму на второй счёт" } },
+              { "id": "i4", "text": { "kk": "COMMIT — өзгерістерді бекіту", "ru": "COMMIT — зафиксировать изменения" } }
+            ]
+          },
+          "answer_key": { "order": ["i1", "i2", "i3", "i4"] }
+        },
+        {
+          "type": "short_answer",
+          "topic": "sql.transactions",
+          "difficulty": 9,
+          "base_xp": 95,
+          "time_limit_sec": 90,
+          "prompt": { "kk": "Ағымдағы транзакциядағы өзгерістерді кері қайтаратын команданы жазыңыз.", "ru": "Напишите команду, которая отменяет изменения в текущей транзакции." },
+          "explanation": { "kk": "ROLLBACK транзакцияны тоқтатып, ондағы барлық өзгерістерді жояды. Мысалы, аударым кезінде екінші UPDATE сәтсіз болса, ROLLBACK бірінші шегеруді де қайтарады.", "ru": "ROLLBACK прерывает транзакцию и отменяет все её изменения. Например, если при переводе второй UPDATE не удался, ROLLBACK отменит и первое списание." },
+          "hints": [
+            { "kk": "Бұл команда COMMIT-ке қарама-қарсы.", "ru": "Эта команда противоположна COMMIT." },
+            { "kk": "Атауы «кері айналдыру» дегенді білдіреді.", "ru": "Название означает «откатить назад»." }
+          ],
+          "payload": {
+            "placeholder": { "kk": "команда", "ru": "команда" }
+          },
+          "answer_key": { "accepted": ["rollback", "ROLLBACK", "roll back"], "case_sensitive": false }
+        },
+        {
+          "type": "numeric",
+          "topic": "sql.transactions",
+          "difficulty": 9,
+          "base_xp": 100,
+          "time_limit_sec": 150,
+          "prompt": { "kk": "accounts кестесі: id=1 — 500 теңге, id=2 — 300 теңге.\n\nBEGIN; UPDATE accounts SET balance = balance - 100 WHERE id = 1; ROLLBACK;\n\nROLLBACK-тан кейін id=1 шотының балансы қандай?", "ru": "Таблица accounts: id=1 — 500 тенге, id=2 — 300 тенге.\n\nBEGIN; UPDATE accounts SET balance = balance - 100 WHERE id = 1; ROLLBACK;\n\nКаким будет баланс счёта id=1 после ROLLBACK?" },
+          "explanation": { "kk": "ROLLBACK транзакциядағы шегеруді жояды, сондықтан id=1 балансы бастапқы 500 теңге күйінде қалады. Бұл — атомдық қасиеттің көрінісі.", "ru": "ROLLBACK отменяет списание в транзакции, поэтому баланс id=1 остаётся исходным — 500 тенге. Это проявление атомарности." },
+          "hints": [
+            { "kk": "ROLLBACK барлық өзгерістерді жояды.", "ru": "ROLLBACK отменяет все изменения." },
+            { "kk": "Бастапқы баланс қалпына келеді.", "ru": "Исходный баланс восстанавливается." }
+          ],
+          "payload": {
+            "unit": { "kk": "теңге", "ru": "тенге" }
+          },
+          "answer_key": { "value": 500, "tolerance": 0.01 }
+        },
+        {
+          "type": "timed_quiz",
+          "topic": "sql.transactions",
+          "difficulty": 9,
+          "base_xp": 90,
+          "time_limit_sec": 25,
+          "prompt": { "kk": "Апаттан кейін бекітілген деректердің сақталуын қай қасиет кепілдейді?", "ru": "Какое свойство гарантирует сохранность зафиксированных данных после сбоя?" },
+          "explanation": { "kk": "Durability — беріктік: COMMIT-тен кейін өзгерістер тұрақты сақтау құрылғысында жазылып, жүйе қайта қосылғанда да сақталады.", "ru": "Durability — устойчивость: после COMMIT изменения записываются на постоянный носитель и сохраняются даже после перезапуска системы." },
+          "hints": [
+            { "kk": "Бұл қасиеттің атауы «беріктік» дегенді білдіреді.", "ru": "Название этого свойства означает «устойчивость»." },
+            { "kk": "Ол COMMIT-пен тікелей байланысты.", "ru": "Оно напрямую связано с COMMIT." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "Durability", "ru": "Durability" } },
+              { "id": "b", "text": { "kk": "Atomicity", "ru": "Atomicity" } },
+              { "id": "c", "text": { "kk": "Isolation", "ru": "Isolation" } },
+              { "id": "d", "text": { "kk": "Consistency", "ru": "Consistency" } }
+            ]
+          },
+          "answer_key": { "correct": ["a"] }
+        },
+        {
+          "type": "single_choice",
+          "topic": "sql.design",
+          "difficulty": 10,
+          "base_xp": 140,
+          "time_limit_sec": 160,
+          "prompt": { "kk": "Тапсырыстар мен клиенттер үшін қай схема деректердің артық қайталануын (update anomaly) азайтады?", "ru": "Какая схема для заказов и клиентов уменьшает избыточное дублирование данных (аномалию обновления)?" },
+          "explanation": { "kk": "Клиент деректері бір customers кестесінде сақталып, orders оған customer_id арқылы сілтеме жасайды. Осылайша клиенттің атын бір жерден өзгерту жеткілікті, қайталану мен аномалия жойылады.", "ru": "Данные клиента хранятся в одной таблице customers, а orders ссылается на неё через customer_id. Так имя клиента меняется в одном месте, а дублирование и аномалии устраняются." },
+          "hints": [
+            { "kk": "Клиент туралы ақпарат бір жерде болуы керек.", "ru": "Информация о клиенте должна храниться в одном месте." },
+            { "kk": "orders кестесінде тек сілтеме (id) қалсын.", "ru": "В таблице orders должна остаться только ссылка (id)." }
+          ],
+          "payload": {
+            "options": [
+              { "id": "a", "text": { "kk": "orders(id, customer_id, total) және customers(id, name, email)", "ru": "orders(id, customer_id, total) и customers(id, name, email)" } },
+              { "id": "b", "text": { "kk": "orders(id, customer_name, customer_email, total)", "ru": "orders(id, customer_name, customer_email, total)" } },
+              { "id": "c", "text": { "kk": "orders(id, total) және order_items(id, customer_name)", "ru": "orders(id, total) и order_items(id, customer_name)" } },
+              { "id": "d", "text": { "kk": "customers(id, name, email, order1, order2)", "ru": "customers(id, name, email, order1, order2)" } }
+            ]
+          },
+          "answer_key": { "correct": ["a"] }
+        }
+      ]
+    }
+  ]
+}

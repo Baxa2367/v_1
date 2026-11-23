@@ -1,0 +1,403 @@
+[
+  {
+    "code": "hint_pack_1",
+    "kind": "hint_pack",
+    "price_coins": 100,
+    "icon": "lightbulb",
+    "title": {
+      "kk": "1 подсказка",
+      "ru": "1 подсказка",
+      "en": "1 Hint"
+    },
+    "description": {
+      "kk": "Бір қосымша подсказка.",
+      "ru": "Одна дополнительная подсказка.",
+      "en": "One extra hint."
+    },
+    "payload": {
+      "hints": 1
+    },
+    "sort_order": 0
+  },
+  {
+    "code": "hint_pack_5",
+    "kind": "hint_pack",
+    "price_coins": 400,
+    "icon": "tips_and_updates",
+    "title": {
+      "kk": "5 подсказок",
+      "ru": "5 подсказок",
+      "en": "5 Hints"
+    },
+    "description": {
+      "kk": "Бес подсказка жинағы.",
+      "ru": "Набор из пяти подсказок.",
+      "en": "Five-hint pack."
+    },
+    "payload": {
+      "hints": 5
+    },
+    "sort_order": 0
+  },
+  {
+    "code": "hint_pack_10",
+    "kind": "hint_pack",
+    "price_coins": 700,
+    "icon": "psychology_alt",
+    "title": {
+      "kk": "10 подсказок",
+      "ru": "10 подсказок",
+      "en": "10 Hints"
+    },
+    "description": {
+      "kk": "Он подсказка — тиімді.",
+      "ru": "Десять подсказок выгодно.",
+      "en": "Ten hints, better value."
+    },
+    "payload": {
+      "hints": 10
+    },
+    "sort_order": 0
+  },
+  {
+    "code": "streak_freeze_1",
+    "kind": "streak_freeze",
+    "price_coins": 200,
+    "icon": "ac_unit",
+    "title": {
+      "kk": "Серия мұздату",
+      "ru": "Заморозка серии",
+      "en": "Streak Freeze"
+    },
+    "description": {
+      "kk": "Бір күнді өткізіп жіберсеңіз, серия сақталады.",
+      "ru": "Пропуск дня не сбросит серию.",
+      "en": "One missed day will not break your streak."
+    },
+    "payload": {
+      "days": 1
+    },
+    "sort_order": 0
+  },
+  {
+    "code": "streak_freeze_3",
+    "kind": "streak_freeze",
+    "price_coins": 500,
+    "icon": "severe_cold",
+    "title": {
+      "kk": "3 мұздату",
+      "ru": "3 заморозки",
+      "en": "3 Freezes"
+    },
+    "description": {
+      "kk": "Үш күнге серия қорғаны.",
+      "ru": "Защита серии на три дня.",
+      "en": "Three-day streak protection."
+    },
+    "payload": {
+      "days": 3
+    },
+    "sort_order": 0
+  },
+  {
+    "code": "avatar_astronaut",
+    "kind": "avatar",
+    "price_coins": 250,
+    "icon": "rocket_launch",
+    "title": {
+      "kk": "Астронавт аватары",
+      "ru": "Аватар «Астронавт»",
+      "en": "Astronaut Avatar"
+    },
+    "description": {
+      "kk": "Профильге ғарышкер аватары.",
+      "ru": "Космический аватар профиля.",
+      "en": "Space explorer avatar."
+    },
+    "payload": {
+      "avatar": "astronaut"
+    },
+    "sort_order": 0
+  },
+  {
+    "code": "avatar_ninja",
+    "kind": "avatar",
+    "price_coins": 250,
+    "icon": "sports_martial_arts",
+    "title": {
+      "kk": "Ниндзя аватары",
+      "ru": "Аватар «Ниндзя»",
+      "en": "Ninja Avatar"
+    },
+    "description": {
+      "kk": "Жылдамдық пен дәлдік символы.",
+      "ru": "Символ скорости и точности.",
+      "en": "A symbol of speed and precision."
+    },
+    "payload": {
+      "avatar": "ninja"
+    },
+    "sort_order": 0
+  },
+  {
+    "code": "avatar_fox",
+    "kind": "avatar",
+    "price_coins": 300,
+    "icon": "pets",
+    "title": {
+      "kk": "Түлкі аватары",
+      "ru": "Аватар «Лиса»",
+      "en": "Fox Avatar"
+    },
+    "description": {
+      "kk": "Айлалы түлкі.",
+      "ru": "Хитрая лиса.",
+      "en": "A clever fox."
+    },
+    "payload": {
+      "avatar": "fox"
+    },
+    "sort_order": 0
+  },
+  {
+    "code": "avatar_robot",
+    "kind": "avatar",
+    "price_coins": 350,
+    "icon": "smart_toy",
+    "title": {
+      "kk": "Робот аватары",
+      "ru": "Аватар «Робот»",
+      "en": "Robot Avatar"
+    },
+    "description": {
+      "kk": "Болашақ инженеріне.",
+      "ru": "Для будущего инженера.",
+      "en": "For future engineers."
+    },
+    "payload": {
+      "avatar": "robot"
+    },
+    "sort_order": 0
+  },
+  {
+    "code": "frame_gold",
+    "kind": "frame",
+    "price_coins": 600,
+    "icon": "workspace_premium",
+    "title": {
+      "kk": "Алтын рамка",
+      "ru": "Золотая рамка",
+      "en": "Gold Frame"
+    },
+    "description": {
+      "kk": "Алтын жиек — мәртебе.",
+      "ru": "Золотая рамка — статус.",
+      "en": "A gold frame for your status."
+    },
+    "payload": {
+      "frame": "gold"
+    },
+    "sort_order": 0
+  },
+  {
+    "code": "frame_neon",
+    "kind": "frame",
+    "price_coins": 450,
+    "icon": "flare",
+    "title": {
+      "kk": "Неон рамка",
+      "ru": "Неоновая рамка",
+      "en": "Neon Frame"
+    },
+    "description": {
+      "kk": "Жарқыраған неон.",
+      "ru": "Светящийся неон.",
+      "en": "Glowing neon."
+    },
+    "payload": {
+      "frame": "neon"
+    },
+    "sort_order": 0
+  },
+  {
+    "code": "frame_emerald",
+    "kind": "frame",
+    "price_coins": 450,
+    "icon": "eco",
+    "title": {
+      "kk": "Изумруд рамка",
+      "ru": "Изумрудная рамка",
+      "en": "Emerald Frame"
+    },
+    "description": {
+      "kk": "Жасыл энергия.",
+      "ru": "Зелёная энергия.",
+      "en": "Green energy."
+    },
+    "payload": {
+      "frame": "emerald"
+    },
+    "sort_order": 0
+  },
+  {
+    "code": "frame_royal",
+    "kind": "frame",
+    "price_coins": 800,
+    "icon": "diamond",
+    "title": {
+      "kk": "Корольдік рамка",
+      "ru": "Королевская рамка",
+      "en": "Royal Frame"
+    },
+    "description": {
+      "kk": "Патшаларға лайық.",
+      "ru": "Достойна королей.",
+      "en": "Fit for royalty."
+    },
+    "payload": {
+      "frame": "royal"
+    },
+    "sort_order": 0
+  },
+  {
+    "code": "theme_aurora",
+    "kind": "theme",
+    "price_coins": 700,
+    "icon": "palette",
+    "title": {
+      "kk": "Aurora темасы",
+      "ru": "Тема Aurora",
+      "en": "Aurora Theme"
+    },
+    "description": {
+      "kk": "Полярлық шұғыла түстері.",
+      "ru": "Цвета северного сияния.",
+      "en": "Northern lights palette."
+    },
+    "payload": {
+      "theme": "aurora"
+    },
+    "sort_order": 0
+  },
+  {
+    "code": "theme_sunset",
+    "kind": "theme",
+    "price_coins": 700,
+    "icon": "wb_sunny",
+    "title": {
+      "kk": "Sunset темасы",
+      "ru": "Тема Sunset",
+      "en": "Sunset Theme"
+    },
+    "description": {
+      "kk": "Күн батқан кез.",
+      "ru": "Закатные оттенки.",
+      "en": "Sunset shades."
+    },
+    "payload": {
+      "theme": "sunset"
+    },
+    "sort_order": 0
+  },
+  {
+    "code": "theme_mono",
+    "kind": "theme",
+    "price_coins": 500,
+    "icon": "contrast",
+    "title": {
+      "kk": "Mono темасы",
+      "ru": "Тема Mono",
+      "en": "Mono Theme"
+    },
+    "description": {
+      "kk": "Минимализм.",
+      "ru": "Минимализм.",
+      "en": "Minimalism."
+    },
+    "payload": {
+      "theme": "mono"
+    },
+    "sort_order": 0
+  },
+  {
+    "code": "theme_ocean",
+    "kind": "theme",
+    "price_coins": 650,
+    "icon": "water",
+    "title": {
+      "kk": "Ocean темасы",
+      "ru": "Тема Ocean",
+      "en": "Ocean Theme"
+    },
+    "description": {
+      "kk": "Мұхит тыныштығы.",
+      "ru": "Спокойствие океана.",
+      "en": "Ocean calm."
+    },
+    "payload": {
+      "theme": "ocean"
+    },
+    "sort_order": 0
+  },
+  {
+    "code": "booster_xp",
+    "kind": "booster",
+    "price_coins": 900,
+    "icon": "bolt",
+    "title": {
+      "kk": "XP бустер",
+      "ru": "XP-бустер",
+      "en": "XP Booster"
+    },
+    "description": {
+      "kk": "Бір күнге +25% XP.",
+      "ru": "+25% XP на один день.",
+      "en": "+25% XP for one day."
+    },
+    "payload": {
+      "multiplier": 1.25,
+      "hours": 24
+    },
+    "sort_order": 0
+  },
+  {
+    "code": "title_scholar",
+    "kind": "frame",
+    "price_coins": 500,
+    "icon": "menu_book",
+    "title": {
+      "kk": "«Ғалым» титулы",
+      "ru": "Титул «Учёный»",
+      "en": "Scholar Title"
+    },
+    "description": {
+      "kk": "Профильде көрсетіледі.",
+      "ru": "Отображается в профиле.",
+      "en": "Shown on your profile."
+    },
+    "payload": {
+      "title": "scholar"
+    },
+    "sort_order": 0
+  },
+  {
+    "code": "badge_owl",
+    "kind": "frame",
+    "price_coins": 400,
+    "icon": "owl",
+    "title": {
+      "kk": "Жапалақ белгісі",
+      "ru": "Значок совы",
+      "en": "Owl Badge"
+    },
+    "description": {
+      "kk": "Білім символы.",
+      "ru": "Символ знаний.",
+      "en": "A symbol of wisdom."
+    },
+    "payload": {
+      "title": "owl"
+    },
+    "sort_order": 0
+  }
+]

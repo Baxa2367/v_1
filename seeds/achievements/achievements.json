@@ -1,0 +1,1037 @@
+[
+  {
+    "code": "first_step",
+    "category": "start",
+    "rarity": "common",
+    "icon": "footprint",
+    "reward_coins": 20,
+    "rule": {
+      "event": "any",
+      "metric": "tasks_completed",
+      "op": ">=",
+      "value": 1
+    },
+    "title": {
+      "kk": "Алғашқы қадам",
+      "ru": "Первый шаг",
+      "en": "First Step"
+    },
+    "description": {
+      "kk": "Бірінші тапсырманы орындадыңыз. Сапар басталды!",
+      "ru": "Вы выполнили первое задание. Путь начат!",
+      "en": "You completed your first task. The journey begins!"
+    }
+  },
+  {
+    "code": "first_level",
+    "category": "start",
+    "rarity": "common",
+    "icon": "flag",
+    "reward_coins": 30,
+    "rule": {
+      "event": "any",
+      "metric": "levels_completed",
+      "op": ">=",
+      "value": 1
+    },
+    "title": {
+      "kk": "Бірінші деңгей",
+      "ru": "Первый уровень",
+      "en": "First Level"
+    },
+    "description": {
+      "kk": "Бірінші деңгейді толық аяқтадыңыз.",
+      "ru": "Вы полностью прошли первый уровень.",
+      "en": "You completed your first level."
+    }
+  },
+  {
+    "code": "five_tasks",
+    "category": "start",
+    "rarity": "common",
+    "icon": "checklist",
+    "reward_coins": 25,
+    "rule": {
+      "event": "any",
+      "metric": "tasks_completed",
+      "op": ">=",
+      "value": 5
+    },
+    "title": {
+      "kk": "Бес тапсырма",
+      "ru": "Пять заданий",
+      "en": "Five Tasks"
+    },
+    "description": {
+      "kk": "Бес тапсырманы дұрыс орындадыңыз.",
+      "ru": "Пять верно решённых заданий.",
+      "en": "Five tasks solved correctly."
+    }
+  },
+  {
+    "code": "ten_tasks",
+    "category": "start",
+    "rarity": "common",
+    "icon": "done_all",
+    "reward_coins": 40,
+    "rule": {
+      "event": "any",
+      "metric": "tasks_completed",
+      "op": ">=",
+      "value": 10
+    },
+    "title": {
+      "kk": "Он тапсырма",
+      "ru": "Десять заданий",
+      "en": "Ten Tasks"
+    },
+    "description": {
+      "kk": "Он тапсырма — тұрақтылықтың басы.",
+      "ru": "Десять заданий — начало стабильности.",
+      "en": "Ten tasks вЂ” the start of consistency."
+    }
+  },
+  {
+    "code": "first_course",
+    "category": "start",
+    "rarity": "rare",
+    "icon": "school",
+    "reward_coins": 120,
+    "rule": {
+      "event": "any",
+      "metric": "courses_completed",
+      "op": ">=",
+      "value": 1
+    },
+    "title": {
+      "kk": "Курс тәмамдалды",
+      "ru": "Курс завершён",
+      "en": "Course Completed"
+    },
+    "description": {
+      "kk": "Бір курсты толығымен аяқтадыңыз.",
+      "ru": "Вы завершили целый курс.",
+      "en": "You finished a full course."
+    }
+  },
+  {
+    "code": "level_5",
+    "category": "start",
+    "rarity": "rare",
+    "icon": "military_tech",
+    "reward_coins": 60,
+    "rule": {
+      "event": "any",
+      "metric": "level",
+      "op": ">=",
+      "value": 5
+    },
+    "title": {
+      "kk": "Бесінші деңгей",
+      "ru": "Пятый уровень",
+      "en": "Level Five"
+    },
+    "description": {
+      "kk": "Ойыншы деңгейі 5-ке жетті.",
+      "ru": "Уровень игрока достиг 5.",
+      "en": "Player level reached 5."
+    }
+  },
+  {
+    "code": "level_10",
+    "category": "start",
+    "rarity": "epic",
+    "icon": "workspace_premium",
+    "reward_coins": 150,
+    "rule": {
+      "event": "any",
+      "metric": "level",
+      "op": ">=",
+      "value": 10
+    },
+    "title": {
+      "kk": "Ондық деңгей",
+      "ru": "Десятый уровень",
+      "en": "Level Ten"
+    },
+    "description": {
+      "kk": "Ойыншы деңгейі 10-ға жетті.",
+      "ru": "Уровень игрока достиг 10.",
+      "en": "Player level reached 10."
+    }
+  },
+  {
+    "code": "level_20",
+    "category": "start",
+    "rarity": "legendary",
+    "icon": "diamond",
+    "reward_coins": 400,
+    "rule": {
+      "event": "any",
+      "metric": "level",
+      "op": ">=",
+      "value": 20
+    },
+    "title": {
+      "kk": "Мифтік деңгей",
+      "ru": "Мифический уровень",
+      "en": "Mythic Level"
+    },
+    "description": {
+      "kk": "20-деңгейге жеттіңіз — бұл элита.",
+      "ru": "Вы достигли 20 уровня — это элита.",
+      "en": "You reached level 20 вЂ” elite territory."
+    }
+  },
+  {
+    "code": "levels_5",
+    "category": "progress",
+    "rarity": "common",
+    "icon": "stairs",
+    "reward_coins": 50,
+    "rule": {
+      "event": "any",
+      "metric": "levels_completed",
+      "op": ">=",
+      "value": 5
+    },
+    "title": {
+      "kk": "Бес деңгей",
+      "ru": "Пять уровней",
+      "en": "Five Levels"
+    },
+    "description": {
+      "kk": "Бес деңгейді аяқтадыңыз.",
+      "ru": "Пройдено пять уровней.",
+      "en": "Five levels completed."
+    }
+  },
+  {
+    "code": "levels_15",
+    "category": "progress",
+    "rarity": "rare",
+    "icon": "trending_up",
+    "reward_coins": 120,
+    "rule": {
+      "event": "any",
+      "metric": "levels_completed",
+      "op": ">=",
+      "value": 15
+    },
+    "title": {
+      "kk": "Он бес деңгей",
+      "ru": "Пятнадцать уровней",
+      "en": "Fifteen Levels"
+    },
+    "description": {
+      "kk": "Он бес деңгей артта қалды.",
+      "ru": "Позади пятнадцать уровней.",
+      "en": "Fifteen levels behind you."
+    }
+  },
+  {
+    "code": "levels_30",
+    "category": "progress",
+    "rarity": "epic",
+    "icon": "auto_awesome",
+    "reward_coins": 250,
+    "rule": {
+      "event": "any",
+      "metric": "levels_completed",
+      "op": ">=",
+      "value": 30
+    },
+    "title": {
+      "kk": "Отыз деңгей",
+      "ru": "Тридцать уровней",
+      "en": "Thirty Levels"
+    },
+    "description": {
+      "kk": "Отыз деңгей — үлкен жетістік.",
+      "ru": "Тридцать уровней — большое достижение.",
+      "en": "Thirty levels is a major feat."
+    }
+  },
+  {
+    "code": "boss_first",
+    "category": "progress",
+    "rarity": "rare",
+    "icon": "swords",
+    "reward_coins": 100,
+    "rule": {
+      "event": "any",
+      "metric": "boss_completed",
+      "op": ">=",
+      "value": 1
+    },
+    "title": {
+      "kk": "Босс жеңілді",
+      "ru": "Босс побеждён",
+      "en": "Boss Defeated"
+    },
+    "description": {
+      "kk": "Бірінші босс-деңгейді жеңдіңіз.",
+      "ru": "Вы победили первого босса.",
+      "en": "You defeated your first boss level."
+    }
+  },
+  {
+    "code": "boss_5",
+    "category": "progress",
+    "rarity": "epic",
+    "icon": "shield",
+    "reward_coins": 300,
+    "rule": {
+      "event": "any",
+      "metric": "boss_completed",
+      "op": ">=",
+      "value": 5
+    },
+    "title": {
+      "kk": "Бес босс",
+      "ru": "Пять боссов",
+      "en": "Five Bosses"
+    },
+    "description": {
+      "kk": "Бес босс-деңгейді жеңдіңіз.",
+      "ru": "Побеждено пять боссов.",
+      "en": "Five boss levels defeated."
+    }
+  },
+  {
+    "code": "perfect_first",
+    "category": "progress",
+    "rarity": "rare",
+    "icon": "star",
+    "reward_coins": 80,
+    "rule": {
+      "event": "any",
+      "metric": "perfect_levels",
+      "op": ">=",
+      "value": 1
+    },
+    "title": {
+      "kk": "Мінсіз деңгей",
+      "ru": "Идеальный уровень",
+      "en": "Perfect Level"
+    },
+    "description": {
+      "kk": "Деңгейді үш жұлдызбен аяқтадыңыз.",
+      "ru": "Уровень пройден на три звезды.",
+      "en": "You completed a level with three stars."
+    }
+  },
+  {
+    "code": "perfect_5",
+    "category": "progress",
+    "rarity": "epic",
+    "icon": "stars",
+    "reward_coins": 200,
+    "rule": {
+      "event": "any",
+      "metric": "perfect_levels",
+      "op": ">=",
+      "value": 5
+    },
+    "title": {
+      "kk": "Бес мінсіз деңгей",
+      "ru": "Пять идеальных уровней",
+      "en": "Five Perfect Levels"
+    },
+    "description": {
+      "kk": "Бес деңгейді үш жұлдызбен өттіңіз.",
+      "ru": "Пять уровней на три звезды.",
+      "en": "Five levels with three stars."
+    }
+  },
+  {
+    "code": "perfect_10",
+    "category": "progress",
+    "rarity": "legendary",
+    "icon": "grade",
+    "reward_coins": 500,
+    "rule": {
+      "event": "any",
+      "metric": "perfect_levels",
+      "op": ">=",
+      "value": 10
+    },
+    "title": {
+      "kk": "Мінсіздік шебері",
+      "ru": "Мастер совершенства",
+      "en": "Master of Perfection"
+    },
+    "description": {
+      "kk": "Он деңгей үш жұлдызбен аяқталды.",
+      "ru": "Десять уровней на три звезды.",
+      "en": "Ten perfect levels."
+    }
+  },
+  {
+    "code": "accuracy_80",
+    "category": "accuracy",
+    "rarity": "rare",
+    "icon": "target",
+    "reward_coins": 80,
+    "rule": {
+      "event": "any",
+      "metric": "accuracy_pct",
+      "op": ">=",
+      "value": 80
+    },
+    "title": {
+      "kk": "Дәлдік 80%",
+      "ru": "Точность 80%",
+      "en": "80% Accuracy"
+    },
+    "description": {
+      "kk": "Орташа дәлдік 80%-дан жоғары.",
+      "ru": "Средняя точность выше 80%.",
+      "en": "Average accuracy above 80%."
+    }
+  },
+  {
+    "code": "accuracy_90",
+    "category": "accuracy",
+    "rarity": "rare",
+    "icon": "my_location",
+    "reward_coins": 120,
+    "rule": {
+      "event": "any",
+      "metric": "accuracy_pct",
+      "op": ">=",
+      "value": 90
+    },
+    "title": {
+      "kk": "Дәлдік 90%",
+      "ru": "Точность 90%",
+      "en": "90% Accuracy"
+    },
+    "description": {
+      "kk": "Орташа дәлдік 90%-дан жоғары.",
+      "ru": "Средняя точность выше 90%.",
+      "en": "Average accuracy above 90%."
+    }
+  },
+  {
+    "code": "accuracy_95",
+    "category": "accuracy",
+    "rarity": "epic",
+    "icon": "gps_fixed",
+    "reward_coins": 250,
+    "rule": {
+      "event": "any",
+      "metric": "accuracy_pct",
+      "op": ">=",
+      "value": 95
+    },
+    "title": {
+      "kk": "Дәлдік 95%",
+      "ru": "Точность 95%",
+      "en": "95% Accuracy"
+    },
+    "description": {
+      "kk": "Керемет дәлдік — 95%-дан жоғары.",
+      "ru": "Выдающаяся точность — выше 95%.",
+      "en": "Outstanding accuracy above 95%."
+    }
+  },
+  {
+    "code": "no_hint_10",
+    "category": "accuracy",
+    "rarity": "rare",
+    "icon": "lightbulb",
+    "reward_coins": 90,
+    "rule": {
+      "event": "any",
+      "metric": "no_hint_correct",
+      "op": ">=",
+      "value": 10
+    },
+    "title": {
+      "kk": "Он рет өз күшімен",
+      "ru": "Десять раз самостоятельно",
+      "en": "Ten Solos"
+    },
+    "description": {
+      "kk": "Он тапсырманы подсказкасыз дұрыс орындадыңыз.",
+      "ru": "Десять заданий без подсказок.",
+      "en": "Ten tasks solved without hints."
+    }
+  },
+  {
+    "code": "no_hint_25",
+    "category": "accuracy",
+    "rarity": "epic",
+    "icon": "bolt",
+    "reward_coins": 220,
+    "rule": {
+      "event": "any",
+      "metric": "no_hint_correct",
+      "op": ">=",
+      "value": 25
+    },
+    "title": {
+      "kk": "Жиырма бес рет өз күшімен",
+      "ru": "Двадцать пять раз самостоятельно",
+      "en": "Twenty-Five Solos"
+    },
+    "description": {
+      "kk": "Жиырма бес тапсырма подсказкасыз.",
+      "ru": "Двадцать пять заданий без подсказок.",
+      "en": "Twenty-five tasks without hints."
+    }
+  },
+  {
+    "code": "no_hint_streak_10",
+    "category": "accuracy",
+    "rarity": "rare",
+    "icon": "link",
+    "reward_coins": 100,
+    "rule": {
+      "event": "any",
+      "metric": "no_hint_streak_max",
+      "op": ">=",
+      "value": 10
+    },
+    "title": {
+      "kk": "Подсказкасыз серия",
+      "ru": "Серия без подсказок",
+      "en": "Hint-Free Streak"
+    },
+    "description": {
+      "kk": "Қатарынан он тапсырма подсказкасыз.",
+      "ru": "Десять заданий подряд без подсказок.",
+      "en": "Ten tasks in a row without hints."
+    }
+  },
+  {
+    "code": "fixed_mistake",
+    "category": "accuracy",
+    "rarity": "common",
+    "icon": "build",
+    "reward_coins": 40,
+    "rule": {
+      "event": "any",
+      "metric": "fixed_mistakes",
+      "op": ">=",
+      "value": 1
+    },
+    "title": {
+      "kk": "Қатені түзедіңіз",
+      "ru": "Исправил ошибку",
+      "en": "Mistake Fixed"
+    },
+    "description": {
+      "kk": "Бұрын үш рет қателескен тапсырманы дұрыс шештіңіз.",
+      "ru": "Вы верно решили задание, где раньше ошибались трижды.",
+      "en": "You solved a task you had missed three times before."
+    }
+  },
+  {
+    "code": "fixed_5",
+    "category": "accuracy",
+    "rarity": "epic",
+    "icon": "construction",
+    "reward_coins": 180,
+    "rule": {
+      "event": "any",
+      "metric": "fixed_mistakes",
+      "op": ">=",
+      "value": 5
+    },
+    "title": {
+      "kk": "Бес қатені түзедіңіз",
+      "ru": "Пять исправленных ошибок",
+      "en": "Five Mistakes Fixed"
+    },
+    "description": {
+      "kk": "Бес қиын тапсырманы қайта шештіңіз.",
+      "ru": "Пять сложных заданий перерешено.",
+      "en": "Five tough tasks re-solved."
+    }
+  },
+  {
+    "code": "hard_10",
+    "category": "accuracy",
+    "rarity": "rare",
+    "icon": "fitness_center",
+    "reward_coins": 150,
+    "rule": {
+      "event": "any",
+      "metric": "hard_correct",
+      "op": ">=",
+      "value": 10
+    },
+    "title": {
+      "kk": "Қиын ондық",
+      "ru": "Сложная десятка",
+      "en": "Hard Ten"
+    },
+    "description": {
+      "kk": "Он қиын (8+) тапсырманы дұрыс орындадыңыз.",
+      "ru": "Десять сложных (8+) заданий решено.",
+      "en": "Ten hard (8+) tasks solved."
+    }
+  },
+  {
+    "code": "fast_10",
+    "category": "speed",
+    "rarity": "common",
+    "icon": "speed",
+    "reward_coins": 60,
+    "rule": {
+      "event": "any",
+      "metric": "fast_correct",
+      "op": ">=",
+      "value": 10
+    },
+    "title": {
+      "kk": "Жылдам ондық",
+      "ru": "Быстрая десятка",
+      "en": "Fast Ten"
+    },
+    "description": {
+      "kk": "Он тапсырманы 5 секундтан тез шештіңіз.",
+      "ru": "Десять заданий быстрее 5 секунд.",
+      "en": "Ten tasks solved in under 5 seconds."
+    }
+  },
+  {
+    "code": "fast_50",
+    "category": "speed",
+    "rarity": "rare",
+    "icon": "rocket_launch",
+    "reward_coins": 200,
+    "rule": {
+      "event": "any",
+      "metric": "fast_correct",
+      "op": ">=",
+      "value": 50
+    },
+    "title": {
+      "kk": "Зымыран жылдамдығы",
+      "ru": "Ракетная скорость",
+      "en": "Rocket Speed"
+    },
+    "description": {
+      "kk": "Елу жылдам әрі дұрыс жауап.",
+      "ru": "Пятьдесят быстрых верных ответов.",
+      "en": "Fifty fast correct answers."
+    }
+  },
+  {
+    "code": "combo_10",
+    "category": "speed",
+    "rarity": "rare",
+    "icon": "local_fire_department",
+    "reward_coins": 100,
+    "rule": {
+      "event": "any",
+      "metric": "correct_streak_max",
+      "op": ">=",
+      "value": 10
+    },
+    "title": {
+      "kk": "Ондық комбо",
+      "ru": "Комбо из десяти",
+      "en": "Ten Combo"
+    },
+    "description": {
+      "kk": "Қатарынан он дұрыс жауап.",
+      "ru": "Десять верных ответов подряд.",
+      "en": "Ten correct answers in a row."
+    }
+  },
+  {
+    "code": "combo_25",
+    "category": "speed",
+    "rarity": "epic",
+    "icon": "whatshot",
+    "reward_coins": 260,
+    "rule": {
+      "event": "any",
+      "metric": "correct_streak_max",
+      "op": ">=",
+      "value": 25
+    },
+    "title": {
+      "kk": "Жиырма бестік комбо",
+      "ru": "Комбо из двадцати пяти",
+      "en": "Twenty-Five Combo"
+    },
+    "description": {
+      "kk": "Қатарынан жиырма бес дұрыс жауап.",
+      "ru": "Двадцать пять верных ответов подряд.",
+      "en": "Twenty-five correct answers in a row."
+    }
+  },
+  {
+    "code": "streak_3",
+    "category": "streaks",
+    "rarity": "common",
+    "icon": "calendar_today",
+    "reward_coins": 40,
+    "rule": {
+      "event": "any",
+      "metric": "current_streak",
+      "op": ">=",
+      "value": 3
+    },
+    "title": {
+      "kk": "Үш күн қатарынан",
+      "ru": "Три дня подряд",
+      "en": "Three-Day Streak"
+    },
+    "description": {
+      "kk": "Үш күн қатарынан белсендісіз.",
+      "ru": "Три дня активности подряд.",
+      "en": "Three active days in a row."
+    }
+  },
+  {
+    "code": "streak_7",
+    "category": "streaks",
+    "rarity": "rare",
+    "icon": "event_repeat",
+    "reward_coins": 120,
+    "rule": {
+      "event": "any",
+      "metric": "current_streak",
+      "op": ">=",
+      "value": 7
+    },
+    "title": {
+      "kk": "Апталық марафон",
+      "ru": "Недельный марафон",
+      "en": "Weekly Marathon"
+    },
+    "description": {
+      "kk": "Жеті күн қатарынан оқыдыңыз.",
+      "ru": "Семь дней учёбы подряд.",
+      "en": "Seven days of learning in a row."
+    }
+  },
+  {
+    "code": "streak_30",
+    "category": "streaks",
+    "rarity": "legendary",
+    "icon": "trophy",
+    "reward_coins": 600,
+    "rule": {
+      "event": "any",
+      "metric": "current_streak",
+      "op": ">=",
+      "value": 30
+    },
+    "title": {
+      "kk": "Отыз күн",
+      "ru": "Тридцать дней",
+      "en": "Thirty Days"
+    },
+    "description": {
+      "kk": "Отыз күн қатарынан — шынайы тұрақтылық.",
+      "ru": "Тридцать дней подряд — настоящая дисциплина.",
+      "en": "Thirty days in a row вЂ” true consistency."
+    }
+  },
+  {
+    "code": "longest_14",
+    "category": "streaks",
+    "rarity": "rare",
+    "icon": "timeline",
+    "reward_coins": 140,
+    "rule": {
+      "event": "any",
+      "metric": "longest_streak",
+      "op": ">=",
+      "value": 14
+    },
+    "title": {
+      "kk": "Екі апта рекорды",
+      "ru": "Рекорд в две недели",
+      "en": "Two-Week Record"
+    },
+    "description": {
+      "kk": "Ең ұзақ серия — 14 күн.",
+      "ru": "Самая длинная серия — 14 дней.",
+      "en": "Longest streak reached 14 days."
+    }
+  },
+  {
+    "code": "night_owl",
+    "category": "streaks",
+    "rarity": "rare",
+    "icon": "nightlight",
+    "reward_coins": 80,
+    "rule": {
+      "event": "any",
+      "metric": "night_correct",
+      "op": ">=",
+      "value": 5
+    },
+    "title": {
+      "kk": "Түнгі жапалақ",
+      "ru": "Ночная сова",
+      "en": "Night Owl"
+    },
+    "description": {
+      "kk": "Түнгі сағатта бес тапсырма орындадыңыз.",
+      "ru": "Пять заданий выполнено ночью.",
+      "en": "Five tasks solved at night."
+    }
+  },
+  {
+    "code": "early_bird",
+    "category": "streaks",
+    "rarity": "rare",
+    "icon": "wb_twilight",
+    "reward_coins": 80,
+    "rule": {
+      "event": "any",
+      "metric": "early_correct",
+      "op": ">=",
+      "value": 5
+    },
+    "title": {
+      "kk": "Таңғы құс",
+      "ru": "Ранняя пташка",
+      "en": "Early Bird"
+    },
+    "description": {
+      "kk": "Таңғы сағатта бес тапсырма орындадыңыз.",
+      "ru": "Пять заданий выполнено утром.",
+      "en": "Five tasks solved early in the morning."
+    }
+  },
+  {
+    "code": "team_player",
+    "category": "social",
+    "rarity": "common",
+    "icon": "groups",
+    "reward_coins": 40,
+    "rule": {
+      "event": "any",
+      "metric": "team_member",
+      "op": ">=",
+      "value": 1
+    },
+    "title": {
+      "kk": "Команда ойыншысы",
+      "ru": "Командный игрок",
+      "en": "Team Player"
+    },
+    "description": {
+      "kk": "Командаға қосылдыңыз.",
+      "ru": "Вы вступили в команду.",
+      "en": "You joined a team."
+    }
+  },
+  {
+    "code": "team_win",
+    "category": "social",
+    "rarity": "epic",
+    "icon": "military_tech",
+    "reward_coins": 250,
+    "rule": {
+      "event": "any",
+      "metric": "team_wins",
+      "op": ">=",
+      "value": 1
+    },
+    "title": {
+      "kk": "Чемпион командасы",
+      "ru": "Команда-чемпион",
+      "en": "Champion Team"
+    },
+    "description": {
+      "kk": "Командаңыз турнирде жеңді.",
+      "ru": "Ваша команда победила в турнире.",
+      "en": "Your team won a tournament."
+    }
+  },
+  {
+    "code": "season_top10",
+    "category": "seasonal",
+    "rarity": "epic",
+    "icon": "leaderboard",
+    "reward_coins": 200,
+    "rule": {
+      "event": "any",
+      "metric": "season_rank_best",
+      "op": "<=",
+      "value": 10
+    },
+    "title": {
+      "kk": "Маусым топ-10",
+      "ru": "Топ-10 сезона",
+      "en": "Season Top 10"
+    },
+    "description": {
+      "kk": "Маусымдық рейтингте топ-10-ға кірдіңіз.",
+      "ru": "Вы вошли в топ-10 сезона.",
+      "en": "You reached the season top 10."
+    }
+  },
+  {
+    "code": "season_top3",
+    "category": "seasonal",
+    "rarity": "legendary",
+    "icon": "emoji_events",
+    "reward_coins": 500,
+    "rule": {
+      "event": "any",
+      "metric": "season_rank_best",
+      "op": "<=",
+      "value": 3
+    },
+    "title": {
+      "kk": "Маусым подиумы",
+      "ru": "Подиум сезона",
+      "en": "Season Podium"
+    },
+    "description": {
+      "kk": "Маусымда үздік үштікке кірдіңіз.",
+      "ru": "Вы вошли в тройку лучших сезона.",
+      "en": "You reached the season top three."
+    }
+  },
+  {
+    "code": "weekly_500",
+    "category": "seasonal",
+    "rarity": "rare",
+    "icon": "calendar_view_week",
+    "reward_coins": 120,
+    "rule": {
+      "event": "any",
+      "metric": "weekly_xp",
+      "op": ">=",
+      "value": 500
+    },
+    "title": {
+      "kk": "Аптаның 500 XP",
+      "ru": "500 XP за неделю",
+      "en": "500 Weekly XP"
+    },
+    "description": {
+      "kk": "Бір аптада 500 XP жинадыңыз.",
+      "ru": "За неделю набрано 500 XP.",
+      "en": "You earned 500 XP in a week."
+    }
+  },
+  {
+    "code": "quests_10",
+    "category": "seasonal",
+    "rarity": "rare",
+    "icon": "task_alt",
+    "reward_coins": 100,
+    "rule": {
+      "event": "any",
+      "metric": "quests_completed",
+      "op": ">=",
+      "value": 10
+    },
+    "title": {
+      "kk": "Квесттер шебері",
+      "ru": "Мастер квестов",
+      "en": "Quest Master"
+    },
+    "description": {
+      "kk": "Он квестті орындадыңыз.",
+      "ru": "Выполнено десять квестов.",
+      "en": "Ten quests completed."
+    }
+  },
+  {
+    "code": "shop_first",
+    "category": "secret",
+    "rarity": "common",
+    "icon": "shopping_bag",
+    "reward_coins": 30,
+    "rule": {
+      "event": "any",
+      "metric": "coins_spent",
+      "op": ">=",
+      "value": 1
+    },
+    "title": {
+      "kk": "Алғашқы сатып алу",
+      "ru": "Первая покупка",
+      "en": "First Purchase"
+    },
+    "description": {
+      "kk": "Дүкеннен бірінші затты сатып алдыңыз.",
+      "ru": "Вы купили первый товар.",
+      "en": "You made your first purchase."
+    }
+  },
+  {
+    "code": "traveler",
+    "category": "secret",
+    "rarity": "common",
+    "icon": "explore",
+    "reward_coins": 70,
+    "rule": {
+      "event": "any",
+      "metric": "distinct_topics",
+      "op": ">=",
+      "value": 10
+    },
+    "title": {
+      "kk": "Зерттеуші",
+      "ru": "Исследователь",
+      "en": "Explorer"
+    },
+    "description": {
+      "kk": "Он түрлі тақырыпқа қол тигіздіңіз.",
+      "ru": "Вы коснулись десяти разных тем.",
+      "en": "You explored ten different topics."
+    }
+  },
+  {
+    "code": "master_topic",
+    "category": "mastery",
+    "rarity": "rare",
+    "icon": "psychology",
+    "reward_coins": 100,
+    "rule": {
+      "event": "any",
+      "metric": "topics_mastered",
+      "op": ">=",
+      "value": 1
+    },
+    "title": {
+      "kk": "Тақырып шебері",
+      "ru": "Мастер темы",
+      "en": "Topic Master"
+    },
+    "description": {
+      "kk": "Бір тақырыпта mastery 80%-дан асты.",
+      "ru": "Mastery темы выше 80%.",
+      "en": "Mastery above 80% in a topic."
+    }
+  },
+  {
+    "code": "master_5_topics",
+    "category": "mastery",
+    "rarity": "epic",
+    "icon": "school",
+    "reward_coins": 260,
+    "rule": {
+      "event": "any",
+      "metric": "topics_mastered",
+      "op": ">=",
+      "value": 5
+    },
+    "title": {
+      "kk": "Бес тақырып шебері",
+      "ru": "Мастер пяти тем",
+      "en": "Master of Five Topics"
+    },
+    "description": {
+      "kk": "Бес тақырыпты меңгердіңіз.",
+      "ru": "Освоено пять тем.",
+      "en": "Five topics mastered."
+    }
+  }
+]

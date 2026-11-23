@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+
+<html lang="kk"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#3525cd", "on-secondary-fixed-variant": "#005236", "on-tertiary": "#ffffff", "surface-container": "#e5eeff", "background": "#f8f9ff", "on-surface-variant": "#464555", "surface-container-low": "#eff4ff", "secondary": "#006c49", "tertiary-container": "#885500", "on-tertiary-fixed-variant": "#653e00", "inverse-primary": "#c3c0ff", "error": "#ba1a1a", "on-secondary": "#ffffff", "on-primary-fixed-variant": "#3323cc", "surface-bright": "#f8f9ff", "surface-container-highest": "#d3e4fe", "primary-container": "#4f46e5", "on-secondary-fixed": "#002113", "surface-dim": "#cbdbf5", "on-primary-container": "#dad7ff", "inverse-surface": "#213145", "on-primary": "#ffffff", "primary-fixed": "#e2dfff", "on-primary-fixed": "#0f0069", "tertiary-fixed-dim": "#ffb95f", "surface": "#f8f9ff", "tertiary": "#684000", "error-container": "#ffdad6", "secondary-container": "#6cf8bb", "on-background": "#0b1c30", "inverse-on-surface": "#eaf1ff", "secondary-fixed-dim": "#4edea3", "surface-tint": "#4d44e3", "surface-container-high": "#dce9ff", "on-tertiary-fixed": "#2a1700", "surface-container-lowest": "#ffffff", "on-surface": "#0b1c30", "on-secondary-container": "#00714d", "tertiary-fixed": "#ffddb8", "secondary-fixed": "#6ffbbe", "on-error": "#ffffff", "primary-fixed-dim": "#c3c0ff", "on-error-container": "#93000a", "surface-variant": "#d3e4fe", "outline": "#777587", "on-tertiary-container": "#ffd4a4", "outline-variant": "#c7c4d8" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1rem", "margin": "2rem", "space-xl": "2.5rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-md": "1rem", "gutter-mobile": "0.75rem", "space-xs": "0.25rem" }, "fontFamily": { "body-md": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "label-sm": [ "JetBrains Mono" ], "display-lg-mobile": [ "Plus Jakarta Sans" ], "label-md": [ "JetBrains Mono" ], "display-lg": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ] }, "fontSize": { "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "display-lg-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "display-lg": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest flex flex-col justify-between z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-lg flex items-center justify-between flex-shrink-0"><div class="flex items-center gap-space-sm"><img alt="Lumina Learn Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VR59ElxEo1g27AxnXqJu5jExnSOLLt11yUZO6Bg2tgIKt_Eb3xBXSw-vMV-UeMYbJrJcNDTCK6szlUkvOj3b9t1ZmGbFuJX1vmobpLfVZS0t8B0qXbGk79V5yipBLOZKpK5HCIfGvaVwyPq1ew0EfCic0vANDW2q6xovsRztsEgdxJLzsy1JNqq6cls15uV0lLqoDY3cHKe59esAzzW_4DhfrvXwA7sYs_YcWlK5QfBDVk7SA64jkrNWM"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Lumina</span><span class="px-space-xs py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider">PRO</span></div><button class="text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">menu_open</span></button></div><div class="px-space-md py-space-xs"><div class="h-px w-full bg-surface-container-high"></div></div><div class="flex-1 overflow-y-auto px-space-md py-space-sm"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Жұмыс кеңістігі</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary shadow-sm font-semibold"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl transition-colors bg-primary-container text-on-primary shadow-sm font-semibold" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Басқару панелі</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="courses" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>Курстар</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="learning-path" href="#"><span class="material-symbols-outlined text-[20px]">account_tree</span><span>Оқу траекториясы</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="tasks-and-quizzes" href="#"><span class="material-symbols-outlined text-[20px]">task_alt</span><span>Тапсырмалар мен тесттер</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="ai-assistant" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-primary">auto_awesome</span><span>AI Көмекші</span></div><span class="px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Тьютор</span></a><div class="pt-space-sm px-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Прогресс</div><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="achievements" href="#"><span class="material-symbols-outlined text-[20px]">military_tech</span><span>Жетістіктер</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="leaderboard" href="#"><span class="material-symbols-outlined text-[20px]">leaderboard</span><span>Көшбасшылар тақтасы</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="statistics" href="#"><span class="material-symbols-outlined text-[20px]">insights</span><span>Статистика</span></a></nav></div></div><div class="p-space-md flex-shrink-0 flex flex-col gap-space-sm"><a class="w-full flex items-center justify-between px-space-md py-2 rounded-xl bg-surface-container-low hover:bg-surface-container hover:text-on-surface transition-colors text-on-surface-variant font-body-sm text-body-sm" data-path="teacher-portal" href="#"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px]">swap_horiz</span><span>Оқытушы порталы</span></div><span class="material-symbols-outlined text-[16px]">north_east</span></a><div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-2 shadow-[0_1px_4px_rgba(0,0,0,0.03)]"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs min-w-0"><img alt="Профиль" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6uyvcKHr0ilws8XFsQYklsZ4OFf4ta5sH4KY4nXXi_kNZ_OCgERpltD9JFGIzwEkktSfGca6Q0dx8qSJNMMQ-L4h_VIiiuQZmQ3Wh0_DMwfXeKidZZr5F3i9w-r-_w8NcphF6D7dimiarQNF5F2Q1LkXtE1yIpWhuXjDh7YYy1Eifn20v0CtKtDxJ__poR7ufdfugdTg7DXuApBSICWRVyYQeVV7UTGrT_UPTzQ4c6RATreJNkmG0dQ"/><div class="min-w-0"><div class="font-headline-sm text-body-sm text-on-surface truncate leading-tight">Әлішер Серіков</div><div class="font-label-sm text-label-sm text-on-surface-variant truncate">14-деңгей · Жүйелік сәулетші</div></div></div><span class="px-1.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm flex items-center gap-0.5">🔥 12 күн</span></div><div class="w-full flex flex-col gap-1"><div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Прогресс</span><span>3,450 / 4,000 XP</span></div><div class="w-full h-1.5 rounded-full bg-surface-container"><div class="h-1.5 rounded-full bg-gradient-to-r from-primary-container to-secondary" style="width: 86.25%"></div></div></div></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full max-w-md"><div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">search</span></div><input class="w-full pl-9 pr-14 py-1.5 rounded-full bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary/20 placeholder:text-on-surface-variant/70" placeholder="Сабақтарды, тапсырмаларды іздеу немесе Lumina AI-дан сұрау..." type="text"/><div class="absolute inset-y-0 right-0 pr-2.5 flex items-center pointer-events-none"><kbd class="px-1.5 py-0.5 text-label-sm font-label-sm bg-surface-container-lowest text-on-surface-variant rounded border border-surface-container shadow-sm">⌘K</kbd></div></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="flex items-center p-0.5 bg-surface-container-low rounded-full"><button class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-primary shadow-sm font-semibold">ҚАЗ</button><button class="px-2 py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors">РУС</button><button class="px-2 py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors">ENG</button></div><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm"><span>🔥</span><span>12 күн</span></div><div class="flex items-center gap-2 px-space-sm py-1 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface"><span class="flex items-center gap-0.5 text-primary font-semibold"><span>⚡</span><span>3,450 XP</span></span><span class="text-outline-variant">·</span><span class="flex items-center gap-0.5 text-secondary font-semibold"><span>💎</span><span>420</span></span></div><button class="relative p-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Профиль" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-high" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6uyvcKHr0ilws8XFsQYklsZ4OFf4ta5sH4KY4nXXi_kNZ_OCgERpltD9JFGIzwEkktSfGca6Q0dx8qSJNMMQ-L4h_VIiiuQZmQ3Wh0_DMwfXeKidZZr5F3i9w-r-_w8NcphF6D7dimiarQNF5F2Q1LkXtE1yIpWhuXjDh7YYy1Eifn20v0CtKtDxJ__poR7ufdfugdTg7DXuApBSICWRVyYQeVV7UTGrT_UPTzQ4c6RATreJNkmG0dQ"/><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div></div></header><main class="w-full pt-16 bg-background flex-1 px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-lg w-full max-w-[1440px] mx-auto pb-12">
+<!-- Top Greeting & Context -->
+<section class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+            КҮН ТӘРТІБІ • БЕЛСЕНДІ СЕССИЯ
+          </span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Белсенді сессия</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Сәлем, Әлішер! <span class="font-normal text-on-surface-variant text-headline-md">👋 Қош келдіңіз</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Сіз <span class="font-semibold text-tertiary-container">12 күндік оқу қарқынын</span> ұстап тұрсыз. Бүгінгі алгоритмдік тапсырманы орындап, <strong class="text-on-surface">15-деңгейге (Жүйе сәулетшісі)</strong> өтіңіз.
+        </p>
+</div>
+<!-- Quick Command Buttons / Multilingual Actions -->
+<div class="flex items-center gap-space-xs self-start lg:self-auto bg-surface-container-low p-1.5 rounded-xl">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-sm transition-all hover:bg-surface-container">
+<span class="material-symbols-outlined text-[16px] text-primary">add_task</span>
+<span>Жаңа тапсырма</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface-variant font-body-sm text-body-sm transition-all hover:text-on-surface hover:bg-surface-container">
+<span class="material-symbols-outlined text-[16px] text-tertiary">tune</span>
+<span>Оқу мақсаттары</span>
+</button>
+</div>
+</section>
+<!-- 4 High-Density Metric Nodes -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1: Level XP -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">ДЕҢГЕЙ • ЖҮЙЕ СӘУЛЕТШІСІ</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-0.5">14-деңгей · Жүйе сәулетшісі</span>
+</div>
+<span class="p-2 rounded-lg bg-surface-container-low text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</span>
+</div>
+<div class="mt-4 flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-medium">3,450 / 4,000 XP</span>
+<span class="text-secondary font-semibold">+150 Ұпай бүгін</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-primary-container transition-all duration-700" style="width: 86.25%"></div>
+</div>
+</div>
+</div>
+<!-- Card 2: Streak Flow -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">СЕРИЯ • ТҰРАҚТЫЛЫҚ</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">12 Күн белсенді</span>
+<span class="text-tertiary text-sm">🔥</span>
+</div>
+</div>
+<span class="p-2 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</span>
+</div>
+<!-- 7-Day Dot Tracker -->
+<div class="mt-3 flex items-center justify-between pt-1">
+<div class="flex flex-col items-center gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Дй</span>
+<span class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-[11px] font-bold">✓</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Сй</span>
+<span class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-[11px] font-bold">✓</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ср</span>
+<span class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-[11px] font-bold">✓</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Бй</span>
+<span class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-[11px] font-bold">✓</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Жм</span>
+<span class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-[11px] font-bold">✓</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Сн</span>
+<span class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-[11px] font-bold">✓</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Жк</span>
+<span class="w-6 h-6 rounded-full bg-surface-container text-primary flex items-center justify-center font-label-sm text-[10px] animate-pulse">●</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Weekly Goal -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex items-center justify-between shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">АПТАЛЫҚ ЖОСПАР</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-0.5">4 / 5 Сабақ аяқталды</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Мақсатқа жетуге 1 сабақ қалды</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center flex-shrink-0">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="80, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-md text-label-md font-bold text-on-surface">80%</span>
+</div>
+</div>
+<!-- Card 4: Global Rank & League -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">РЕЙТИНГ • ЛИГА</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">#4 Алмас лигасы</span>
+</div>
+</div>
+<span class="p-2 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</span>
+</div>
+<div class="mt-4 flex items-center justify-between font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1 text-secondary font-bold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+<span>Осы аптада +2 орынға көтерілді</span>
+</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Жоғарылау аймағы</span>
+</div>
+</div>
+</section>
+<!-- Primary Hero Feature: Continue Learning -->
+<section class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-container via-primary to-inverse-surface text-on-primary p-space-lg lg:p-space-xl shadow-lg">
+<div class="absolute -right-16 -bottom-24 w-96 h-96 rounded-full bg-secondary/20 blur-3xl pointer-events-none"></div>
+<div class="absolute right-1/4 -top-20 w-80 h-80 rounded-full bg-inverse-primary/10 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-sm max-w-2xl">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-1 rounded-md bg-on-primary/15 text-on-primary font-label-sm text-label-sm uppercase tracking-wider backdrop-blur-md">
+              ОҚЫЛУДА • 4-МОДУЛЬ
+            </span>
+<span class="px-2.5 py-1 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>120 Ұпай сыйлық</span>
+</span>
+<span class="text-on-primary-container font-label-sm text-label-sm">Қалған уақыты 18 минут</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-primary tracking-tight">
+            Алгоритмдер және деректер құрылымы: Динамикалық бағдарламалау және мемоизация
+          </h2>
+<p class="font-body-md text-body-md text-on-primary/80 line-clamp-2">
+            Төменнен-жоғарыға (bottom-up) кестелеу және рекурсивті ағаштарды оңтайландыру тәсілдерін меңгеру. Қайталанатын ішкі есептер мен күй ауысу теңдеулерін талдау.
+          </p>
+<!-- Module Micro Progress -->
+<div class="flex flex-col gap-1.5 pt-2 max-w-md">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-primary/90">
+<span>8 сабақтың 3-і • 45% аяқталды</span>
+<span class="font-mono">Ішкі есептер кэші</span>
+</div>
+<div class="w-full h-2 rounded-full bg-on-primary/20 overflow-hidden backdrop-blur-sm">
+<div class="h-full rounded-full bg-secondary-fixed transition-all duration-500" style="width: 45%"></div>
+</div>
+</div>
+</div>
+<!-- Action CTAs -->
+<div class="flex flex-col sm:flex-row lg:flex-col gap-2.5 flex-shrink-0 min-w-[220px]">
+<a class="px-space-md py-3 rounded-xl bg-secondary text-on-secondary font-headline-sm text-body-md flex items-center justify-center gap-2 shadow-md hover:bg-secondary/90 transition-all transform hover:-translate-y-0.5" href="#">
+<span>Жалғастыру / Бастау</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<button class="px-space-md py-2.5 rounded-xl bg-on-primary/10 hover:bg-on-primary/20 text-on-primary font-body-sm text-body-sm flex items-center justify-center gap-2 backdrop-blur-sm transition-colors">
+<span class="material-symbols-outlined text-[16px]">style</span>
+<span>Карточкаларды қайталау (14)</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Two-Column Main Content Split -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN (65% / 8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Enrolled Courses -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">КУРСТАР • АҒЫМДАҒЫ КУРСТАР</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Белсенді курстар</h3>
+</div>
+<a class="font-label-md text-label-md text-primary font-semibold hover:underline flex items-center gap-1" href="#">
+<span>Барлығын көру (5)</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Track 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">psychology</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-lg text-on-surface font-semibold">Қолданбалы машиналық оқыту және Python</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[10px] uppercase font-semibold">ОРТА ДЕҢГЕЙ</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>Оқытушы: Доктор А. Смағұлов</span>
+<span>•</span>
+<span>14 / 20 сабақ өтілді</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 flex-shrink-0 md:w-56 justify-between md:justify-end">
+<div class="flex flex-col items-end gap-1 flex-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">68%</span>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 68%"></div>
+</div>
+</div>
+<button class="p-2 rounded-lg bg-surface-container-lowest text-on-surface hover:text-primary shadow-sm transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Track 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">layers</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-lg text-on-surface font-semibold">Full-Stack веб-архитектурасы</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[10px] uppercase font-semibold">ЖОҒАРЫ ДЕҢГЕЙ</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>Микросервистер және үлестірілген кэштеу</span>
+<span>•</span>
+<span>24 / 30 сабақ</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 flex-shrink-0 md:w-56 justify-between md:justify-end">
+<div class="flex flex-col items-end gap-1 flex-1">
+<span class="font-label-sm text-label-sm font-bold text-secondary">82%</span>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<button class="p-2 rounded-lg bg-surface-container-lowest text-on-surface hover:text-primary shadow-sm transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Track 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">functions</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-lg text-on-surface font-semibold">Компьютерлік ғылымдарға арналған дискретті математика</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[10px] uppercase font-semibold">НЕГІЗГІ ДЕҢГЕЙ</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>Комбинаторика, графтар теориясы және жиындар</span>
+<span>•</span>
+<span>7 / 18 сабақ</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 flex-shrink-0 md:w-56 justify-between md:justify-end">
+<div class="flex flex-col items-end gap-1 flex-1">
+<span class="font-label-sm text-label-sm font-bold text-tertiary">35%</span>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-tertiary-fixed-dim rounded-full" style="width: 35%"></div>
+</div>
+</div>
+<button class="p-2 rounded-lg bg-surface-container-lowest text-on-surface hover:text-primary shadow-sm transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Weekly Learning Activity & XP Growth Chart -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">БЕЛСЕНДІЛІК • ҰПАЙЛАР АНАЛИТИКАСЫ</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Апталық оқу белсенділігі мен жүктеме</h3>
+</div>
+<!-- Segmented Pill Filter -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-xl self-start sm:self-auto">
+<button class="px-3 py-1 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm">Осы апта</button>
+<button class="px-3 py-1 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors">Осы ай</button>
+<button class="px-3 py-1 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors">Барлық уақыт</button>
+</div>
+</div>
+<!-- Synthetic Modern High-Precision Bar/Spline Visualization -->
+<div class="flex flex-col gap-2 pt-2">
+<div class="h-52 w-full flex items-end justify-between gap-3 px-2 pt-6">
+<!-- Monday -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group">
+<span class="font-label-sm text-label-sm text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">320 XP</span>
+<div class="w-full max-w-[42px] rounded-t-lg bg-surface-container-high group-hover:bg-primary-container transition-all duration-300" style="height: 51%"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Дүй</span>
+</div>
+<!-- Tuesday -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group">
+<span class="font-label-sm text-label-sm text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">450 XP</span>
+<div class="w-full max-w-[42px] rounded-t-lg bg-surface-container-high group-hover:bg-primary-container transition-all duration-300" style="height: 72%"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Сей</span>
+</div>
+<!-- Wednesday -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group">
+<span class="font-label-sm text-label-sm text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">280 XP</span>
+<div class="w-full max-w-[42px] rounded-t-lg bg-surface-container-high group-hover:bg-primary-container transition-all duration-300" style="height: 45%"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Сәр</span>
+</div>
+<!-- Thursday -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group">
+<span class="font-label-sm text-label-sm text-primary font-bold opacity-0 group-hover:opacity-100 transition-opacity">510 XP</span>
+<div class="w-full max-w-[42px] rounded-t-lg bg-primary-container transition-all duration-300" style="height: 82%"></div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Бей</span>
+</div>
+<!-- Friday -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group">
+<span class="font-label-sm text-label-sm text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">400 XP</span>
+<div class="w-full max-w-[42px] rounded-t-lg bg-surface-container-high group-hover:bg-primary-container transition-all duration-300" style="height: 64%"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Жұм</span>
+</div>
+<!-- Saturday -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group">
+<span class="font-label-sm text-label-sm text-secondary font-bold">620 XP</span>
+<div class="w-full max-w-[42px] rounded-t-lg bg-gradient-to-t from-primary-container to-secondary transition-all duration-300 shadow-sm" style="height: 100%"></div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Сен 👑</span>
+</div>
+<!-- Sunday (Pending) -->
+<div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Бүгін</span>
+<div class="w-full max-w-[42px] rounded-t-lg bg-surface-container-low border-2 border-dashed border-primary/40 transition-all duration-300" style="height: 24%"></div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Жек</span>
+</div>
+</div>
+<div class="pt-3 flex flex-wrap items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span>Апталық жиын: <strong class="text-on-surface font-label-sm text-label-sm">2 580 Ұпай (XP)</strong></span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+18.4% оқу нәтижелілігі өткен аптамен салыстырғанда</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (35% / 4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- AI Daily Personalized Challenge -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm relative overflow-hidden flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[11px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+<span>AI ҰСЫНЫСЫ</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">⚡ 5 мин жылдам тапсырма</span>
+</div>
+<div class="flex flex-col gap-1">
+<h4 class="font-headline-sm text-body-lg font-bold text-on-surface">
+              Фибоначчи мемоизация кэшін жөндеу (Debug)
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Кешегі Python тест нәтижесі бойынша жекелендірілген: LRU кэштеу арқылы рекурсия стек толып кетуін шешіңіз.
+            </p>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-low flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-2 text-on-surface font-semibold">
+<span class="text-primary font-bold">+85 XP</span>
+<span class="text-outline-variant">•</span>
+<span class="text-secondary font-bold">15 Асыл тас</span>
+</div>
+<span class="text-tertiary-container font-medium">Күрделілігі: Орташа</span>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-body-sm text-body-sm font-semibold transition-all flex items-center justify-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+<span>Тапсырманы бастау</span>
+</button>
+</div>
+<!-- Diamond Tier League Preview -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">ЛИГА КЕСТЕСІ • РЕЙТИНГ</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Алмас лигасы</h4>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold">2к 14с қалды</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<!-- Rank 1 -->
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="font-label-sm text-label-sm font-bold text-tertiary w-4 text-center">1</span>
+<img class="w-8 h-8 rounded-full object-cover" data-alt="Square portrait of top student avatar smiling, minimalist vector illustration style in soft blue and white hues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPHkiTWsL9eeuQtf_YHbUFa9gPGO5VH20Agd_TdTR96qVQiwdMyjeeXBwr3bv0iTjz7rb9otDXywtPjje7m_yFXVi2xrTplrvmd3rM18Pa-2LSc5mSh1x_pLphPuokAq9QY0qQQyYqFXceaMFmetcJgdEHkaegjmKIdHFjlVm5mdJfd71c7ySL0-B2RFc4KsPzVAj2alD1evuM36cPNUfyT4qXA9A1pNkVqtJgeXxnvNundv7CBPl-gA"/>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Аружан С.</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">16-деңгей • AI ғалымы</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-mono font-bold text-on-surface">4,120 XP</span>
+</div>
+<!-- Rank 2 -->
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant w-4 text-center">2</span>
+<img class="w-8 h-8 rounded-full object-cover" data-alt="Avatar of student user with glasses, clean modern flat digital aesthetic, cyan accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADuIcXQ2JN81AHb_7vMXbpRu-I9DgnSLlSmCFS_2Z0FxadE8Ww9wWMm9Kd1gd9nrkaddA-BVGeR5I020L0sTfxwXVphcQlzr-rFXcAwdzQd07Lie_uxTyVgzDDpXVP-SiXbRi2AvvROIi6JBVmKswu40sG7N50K-bSB7z27NFYs1YNBujnuBXRkS7bK6K-uLRUhYIVVa0zQoUWntaj0HzCHF_TvtNSw4nVrqjgDDWJXZbLIurwfIT-yQ"/>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Данияр Қ.</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">15-деңгей • Full Stack</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-mono font-bold text-on-surface">3,890 XP</span>
+</div>
+<!-- Rank 3 -->
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="font-label-sm text-label-sm font-bold text-tertiary-container w-4 text-center">3</span>
+<img class="w-8 h-8 rounded-full object-cover" data-alt="Avatar graphic of a young female software engineer, professional modern flat render style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ55VBsRtvSVQEKFoUSF1KWg6teBn9qhTJXdDI6PiHBdYBwjgipJpuCfF4eyuV2ZLik5SI0NDy_j7o-3gcyEOv_02dEjIedq-p9Wj6YnsQ3U50ZMT-qCGQecDJLKrE5XW0RHppyLmi8QsXTaEQh7GaMICwZ4OZ5vqQt2qu9MWBeQazF-dAeuUiR396IyGHvtZ_HAyuYKtCulkevJ3UA3Lt-yjrbSRiH3cmr4QY8Gj9dXwIla1CnN8Opw"/>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Елена Ростова</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">14-деңгей • Математика</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-mono font-bold text-on-surface">3,610 XP</span>
+</div>
+<!-- User Alisher (Highlighted Rank 4) -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-high shadow-xs">
+<div class="flex items-center gap-2.5">
+<span class="font-label-sm text-label-sm font-bold text-primary w-4 text-center">4</span>
+<div class="relative">
+<img alt="Әлішер Серіков" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6uyvcKHr0ilws8XFsQYklsZ4OFf4ta5sH4KY4nXXi_kNZ_OCgERpltD9JFGIzwEkktSfGca6Q0dx8qSJNMMQ-L4h_VIiiuQZmQ3Wh0_DMwfXeKidZZr5F3i9w-r-_w8NcphF6D7dimiarQNF5F2Q1LkXtE1yIpWhuXjDh7YYy1Eifn20v0CtKtDxJ__poR7ufdfugdTg7DXuApBSICWRVyYQeVV7UTGrT_UPTzQ4c6RATreJNkmG0dQ"/>
+<span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-secondary"></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-body-sm text-body-sm text-on-surface font-bold">Сіз (Әлішер)</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[9px] uppercase font-bold">Жоғарылау</span>
+</div>
+<span class="font-label-sm text-[10px] text-primary font-semibold">▲ +2 орынға көтерілді</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-mono font-bold text-primary">3,450 XP</span>
+</div>
+</div>
+<a class="text-center font-body-sm text-body-sm text-primary hover:underline font-semibold pt-1 flex items-center justify-center gap-1" href="#">
+<span>Толық кестені қарау</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Recently Earned Badges -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">ЖЕТІСТІКТЕР • МАРАПАТТАР</span>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold" href="#">Барлығы (18)</a>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-1">
+<!-- Badge 1 -->
+<div class="p-2.5 rounded-xl bg-surface-container-low flex flex-col items-center text-center gap-1.5 group hover:bg-surface-container transition-colors">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<span class="font-headline-sm text-[11px] font-bold text-on-surface leading-tight">Тұрақтылық шебері</span>
+<span class="font-label-sm text-[10px] text-tertiary-container font-medium">10 күн</span>
+</div>
+<!-- Badge 2 -->
+<div class="p-2.5 rounded-xl bg-surface-container-low flex flex-col items-center text-center gap-1.5 group hover:bg-surface-container transition-colors">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bug_report</span>
+</div>
+<span class="font-headline-sm text-[11px] font-bold text-on-surface leading-tight">Қате тапқыш</span>
+<span class="font-label-sm text-[10px] text-secondary font-medium">50 өткізілді</span>
+</div>
+<!-- Badge 3 -->
+<div class="p-2.5 rounded-xl bg-surface-container-low flex flex-col items-center text-center gap-1.5 group hover:bg-surface-container transition-colors">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">speed</span>
+</div>
+<span class="font-headline-sm text-[11px] font-bold text-on-surface leading-tight">Жылдамдық жүйрігі</span>
+<span class="font-label-sm text-[10px] text-primary font-medium">&lt; 3 мин</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
