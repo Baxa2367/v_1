@@ -34,45 +34,45 @@ json explanationFor(const std::string& reason, const std::string& topic, double 
                     int errorStreak, const std::string& locale) {
     const int pct = static_cast<int>(std::lround(expected * 100));
     if (reason == "support") {
-        const std::string kk = "Р‘Т±Р» С‚Р°РїСЃС‹СЂРјР°РЅС‹ В«" + topic + "В» С‚Р°Т›С‹СЂС‹Р±С‹РЅРґР°Т“С‹ Т›Р°С‚РµР»РµСЂ Т›Р°С‚Р°СЂС‹РЅР° "
-                               "Р±Р°Р№Р»Р°РЅС‹СЃС‚С‹ Т±СЃС‹РЅРґС‹Т› (Т›Р°С‚Р°СЂС‹РЅР°РЅ " + std::to_string(errorStreak) +
-                               " Т›Р°С‚Рµ). ТљРёС‹РЅРґС‹Т›С‚С‹ Р±С–СЂ СЃР°С‚С‹Т“Р° С‚У©РјРµРЅРґРµС‚С‚С–Рє вЂ” РјР°ТЈС‹Р·РґС‹СЃС‹ Т›Р°Р№С‚Р° СЃРµРЅС–РјРґС–Р»С–Рє Т›Т±СЂСѓ.";
-        const std::string ru = "РњС‹ РїСЂРµРґР»РѕР¶РёР»Рё СЌС‚Рѕ Р·Р°РґР°РЅРёРµ, РїРѕС‚РѕРјСѓ С‡С‚Рѕ РІ С‚РµРјРµ В«" + topic +
-                               "В» Р±С‹Р»Рё РѕС€РёР±РєРё РїРѕРґСЂСЏРґ (" + std::to_string(errorStreak) +
-                               "). РЎР»РѕР¶РЅРѕСЃС‚СЊ СЃРЅРёР¶РµРЅР° РЅР° С€Р°Рі вЂ” СЃРЅР°С‡Р°Р»Р° РІРµСЂРЅС‘Рј СѓРІРµСЂРµРЅРЅРѕСЃС‚СЊ.";
+        const std::string kk = "Бұл тапсырманы «" + topic + "» тақырыбындағы қателер қатарына "
+                               "байланысты ұсындық (қатарынан " + std::to_string(errorStreak) +
+                               " қате). Қиындықты бір сатыға төмендеттік — маңыздысы қайта сенімділік құру.";
+        const std::string ru = "Мы предложили это задание, потому что в теме «" + topic +
+                               "» были ошибки подряд (" + std::to_string(errorStreak) +
+                               "). Сложность снижена на шаг — сначала вернём уверенность.";
         const std::string en = "We picked this task because of repeated mistakes in \"" + topic +
                                "\" (" + std::to_string(errorStreak) +
                                " in a row). Difficulty was lowered by one step.";
         return localizeText(kk, ru, en);
     }
     if (reason == "challenge") {
-        const std::string kk = "ТљР°С‚Р°СЂС‹РЅР°РЅ 3 РґТ±СЂС‹СЃ Р¶Р°СѓР°Рї! ТљРёС‹РЅРґС‹Т›С‚С‹ Р°СЂС‚С‚С‹СЂС‹Рї, В«" + topic +
-                               "В» Р±РѕР№С‹РЅС€Р° РєРµР»РµСЃС– РґРµТЈРіРµР№РіРµ У©С‚РµРјС–Р·.";
-        const std::string ru = "РўСЂРё РІРµСЂРЅС‹С… РѕС‚РІРµС‚Р° РїРѕРґСЂСЏРґ! РџРѕРІС‹С€Р°РµРј СЃР»РѕР¶РЅРѕСЃС‚СЊ Рё РїРµСЂРµС…РѕРґРёРј РЅР° "
-                               "СЃР»РµРґСѓСЋС‰РёР№ СѓСЂРѕРІРµРЅСЊ С‚РµРјС‹ В«" + topic + "В».";
+        const std::string kk = "Қатарынан 3 дұрыс жауап! Қиындықты арттырып, «" + topic +
+                               "» бойынша келесі деңгейге өтеміз.";
+        const std::string ru = "Три верных ответа подряд! Повышаем сложность и переходим на "
+                               "следующий уровень темы «" + topic + "В».";
         const std::string en = "Three correct answers in a row! Raising difficulty for \"" + topic + "\".";
         return localizeText(kk, ru, en);
     }
     if (reason == "review") {
-        const std::string kk = "В«" + topic + "В» С‚Р°Т›С‹СЂС‹Р±С‹РЅ Т›Р°Р№С‚Р°Р»Р°Сѓ СѓР°Т›С‹С‚С‹ РєРµР»РґС– вЂ” Р°СЂР°Р»С‹Т› Т›Р°Р№С‚Р°Р»Р°Сѓ "
-                               "РµСЃС‚Рµ СЃР°Т›С‚Р°СѓРґС‹ РЅС‹Т“Р°Р№С‚Р°РґС‹.";
-        const std::string ru = "РџСЂРёС€Р»Рѕ РІСЂРµРјСЏ РїРѕРІС‚РѕСЂРёС‚СЊ В«" + topic + "В» вЂ” РёРЅС‚РµСЂРІР°Р»СЊРЅРѕРµ РїРѕРІС‚РѕСЂРµРЅРёРµ "
-                               "Р·Р°РєСЂРµРїР»СЏРµС‚ РїР°РјСЏС‚СЊ.";
-        const std::string en = "Time to review \"" + topic + "\" вЂ” spaced repetition strengthens memory.";
+        const std::string kk = "«" + topic + "» тақырыбын қайталау уақыты келді — аралық қайталау "
+                               "есте сақтауды нығайтады.";
+        const std::string ru = "Пришло время повторить «" + topic + "» — интервальное повторение "
+                               "закрепляет память.";
+        const std::string en = "Time to review \"" + topic + "\" — spaced repetition strengthens memory.";
         return localizeText(kk, ru, en);
     }
     if (reason == "new_topic") {
-        const std::string kk = "Р–Р°ТЈР° С‚Р°Т›С‹СЂС‹РїС‚С‹ Р·РµСЂС‚С‚РµСѓ СѓР°Т›С‹С‚С‹: В«" + topic + "В». ТљР°С‚РµР»РµСЃСѓ Т›Р°Р»С‹РїС‚С‹ вЂ” "
-                               "РјР°ТЈС‹Р·РґС‹СЃС‹ ТЇР»РіС–РЅС– С‚ТЇСЃС–РЅСѓ.";
-        const std::string ru = "Р’СЂРµРјСЏ РёСЃСЃР»РµРґРѕРІР°С‚СЊ РЅРѕРІСѓСЋ С‚РµРјСѓ: В«" + topic + "В». РћС€РёР±Р°С‚СЊСЃСЏ РЅРѕСЂРјР°Р»СЊРЅРѕ вЂ” "
-                               "РіР»Р°РІРЅРѕРµ РїРѕРЅСЏС‚СЊ Р·Р°РєРѕРЅРѕРјРµСЂРЅРѕСЃС‚СЊ.";
+        const std::string kk = "Жаңа тақырыпты зерттеу уақыты: «" + topic + "». Қателесу қалыпты — "
+                               "маңыздысы үлгіні түсіну.";
+        const std::string ru = "Время исследовать новую тему: «" + topic + "». Ошибаться нормально — "
+                               "главное понять закономерность.";
         const std::string en = "Exploring a new topic: \"" + topic + "\". Mistakes are part of learning.";
         return localizeText(kk, ru, en);
     }
-    const std::string kk = "Р‘Т±Р» С‚Р°РїСЃС‹СЂРјР° СЃС–Р·РґС–ТЈ РґР°РјСѓ Р°Р№РјР°Т“С‹ТЈС‹Р·РґР°: Р±РѕР»Р¶Р°РјРґС‹ С‚Р°Р±С‹СЃ РґРµТЈРіРµР№С– " +
-                           std::to_string(pct) + "%. В«" + topic + "В» Р±РѕР№С‹РЅС€Р° Р±С–Р»С–РјС–ТЈС–Р·РґС– Р±РµРєС–С‚РµРјС–Р·.";
-    const std::string ru = "Р­С‚Рѕ Р·Р°РґР°РЅРёРµ РІ РІР°С€РµР№ Р·РѕРЅРµ Р±Р»РёР¶Р°Р№С€РµРіРѕ СЂР°Р·РІРёС‚РёСЏ: РѕР¶РёРґР°РµРјС‹Р№ СѓСЃРїРµС… " +
-                           std::to_string(pct) + "%. Р—Р°РєСЂРµРїР»СЏРµРј В«" + topic + "В».";
+    const std::string kk = "Бұл тапсырма сіздің даму аймағыңызда: болжамды табыс деңгейі " +
+                           std::to_string(pct) + "%. «" + topic + "» бойынша біліміңізді бекітеміз.";
+    const std::string ru = "Это задание в вашей зоне ближайшего развития: ожидаемый успех " +
+                           std::to_string(pct) + "%. Закрепляем «" + topic + "В».";
     const std::string en = "This task sits in your zone of proximal development: expected success " +
                            std::to_string(pct) + "%. Strengthening \"" + topic + "\".";
     (void)locale;
@@ -262,7 +262,7 @@ json AiService::tips(const AuthCtx& ctx) {
             "WHERE user_id = $1",
             {param(ctx.userId)}));
 
-        const std::string topic = weak.is_null() ? "вЂ”" : I18n::pick(weak["name"], ctx.locale);
+        const std::string topic = weak.is_null() ? "—" : I18n::pick(weak["name"], ctx.locale);
         const int streak = student.is_null() ? 0 : student.value("current_streak", 0);
         const int goalXp = student.is_null() ? 50 : student.value("daily_goal_xp", 50);
         const int earned = goal.is_null() ? 0 : goal.value("xp_earned", 0);
@@ -308,7 +308,20 @@ json AiService::tips(const AuthCtx& ctx) {
         json tips = json::array();
         for (const auto& r : recent) {
             json item = r;
-            item["text"] = I18n::pick(r["text"], ctx.locale);
+            const std::string text = I18n::pick(r["text"], ctx.locale);
+            size_t mojibakeMarkers = 0;
+            for (const std::string marker : {"Р", "С"}) {
+                size_t pos = 0;
+                while ((pos = text.find(marker, pos)) != std::string::npos) {
+                    ++mojibakeMarkers;
+                    pos += marker.size();
+                }
+            }
+            item["text"] = (mojibakeMarkers >= 2 || text.find("вЂ") != std::string::npos ||
+                            text.find("В«") != std::string::npos)
+                               ? ai::TipRenderer::fallback(r.value("kind", "methodical"), ctx.locale,
+                                                           r.value("meta", json::object()))
+                               : text;
             tips.push_back(item);
         }
         return json{{"tips", tips},
@@ -364,12 +377,12 @@ json AiService::forecast(const AuthCtx& ctx) {
                     {"recommended_daily_goal", recommendedGoal},
                     {"message",
                      {{"kk", etaDays > 0
-                                ? "РћСЃС‹ Т›Р°СЂТ›С‹РЅРјРµРЅ РєРµР»РµСЃС– РґРµТЈРіРµР№РіРµ С€Р°РјР°РјРµРЅ " + std::to_string(etaDays) + " РєТЇРЅ"
-                                : "РљТЇРЅРґРµР»С–РєС‚С– РјР°Т›СЃР°С‚С‚С‹ Р±РµР»РіС–Р»РµРї, Т›Р°СЂТ›С‹РЅРґС‹ С‚Т±СЂР°Т›С‚Р°РЅРґС‹СЂС‹ТЈС‹Р·"},
+                                ? "Осы қарқынмен келесі деңгейге шамамен " + std::to_string(etaDays) + " күн"
+                                : "Күнделікті мақсатты белгілеп, қарқынды тұрақтандырыңыз"},
                       {"ru", etaDays > 0
-                                ? "РџСЂРё С‚РµРєСѓС‰РµРј С‚РµРјРїРµ СЃР»РµРґСѓСЋС‰РёР№ СѓСЂРѕРІРµРЅСЊ РїСЂРёРјРµСЂРЅРѕ С‡РµСЂРµР· " +
-                                      std::to_string(etaDays) + " РґРЅ."
-                                : "Р—Р°РґР°Р№С‚Рµ РґРЅРµРІРЅСѓСЋ С†РµР»СЊ, С‡С‚РѕР±С‹ СЃС‚Р°Р±РёР»РёР·РёСЂРѕРІР°С‚СЊ С‚РµРјРї"},
+                                ? "При текущем темпе следующий уровень примерно через " +
+                                      std::to_string(etaDays) + " дн."
+                                : "Задайте дневную цель, чтобы стабилизировать темп"},
                       {"en", etaDays > 0
                                 ? "At this pace the next level is ~" + std::to_string(etaDays) + " days away"
                                 : "Set a daily goal to stabilise your pace"}}}};

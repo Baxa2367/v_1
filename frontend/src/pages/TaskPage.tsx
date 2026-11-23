@@ -53,6 +53,11 @@ export default function TaskPage() {
   useEffect(() => {
     if (!data) return;
     const p = data.payload;
+    setResult(null);
+    setHintsUsed(0);
+    setShownHints([]);
+    setElapsed(0);
+    started.current = Date.now();
     if (data.type === 'multiple_choice') setAnswer({ options: [] });
     else if (data.type === 'matching') setAnswer({ pairs: {} });
     else if (data.type === 'ordering') setAnswer({ order: (p.items ?? []).map((x) => x.id) });

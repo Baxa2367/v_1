@@ -195,33 +195,36 @@ void seedShop(Tx& t, const json& items) {
 }
 
 void seedQuests(Tx& t, const json& items) {
-    int added = 0;
+    int synced = 0;
     for (const auto& q : items) {
-        if (t.scalar("SELECT 1 FROM daily_quests WHERE code = $1", {param(q["code"])})) continue;
         t.exec("INSERT INTO daily_quests (id, code, title, description, kind, rule, target, reward_xp, "
                "reward_coins, icon, active) VALUES ($1,$2,$3::jsonb,$4::jsonb,$5,$6::jsonb,$7,$8,$9,"
-               "$10,true)",
+               "$10,true) ON CONFLICT (code) DO UPDATE SET title = EXCLUDED.title, "
+               "description = EXCLUDED.description, kind = EXCLUDED.kind, rule = EXCLUDED.rule, "
+               "target = EXCLUDED.target, reward_xp = EXCLUDED.reward_xp, "
+               "reward_coins = EXCLUDED.reward_coins, icon = EXCLUDED.icon",
                {param(uuidV4()), param(q["code"]), paramJson(q["title"]),
                 paramJson(q.value("description", json::object())), param(q.value("kind", "daily")),
                 paramJson(q["rule"]), param(q.value("target", 1)), param(q.value("reward_xp", 20)),
                 param(q.value("reward_coins", 5)), param(q.value("icon", "task_alt"))});
-        ++added;
+        ++synced;
     }
-    Log::get()->info("quests seeded: {}", added);
+    Log::get()->info("quests synced: {}", synced);
 }
 
 void seedTips(Tx& t, const json& items) {
-    int added = 0;
+    int synced = 0;
     for (const auto& tip : items) {
-        if (t.scalar("SELECT 1 FROM ai_tip_templates WHERE code = $1", {param(tip["code"])})) continue;
         t.exec("INSERT INTO ai_tip_templates (id, code, kind, text, tags, priority) "
-               "VALUES ($1,$2,$3,$4::jsonb,$5::jsonb,$6)",
+               "VALUES ($1,$2,$3,$4::jsonb,$5::jsonb,$6) "
+               "ON CONFLICT (code) DO UPDATE SET kind = EXCLUDED.kind, text = EXCLUDED.text, "
+               "tags = EXCLUDED.tags, priority = EXCLUDED.priority",
                {param(uuidV4()), param(tip["code"]), param(tip.value("kind", "methodical")),
                 paramJson(tip["text"]), paramJson(tip.value("tags", json::array())),
                 param(tip.value("priority", 0))});
-        ++added;
+        ++synced;
     }
-    Log::get()->info("ai tips seeded: {}", added);
+    Log::get()->info("ai tips synced: {}", synced);
 }
 
 std::string loadUserByEmail(Tx& t, const std::string& email) {

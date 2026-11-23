@@ -477,10 +477,10 @@ json AttemptService::submit(const AuthCtx& ctx, const std::string& taskId, const
         if (levelUp) {
             const std::string title = XpEngine::titleForLevel(newLevel, ctx.locale);
             svc::notify(t, ctx.userId, "level_up",
-                        json{{"kk", "Р–Р°ТЈР° РґРµТЈРіРµР№!"}, {"ru", "РќРѕРІС‹Р№ СѓСЂРѕРІРµРЅСЊ!"},
+                        json{{"kk", "Жаңа деңгей!"}, {"ru", "Новый уровень!"},
                              {"en", "Level up!"}},
-                        json{{"kk", "РЎС–Р· " + std::to_string(newLevel) + "-РґРµТЈРіРµР№РіРµ РєУ©С‚РµСЂС–Р»РґС–ТЈС–Р·: " + title},
-                             {"ru", "Р’С‹ РґРѕСЃС‚РёРіР»Рё СѓСЂРѕРІРЅСЏ " + std::to_string(newLevel) + ": " + title},
+                        json{{"kk", "Сіз " + std::to_string(newLevel) + "-деңгейге көтерілдіңіз: " + title},
+                             {"ru", "Вы достигли уровня " + std::to_string(newLevel) + ": " + title},
                              {"en", "You reached level " + std::to_string(newLevel) + ": " + title}},
                         {{"level", newLevel}, {"title", title}});
         }

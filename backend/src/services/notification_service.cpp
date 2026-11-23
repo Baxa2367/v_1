@@ -13,8 +13,20 @@ json NotificationService::list(const AuthCtx& ctx, int limit) {
         json out = json::array();
         for (const auto& r : rows) {
             json item = r;
-            item["title"] = I18n::pick(r["title"], ctx.locale);
-            item["body"] = I18n::pick(r["body"], ctx.locale);
+            std::string title = I18n::pick(r["title"], ctx.locale);
+            std::string body = I18n::pick(r["body"], ctx.locale);
+            const std::string kind = r.value("kind", "");
+            if (kind == "achievement") {
+                title = ctx.locale == "ru" ? "Новое достижение!"
+                         : ctx.locale == "en" ? "Achievement unlocked!"
+                                               : "Жаңа жетістік!";
+            } else if (kind == "level_up") {
+                title = ctx.locale == "ru" ? "Новый уровень!"
+                         : ctx.locale == "en" ? "Level up!"
+                                               : "Жаңа деңгей!";
+            }
+            item["title"] = title;
+            item["body"] = body;
             out.push_back(item);
         }
         return json{{"notifications", out},

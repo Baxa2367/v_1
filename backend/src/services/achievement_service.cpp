@@ -206,7 +206,7 @@ json AchievementService::evaluate(Tx& t, const std::string& studentId, const std
                    {param(coins), param(studentId)});
         }
         svc::notify(t, studentId, "achievement",
-                    json{{"kk", "Р–Р°ТЈР° Р¶РµС‚С–СЃС‚С–Рє!"}, {"ru", "РќРѕРІРѕРµ РґРѕСЃС‚РёР¶РµРЅРёРµ!"},
+                    json{{"kk", "Жаңа жетістік!"}, {"ru", "Новое достижение!"},
                          {"en", "Achievement unlocked!"}},
                     json{{"kk", a["title"].value("kk", "")},
                          {"ru", a["title"].value("ru", "")},
