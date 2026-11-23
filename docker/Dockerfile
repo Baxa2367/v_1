@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 COPY backend/ ./backend/
 RUN cmake -S backend -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DLUMINA_BUILD_TESTS=OFF \
-    && cmake --build build -j"$(nproc)" \
+    && cmake --build build -j2 \
     && cp build/lumina_server build/lumina_migrator build/lumina_seeder build/lumina_worker /usr/local/bin/ \
     && rm -rf build
 
