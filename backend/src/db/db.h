@@ -83,7 +83,7 @@ public:
     // Single-statement convenience (auto-commit).
     json query(const std::string& sql, const Params& params = {});
 
-    static json rowToJson(const pqxx::row_ref& row);
+    static json rowToJson(const pqxx::row& row);
     static json resultToJson(const pqxx::result& res);
 
 private:
