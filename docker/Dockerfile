@@ -14,7 +14,7 @@ FROM debian:trixie-slim AS runtime
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends \
       build-essential cmake ninja-build pkg-config ca-certificates curl \
-      libdrogon-dev libpqxx-dev libsodium-dev nlohmann-json3-dev \
+      libdrogon-dev libpqxx-dev libjsoncpp-dev libsodium-dev nlohmann-json3-dev \
       libspdlog-dev libxlsxwriter-dev libhpdf-dev libssl-dev libcurl4-openssl-dev \
       postgresql-client \
     && rm -rf /var/lib/apt/lists/*
