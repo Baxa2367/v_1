@@ -23,6 +23,14 @@ std::optional<std::string> param(bool v);
 std::optional<std::string> param(const json& v);
 std::optional<std::string> paramJson(const json& v);
 
+template <typename T,
+          std::enable_if_t<std::is_integral_v<T> && !std::is_same_v<T, int> &&
+                               !std::is_same_v<T, int64_t> && !std::is_same_v<T, bool>,
+                           int> = 0>
+std::optional<std::string> param(T v) {
+    return std::to_string(v);
+}
+
 class Tx {
 public:
     explicit Tx(pqxx::work& w) : w_(w) {}
