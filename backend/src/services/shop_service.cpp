@@ -49,9 +49,15 @@ json ShopService::buy(const AuthCtx& ctx, const std::string& itemId) {
 
         const int priceCoins = item.value("price_coins", 0);
         const int priceGems = item.value("price_gems", 0);
-        if (student.value("coins", 0) < priceCoins || student.value("gems", 0) < priceGems) {
+        const int balanceCoins = student.value("coins", 0);
+        const int balanceGems = student.value("gems", 0);
+        if (balanceCoins < priceCoins) {
             throw badRequest("Not enough coins", {{"required_coins", priceCoins},
-                                                  {"balance_coins", student.value("coins", 0)}});
+                                                  {"balance_coins", balanceCoins}});
+        }
+        if (balanceGems < priceGems) {
+            throw badRequest("Not enough gems", {{"required_gems", priceGems},
+                                                 {"balance_gems", balanceGems}});
         }
         t.exec("UPDATE students SET coins = coins - $1, gems = gems - $2, updated_at = now() "
                "WHERE user_id = $3",
