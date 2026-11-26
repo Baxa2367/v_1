@@ -89,7 +89,8 @@ std::string pathParam(const HttpRequestPtr& req, const std::string& key) {
 
     static const std::set<std::string> resources = {
         "courses", "levels", "tasks", "teams", "tournaments", "seasons", "quests",
-        "notifications", "users", "anticheat", "achievements", "topics"};
+        "notifications", "users", "anticheat", "achievements", "topics", "shop",
+        "inventory"};
     for (size_t i = 0; i + 1 < parts.size(); ++i) {
         if (resources.count(parts[i])) return parts[i + 1];
     }
